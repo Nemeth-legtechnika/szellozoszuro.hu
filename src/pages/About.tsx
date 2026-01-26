@@ -28,8 +28,8 @@ const About = () => {
     {
       year: 'Kezdetek',
       title: 'Sopronterv',
-      subtitle: 'Mérnöki tervezés',
-      description: 'Mérnöki alapok és műszaki tanácsadás',
+      subtitle: 'Szakértői tervezés',
+      description: 'Szakértői alapok és műszaki tanácsadás',
       icon: Building2,
       color: 'bg-muted',
     },
@@ -45,7 +45,7 @@ const About = () => {
       year: 'Ma',
       title: 'szellozoszuro.hu',
       subtitle: 'Szerviz & Karbantartás',
-      description: 'Gyári minőségű szűrők, mérnöki támogatással',
+      description: 'Gyári minőségű szűrők, szakértői támogatással',
       icon: Filter,
       color: 'bg-cyan',
     },
@@ -54,7 +54,7 @@ const About = () => {
   const team = [
     {
       name: 'Németh Gábor',
-      role: 'Alapító, vezető mérnök',
+      role: 'Alapító, vezető szakértő',
       description: 'Több mint 15 év légtechnikai tapasztalat',
     },
     {
@@ -80,7 +80,7 @@ const About = () => {
                 A mi történetünk
               </p>
               <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-                Mérnöki precizitás a tiszta otthon szolgálatában –{' '}
+                Szakértői precizitás a tiszta otthon szolgálatában –{' '}
                 <span className="gradient-cyan-text">A Németh Légtechnika története</span>
               </h1>
               <p className="text-dark-muted text-lg lg:text-xl leading-relaxed">
@@ -101,11 +101,11 @@ const About = () => {
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
                     A mi történetünk nem egy egyszerű kereskedelemmel kezdődött. Alapjainkat a 
-                    <strong className="text-foreground"> mérnöki tervezés és a műszaki tanácsadás</strong> fektette 
+                    <strong className="text-foreground"> szakértői tervezés és a műszaki tanácsadás</strong> fektette 
                     le a Sopronterv égisze alatt.
                   </p>
                   <p>
-                    Mérnök emberekként hittünk abban, hogy a modern otthon nemcsak falakból áll, 
+                    Szakértőkként hittünk abban, hogy a modern otthon nemcsak falakból áll, 
                     hanem egy komplex, lélegző rendszerből. Ez a szemlélet hívta életre a 
                     <strong className="text-foreground"> Németh Légtechnika Kft.</strong>-t, ahol a célunk 
                     az volt, hogy a papírra vetett terveket a legmagasabb minőségben váltsuk valóra.
@@ -118,7 +118,7 @@ const About = () => {
                   <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center overflow-hidden border border-border">
                     <div className="text-center p-8">
                       <Building2 className="w-20 h-20 text-cyan mx-auto mb-4" />
-                      <p className="text-muted-foreground text-sm">Mérnöki háttér és tervezési tapasztalat</p>
+                      <p className="text-muted-foreground text-sm">Szakértői háttér és tervezési tapasztalat</p>
                     </div>
                   </div>
                   <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-cyan/20 rounded-xl flex items-center justify-center">
@@ -241,7 +241,7 @@ const About = () => {
                   hanem pontosan tudjuk, mi történik a gép belsejében, ha nem megfelelő a légáramlás.
                 </p>
                 <p className="text-xl font-medium text-dark-foreground">
-                  Saját raktárkészletünkből, mérnöki támogatással biztosítjuk a friss levegőt otthonába.
+                  Saját raktárkészletünkből, szakértői támogatással biztosítjuk a friss levegőt otthonába.
                 </p>
               </div>
             </div>
@@ -334,7 +334,7 @@ const About = () => {
               Kérdése van a szűrőkkel kapcsolatban?
             </h2>
             <p className="text-dark-muted text-lg mb-8 max-w-xl mx-auto">
-              Mérnöki háttérrel rendelkező csapatunk készséggel segít megtalálni 
+              Szakértői háttérrel rendelkező csapatunk készséggel segít megtalálni 
               a gépe típusához legmegfelelőbb szűrőt.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
