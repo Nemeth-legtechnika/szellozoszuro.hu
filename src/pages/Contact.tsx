@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -6,23 +6,47 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 const Contact = () => {
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: 'E-mail',
-      value: 'info@szellozoszuro.hu',
-      href: 'mailto:info@szellozoszuro.hu',
-    },
+  const orderContact = [
     {
       icon: Phone,
       title: 'Telefon',
-      value: '+36 30 123 4567',
-      href: 'tel:+36301234567',
+      value: '+36 20 806 9072',
+      href: 'tel:+36208069072',
     },
+    {
+      icon: Mail,
+      title: 'E-mail',
+      value: 'office@sopronterv.hu',
+      href: 'mailto:office@sopronterv.hu',
+    },
+  ];
+
+  const technicalContact = [
+    {
+      icon: Phone,
+      title: 'Telefon',
+      value: '+36 20 323 8172',
+      href: 'tel:+36203238172',
+    },
+    {
+      icon: Mail,
+      title: 'E-mail',
+      value: 'info@sopronterv.hu',
+      href: 'mailto:info@sopronterv.hu',
+    },
+    {
+      icon: MessageSquare,
+      title: 'Skype',
+      value: 'nemeth_kalman',
+      href: 'skype:nemeth_kalman?chat',
+    },
+  ];
+
+  const generalInfo = [
     {
       icon: MapPin,
       title: 'Cím',
-      value: 'Budapest, Magyarország',
+      value: 'Sopron, Magyarország',
       href: null,
     },
     {
@@ -111,13 +135,13 @@ const Contact = () => {
 
               {/* Contact Info */}
               <div className="space-y-8">
+                {/* Order & Shipping */}
                 <div>
-                  <h2 className="text-xl font-semibold text-foreground mb-6">
-                    Elérhetőségeink
+                  <h2 className="text-xl font-semibold text-foreground mb-4">
+                    Rendelés, Szállítás
                   </h2>
-                  
-                  <div className="space-y-4">
-                    {contactInfo.map((item) => (
+                  <div className="space-y-3">
+                    {orderContact.map((item) => (
                       <div 
                         key={item.title}
                         className="flex items-start gap-4 p-4 rounded-xl bg-muted/50"
@@ -127,16 +151,63 @@ const Contact = () => {
                         </div>
                         <div>
                           <p className="text-sm text-muted-foreground mb-1">{item.title}</p>
-                          {item.href ? (
-                            <a 
-                              href={item.href}
-                              className="font-medium text-foreground hover:text-cyan transition-colors"
-                            >
-                              {item.value}
-                            </a>
-                          ) : (
-                            <p className="font-medium text-foreground">{item.value}</p>
-                          )}
+                          <a 
+                            href={item.href}
+                            className="font-medium text-foreground hover:text-cyan transition-colors"
+                          >
+                            {item.value}
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Technical Support */}
+                <div>
+                  <h2 className="text-xl font-semibold text-foreground mb-4">
+                    Szakmai, technikai kérdések
+                  </h2>
+                  <div className="space-y-3">
+                    {technicalContact.map((item) => (
+                      <div 
+                        key={item.title}
+                        className="flex items-start gap-4 p-4 rounded-xl bg-muted/50"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center flex-shrink-0">
+                          <item.icon className="w-5 h-5 text-cyan" />
+                        </div>
+                        <div>
+                          <p className="text-sm text-muted-foreground mb-1">{item.title}</p>
+                          <a 
+                            href={item.href}
+                            className="font-medium text-foreground hover:text-cyan transition-colors"
+                          >
+                            {item.value}
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* General Info */}
+                <div>
+                  <h2 className="text-xl font-semibold text-foreground mb-4">
+                    Általános információk
+                  </h2>
+                  <div className="space-y-3">
+                    {generalInfo.map((item) => (
+                      <div 
+                        key={item.title}
+                        className="flex items-start gap-4 p-4 rounded-xl bg-muted/50"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center flex-shrink-0">
+                          <item.icon className="w-5 h-5 text-cyan" />
+                        </div>
+                        <div>
+                          <p className="text-sm text-muted-foreground mb-1">{item.title}</p>
+                          <p className="font-medium text-foreground">{item.value}</p>
                         </div>
                       </div>
                     ))}
@@ -150,12 +221,12 @@ const Contact = () => {
                   </h3>
                   <p className="text-dark-muted text-sm leading-relaxed mb-4">
                     Munkanapokon 24 órán belül válaszolunk minden megkeresésre. 
-                    Sürgős esetben hívj minket telefonon!
+                    Sürgős rendelés esetén hívj minket telefonon!
                   </p>
                   <div className="flex items-center gap-2 text-cyan font-medium">
                     <Phone className="w-4 h-4" />
-                    <a href="tel:+36301234567" className="hover:underline">
-                      +36 30 123 4567
+                    <a href="tel:+36208069072" className="hover:underline">
+                      +36 20 806 9072
                     </a>
                   </div>
                 </div>

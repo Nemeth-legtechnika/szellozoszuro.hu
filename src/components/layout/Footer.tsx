@@ -74,21 +74,35 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Kapcsolat</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-dark-muted text-sm">
-                <Mail className="w-4 h-4 text-cyan" />
-                <a href="mailto:info@szellozoszuro.hu" className="hover:text-cyan transition-colors">
-                  info@szellozoszuro.hu
-                </a>
-              </li>
+              <li className="text-dark-muted text-xs font-medium uppercase tracking-wide mb-1">Rendelés</li>
               <li className="flex items-center gap-3 text-dark-muted text-sm">
                 <Phone className="w-4 h-4 text-cyan" />
-                <a href="tel:+36301234567" className="hover:text-cyan transition-colors">
-                  +36 30 123 4567
+                <a href="tel:+36208069072" className="hover:text-cyan transition-colors">
+                  +36 20 806 9072
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-dark-muted text-sm">
+              <li className="flex items-center gap-3 text-dark-muted text-sm">
+                <Mail className="w-4 h-4 text-cyan" />
+                <a href="mailto:office@sopronterv.hu" className="hover:text-cyan transition-colors">
+                  office@sopronterv.hu
+                </a>
+              </li>
+              <li className="text-dark-muted text-xs font-medium uppercase tracking-wide mb-1 mt-4">Szakmai kérdések</li>
+              <li className="flex items-center gap-3 text-dark-muted text-sm">
+                <Phone className="w-4 h-4 text-cyan" />
+                <a href="tel:+36203238172" className="hover:text-cyan transition-colors">
+                  +36 20 323 8172
+                </a>
+              </li>
+              <li className="flex items-center gap-3 text-dark-muted text-sm">
+                <Mail className="w-4 h-4 text-cyan" />
+                <a href="mailto:info@sopronterv.hu" className="hover:text-cyan transition-colors">
+                  info@sopronterv.hu
+                </a>
+              </li>
+              <li className="flex items-start gap-3 text-dark-muted text-sm mt-4">
                 <MapPin className="w-4 h-4 text-cyan mt-0.5" />
-                <span>Budapest, Magyarország</span>
+                <span>Sopron, Magyarország</span>
               </li>
             </ul>
           </div>
