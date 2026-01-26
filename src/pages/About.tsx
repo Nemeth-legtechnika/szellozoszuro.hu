@@ -53,12 +53,12 @@ const About = () => {
 
   const team = [
     {
-      name: 'Németh Gábor',
+      name: 'Németh Kálmán',
       role: 'Alapító, vezető szakértő',
       description: 'Több mint 15 év légtechnikai tapasztalat',
     },
     {
-      name: 'Németh Katalin',
+      name: 'Némethné Papp Eszter',
       role: 'Ügyfélkapcsolatok',
       description: 'Személyre szabott tanácsadás és támogatás',
     },
