@@ -185,7 +185,7 @@ const Shop = () => {
               {brands.map((brand) => (
                 <div
                   key={brand.id}
-                  className="group bg-card rounded-2xl border border-border hover:border-cyan/30 transition-all duration-300 overflow-hidden hover:shadow-card"
+                  className="group bg-secondary rounded-2xl border border-border hover:border-cyan/30 transition-all duration-300 overflow-hidden hover:shadow-card"
                 >
                   {/* Brand Header */}
                   <div className="p-6 pb-4">
