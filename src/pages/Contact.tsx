@@ -234,8 +234,8 @@ const Contact = () => {
                 {/* Company Info */}
                 <div className="text-sm text-muted-foreground">
                   <p className="font-medium text-foreground mb-2">Németh Légtechnika Kft.</p>
-                  <p>Cégjegyzékszám: 01-09-XXXXXX</p>
-                  <p>Adószám: XXXXXXXX-X-XX</p>
+                  <p>Adószám: 26290438-2-08</p>
+                  <p>Cégjegyzékszám: 08 09 029861</p>
                 </div>
               </div>
             </div>
