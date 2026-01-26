@@ -1,12 +1,30 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Wind } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 const Footer = () => {
+  const partnerPortals = [
+    {
+      name: 'szelloztetes.eu',
+      url: 'https://szelloztetes.eu',
+      description: 'Szellőztetési webshop',
+    },
+    {
+      name: 'hoszivattyu.online',
+      url: 'https://hoszivattyu.online',
+      description: 'Hőszivattyú szakportál',
+    },
+    {
+      name: 'sopronterv.hu',
+      url: 'https://sopronterv.hu',
+      description: 'Műszaki tervezés',
+    },
+  ];
+
   return (
     <footer className="bg-dark text-dark-foreground">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="space-y-4">
             <img src={logo} alt="Németh Légtechnika" className="h-12 w-auto" />
@@ -53,7 +71,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link to="/gyik" className="text-dark-muted hover:text-cyan transition-colors text-sm">
                   Gyakori kérdések
                 </Link>
               </li>
@@ -68,6 +86,32 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
+          </div>
+
+          {/* Partner Portals - Knowledge Graph */}
+          <div>
+            <h4 className="font-semibold text-lg mb-4">Szakportáljaink</h4>
+            <ul className="space-y-3">
+              {partnerPortals.map((portal) => (
+                <li key={portal.name}>
+                  <a 
+                    href={portal.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-start gap-2 text-dark-muted hover:text-cyan transition-colors text-sm"
+                  >
+                    <ExternalLink className="w-3.5 h-3.5 mt-0.5 opacity-50 group-hover:opacity-100" />
+                    <div>
+                      <span className="block font-medium">{portal.name}</span>
+                      <span className="block text-xs opacity-70">{portal.description}</span>
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p className="text-dark-muted/60 text-xs mt-4 leading-relaxed">
+              A Németh Légtechnika Kft. szakportál-hálózata
+            </p>
           </div>
 
           {/* Contact */}

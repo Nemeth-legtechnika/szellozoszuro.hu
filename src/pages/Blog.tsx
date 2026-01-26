@@ -1,7 +1,9 @@
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, User } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import JsonLdSchema from '@/components/seo/JsonLdSchema';
 
 const blogPosts = [
   {
@@ -10,7 +12,7 @@ const blogPosts = [
     excerpt: 'A hővisszanyerős rendszer szűrőjének időben történő cseréje kulcsfontosságú a levegőminőség és a gép élettartama szempontjából. Ebben a cikkben részletesen bemutatjuk, milyen károkat okozhat az elhanyagolt karbantartás.',
     content: 'Lorem ipsum dolor sit amet...',
     date: '2024. január 15.',
-    author: 'Németh Gábor',
+    author: 'Németh Kálmán',
     slug: 'miert-fontos-a-rendszeres-szurocsere',
     category: 'Karbantartás',
     readTime: '5 perc',
@@ -21,7 +23,7 @@ const blogPosts = [
     excerpt: 'Miben különbözik a durva porszűrő a finom pollenshűrőtől? Melyiket válaszd az igényeid alapján? Részletes összehasonlítás allergiásoknak és egészségtudatos felhasználóknak.',
     content: 'Lorem ipsum dolor sit amet...',
     date: '2024. január 10.',
-    author: 'Németh Gábor',
+    author: 'Németh Kálmán',
     slug: 'szuroosztályok-magyarazata',
     category: 'Útmutató',
     readTime: '7 perc',
@@ -32,7 +34,7 @@ const blogPosts = [
     excerpt: 'Hogyan kezeld a téli időszak páratartalom-problémáit hővisszanyerős rendszerrel? Praktikus tanácsok a páralecsapódás és a penészesedés megelőzésére.',
     content: 'Lorem ipsum dolor sit amet...',
     date: '2024. január 5.',
-    author: 'Németh Gábor',
+    author: 'Németh Kálmán',
     slug: 'teli-szelloztes-es-paratartalom',
     category: 'Tippek',
     readTime: '6 perc',
@@ -43,7 +45,7 @@ const blogPosts = [
     excerpt: 'Átfogó útmutató a hővisszanyerős szellőztetőrendszer alapos tisztításához. Mikor és hogyan végezd el a karbantartást?',
     content: 'Lorem ipsum dolor sit amet...',
     date: '2023. december 20.',
-    author: 'Németh Gábor',
+    author: 'Németh Kálmán',
     slug: 'hovisszanyero-tisztitas',
     category: 'Karbantartás',
     readTime: '10 perc',
@@ -54,7 +56,7 @@ const blogPosts = [
     excerpt: 'A pollenszezonban különösen fontos a megfelelő levegőminőség. Íme a legjobb tippek allergiásoknak a szűrőválasztástól a karbantartásig.',
     content: 'Lorem ipsum dolor sit amet...',
     date: '2023. december 15.',
-    author: 'Németh Gábor',
+    author: 'Németh Kálmán',
     slug: 'allergiaszezon-vedelem',
     category: 'Egészség',
     readTime: '8 perc',
@@ -64,6 +66,14 @@ const blogPosts = [
 const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Tudástár | szellozoszuro.hu - Légtechnikai szakértelem</title>
+        <meta name="description" content="Hasznos cikkek a szellőztetésről, szűrőkarbantartásról és az egészséges beltéri levegőről. A szelloztetes.eu szakmai támogatásával, 15+ év tapasztalattal." />
+        <link rel="canonical" href="https://szellozoszuro.hu/blog" />
+      </Helmet>
+      
+      <JsonLdSchema includeLocalBusiness={false} includeOrganization={true} />
+      
       <Header />
       
       <main className="pt-20 lg:pt-24">
@@ -74,7 +84,17 @@ const Blog = () => {
               <span className="gradient-cyan-text">Tudástár</span>
             </h1>
             <p className="text-dark-muted text-lg max-w-2xl">
-              Hasznos cikkek a szellőztetésről, szűrőkarbantartásról és az egészséges beltéri levegőről.
+              Hasznos cikkek a szellőztetésről, szűrőkarbantartásról és az egészséges beltéri levegőről. 
+              A{' '}
+              <a 
+                href="https://szelloztetes.eu" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-cyan hover:underline"
+              >
+                szelloztetes.eu
+              </a>{' '}
+              szakmai támogatásával, 15+ év tapasztalattal.
             </p>
           </div>
         </section>
