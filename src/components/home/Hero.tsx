@@ -67,7 +67,7 @@ const Hero = () => {
               </div>
               <div>
                 <p className="text-dark-foreground font-semibold text-sm">Gyors szállítás</p>
-                <p className="text-dark-muted text-xs">1-3 munkanap</p>
+                <p className="text-dark-muted text-xs">Készletről, vagy 2-3 hét</p>
               </div>
             </div>
             <div className="flex items-center gap-3">

@@ -277,7 +277,7 @@ const Shop = () => {
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">Gyors szállítás</h3>
                 <p className="text-muted-foreground text-sm">
-                  1-3 munkanapon belül megkapod a rendelésed
+                  Készletről azonnal, egyéb termékek 2-3 héten belül
                 </p>
               </div>
               <div className="text-center">

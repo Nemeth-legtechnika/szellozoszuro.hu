@@ -21,7 +21,7 @@ const CtaBanner = () => {
           
           <p className="text-dark-muted text-lg mb-8 max-w-xl mx-auto">
             Keresd meg a géped típusához illő szűrőt, és rendeld meg még ma! 
-            Gyors szállítással, megbízható minőséggel.
+            Készletről azonnal, vagy 2-3 héten belül.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
