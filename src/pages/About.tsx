@@ -1,32 +1,66 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Users, Award, Building } from 'lucide-react';
+import { ArrowRight, Home, MapPin, Award, Users, Building2, Wrench, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 const About = () => {
-  const stats = [
-    { label: 'Év tapasztalat', value: '15+' },
-    { label: 'Elégedett ügyfél', value: '5000+' },
-    { label: 'Támogatott márka', value: '20+' },
-    { label: 'Szállított szűrő', value: '50000+' },
-  ];
-
-  const values = [
+  const highlights = [
     {
-      icon: CheckCircle,
-      title: 'Minőség',
-      description: 'Csak olyan szűrőket forgalmazunk, amelyek teljesítménye és élettartama megfelel a gyári specifikációknak.',
+      icon: Home,
+      title: 'Családi vállalkozás',
+      description: 'Értékrendünk alapja a személyes felelősségvállalás és a hosszú távú kapcsolat az ügyfeleinkkel.',
     },
     {
-      icon: Users,
-      title: 'Szakértelem',
-      description: 'Csapatunk mérnöki háttérrel és több évtizedes légtechnikai tapasztalattal rendelkezik.',
+      icon: MapPin,
+      title: 'Soproni központ',
+      description: 'Büszkék vagyunk helyi kötődésünkre, soproni irodánkból segítjük partnereinket az ország egész területén.',
     },
     {
       icon: Award,
-      title: 'Megbízhatóság',
-      description: 'Gyors szállítás, pontos termékleírások és készséges ügyfélszolgálat jellemez minket.',
+      title: 'Minőség garancia',
+      description: 'Csak olyan szűrőket kínálunk (legyen az gyári vagy utángyártott), amiket mi magunk is beszerelnénk saját projektjeinkbe.',
+    },
+  ];
+
+  const timeline = [
+    {
+      year: 'Kezdetek',
+      title: 'Sopronterv',
+      subtitle: 'Mérnöki tervezés',
+      description: 'Mérnöki alapok és műszaki tanácsadás',
+      icon: Building2,
+      color: 'bg-muted',
+    },
+    {
+      year: 'Megvalósítás',
+      title: 'Németh Légtechnika',
+      subtitle: 'Kivitelezés',
+      description: 'Hővisszanyerős és hőszivattyús rendszerek',
+      icon: Wrench,
+      color: 'bg-cyan/20',
+    },
+    {
+      year: 'Ma',
+      title: 'szellozoszuro.hu',
+      subtitle: 'Szerviz & Karbantartás',
+      description: 'Gyári minőségű szűrők, mérnöki támogatással',
+      icon: Filter,
+      color: 'bg-cyan',
+    },
+  ];
+
+  const team = [
+    {
+      name: 'Németh Gábor',
+      role: 'Alapító, vezető mérnök',
+      description: 'Több mint 15 év légtechnikai tapasztalat',
+    },
+    {
+      name: 'Németh Katalin',
+      role: 'Ügyfélkapcsolatok',
+      description: 'Személyre szabott tanácsadás és támogatás',
     },
   ];
 
@@ -38,110 +72,257 @@ const About = () => {
         {/* Hero Section */}
         <section className="section-dark py-16 lg:py-24 relative overflow-hidden">
           <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-cyan/10 rounded-full blur-3xl opacity-50" />
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-cyan/5 rounded-full blur-2xl" />
           
           <div className="relative container mx-auto px-4">
-            <div className="max-w-3xl">
-              <h1 className="text-3xl lg:text-5xl font-bold mb-6">
-                Ismerd meg a{' '}
-                <span className="gradient-cyan-text">Németh Légtechnikát</span>
+            <div className="max-w-4xl">
+              <p className="text-cyan font-medium mb-4 tracking-wide uppercase text-sm">
+                A mi történetünk
+              </p>
+              <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
+                Mérnöki precizitás a tiszta otthon szolgálatában –{' '}
+                <span className="gradient-cyan-text">A Németh Légtechnika története</span>
               </h1>
               <p className="text-dark-muted text-lg lg:text-xl leading-relaxed">
-                A Németh Légtechnika Kft. több mint 15 éve foglalkozik légtechnikai rendszerek 
-                tervezésével, telepítésével és karbantartásával. Szakértelmünket most a 
-                szűrőértékesítés területén is kamatoztatjuk.
+                Több mint egy évtizedes tapasztalat a tervezéstől a megvalósításig.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Stats */}
-        <section className="py-12 lg:py-16 border-b border-border">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <div className="text-3xl lg:text-4xl font-bold gradient-cyan-text mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-muted-foreground text-sm">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Story */}
+        {/* Section 1: A kezdetek - Split Layout */}
         <section className="py-16 lg:py-24">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="order-2 lg:order-1">
                 <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
-                  A mi történetünk
+                  A kezdetek és a szakértelem
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Cégünk 2008-ban alakult azzal a céllal, hogy professzionális légtechnikai 
-                    megoldásokat nyújtsunk lakossági és ipari ügyfeleknek egyaránt. Az évek 
-                    során szerzett tapasztalataink alapján felismertük, hogy a hővisszanyerős 
-                    rendszerek üzemeltetése során a leggyakoribb probléma a szűrők beszerzése.
+                    A mi történetünk nem egy egyszerű kereskedelemmel kezdődött. Alapjainkat a 
+                    <strong className="text-foreground"> mérnöki tervezés és a műszaki tanácsadás</strong> fektette 
+                    le a Sopronterv égisze alatt.
                   </p>
                   <p>
-                    A szellozoszuro.hu webáruházat azért hoztuk létre, hogy ügyfeleink könnyen 
-                    és gyorsan hozzájuthassanak a gépükhöz illő szűrőkhöz. Mind gyári, mind 
-                    kiváló minőségű utángyártott szűrőket kínálunk, hogy minden igényt és 
-                    költségvetést ki tudjunk szolgálni.
-                  </p>
-                  <p>
-                    Büszkék vagyunk arra, hogy több ezer elégedett ügyfelünk bízik meg bennünk, 
-                    és rendszeresen hozzánk fordul a szűrőcseréért.
+                    Mérnök emberekként hittünk abban, hogy a modern otthon nemcsak falakból áll, 
+                    hanem egy komplex, lélegző rendszerből. Ez a szemlélet hívta életre a 
+                    <strong className="text-foreground"> Németh Légtechnika Kft.</strong>-t, ahol a célunk 
+                    az volt, hogy a papírra vetett terveket a legmagasabb minőségben váltsuk valóra.
                   </p>
                 </div>
               </div>
               
-              <div className="grid grid-cols-2 gap-4">
-                <div className="aspect-square rounded-2xl bg-muted flex items-center justify-center">
-                  <Building className="w-16 h-16 text-muted-foreground/30" />
-                </div>
-                <div className="aspect-square rounded-2xl bg-cyan/10 flex items-center justify-center mt-8">
-                  <Users className="w-16 h-16 text-cyan/50" />
-                </div>
-                <div className="aspect-square rounded-2xl bg-cyan/10 flex items-center justify-center -mt-4">
-                  <Award className="w-16 h-16 text-cyan/50" />
-                </div>
-                <div className="aspect-square rounded-2xl bg-muted flex items-center justify-center mt-4">
-                  <CheckCircle className="w-16 h-16 text-muted-foreground/30" />
+              <div className="order-1 lg:order-2">
+                <div className="relative">
+                  <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center overflow-hidden border border-border">
+                    <div className="text-center p-8">
+                      <Building2 className="w-20 h-20 text-cyan mx-auto mb-4" />
+                      <p className="text-muted-foreground text-sm">Mérnöki háttér és tervezési tapasztalat</p>
+                    </div>
+                  </div>
+                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-cyan/20 rounded-xl flex items-center justify-center">
+                    <span className="text-2xl font-bold text-cyan">15+</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Values */}
-        <section className="py-16 lg:py-24 bg-muted/50">
+        {/* Section 2: Küldetésünk - Split Layout Reversed */}
+        <section className="py-16 lg:py-24 bg-muted/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl lg:text-3xl font-bold text-foreground text-center mb-12">
-              Értékeink
-            </h2>
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div>
+                <div className="relative">
+                  <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-dark to-dark-secondary flex items-center justify-center overflow-hidden border border-dark-secondary">
+                    <div className="text-center p-8">
+                      <Wrench className="w-20 h-20 text-cyan mx-auto mb-4" />
+                      <p className="text-dark-muted text-sm">Hővisszanyerős és hőszivattyús rendszerek specialistái</p>
+                    </div>
+                  </div>
+                  <div className="absolute -top-4 -left-4 glass-card rounded-xl p-4 shadow-lg">
+                    <p className="text-xs text-muted-foreground mb-1">Portfóliónk</p>
+                    <p className="text-sm font-semibold text-foreground">szelloztetes.eu</p>
+                    <p className="text-sm font-semibold text-foreground">hoszivattyu.online</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
+                  Küldetésünk a szellőztetésben
+                </h2>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    Az évek során specialistává váltunk a <strong className="text-foreground">hővisszanyerős 
+                    szellőztető rendszerek</strong> és a <strong className="text-foreground">modern hőszivattyús 
+                    megoldások</strong> területén.
+                  </p>
+                  <p>
+                    Felismertük, hogy egy jól megtervezett rendszer csak akkor marad hatékony és egészséges, 
+                    ha a karbantartása is szakszerű. A rendszeres szűrőcsere nem luxus – a gép élettartamának 
+                    és az otthon levegőminőségének alapfeltétele.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Timeline Section */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                Az utunk
+              </h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                A tervezéstől a megvalósításon át a karbantartásig – így épült fel szakértelmünk
+              </p>
+            </div>
+            
+            <div className="relative max-w-4xl mx-auto">
+              {/* Timeline Line */}
+              <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-border -translate-y-1/2" />
+              <div className="hidden md:block absolute top-1/2 left-0 right-1/3 h-1 bg-gradient-to-r from-muted-foreground/30 via-cyan/50 to-cyan -translate-y-1/2" />
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                {timeline.map((item, index) => (
+                  <div key={item.title} className="relative">
+                    <div className="flex flex-col items-center text-center">
+                      <div className={`w-16 h-16 rounded-full ${item.color} flex items-center justify-center mb-4 relative z-10 border-4 border-background shadow-lg`}>
+                        <item.icon className={`w-7 h-7 ${index === timeline.length - 1 ? 'text-primary-foreground' : 'text-cyan'}`} />
+                      </div>
+                      <span className="text-xs font-medium text-cyan uppercase tracking-wider mb-2">
+                        {item.year}
+                      </span>
+                      <h3 className="text-lg font-bold text-foreground mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm font-medium text-muted-foreground mb-2">
+                        {item.subtitle}
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        {item.description}
+                      </p>
+                    </div>
+                    
+                    {index < timeline.length - 1 && (
+                      <div className="hidden md:block absolute top-8 left-full w-full">
+                        <ArrowRight className="w-5 h-5 text-cyan/50 mx-auto" />
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3: Miért jött létre */}
+        <section className="py-16 lg:py-24 section-dark relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-cyan/5 rounded-full blur-3xl" />
+          
+          <div className="relative container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                Miért jött létre a <span className="gradient-cyan-text">szellozoszuro.hu</span>?
+              </h2>
+              <div className="space-y-4 text-dark-muted text-lg leading-relaxed">
+                <p>
+                  Ügyfeleink visszajelzései alapján láttuk a piaci rést: nehéz volt gyorsan, 
+                  megbízható forrásból beszerezni a gyári minőségű szűrőket.
+                </p>
+                <p>
+                  A szellozoszuro.hu azért jött létre, hogy <strong className="text-dark-foreground">Önnek 
+                  ne kelljen szakemberre várnia</strong> a szűrőcseréhez. Mi nemcsak eladjuk a szűrőt, 
+                  hanem pontosan tudjuk, mi történik a gép belsejében, ha nem megfelelő a légáramlás.
+                </p>
+                <p className="text-xl font-medium text-dark-foreground">
+                  Saját raktárkészletünkből, mérnöki támogatással biztosítjuk a friss levegőt otthonába.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Highlights */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                Amiben hiszünk
+              </h2>
+            </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              {values.map((value) => (
-                <div 
-                  key={value.title}
-                  className="bg-card rounded-2xl border border-border p-8 text-center"
+              {highlights.map((highlight) => (
+                <Card 
+                  key={highlight.title}
+                  className="bg-card border-border hover:border-cyan/30 transition-all duration-300 hover:shadow-lg"
                 >
-                  <div className="w-16 h-16 mx-auto rounded-xl bg-cyan/10 flex items-center justify-center mb-6">
-                    <value.icon className="w-8 h-8 text-cyan" />
+                  <CardContent className="p-8 text-center">
+                    <div className="w-16 h-16 mx-auto rounded-xl bg-cyan/10 flex items-center justify-center mb-6">
+                      <highlight.icon className="w-8 h-8 text-cyan" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground mb-3">
+                      {highlight.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {highlight.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Meet the Team */}
+        <section className="py-16 lg:py-24 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                A csapat mögöttünk
+              </h2>
+              <p className="text-muted-foreground max-w-xl mx-auto">
+                Családi vállalkozásként minden ügyfelünkkel személyesen foglalkozunk
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+              {team.map((member) => (
+                <div 
+                  key={member.name}
+                  className="bg-card rounded-2xl border border-border p-8 text-center hover:border-cyan/30 transition-all duration-300"
+                >
+                  <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cyan/20 to-cyan/5 flex items-center justify-center mb-4 border-2 border-cyan/20">
+                    <Users className="w-10 h-10 text-cyan" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
-                    {value.title}
+                  <h3 className="text-lg font-semibold text-foreground mb-1">
+                    {member.name}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {value.description}
+                  <p className="text-cyan text-sm font-medium mb-2">
+                    {member.role}
+                  </p>
+                  <p className="text-muted-foreground text-sm">
+                    {member.description}
                   </p>
                 </div>
               ))}
+            </div>
+            
+            {/* Signature */}
+            <div className="mt-12 text-center">
+              <div className="inline-block bg-card rounded-2xl border border-border p-8">
+                <p className="text-muted-foreground italic mb-4">
+                  "Minden szűrőcsere mögött a tiszta levegő és az egészséges otthon iránti elkötelezettségünk áll."
+                </p>
+                <p className="text-foreground font-semibold">– A Németh család</p>
+                <p className="text-sm text-muted-foreground">Sopron, 2024</p>
+              </div>
             </div>
           </div>
         </section>
@@ -150,11 +331,11 @@ const About = () => {
         <section className="py-16 lg:py-24 section-dark">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl lg:text-3xl font-bold mb-4">
-              Kérdésed van?
+              Kérdése van a szűrőkkel kapcsolatban?
             </h2>
             <p className="text-dark-muted text-lg mb-8 max-w-xl mx-auto">
-              Lépj kapcsolatba velünk, és szakértő csapatunk segít megtalálni 
-              a géped típusához legmegfelelőbb szűrőt.
+              Mérnöki háttérrel rendelkező csapatunk készséggel segít megtalálni 
+              a gépe típusához legmegfelelőbb szűrőt.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" asChild>
