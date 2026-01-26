@@ -1,9 +1,11 @@
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Home, MapPin, Award, Users, Building2, Wrench, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import JsonLdSchema from '@/components/seo/JsonLdSchema';
 
 const About = () => {
   const highlights = [
@@ -66,6 +68,14 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Rólunk | Németh Légtechnika Kft. - 15+ év szakértelem</title>
+        <meta name="description" content="Ismerje meg a Németh Légtechnika Kft. történetét: 15+ év légtechnikai tapasztalat, családi vállalkozás Sopronból. A szelloztetes.eu és hoszivattyu.online szakmai hátterével." />
+        <link rel="canonical" href="https://szellozoszuro.hu/about" />
+      </Helmet>
+      
+      <JsonLdSchema includeLocalBusiness={true} includeOrganization={true} />
+      
       <Header />
       
       <main className="pt-20 lg:pt-24">
@@ -84,7 +94,16 @@ const About = () => {
                 <span className="gradient-cyan-text">A Németh Légtechnika története</span>
               </h1>
               <p className="text-dark-muted text-lg lg:text-xl leading-relaxed">
-                Több mint egy évtizedes tapasztalat a tervezéstől a megvalósításig.
+                Több mint 15 év tapasztalat a tervezéstől a megvalósításig. A{' '}
+                <a 
+                  href="https://szelloztetes.eu" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-cyan hover:underline"
+                >
+                  szelloztetes.eu
+                </a>{' '}
+                szakmai támogatásával.
               </p>
             </div>
           </div>
@@ -102,7 +121,16 @@ const About = () => {
                   <p>
                     A mi történetünk nem egy egyszerű kereskedelemmel kezdődött. Alapjainkat a 
                     <strong className="text-foreground"> szakértői tervezés és a műszaki tanácsadás</strong> fektette 
-                    le a Sopronterv égisze alatt.
+                    le a{' '}
+                    <a 
+                      href="https://sopronterv.hu" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-cyan hover:underline"
+                    >
+                      Sopronterv
+                    </a>{' '}
+                    égisze alatt, több mint 15 éve.
                   </p>
                   <p>
                     Szakértőkként hittünk abban, hogy a modern otthon nemcsak falakból áll, 
@@ -158,7 +186,25 @@ const About = () => {
                   <p>
                     Az évek során specialistává váltunk a <strong className="text-foreground">hővisszanyerős 
                     szellőztető rendszerek</strong> és a <strong className="text-foreground">modern hőszivattyús 
-                    megoldások</strong> területén.
+                    megoldások</strong> területén. Szakértelmünket a{' '}
+                    <a 
+                      href="https://szelloztetes.eu" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-cyan hover:underline"
+                    >
+                      szelloztetes.eu
+                    </a>{' '}
+                    és{' '}
+                    <a 
+                      href="https://hoszivattyu.online" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-cyan hover:underline"
+                    >
+                      hoszivattyu.online
+                    </a>{' '}
+                    szakportáljaink is tükrözik.
                   </p>
                   <p>
                     Felismertük, hogy egy jól megtervezett rendszer csak akkor marad hatékony és egészséges, 
