@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const brands = [
-  { name: 'Zehnder', slug: 'zehnder' },
+  { name: 'Vaillant', slug: 'vaillant' },
   { name: 'Helios', slug: 'helios' },
+  { name: 'Bosch', slug: 'bosch' },
   { name: 'Wolf', slug: 'wolf' },
-  { name: 'Vallox', slug: 'vallox' },
   { name: 'Maico', slug: 'maico' },
   { name: 'Vents', slug: 'vents' },
   { name: 'Systemair', slug: 'systemair' },
