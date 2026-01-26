@@ -52,7 +52,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: 'Ügyfélszolgálat',
-      value: 'H-P: 8:00 - 17:00',
+      value: 'H-P: 8:00 - 16:00',
       href: null,
     },
   ];
