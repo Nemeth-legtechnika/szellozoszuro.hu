@@ -33,7 +33,7 @@ const Hero = () => {
           
           <p className="text-lg md:text-xl text-dark-muted mb-8 leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Prémium csereszűrők hővisszanyerős szellőztetőrendszerekhez. 
-            Zehnder, Helios, Wolf és más márkákhoz – gyári és kiváló minőségű utángyártott változatban.
+            Vaillant, Helios, Bosch, Wolf és más márkákhoz – gyári és kiváló minőségű utángyártott változatban.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
