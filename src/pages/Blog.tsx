@@ -8,6 +8,7 @@ import JsonLdSchema from '@/components/seo/JsonLdSchema';
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg';
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg';
+import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg';
 
 const blogPosts = [
   {
@@ -48,14 +49,15 @@ const blogPosts = [
   },
   {
     id: 4,
-    title: 'Hővisszanyerő rendszer tisztítása lépésről lépésre',
-    excerpt: 'Átfogó útmutató a hővisszanyerős szellőztetőrendszer alapos tisztításához. Mikor és hogyan végezd el a karbantartást?',
-    content: 'Lorem ipsum dolor sit amet...',
+    title: 'A szellőztető rendszer tisztítása és a csőhálózat védelme',
+    excerpt: 'Mikor és hogyan végezd el a karbantartást? Átfogó útmutató a légcsatornák védelméhez és a szakértői tisztításhoz.',
+    image: ductCleaningImage,
+    imageAlt: 'Légcsatorna belülről nézve - tisztítás előtti állapot',
     date: '2023. december 20.',
     author: 'Németh Kálmán',
-    slug: 'hovisszanyero-tisztitas',
+    slug: 'szellozteto-tisztitas-csohalozat',
     category: 'Karbantartás',
-    readTime: '10 perc',
+    readTime: '8 perc',
   },
   {
     id: 5,
