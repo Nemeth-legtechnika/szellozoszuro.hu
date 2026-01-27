@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLdSchema from '@/components/seo/JsonLdSchema';
+import nemethKalmanImage from '@/assets/team/nemeth-kalman.jpg';
 
 const About = () => {
   const highlights = [
@@ -58,11 +59,13 @@ const About = () => {
       name: 'Németh Kálmán',
       role: 'Alapító, vezető szakértő',
       description: 'Több mint 15 év légtechnikai tapasztalat',
+      image: nemethKalmanImage,
     },
     {
       name: 'Ügyfélszolgálati Asszisztens',
       role: 'Ügyfélkapcsolatok',
       description: 'Személyre szabott tanácsadás és támogatás',
+      image: null,
     },
   ];
 
@@ -349,9 +352,19 @@ const About = () => {
                   key={member.name}
                   className="bg-card rounded-2xl border border-border p-8 text-center hover:border-cyan/30 transition-all duration-300"
                 >
-                  <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-cyan/20 to-cyan/5 flex items-center justify-center mb-4 border-2 border-cyan/20">
-                    <Users className="w-10 h-10 text-cyan" />
-                  </div>
+                  {member.image ? (
+                    <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-cyan/30 shadow-lg">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-cyan/20 to-cyan/5 flex items-center justify-center mb-4 border-2 border-cyan/20">
+                      <Users className="w-12 h-12 text-cyan" />
+                    </div>
+                  )}
                   <h3 className="text-lg font-semibold text-foreground mb-1">
                     {member.name}
                   </h3>
