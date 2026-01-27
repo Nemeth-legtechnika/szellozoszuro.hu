@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLdSchema from '@/components/seo/JsonLdSchema';
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg';
+import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
 
 const blogPosts = [
   {
@@ -42,6 +43,44 @@ const blogPosts = [
         type: 'callout',
         title: 'Szakértői tanácsunk',
         content: 'Ellenőrizze szűrőit 3-4 havonta, és évente legalább kétszer végezzen teljes cserét!',
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: 'G4, M5 vagy F7? – Segítünk eligazodni a szűrőosztályok között',
+    excerpt: 'Miben különbözik a durva porszűrő a finom pollenshűrőtől? Melyiket válaszd az igényeid alapján?',
+    heroImage: dandelionPollenImage,
+    heroAlt: 'Pitypang magok repülnek - illusztráció a pollenszűrés fontosságához',
+    date: '2024. január 10.',
+    author: 'Németh Kálmán',
+    slug: 'szuroosztályok-magyarazata',
+    category: 'Útmutató',
+    readTime: '7 perc',
+    sections: [
+      {
+        type: 'intro',
+        content: 'Gyakran tapasztaljuk, hogy a felhasználók elvesznek a betűk és számok rengetegében. A képen látható pitypang gyönyörű, de az allergiásoknak maga az ellenség. Szakértőként segítünk egyszerűen elmagyarázni, melyik szűrő mire való.',
+      },
+      {
+        type: 'heading',
+        title: 'G4 (Durva szűrő) – A gép testőre',
+        content: 'Ez a "munkás" szűrő. Megfogja a bogarakat, a nagyobb porszöszöket, hajszálakat és a nyárfapelyhet.\n\nCélja: Elsősorban a hővisszanyerő gép mechanikai védelme a nagy szennyeződésektől.',
+      },
+      {
+        type: 'heading',
+        title: 'F7 (Finom szűrő) – A család védelmezője',
+        content: 'Ez az a szint, ami megállítja a szabad szemmel alig látható veszélyeket: a virágport (pollent), a finomport és a szmog egy részét.\n\nCélja: Az egészséges, tiszta belső levegő biztosítása. Ha allergiás van a családban, vagy forgalmas út mellett laknak, ez a típus elengedhetetlen.',
+      },
+      {
+        type: 'heading',
+        title: 'M5 (Közepes szűrő)',
+        content: 'Az arany középút. Jobban szűr, mint a G4, de még nem fogja meg a legfinomabb polleneket olyan hatékonysággal, mint az F7.',
+      },
+      {
+        type: 'callout',
+        title: 'Szakértői tanácsunk',
+        content: 'A legelterjedtebb és általunk is javasolt kombináció: A friss levegő ágba (amit beszívunk) tegyen F7-es pollenszűrőt az egészsége érdekében, az elszívó ágba pedig elegendő a G4-es, hogy a gépet védje a benti portól.',
       },
     ],
   },
