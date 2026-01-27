@@ -10,6 +10,7 @@ import winterHumidityImage from '@/assets/blog/winter-humidity.jpg';
 import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg';
 import filterClassesChartImage from '@/assets/blog/filter-classes-chart.jpg';
 import allergySeasonHeroImage from '@/assets/blog/allergy-season-hero-generated.jpg';
+import aftermarketFiltersImage from '@/assets/blog/aftermarket-filters.jpg';
 
 const blogPosts = [
   {
@@ -235,6 +236,59 @@ const blogPosts = [
         type: 'callout',
         title: 'Készen áll az allergiaszezonra?',
         content: 'Vásároljon F7-es pollenszűrőt a gépéhez, és élvezze a pollenmentes, tiszta levegőt otthonában! Webshopunkban megtalálja a legtöbb gyártó OEM és utángyártott szűrőit is.',
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: 'Utángyártott szellőzőszűrők: Hogyan válasszunk, hogy ne legyen bosszúság a vége?',
+    excerpt: 'Létezik okos megtakarítás a hatékonyság feláldozása nélkül? Szakértőként eláruljuk, mire figyeljen utángyártott szűrők vásárlásakor.',
+    heroImage: aftermarketFiltersImage,
+    heroAlt: 'G4 és F7 szűrők összehasonlítása - szűrési osztályok táblázattal',
+    date: '2024. február 10.',
+    author: 'Németh Kálmán',
+    slug: 'utangyartott-szurok-valasztas',
+    category: 'Vásárlási tanács',
+    readTime: '6 perc',
+    sections: [
+      {
+        type: 'intro',
+        content: 'A hővisszanyerős szellőztető rendszerek tulajdonosaiként tudjuk: a szűrőcsere a gép lelke. Sokan tartanak az utángyártott megoldásoktól, de szakértőként eláruljuk: létezik okos megtakarítás a hatékonyság feláldozása nélkül is.',
+      },
+      {
+        type: 'heading',
+        title: 'Miért lehet „bosszantó" egy rossz minőségű utángyártott szűrő?',
+        content: 'A nem megfelelő szűrők két fő problémát okozhatnak:\n\n• Túl magas légellenállás: Ha az anyag nem megfelelő, a ventilátornak nagyobb erővel kell dolgoznia. Ez magasabb villanyszámlát és a motor idő előtti elhasználódását eredményezi.\n\n• Gyenge szűrési hatékonyság: Ha az anyag szerkezete nem fogja meg a finomport, az lerakódik a hőcserélőben és a csövekben, ami később méregdrága tisztítást igényel.',
+      },
+      {
+        type: 'heading',
+        title: '4 dolog, amit mi garantálunk szakértőként',
+        content: 'A szellozoszuro.hu kínálatának összeállításakor mi már elvégeztük a szűrést Ön helyett:',
+      },
+      {
+        type: 'heading',
+        title: '1. Német prémium alapanyag (Sandler AG)',
+        content: 'Csak olyan szintetikus anyagokat használunk, amelyek légáteresztése pontosan megfelel a gyári (Vaillant, Bosch, Helios, stb.) előírásoknak.',
+      },
+      {
+        type: 'heading',
+        title: '2. ISO 16890 tanúsítvány',
+        content: 'Szűrőinket akkreditált laboratóriumokban tesztelik. Az ePM1 70% nálunk valóban a szmog és pollenek megfogását jelenti.',
+      },
+      {
+        type: 'heading',
+        title: '3. PFAS-mentes és higiénikus',
+        content: 'Megfelelnek a VDI 6022 előírásoknak, így nem juttatnak káros vegyi anyagokat otthonába.',
+      },
+      {
+        type: 'heading',
+        title: '4. Pontos illeszkedés',
+        content: 'Termékeink (legyen szó Wolf, Zehnder vagy Stiebel Eltron típusról) milliméterre pontosan illeszkednek a gyári foglalatba.',
+      },
+      {
+        type: 'callout',
+        title: 'Szakértői tanácsunk',
+        content: 'Ne csak az árat nézze! Egy silány szűrő okozta motorcsere tíz évnyi megtakarítást emészthet fel egyetlen nap alatt. Válasszon tesztelt minőséget!',
       },
     ],
   },

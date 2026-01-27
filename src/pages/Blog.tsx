@@ -10,6 +10,7 @@ import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg';
 import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg';
 import allergySeasonHeroImage from '@/assets/blog/allergy-season-hero-generated.jpg';
+import aftermarketFiltersImage from '@/assets/blog/aftermarket-filters.jpg';
 
 const blogPosts = [
   {
@@ -70,6 +71,18 @@ const blogPosts = [
     author: 'Németh Kálmán',
     slug: 'allergiaszezon-pollenmentes-otthon',
     category: 'Egészség',
+    readTime: '6 perc',
+  },
+  {
+    id: 6,
+    title: 'Utángyártott szellőzőszűrők: Hogyan válasszunk, hogy ne legyen bosszúság a vége?',
+    excerpt: 'Létezik okos megtakarítás a hatékonyság feláldozása nélkül? Szakértőként eláruljuk, mire figyeljen utángyártott szűrők vásárlásakor.',
+    image: aftermarketFiltersImage,
+    imageAlt: 'G4 és F7 szűrők összehasonlítása - szűrési osztályok táblázattal',
+    date: '2024. február 10.',
+    author: 'Németh Kálmán',
+    slug: 'utangyartott-szurok-valasztas',
+    category: 'Vásárlási tanács',
     readTime: '6 perc',
   },
 ];
