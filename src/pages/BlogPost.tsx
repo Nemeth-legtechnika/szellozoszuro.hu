@@ -6,6 +6,7 @@ import Footer from '@/components/layout/Footer';
 import JsonLdSchema from '@/components/seo/JsonLdSchema';
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg';
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
+import winterHumidityImage from '@/assets/blog/winter-humidity.jpg';
 
 const blogPosts = [
   {
@@ -86,6 +87,49 @@ const blogPosts = [
         type: 'callout',
         title: 'Szakértői tanácsunk',
         content: 'A legelterjedtebb és általunk is javasolt kombináció: A friss levegő ágba (amit beszívunk) tegyen F7-es pollenszűrőt az egészsége érdekében, az elszívó ágba pedig elegendő a G4-es, hogy a gépet védje a benti portól.',
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Száraz levegő és nedves szűrők? – A téli szellőztetés buktatói szakértői szemmel',
+    excerpt: 'Hogyan kezeld a téli időszak páratartalom-problémáit hővisszanyerős rendszerrel? Praktikus tanácsok a páralecsapódás és a penészesedés megelőzésére.',
+    heroImage: winterHumidityImage,
+    heroAlt: 'Szellőztető vezérlő panel 25% páratartalommal téli környezetben, szűrővel a háttérben',
+    date: '2024. január 5.',
+    author: 'Németh Kálmán',
+    slug: 'teli-szelloztes-es-paratartalom',
+    category: 'Tippek',
+    readTime: '6 perc',
+    sections: [
+      {
+        type: 'intro',
+        content: 'Télen sokan tapasztalják, hogy a benti levegő páratartalma drasztikusan lecsökken, ami torokszárazsághoz és komfortérzet-csökkenéshez vezet. A képen látható 25%-os páratartalom tipikus példája ennek. Szakértőként azonban látjuk a folyamat másik, rejtett oldalát is, ami a gép belsejében zajlik.',
+      },
+      {
+        type: 'heading',
+        title: 'Miért olyan száraz a téli levegő?',
+        content: 'A kinti hideg levegő kevés párát tartalmaz, és amint a gép felmelegíti, a relatív páratartalom leesik. Ezen a modern entalpia hőcserélők segíthetnek, de a rendszer lelke továbbra is a tiszta szűrő marad. Itt jön a képbe egy kritikus összefüggés:',
+      },
+      {
+        type: 'heading',
+        title: 'A nedvesség és a koszos szűrő veszélyes párosa',
+        content: 'A téli párás, ködös időben a külső szűrőbetétek (különösen a papír alapúak) óhatatlanul benedvesednek. Ha a szűrő már telített és koszos, a sűrű porréteg megköti a nedvességet, és a szűrő nem tud gyorsan, hatékonyan kiszáradni.',
+      },
+      {
+        type: 'heading',
+        title: 'Ennek súlyos következményei lehetnek',
+        content: '• Kellemetlen szagok: A tartósan nedves porrétegben mikroorganizmusok szaporodhatnak el, dohos szagot árasztva a lakásban.\n\n• Strukturális deformáció: A nedvességtől átázott, nehéz és koszos szűrőkeret vagy betét eldeformálódhat.\n\n• Gépkárosodás: Az eldeformálódott szűrő mellett a levegő szűretlenül szökik el, így a szennyeződés közvetlenül a méregdrága hőcserélő kockát kezdi el tömíteni.',
+      },
+      {
+        type: 'heading',
+        title: 'A megoldás kulcsa',
+        content: 'A tiszta szűrő tehát télen nemcsak a levegőminőség záloga, hanem a gép fizikai épségének és a szagtalan működésnek is az alapfeltétele.',
+      },
+      {
+        type: 'callout',
+        title: 'Szakértői tanácsunk',
+        content: 'Ha télen 40% alatti páratartalmat mér, vegye lejjebb a szellőztetés intenzitását! De ne feledje: a tiszta szűrő ilyenkor is kulcsfontosságú, hogy elkerülje a nedvesség okozta deformációt és a kellemetlen szagokat.',
       },
     ],
   },

@@ -7,6 +7,7 @@ import JsonLdSchema from '@/components/seo/JsonLdSchema';
 
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg';
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
+import winterHumidityImage from '@/assets/blog/winter-humidity.jpg';
 
 const blogPosts = [
   {
@@ -35,9 +36,10 @@ const blogPosts = [
   },
   {
     id: 3,
-    title: 'Téli szellőztetés és páratartalom',
+    title: 'Száraz levegő és nedves szűrők? – A téli szellőztetés buktatói',
     excerpt: 'Hogyan kezeld a téli időszak páratartalom-problémáit hővisszanyerős rendszerrel? Praktikus tanácsok a páralecsapódás és a penészesedés megelőzésére.',
-    content: 'Lorem ipsum dolor sit amet...',
+    image: winterHumidityImage,
+    imageAlt: 'Szellőztető vezérlő panel 25% páratartalommal téli környezetben',
     date: '2024. január 5.',
     author: 'Németh Kálmán',
     slug: 'teli-szelloztes-es-paratartalom',
