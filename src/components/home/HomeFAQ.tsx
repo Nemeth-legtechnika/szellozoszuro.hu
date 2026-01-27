@@ -42,11 +42,11 @@ const HomeFAQ = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
-          opacity: 0.08,
+          opacity: 0.18,
         }}
       />
       {/* Gradient overlay for smooth transition */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-secondary/50 via-secondary/30 to-secondary/50" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-secondary/30 via-transparent to-secondary/30" />
       
       <div className="container relative z-10 mx-auto px-4">
         <div className="max-w-3xl mx-auto">
