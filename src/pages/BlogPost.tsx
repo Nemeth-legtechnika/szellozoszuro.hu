@@ -78,6 +78,11 @@ const blogPosts = [
         content: 'Az arany középút. Jobban szűr, mint a G4, de még nem fogja meg a legfinomabb polleneket olyan hatékonysággal, mint az F7.',
       },
       {
+        type: 'heading',
+        title: 'F9 / ePM1 – Prémium védelem és nagyvárosi szmogszűrés',
+        content: 'A legmagasabb szintű szűrés, amely már a láthatatlan koromszemcséket, a baktériumok egy részét és a szmogért felelős mikroporokat is megfogja.\n\nMikor válassza? Ha forgalmas út mellett lakik, nagyvárosi környezetben él, vagy asztmával küzd.\n\nMikor ne válassza? Téli időszakban, ahol magas páratartalom és a levegőben található apró korom részecskék nagyon gyorsan eltömíthetik. Tehát ebben az időszakban lerövidül a minőségi védelem időszaka.\n\nFontos: Az ePM1 minősítésű szűrők (minél magasabb a százalékos érték, annál jobb) nyújtják a legtisztább levegőt.',
+      },
+      {
         type: 'callout',
         title: 'Szakértői tanácsunk',
         content: 'A legelterjedtebb és általunk is javasolt kombináció: A friss levegő ágba (amit beszívunk) tegyen F7-es pollenszűrőt az egészsége érdekében, az elszívó ágba pedig elegendő a G4-es, hogy a gépet védje a benti portól.',
