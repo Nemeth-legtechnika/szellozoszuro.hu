@@ -26,8 +26,9 @@ const BrandSelector = () => {
         backgroundPosition: 'center',
       }}
     >
-      {/* Dark overlay - image subtly visible through */}
-      <div className="absolute inset-0 bg-dark-bg/75" />
+      {/* Gradient overlays - matching hero section style */}
+      <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/90 to-dark/70" />
+      <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
