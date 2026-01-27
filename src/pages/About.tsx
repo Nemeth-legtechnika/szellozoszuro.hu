@@ -60,8 +60,8 @@ const About = () => {
       description: 'Több mint 15 év légtechnikai tapasztalat',
     },
     {
-      name: 'Némethné Papp Eszter',
-      role: 'Ügyfélszolgálati Asszisztens',
+      name: 'Ügyfélszolgálati Asszisztens',
+      role: 'Ügyfélkapcsolatok',
       description: 'Személyre szabott tanácsadás és támogatás',
     },
   ];
