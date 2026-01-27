@@ -6,6 +6,7 @@ import Footer from '@/components/layout/Footer';
 import JsonLdSchema from '@/components/seo/JsonLdSchema';
 
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg';
+import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
 
 const blogPosts = [
   {
@@ -22,9 +23,10 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: 'Szűrőosztályok magyarázata: G4 vs F7',
+    title: 'G4, M5 vagy F7? – Segítünk eligazodni a szűrőosztályok között',
     excerpt: 'Miben különbözik a durva porszűrő a finom pollenshűrőtől? Melyiket válaszd az igényeid alapján? Részletes összehasonlítás allergiásoknak és egészségtudatos felhasználóknak.',
-    content: 'Lorem ipsum dolor sit amet...',
+    image: dandelionPollenImage,
+    imageAlt: 'Pitypang magok repülnek - illusztráció a pollenszűrés fontosságához',
     date: '2024. január 10.',
     author: 'Németh Kálmán',
     slug: 'szuroosztályok-magyarazata',
