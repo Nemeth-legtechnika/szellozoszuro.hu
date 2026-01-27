@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import faqBgImage from '@/assets/faq-bg.jpg';
 
 const faqItems = [
   {
@@ -32,8 +33,22 @@ const faqItems = [
 
 const HomeFAQ = () => {
   return (
-    <section className="py-16 lg:py-24 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section className="relative py-16 lg:py-24 overflow-hidden">
+      {/* Faded background image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${faqBgImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+          opacity: 0.08,
+        }}
+      />
+      {/* Gradient overlay for smooth transition */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-secondary/50 via-secondary/30 to-secondary/50" />
+      
+      <div className="container relative z-10 mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 mb-4">
@@ -54,7 +69,7 @@ const HomeFAQ = () => {
               <AccordionItem 
                 key={index} 
                 value={`faq-${index}`}
-                className="bg-card rounded-xl border border-border px-6 data-[state=open]:border-cyan/30 transition-colors"
+                className="bg-card/95 backdrop-blur-sm rounded-xl border border-border px-6 data-[state=open]:border-cyan/30 transition-colors shadow-md"
               >
                 <AccordionTrigger className="text-left font-medium text-foreground hover:text-cyan py-5">
                   {item.question}
