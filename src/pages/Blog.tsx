@@ -10,7 +10,15 @@ const blogPosts = [
     id: 1,
     title: 'Miért fontos a rendszeres szűrőcsere?',
     excerpt: 'A hővisszanyerős rendszer szűrőjének időben történő cseréje kulcsfontosságú a levegőminőség és a gép élettartama szempontjából. Ebben a cikkben részletesen bemutatjuk, milyen károkat okozhat az elhanyagolt karbantartás.',
-    content: 'Lorem ipsum dolor sit amet...',
+    content: `Sokan kérdezik tőlünk, hogy mi történik, ha „csak még egy hónapot" marad a régi szűrő a gépben. Szakértőként látjuk a számokat: egy elhanyagolt szűrő nemcsak a levegő minőségét rontja, hanem komoly anyagi károkat is okozhat.
+
+**Veszélyben a hőcserélő:** A szűrő az első védelmi vonal. Ha telítődik, a finom por átjuthat rajta, és lerakódik a hőcserélő kocka lamellái között. Egy szűrő ára töredéke egy professzionális tisztításnak vagy egy új hőcserélőnek.
+
+**Emelkedő villanyszámla:** A koszos szűrő nagyobb ellenállást jelent. A gép ventilátorai keményebben dolgoznak, magasabb fordulatszámon pörögnek, ami érezhetően növeli az energiafogyasztást.
+
+**Zajterhelés:** A fojtott levegőáramlás miatt a rendszer hangosabbá válik, elvész a hővisszanyerős szellőztetés egyik legnagyobb előnye: a csendes, észrevétlen működés.
+
+**Szakértői tanácsunk:** Ellenőrizze szűrőit 3-4 havonta, és évente legalább kétszer végezzen teljes cserét!`,
     date: '2024. január 15.',
     author: 'Németh Kálmán',
     slug: 'miert-fontos-a-rendszeres-szurocsere',
