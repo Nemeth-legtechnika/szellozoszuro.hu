@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/home/Hero';
 import ValueProposition from '@/components/home/ValueProposition';
 import BrandSelector from '@/components/home/BrandSelector';
+import HomeFAQ from '@/components/home/HomeFAQ';
 import BlogPreview from '@/components/home/BlogPreview';
 import CtaBanner from '@/components/home/CtaBanner';
 import JsonLdSchema from '@/components/seo/JsonLdSchema';
@@ -25,6 +26,7 @@ const Index = () => {
         <Hero />
         <ValueProposition />
         <BrandSelector />
+        <HomeFAQ />
         <BlogPreview />
         <CtaBanner />
       </main>
