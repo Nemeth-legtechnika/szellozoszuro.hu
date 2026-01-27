@@ -1,9 +1,7 @@
-import { Mail, Phone, MapPin, Clock, Send, MessageSquare } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { Mail, Phone, MapPin, Clock, MessageSquare } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import ContactForm from '@/components/contact/ContactForm';
 
 const Contact = () => {
   const orderContact = [
@@ -87,59 +85,7 @@ const Contact = () => {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="bg-card rounded-2xl border border-border p-8">
-                <h2 className="text-xl font-semibold text-foreground mb-6">
-                  Küldj üzenetet
-                </h2>
-                
-                <form className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                        Név *
-                      </label>
-                      <Input id="name" placeholder="A neved" required />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                        E-mail *
-                      </label>
-                      <Input id="email" type="email" placeholder="email@example.com" required />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                      Telefonszám
-                    </label>
-                    <Input id="phone" type="tel" placeholder="+36 30 123 4567" />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="machine" className="block text-sm font-medium text-foreground mb-2">
-                      Gép típusa (opcionális)
-                    </label>
-                    <Input id="machine" placeholder="pl. Zehnder ComfoAir Q350" />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Üzenet *
-                    </label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Írd le kérdésedet vagy kérésedet..." 
-                      rows={5}
-                      required 
-                    />
-                  </div>
-                  
-                  <Button type="submit" className="w-full" size="lg">
-                    <Send className="w-4 h-4" />
-                    Üzenet küldése
-                  </Button>
-                </form>
-              </div>
+              <ContactForm />
 
               {/* Contact Info */}
               <div className="space-y-8">

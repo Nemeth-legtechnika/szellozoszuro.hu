@@ -81,7 +81,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link to="/aszf" className="text-dark-muted hover:text-cyan transition-colors text-sm">
                   Általános szerződési feltételek
                 </Link>
               </li>
@@ -161,7 +161,7 @@ const Footer = () => {
             <Link to="/privacy" className="text-dark-muted hover:text-cyan transition-colors text-sm">
               Adatvédelem
             </Link>
-            <Link to="/terms" className="text-dark-muted hover:text-cyan transition-colors text-sm">
+            <Link to="/aszf" className="text-dark-muted hover:text-cyan transition-colors text-sm">
               ÁSZF
             </Link>
           </div>
