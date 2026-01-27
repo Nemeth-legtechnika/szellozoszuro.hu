@@ -16,8 +16,8 @@ const About = () => {
     },
     {
       icon: MapPin,
-      title: 'Soproni központ',
-      description: 'Büszkék vagyunk helyi kötődésünkre, soproni irodánkból segítjük partnereinket az ország egész területén.',
+      title: 'Országos lefedettség',
+      description: 'Bár központunk Sopronban található, szervizpartnereink révén országos lefedettséggel rendelkezünk Magyarország egész területén.',
     },
     {
       icon: Award,
@@ -69,8 +69,9 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Rólunk | Németh Légtechnika Kft. - 15+ év szakértelem</title>
-        <meta name="description" content="Ismerje meg a Németh Légtechnika Kft. történetét: 15+ év légtechnikai tapasztalat, családi vállalkozás Sopronból. A szelloztetes.eu és hoszivattyu.online szakmai hátterével." />
+        <title>Rólunk | Németh Légtechnika Kft. - 15+ év szakértelem, országos lefedettség</title>
+        <meta name="description" content="Ismerje meg a Németh Légtechnika Kft. történetét: 15+ év légtechnikai tapasztalat, családi vállalkozás Sopronból. Országos szervizpartneri hálózattal rendelkezünk!" />
+        <meta name="keywords" content="országos szellőztető szerviz, hővisszanyerő tisztítás Magyarország, szellőztető rendszer karbantartás partnerhálózat" />
         <link rel="canonical" href="https://szellozoszuro.hu/about" />
       </Helmet>
       
@@ -288,6 +289,10 @@ const About = () => {
                 </p>
                 <p className="text-xl font-medium text-dark-foreground">
                   Saját raktárkészletünkből, szakértői támogatással biztosítjuk a friss levegőt otthonába.
+                </p>
+                <p className="mt-4 p-4 bg-cyan/10 rounded-xl border border-cyan/20">
+                  <strong className="text-cyan">🇭🇺 Országos lefedettség:</strong>{' '}
+                  <span className="text-dark-foreground">Bár központunk Sopronban található, szervizpartnereink révén országos lefedettséggel rendelkezünk. Bárhol is éljen az országban, szakértőink és partnereink készen állnak rendszere karbantartására és tisztítására.</span>
                 </p>
               </div>
             </div>

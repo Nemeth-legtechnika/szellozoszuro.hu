@@ -45,14 +45,16 @@ const Contact = () => {
   const generalInfo = [
     {
       icon: MapPin,
-      title: 'Cím',
+      title: 'Központ',
       value: 'Sopron, Magyarország',
+      subtext: 'Országos szervizpartneri hálózattal',
       href: null,
     },
     {
       icon: Clock,
       title: 'Ügyfélszolgálat',
       value: 'H-P: 8:00 - 16:00',
+      subtext: null,
       href: null,
     },
   ];
@@ -68,9 +70,15 @@ const Contact = () => {
             <h1 className="text-3xl lg:text-4xl font-bold mb-3">
               <span className="gradient-cyan-text">Kapcsolat</span>
             </h1>
-            <p className="text-dark-muted text-lg max-w-2xl">
+            <p className="text-dark-muted text-lg max-w-2xl mb-4">
               Kérdésed van a szűrőkkel kapcsolatban? Segítünk megtalálni a géped típusához illő megoldást.
             </p>
+            <div className="inline-flex items-center gap-2 bg-cyan/10 border border-cyan/30 rounded-lg px-4 py-2">
+              <MapPin className="w-4 h-4 text-cyan" />
+              <span className="text-dark-foreground text-sm">
+                <strong>Országos lefedettség:</strong> Bár központunk Sopronban található, szervizpartnereink révén az ország egész területén elérhetőek vagyunk!
+              </span>
+            </div>
           </div>
         </section>
 
@@ -194,7 +202,7 @@ const Contact = () => {
                 {/* General Info */}
                 <div>
                   <h2 className="text-xl font-semibold text-foreground mb-4">
-                    Általános információk
+                    Elérhetőség
                   </h2>
                   <div className="space-y-3">
                     {generalInfo.map((item) => (
@@ -208,6 +216,9 @@ const Contact = () => {
                         <div>
                           <p className="text-sm text-muted-foreground mb-1">{item.title}</p>
                           <p className="font-medium text-foreground">{item.value}</p>
+                          {item.subtext && (
+                            <p className="text-xs text-cyan mt-1">{item.subtext}</p>
+                          )}
                         </div>
                       </div>
                     ))}
