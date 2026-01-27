@@ -58,8 +58,8 @@ const faqData = [
     icon: Truck,
     questions: [
       {
-        question: 'Mennyi idő alatt érkezik meg a rendelésem?',
-        answer: 'A raktáron lévő termékeket munkanapokon 24 órán belül postázzuk. A szállítási idő általában 1-3 munkanap a GLS futárszolgálattal. Sürgős rendelés esetén hívj minket: +36 20 806 9072.',
+        question: 'Mikor kapom meg a rendelt szűrőket?',
+        answer: 'Raktáron lévő termékek: Munkanapokon 24 órán belül átadjuk a futárszolgálatnak. A kiszállítás a GLS-sel általában 1-3 munkanapot vesz igénybe. "Rendelésre" státuszú termékek: A szállítási idő ilyenkor 2-3 hét. Kérjük, ezt vegye figyelembe a megrendelés leadásakor! Sürgős segítség: Ha nagyon sürgős a rendelése, hívja szakértőnket közvetlenül: +36 20 806 9072!',
       },
       {
         question: 'Van lehetőség személyes átvételre?',
