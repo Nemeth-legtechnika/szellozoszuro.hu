@@ -61,7 +61,7 @@ const About = () => {
     },
     {
       name: 'Némethné Papp Eszter',
-      role: 'Ügyfélkapcsolatok',
+      role: 'Ügyfélszolgálati Asszisztens',
       description: 'Személyre szabott tanácsadás és támogatás',
     },
   ];
