@@ -20,8 +20,11 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-2">
             <img src={logo} alt="Németh Légtechnika" className="h-10 lg:h-12 w-auto" />
+            <span className="text-lg lg:text-xl font-bold text-dark-foreground">
+              szellozoszuro<span className="text-cyan">.hu</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
