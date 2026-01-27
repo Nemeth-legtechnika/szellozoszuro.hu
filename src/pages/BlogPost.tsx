@@ -7,6 +7,7 @@ import JsonLdSchema from '@/components/seo/JsonLdSchema';
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg';
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg';
+import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg';
 
 const blogPosts = [
   {
@@ -130,6 +131,59 @@ const blogPosts = [
         type: 'callout',
         title: 'Szakértői tanácsunk',
         content: 'Ha télen 40% alatti páratartalmat mér, vegye lejjebb a szellőztetés intenzitását! De ne feledje: a tiszta szűrő ilyenkor is kulcsfontosságú, hogy elkerülje a nedvesség okozta deformációt és a kellemetlen szagokat.',
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: 'A szellőztető rendszer tisztítása és a csőhálózat védelme',
+    excerpt: 'Mikor és hogyan végezd el a karbantartást? Átfogó útmutató a légcsatornák védelméhez és a szakértői tisztításhoz.',
+    heroImage: ductCleaningImage,
+    heroAlt: 'Légcsatorna belülről nézve - tisztítás előtti állapot',
+    date: '2023. december 20.',
+    author: 'Németh Kálmán',
+    slug: 'szellozteto-tisztitas-csohalozat',
+    category: 'Karbantartás',
+    readTime: '8 perc',
+    sections: [
+      {
+        type: 'intro',
+        content: 'A szűrők rendszeres cseréje mellett a teljes rendszer (gép és légcsatornák) időszakos tisztítása elengedhetetlen. Szakértői tapasztalatunk szerint legkésőbb 2 évente javasolt a hálózat teljes átvizsgálása és fertőtlenítése. Ez az az időtáv, ami felett a lerakódások már érezhetően ronthatják a rendszer hatékonyságát.',
+      },
+      {
+        type: 'heading',
+        title: 'Mikor jön el a tisztítás ideje?',
+        content: 'A szakértői ajánlás egyértelmű: legkésőbb 2 évente érdemes a teljes rendszert átvizsgáltatni és fertőtleníttetni. Ez az az időtáv, ami felett a lerakódások már érezhetően ronthatják a rendszer hatékonyságát és a beltéri levegő minőségét.',
+      },
+      {
+        type: 'heading',
+        title: 'Az elszívó csőhálózat védelme: A láthatatlan veszély',
+        content: 'Sokan csak a gépben lévő szűrőkre koncentrálnak, de a rendszer tisztasága már az elszívási pontokon (konyha, fürdő, WC) eldől. Ha a szelepcsatlakozóknál szabadon hagyjuk az elszívó oldalt, egy veszélyes láncreakció indul el:',
+      },
+      {
+        type: 'heading',
+        title: 'Lerakódás és szűkülő keresztmetszet',
+        content: 'A bejutott por, szösz és konyhai pára elkezd a cső belső falára lerakódni. Ez a réteg folyamatosan vastagszik, így a cső hasznos keresztmetszete egyre kisebb lesz.',
+      },
+      {
+        type: 'heading',
+        title: 'Ventilátor túlterhelés',
+        content: 'A szűkebb keresztmetszet miatt a gépnek sokkal nagyobb ellenállást kell legyőznie. A ventilátorok magasabb fordulatszámon, folyamatosan nagyobb terhelés mellett dolgoznak.',
+      },
+      {
+        type: 'heading',
+        title: 'Meghibásodás',
+        content: 'Ez a folyamatos erőltetés előbb-utóbb a ventilátor motorjának idő előtti, költséges meghibásodásához vezet.',
+      },
+      {
+        type: 'heading',
+        title: 'A megoldás: G2 szűrőpaplan és szakértői karbantartás',
+        content: 'A megoldás egyszerűbb, mint gondolná: a szelepcsatlakozókba helyezhető G2 szűrőpaplan (kónuszos szűrő) megállítja a szennyeződést még a belépési ponton. Ezzel nemcsak a csőhálózat tisztasága őrizhető meg, hanem a szellőztető gép élettartama is jelentősen meghosszabbítható.',
+      },
+      {
+        type: 'callout',
+        title: 'Szakértői tanácsunk',
+        content: 'A szűrőcsere (és a szelepszűrők használata) az Ön feladata, de a belső géptisztítást és a fertőtlenítést bízza szakemberre! A 2 évente elvégzett karbantartás garantálja a csendes működést és a higiénikus otthont.',
       },
     ],
   },
