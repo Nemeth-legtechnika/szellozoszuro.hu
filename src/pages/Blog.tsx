@@ -5,20 +5,15 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLdSchema from '@/components/seo/JsonLdSchema';
 
+import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg';
+
 const blogPosts = [
   {
     id: 1,
     title: 'Miért fontos a rendszeres szűrőcsere?',
     excerpt: 'A hővisszanyerős rendszer szűrőjének időben történő cseréje kulcsfontosságú a levegőminőség és a gép élettartama szempontjából. Ebben a cikkben részletesen bemutatjuk, milyen károkat okozhat az elhanyagolt karbantartás.',
-    content: `Sokan kérdezik tőlünk, hogy mi történik, ha „csak még egy hónapot" marad a régi szűrő a gépben. Szakértőként látjuk a számokat: egy elhanyagolt szűrő nemcsak a levegő minőségét rontja, hanem komoly anyagi károkat is okozhat.
-
-**Veszélyben a hőcserélő:** A szűrő az első védelmi vonal. Ha telítődik, a finom por átjuthat rajta, és lerakódik a hőcserélő kocka lamellái között. Egy szűrő ára töredéke egy professzionális tisztításnak vagy egy új hőcserélőnek.
-
-**Emelkedő villanyszámla:** A koszos szűrő nagyobb ellenállást jelent. A gép ventilátorai keményebben dolgoznak, magasabb fordulatszámon pörögnek, ami érezhetően növeli az energiafogyasztást.
-
-**Zajterhelés:** A fojtott levegőáramlás miatt a rendszer hangosabbá válik, elvész a hővisszanyerős szellőztetés egyik legnagyobb előnye: a csendes, észrevétlen működés.
-
-**Szakértői tanácsunk:** Ellenőrizze szűrőit 3-4 havonta, és évente legalább kétszer végezzen teljes cserét!`,
+    image: vaillantFilterImage,
+    imageAlt: 'Vaillant hővisszanyerő szellőztető berendezés nyitott ajtóval, F7 és G4 szűrőkkel',
     date: '2024. január 15.',
     author: 'Németh Kálmán',
     slug: 'miert-fontos-a-rendszeres-szurocsere',
@@ -118,9 +113,17 @@ const Blog = () => {
                   className="group block"
                 >
                   <article className="h-full bg-card rounded-2xl border border-border hover:border-cyan/30 transition-all duration-300 hover:shadow-card overflow-hidden flex flex-col">
-                    {/* Placeholder Image */}
-                    <div className="aspect-video bg-muted flex items-center justify-center">
-                      <div className="text-4xl opacity-20">📄</div>
+                    {/* Post Image */}
+                    <div className="aspect-video bg-muted flex items-center justify-center overflow-hidden">
+                      {post.image ? (
+                        <img 
+                          src={post.image} 
+                          alt={post.imageAlt || post.title} 
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="text-4xl opacity-20">📄</div>
+                      )}
                     </div>
                     
                     <div className="p-6 flex flex-col flex-grow">
