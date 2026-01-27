@@ -9,7 +9,7 @@ import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg';
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg';
 import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg';
-import allergySeasonHeroImage from '@/assets/blog/allergy-season-hero.jpg';
+import allergySeasonHeroImage from '@/assets/blog/allergy-season-hero-generated.jpg';
 
 const blogPosts = [
   {
