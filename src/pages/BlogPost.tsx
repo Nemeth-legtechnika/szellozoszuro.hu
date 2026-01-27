@@ -9,6 +9,7 @@ import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg';
 import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg';
 import filterClassesChartImage from '@/assets/blog/filter-classes-chart.jpg';
+import allergySeasonHeroImage from '@/assets/blog/allergy-season-hero.jpg';
 
 const blogPosts = [
   {
@@ -192,8 +193,8 @@ const blogPosts = [
     id: 5,
     title: 'Allergiaszezon: Így varázsolja pollenmentes menedékké otthonát!',
     excerpt: 'Közeleg a tavasz és a pollenszezon? Az allergiások számára az otthonuknak a biztonság szigetének kellene lennie. Megmutatjuk, hogyan érheti el ezt az F7-es szűrőkkel.',
-    heroImage: filterClassesChartImage,
-    heroAlt: 'Szűrőosztályok és hatékonyságuk táblázat - F7 pollen ellen',
+    heroImage: allergySeasonHeroImage,
+    heroAlt: 'Család költözik új otthonába - tiszta levegő és pollenmentes környezet',
     date: '2024. február 1.',
     author: 'Németh Kálmán',
     slug: 'allergiaszezon-pollenmentes-otthon',
@@ -207,7 +208,7 @@ const blogPosts = [
       {
         type: 'heading',
         title: 'Miért nem elég a sima szűrő?',
-        content: 'A legtöbb szellőztető gép alapfelszereltsége a G4-es szűrő. Ahogy a mellékelt táblázatunkban is látszik, a G4-es osztály csak a nagyobb porszöszöket és bogarakat fogja meg. A pollenszemcsék (melyek mérete gyakran 10-100 µm között van) könnyedén átjutnak rajta.',
+        content: 'A legtöbb szellőztető gép alapfelszereltsége a G4-es szűrő. A G4-es osztály csak a nagyobb porszöszöket és bogarakat fogja meg. A pollenszemcsék (melyek mérete gyakran 10-100 µm között van) könnyedén átjutnak rajta.',
       },
       {
         type: 'heading',
@@ -223,6 +224,12 @@ const blogPosts = [
         type: 'heading',
         title: 'Kövessen minket Facebookon is!',
         content: 'Folyamatosan frissülő tanácsokért, videós segítségért és aktuális akciókért látogasson el Facebook oldalunkra is. Ott közösségünk tagjaként azonnal értesülhet a legújabb technológiákról és karbantartási tippekről.',
+      },
+      {
+        type: 'image',
+        image: filterClassesChartImage,
+        imageAlt: 'Szűrőosztályok hatékonysági táblázata - a G1-től F9-ig terjedő osztályok összehasonlítása szemcseméret szerint',
+        caption: 'A szűrőosztályok és hatékonyságuk különböző szemcseméreteknél. Jól látható, hogy csak az F7-es és magasabb osztály nyújt valódi védelmet a pollen ellen.',
       },
       {
         type: 'callout',
@@ -345,6 +352,23 @@ const BlogPost = () => {
                         <p className="text-foreground font-medium">
                           {section.content}
                         </p>
+                      </div>
+                    );
+                  }
+
+                  if (section.type === 'image') {
+                    return (
+                      <div key={index} className="my-10">
+                        <img
+                          src={section.image}
+                          alt={section.imageAlt}
+                          className="w-full rounded-xl border border-border shadow-md"
+                        />
+                        {section.caption && (
+                          <p className="mt-3 text-sm text-muted-foreground text-center italic">
+                            {section.caption}
+                          </p>
+                        )}
                       </div>
                     );
                   }

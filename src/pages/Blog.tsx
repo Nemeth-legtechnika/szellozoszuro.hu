@@ -9,7 +9,7 @@ import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg';
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg';
 import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg';
-import filterClassesChartImage from '@/assets/blog/filter-classes-chart.jpg';
+import allergySeasonHeroImage from '@/assets/blog/allergy-season-hero.jpg';
 
 const blogPosts = [
   {
@@ -64,8 +64,8 @@ const blogPosts = [
     id: 5,
     title: 'Allergiaszezon: Így varázsolja pollenmentes menedékké otthonát!',
     excerpt: 'Közeleg a tavasz és a pollenszezon? Az allergiások számára az otthonuknak a biztonság szigetének kellene lennie. Megmutatjuk, hogyan érheti el ezt az F7-es szűrőkkel.',
-    image: filterClassesChartImage,
-    imageAlt: 'Szűrőosztályok és hatékonyságuk táblázat - F7 pollen ellen',
+    image: allergySeasonHeroImage,
+    imageAlt: 'Család költözik új otthonába - tiszta levegő és pollenmentes környezet',
     date: '2024. február 1.',
     author: 'Németh Kálmán',
     slug: 'allergiaszezon-pollenmentes-otthon',
