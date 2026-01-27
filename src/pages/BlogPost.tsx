@@ -8,6 +8,7 @@ import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg';
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg';
 import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg';
+import filterClassesChartImage from '@/assets/blog/filter-classes-chart.jpg';
 
 const blogPosts = [
   {
@@ -184,6 +185,49 @@ const blogPosts = [
         type: 'callout',
         title: 'Szakértői tanácsunk',
         content: 'A szűrőcsere (és a szelepszűrők használata) az Ön feladata, de a belső géptisztítást és a fertőtlenítést bízza szakemberre! A 2 évente elvégzett karbantartás garantálja a csendes működést és a higiénikus otthont.',
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: 'Allergiaszezon: Így varázsolja pollenmentes menedékké otthonát!',
+    excerpt: 'Közeleg a tavasz és a pollenszezon? Az allergiások számára az otthonuknak a biztonság szigetének kellene lennie. Megmutatjuk, hogyan érheti el ezt az F7-es szűrőkkel.',
+    heroImage: filterClassesChartImage,
+    heroAlt: 'Szűrőosztályok és hatékonyságuk táblázat - F7 pollen ellen',
+    date: '2024. február 1.',
+    author: 'Németh Kálmán',
+    slug: 'allergiaszezon-pollenmentes-otthon',
+    category: 'Egészség',
+    readTime: '6 perc',
+    sections: [
+      {
+        type: 'intro',
+        content: 'Közeleg a tavasz, és vele együtt a pollenszezon is? Az allergiások számára az otthonuknak a biztonság szigetének kellene lennie. A szelloztetes.eu szakmai tapasztalatai alapján mutatjuk be, hogyan érheti ezt el.',
+      },
+      {
+        type: 'heading',
+        title: 'Miért nem elég a sima szűrő?',
+        content: 'A legtöbb szellőztető gép alapfelszereltsége a G4-es szűrő. Ahogy a mellékelt táblázatunkban is látszik, a G4-es osztály csak a nagyobb porszöszöket és bogarakat fogja meg. A pollenszemcsék (melyek mérete gyakran 10-100 µm között van) könnyedén átjutnak rajta.',
+      },
+      {
+        type: 'heading',
+        title: 'Az F7-es szűrő: A pollenmentes otthon záloga',
+        content: 'A megoldás az F7-es (ePM1) finompor-szűrő alkalmazása a friss levegő ágban.\n\nHatékonyság: Ez a szűrőosztály már a 0,3-1 µm közötti részecskék jelentős részét is megfogja, a pollent pedig szinte 100%-os hatékonysággal szűri ki.\n\nÉletminőség: Nincs többé tüsszögés, vörös szemek és éjszakai nehézlégzés a saját lakásában.',
+      },
+      {
+        type: 'heading',
+        title: 'Szakértői tippek az allergiaszezonra',
+        content: '• Időzített csere: Ne várja meg a szezon csúcsát! Cserélje le szűrőit már február végén vagy március elején.\n\n• Szelepvédelem: Ne felejtse el az elszívó oldali szelepek védelmét sem (G2 kónuszos szűrőkkel), hogy a rendszer minden pontja tiszta maradjon.\n\n• Ellenőrzés: Ha nagyon magas a porkoncentráció (pl. útépítés vagy intenzív virágzás a környéken), havonta nézzen rá az F7-es szűrő állapotára!',
+      },
+      {
+        type: 'heading',
+        title: 'Kövessen minket Facebookon is!',
+        content: 'Folyamatosan frissülő tanácsokért, videós segítségért és aktuális akciókért látogasson el Facebook oldalunkra is. Ott közösségünk tagjaként azonnal értesülhet a legújabb technológiákról és karbantartási tippekről.',
+      },
+      {
+        type: 'callout',
+        title: 'Készen áll az allergiaszezonra?',
+        content: 'Vásároljon F7-es pollenszűrőt a gépéhez, és élvezze a pollenmentes, tiszta levegőt otthonában! Webshopunkban megtalálja a legtöbb gyártó OEM és utángyártott szűrőit is.',
       },
     ],
   },

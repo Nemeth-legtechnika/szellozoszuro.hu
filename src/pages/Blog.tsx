@@ -9,6 +9,7 @@ import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg';
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg';
 import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg';
+import filterClassesChartImage from '@/assets/blog/filter-classes-chart.jpg';
 
 const blogPosts = [
   {
@@ -61,14 +62,15 @@ const blogPosts = [
   },
   {
     id: 5,
-    title: 'Allergiaszezon: Hogyan védd meg otthonodat?',
-    excerpt: 'A pollenszezonban különösen fontos a megfelelő levegőminőség. Íme a legjobb tippek allergiásoknak a szűrőválasztástól a karbantartásig.',
-    content: 'Lorem ipsum dolor sit amet...',
-    date: '2023. december 15.',
+    title: 'Allergiaszezon: Így varázsolja pollenmentes menedékké otthonát!',
+    excerpt: 'Közeleg a tavasz és a pollenszezon? Az allergiások számára az otthonuknak a biztonság szigetének kellene lennie. Megmutatjuk, hogyan érheti el ezt az F7-es szűrőkkel.',
+    image: filterClassesChartImage,
+    imageAlt: 'Szűrőosztályok és hatékonyságuk táblázat - F7 pollen ellen',
+    date: '2024. február 1.',
     author: 'Németh Kálmán',
-    slug: 'allergiaszezon-vedelem',
+    slug: 'allergiaszezon-pollenmentes-otthon',
     category: 'Egészség',
-    readTime: '8 perc',
+    readTime: '6 perc',
   },
 ];
 
