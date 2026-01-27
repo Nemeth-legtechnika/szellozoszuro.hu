@@ -13,6 +13,10 @@ const faqItems = [
     answer: 'A pontos típusválasztáshoz szükséges a gép modellszáma (pl. Vaillant recoVAIR 275, Helios KWL EC 300). Ha bizonytalan vagy, keress minket a +36 20 323 8172 számon, és segítünk azonosítani a megfelelő szűrőt.',
   },
   {
+    question: 'Mikor kapom meg a rendelt szűrőket?',
+    answer: 'Raktáron lévő termékek: Munkanapokon 24 órán belül átadjuk a futárszolgálatnak. A kiszállítás a GLS-sel általában 1-3 munkanapot vesz igénybe. "Rendelésre" státuszú termékek: A szállítási idő 2-3 hét. Sürgős esetben hívj: +36 20 806 9072!',
+  },
+  {
     question: 'Mi a különbség a G4 és az F7 szűrőosztály között?',
     answer: 'A G4 durva porszűrő a nagyobb részecskékhez (por, szőr). Az F7 finomszűrő a kisebb részecskéket is kiszűri (finom por, pollenek, baktériumok). Allergiásoknak az F7 kifejezetten ajánlott a belépő levegő oldalán.',
   },
@@ -23,10 +27,6 @@ const faqItems = [
   {
     question: 'Használhatok utángyártott szűrőt a gyári helyett?',
     answer: 'Igen, az általunk kínált utángyártott szűrők ugyanolyan méretpontossággal és szűrési hatékonysággal rendelkeznek. Német prémium alapanyagból (Sandler AG) készülnek, ISO 16890 tanúsítvánnyal.',
-  },
-  {
-    question: 'Mennyi idő alatt érkezik meg a rendelésem?',
-    answer: 'Raktáron lévő termékeket munkanapokon 24 órán belül postázzuk. A szállítási idő általában 1-3 munkanap a GLS futárszolgálattal. Sürgős rendelés esetén hívj: +36 20 806 9072.',
   },
 ];
 

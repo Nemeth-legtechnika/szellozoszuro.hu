@@ -1,4 +1,4 @@
-import { ExternalLink, Filter, ArrowRight } from 'lucide-react';
+import { ExternalLink, Filter, ArrowRight, Truck, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -272,12 +272,15 @@ const Shop = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-cyan/10 flex items-center justify-center">
-                  <span className="text-2xl">🚚</span>
+                <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-green-500/10 flex items-center justify-center">
+                  <Truck className="w-6 h-6 text-green-500" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Gyors szállítás</h3>
+                <h3 className="font-semibold text-foreground mb-2 flex items-center justify-center gap-2">
+                  <Zap className="w-4 h-4 text-cyan" />
+                  Gyors szállítás
+                </h3>
                 <p className="text-muted-foreground text-sm">
-                  Készletről azonnal, egyéb termékek 2-3 héten belül
+                  Raktárról <strong className="text-foreground">24 órán belül</strong> postázzuk, GLS-sel 1-3 nap
                 </p>
               </div>
               <div className="text-center">
