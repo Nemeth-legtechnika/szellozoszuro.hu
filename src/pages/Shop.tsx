@@ -2,6 +2,7 @@ import { ExternalLink, Filter, ArrowRight, Truck, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import shopBrandsBg from '@/assets/shop-brands-bg.jpg';
 
 // Brand data with external webshop links
 const brands = [
@@ -172,8 +173,22 @@ const Shop = () => {
         </section>
 
         {/* Brands Section */}
-        <section className="py-8 lg:py-12">
-          <div className="container mx-auto px-4">
+        <section className="relative py-8 lg:py-12 overflow-hidden">
+          {/* Background image */}
+          <div 
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: `url(${shopBrandsBg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundAttachment: 'fixed',
+              opacity: 0.25,
+            }}
+          />
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 z-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
+          
+          <div className="container relative z-10 mx-auto px-4">
             <div className="mb-8">
               <h2 className="text-2xl font-bold text-foreground mb-2">Márkák szerint</h2>
               <p className="text-muted-foreground">
