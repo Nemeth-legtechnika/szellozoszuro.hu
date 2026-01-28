@@ -59,7 +59,7 @@ const HomeFAQ = () => {
               Gyakran ismételt{' '}
               <span className="gradient-cyan-text">kérdések</span>
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-foreground/80 text-lg font-medium">
               Válaszok a leggyakrabban felmerülő kérdésekre a szűrőválasztásról és cseréről.
             </p>
           </div>
@@ -74,7 +74,7 @@ const HomeFAQ = () => {
                 <AccordionTrigger className="text-left font-medium text-foreground hover:text-cyan py-5">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                <AccordionContent className="text-foreground/75 leading-relaxed pb-5 font-medium">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
