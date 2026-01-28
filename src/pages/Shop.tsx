@@ -208,7 +208,7 @@ const Shop = () => {
                       <div className="w-12 h-12 rounded-xl bg-cyan/10 flex items-center justify-center">
                         <Filter className="w-6 h-6 text-cyan" />
                       </div>
-                      <span className="text-xs text-muted-foreground">
+                      <span className="text-xs text-cyan font-medium">
                         {brand.productCount} termék
                       </span>
                     </div>
