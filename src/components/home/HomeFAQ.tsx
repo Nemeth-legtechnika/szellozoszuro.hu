@@ -42,7 +42,7 @@ const HomeFAQ = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
-          opacity: 0.18,
+          opacity: 0.25,
         }}
       />
       {/* Gradient overlay for smooth transition */}
