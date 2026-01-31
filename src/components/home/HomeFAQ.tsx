@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ArrowRight, HelpCircle } from 'lucide-react';
 import {
   Accordion,
@@ -8,30 +9,33 @@ import {
 } from '@/components/ui/accordion';
 import faqBgImage from '@/assets/faq-bg.jpg';
 
-const faqItems = [
-  {
-    question: 'Milyen szűrő való a gépembe?',
-    answer: 'A pontos típusválasztáshoz szükséges a gép modellszáma (pl. Vaillant recoVAIR 275, Helios KWL EC 300). Ha bizonytalan vagy, keress minket a +36 20 323 8172 számon, és segítünk azonosítani a megfelelő szűrőt.',
-  },
-  {
-    question: 'Mikor kapom meg a rendelt szűrőket?',
-    answer: 'Raktáron lévő termékek: Munkanapokon 24 órán belül átadjuk a futárszolgálatnak. A kiszállítás a GLS-sel általában 1-3 munkanapot vesz igénybe. "Rendelésre" státuszú termékek: A szállítási idő 2-3 hét. Sürgős esetben hívj: +36 20 806 9072!',
-  },
-  {
-    question: 'Mi a különbség a G4 és az F7 szűrőosztály között?',
-    answer: 'A G4 durva porszűrő a nagyobb részecskékhez (por, szőr). Az F7 finomszűrő a kisebb részecskéket is kiszűri (finom por, pollenek, baktériumok). Allergiásoknak az F7 kifejezetten ajánlott a belépő levegő oldalán.',
-  },
-  {
-    question: 'Milyen gyakran kell szűrőt cserélni?',
-    answer: 'Általában 3-6 havonta, de ez függ a környezettől. Városi, poros környezetben vagy allergiaszezonban gyakoribb csere szükséges. A rendszeres csere biztosítja a hatékony működést és megóvja a hővisszanyerő cellát.',
-  },
-  {
-    question: 'Használhatok utángyártott szűrőt a gyári helyett?',
-    answer: 'Igen, az általunk kínált utángyártott szűrők ugyanolyan méretpontossággal és szűrési hatékonysággal rendelkeznek. Német prémium alapanyagból (Sandler AG) készülnek, ISO 16890 tanúsítvánnyal.',
-  },
-];
-
 const HomeFAQ = () => {
+  const { t, i18n } = useTranslation();
+  const langPrefix = i18n.language === 'de' ? '/de' : '';
+
+  const faqItems = [
+    {
+      questionKey: 'faq.items.filterType.question',
+      answerKey: 'faq.items.filterType.answer',
+    },
+    {
+      questionKey: 'faq.items.delivery.question',
+      answerKey: 'faq.items.delivery.answer',
+    },
+    {
+      questionKey: 'faq.items.filterClass.question',
+      answerKey: 'faq.items.filterClass.answer',
+    },
+    {
+      questionKey: 'faq.items.replacement.question',
+      answerKey: 'faq.items.replacement.answer',
+    },
+    {
+      questionKey: 'faq.items.aftermarket.question',
+      answerKey: 'faq.items.aftermarket.answer',
+    },
+  ];
+
   return (
     <section className="relative py-16 lg:py-24 overflow-hidden">
       {/* Faded background image */}
@@ -53,14 +57,14 @@ const HomeFAQ = () => {
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 mb-4">
               <HelpCircle className="w-6 h-6 text-cyan" />
-              <span className="text-cyan font-medium text-sm uppercase tracking-wider">GYIK</span>
+              <span className="text-cyan font-medium text-sm uppercase tracking-wider">{t('faq.badge')}</span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Gyakran ismételt{' '}
-              <span className="gradient-cyan-text">kérdések</span>
+              {t('faq.title')}{' '}
+              <span className="gradient-cyan-text">{t('faq.titleHighlight')}</span>
             </h2>
             <p className="text-foreground/80 text-lg font-medium">
-              Válaszok a leggyakrabban felmerülő kérdésekre a szűrőválasztásról és cseréről.
+              {t('faq.description')}
             </p>
           </div>
 
@@ -72,10 +76,10 @@ const HomeFAQ = () => {
                 className="bg-card/95 backdrop-blur-sm rounded-xl border border-border px-6 data-[state=open]:border-cyan/30 transition-colors shadow-md"
               >
                 <AccordionTrigger className="text-left font-medium text-foreground hover:text-cyan py-5">
-                  {item.question}
+                  {t(item.questionKey)}
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/75 leading-relaxed pb-5 font-medium">
-                  {item.answer}
+                  {t(item.answerKey)}
                 </AccordionContent>
               </AccordionItem>
             ))}
@@ -83,10 +87,10 @@ const HomeFAQ = () => {
 
           <div className="text-center mt-8">
             <Link 
-              to="/gyik" 
+              to={`${langPrefix}/gyik`} 
               className="inline-flex items-center gap-2 text-cyan hover:text-cyan-light transition-colors font-medium"
             >
-              Összes kérdés megtekintése
+              {t('faq.viewAll')}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

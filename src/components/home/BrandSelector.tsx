@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { ArrowRight } from 'lucide-react';
 import brandSelectorBg from '@/assets/brand-selector-bg.jpg';
 
@@ -17,6 +18,8 @@ const brands = [
 ];
 
 const BrandSelector = () => {
+  const { t } = useTranslation();
+
   return (
     <section 
       className="py-20 lg:py-28 relative overflow-hidden"
@@ -33,11 +36,11 @@ const BrandSelector = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-dark-foreground">
-            Válaszd ki a{' '}
-            <span className="gradient-cyan-text">márkát</span>
+            {t('brandSelector.title')}{' '}
+            <span className="gradient-cyan-text">{t('brandSelector.titleHighlight')}</span>
           </h2>
           <p className="text-dark-muted text-lg">
-            Szakértőink által tesztelt, 100% kompatibilis utángyártott szűrők a piacvezető gyártók gépeihez.
+            {t('brandSelector.description')}
           </p>
         </div>
 
@@ -65,7 +68,7 @@ const BrandSelector = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-cyan hover:text-cyan-light transition-colors font-medium"
           >
-            Összes utángyártott szűrő
+            {t('brandSelector.viewProducts')}
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

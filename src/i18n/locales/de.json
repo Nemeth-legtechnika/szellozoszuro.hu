@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "filters": "Filter",
+    "knowledge": "Wissen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "shopFilters": "Filter",
+    "buyFilters": "Filter kaufen"
+  },
+  "hero": {
+    "badge": "Qualitätsfilter aus zuverlässiger Quelle",
+    "title": "Saubere Luft,",
+    "titleHighlight": "gesundes Zuhause",
+    "description": "Premium-Ersatzfilter für Wohnraumlüftungsanlagen mit Wärmerückgewinnung. Für Vaillant, Helios, Bosch, Wolf und weitere Marken – als Originalfilter oder hochwertige Alternativprodukte.",
+    "browseFilters": "Filter durchsuchen",
+    "knowledgeBase": "Wissensdatenbank",
+    "qualityGuarantee": "Qualitätsgarantie",
+    "premiumMaterials": "Premium-Materialien",
+    "fastShipping": "Schneller Versand",
+    "shippingTime": "Auf Lager oder 2-3 Wochen",
+    "expertise": "Fachkompetenz",
+    "yearsExperience": "15+ Jahre Erfahrung"
+  },
+  "valueProps": {
+    "title": "Warum",
+    "titleHighlight": "Németh Légtechnika?",
+    "description": "Mit über 15 Jahren Erfahrung in der Lüftungstechnik helfen wir Ihnen mit fachkundiger Beratung, den perfekten Filter zu finden.",
+    "cleanAir": {
+      "title": "Jeden Tag saubere Luft",
+      "description": "Regelmäßig gewechselte Filter sorgen dafür, dass Ihre Familie stets frische, staubfreie Luft atmet."
+    },
+    "protection": {
+      "title": "Schutz Ihrer Anlage",
+      "description": "Der richtige Filter schützt das Wärmerückgewinnungsgerät vor Verschmutzung und verlängert seine Lebensdauer."
+    },
+    "options": {
+      "title": "Original- und Alternativfilter",
+      "description": "Wählen Sie zwischen Original-Herstellerfiltern und hochwertigen, kostengünstigen Alternativen."
+    },
+    "easyOrder": {
+      "title": "Einfache Bestellung",
+      "description": "Finden Sie Ihren Gerätetyp, wählen Sie die Filterklasse und bestellen Sie mit wenigen Klicks."
+    }
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Häufig gestellte",
+    "titleHighlight": "Fragen",
+    "description": "Antworten auf die häufigsten Fragen zur Filterauswahl und zum Filterwechsel.",
+    "viewAll": "Alle Fragen anzeigen",
+    "items": {
+      "filterType": {
+        "question": "Welcher Filter passt in mein Gerät?",
+        "answer": "Für die genaue Typauswahl benötigen wir die Modellnummer Ihres Gerätes (z.B. Vaillant recoVAIR 275, Helios KWL EC 300). Bei Unsicherheiten kontaktieren Sie uns unter +36 20 323 8172, und wir helfen Ihnen bei der Identifizierung des richtigen Filters."
+      },
+      "delivery": {
+        "question": "Wann erhalte ich die bestellten Filter?",
+        "answer": "Lagerware: An Werktagen übergeben wir die Ware innerhalb von 24 Stunden an den Versanddienstleister. Die Lieferung mit GLS dauert in der Regel 1-3 Werktage. Artikel mit Status \"Auf Bestellung\": Die Lieferzeit beträgt 2-3 Wochen. Bei dringenden Fällen rufen Sie an: +36 20 806 9072!"
+      },
+      "filterClass": {
+        "question": "Was ist der Unterschied zwischen G4 und F7 Filterklasse?",
+        "answer": "G4 ist ein Grobstaubfilter für größere Partikel (Staub, Haare). F7 ist ein Feinstaubfilter, der auch kleinere Partikel (Feinstaub, Pollen, Bakterien) filtert. Für Allergiker ist F7 auf der Zuluftseite besonders empfehlenswert."
+      },
+      "replacement": {
+        "question": "Wie oft sollten Filter gewechselt werden?",
+        "answer": "In der Regel alle 3-6 Monate, abhängig von der Umgebung. In städtischen, staubigen Umgebungen oder während der Allergiesaison ist ein häufigerer Wechsel erforderlich. Regelmäßiger Wechsel gewährleistet effizienten Betrieb und schützt den Wärmetauscher."
+      },
+      "aftermarket": {
+        "question": "Kann ich Alternativfilter statt Originalfilter verwenden?",
+        "answer": "Ja, die von uns angebotenen Alternativfilter haben die gleiche Maßgenauigkeit und Filtereffizienz. Sie werden aus deutschem Premium-Material (Sandler AG) hergestellt und sind ISO 16890 zertifiziert."
+      }
+    }
+  },
+  "cta": {
+    "title": "Bereit für frische Luft?",
+    "description": "Durchstöbern Sie unser Angebot und finden Sie den perfekten Filter für Ihre Lüftungsanlage.",
+    "button": "Filter ansehen"
+  },
+  "blog": {
+    "badge": "Wissensdatenbank",
+    "title": "Nützliche",
+    "titleHighlight": "Artikel",
+    "description": "Erfahren Sie mehr über die Funktionsweise und Wartung von Lüftungsanlagen in unseren Fachartikeln.",
+    "viewAll": "Alle Artikel anzeigen"
+  },
+  "brandSelector": {
+    "title": "Auswahl nach",
+    "titleHighlight": "Marke",
+    "description": "Klicken Sie auf Ihre Gerätemarke und finden Sie kompatible Filter.",
+    "viewProducts": "Produkte anzeigen"
+  },
+  "footer": {
+    "description": "Premium-Qualitätsfilter für Wohnraumlüftungsanlagen mit Wärmerückgewinnung. Fachkundige Beratung und schneller Versand.",
+    "quickLinks": "Schnelllinks",
+    "legal": "Rechtliches",
+    "terms": "AGB",
+    "privacy": "Datenschutz",
+    "shipping": "Versand",
+    "contact": "Kontakt",
+    "allRights": "Alle Rechte vorbehalten."
+  }
+}

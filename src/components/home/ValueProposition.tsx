@@ -1,47 +1,49 @@
+import { useTranslation } from 'react-i18next';
 import { CheckCircle2, Wind, Wrench, Clock } from 'lucide-react';
 
-const features = [
-  {
-    icon: Wind,
-    title: 'Tiszta levegő mindennap',
-    description: 'A rendszeresen cserélt szűrők biztosítják, hogy családod mindig friss, pormentes levegőt lélegezhessen be.',
-  },
-  {
-    icon: Wrench,
-    title: 'Géped védelme',
-    description: 'A megfelelő szűrő megvédi a hővisszanyerő egységet a szennyeződésektől, meghosszabbítva élettartamát.',
-  },
-  {
-    icon: CheckCircle2,
-    title: 'Gyári és utángyártott opciók',
-    description: 'Válassz az eredeti gyártói szűrők és a kiváló minőségű, költséghatékony alternatívák közül.',
-  },
-  {
-    icon: Clock,
-    title: 'Egyszerű rendelés',
-    description: 'Keresd meg géped típusát, válaszd ki a szűrőosztályt, és rendeld meg pár kattintással.',
-  },
-];
-
 const ValueProposition = () => {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      icon: Wind,
+      titleKey: 'valueProps.cleanAir.title',
+      descriptionKey: 'valueProps.cleanAir.description',
+    },
+    {
+      icon: Wrench,
+      titleKey: 'valueProps.protection.title',
+      descriptionKey: 'valueProps.protection.description',
+    },
+    {
+      icon: CheckCircle2,
+      titleKey: 'valueProps.options.title',
+      descriptionKey: 'valueProps.options.description',
+    },
+    {
+      icon: Clock,
+      titleKey: 'valueProps.easyOrder.title',
+      descriptionKey: 'valueProps.easyOrder.description',
+    },
+  ];
+
   return (
     <section className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Miért válaszd a{' '}
-            <span className="gradient-cyan-text">Németh Légtechnikát?</span>
+            {t('valueProps.title')}{' '}
+            <span className="gradient-cyan-text">{t('valueProps.titleHighlight')}</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Több mint 15 év tapasztalattal a légtechnika területén, 
-            szakértő tanácsadással segítünk megtalálni a tökéletes szűrőt.
+            {t('valueProps.description')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div 
-              key={feature.title}
+              key={feature.titleKey}
               className="group p-6 rounded-2xl bg-card border-2 border-border hover:border-cyan hover:bg-white hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] transition-all duration-[250ms] ease-out"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -49,10 +51,10 @@ const ValueProposition = () => {
                 <feature.icon className="w-7 h-7 text-cyan transition-transform duration-[250ms] ease-out group-hover:scale-110" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">
-                {feature.title}
+                {t(feature.titleKey)}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                {feature.description}
+                {t(feature.descriptionKey)}
               </p>
             </div>
           ))}
