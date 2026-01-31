@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Truck, Clock, Package, Phone, ArrowRight, Zap, Calendar } from 'lucide-react';
@@ -6,12 +7,14 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 const Shipping = () => {
+  const { t, i18n } = useTranslation();
+  const langPrefix = i18n.language === 'de' ? '/de' : '';
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Szállítási információk | szellozoszuro.hu - Gyors kiszállítás</title>
-        <meta name="description" content="Raktáron lévő szűrők 24 órán belül postázva! GLS futárszolgálattal 1-3 munkanap. Rendelésre termékek 2-3 hét. Ingyenes szakértői tanácsadás: +36 20 806 9072." />
-        <link rel="canonical" href="https://szellozoszuro.hu/shipping" />
+        <title>{t('shipping.pageTitle')} | szellozoszuro.hu</title>
+        <meta name="description" content={t('shipping.pageDescription')} />
       </Helmet>
       
       <Header />
@@ -23,12 +26,11 @@ const Shipping = () => {
             <div className="flex items-center gap-3 mb-4">
               <Truck className="w-8 h-8 text-cyan" />
               <h1 className="text-3xl lg:text-4xl font-bold">
-                <span className="gradient-cyan-text">Szállítási</span> információk
+                <span className="gradient-cyan-text">{t('shipping.pageTitle')}</span>
               </h1>
             </div>
             <p className="text-dark-muted text-lg max-w-2xl">
-              Gyors és megbízható kiszállítás az egész országban. Raktárkészletről azonnal, 
-              rendelésre termékek megbízható határidővel.
+              {t('shipping.pageDescription')}
             </p>
           </div>
         </section>
@@ -45,11 +47,10 @@ const Shipping = () => {
                   </div>
                   <div>
                     <h2 className="text-xl lg:text-2xl font-bold text-foreground mb-2">
-                      Gyors kiszállítás raktárról
+                      {t('shipping.fastDeliveryTitle')}
                     </h2>
                     <p className="text-muted-foreground text-lg">
-                      A <strong className="text-cyan">raktáron lévő termékeket munkanapokon 24 órán belül</strong> átadjuk 
-                      a futárszolgálatnak. Ez azt jelenti, hogy a legtöbb esetben 1-3 munkanapon belül megérkezik a csomagod!
+                      {t('shipping.fastDeliveryText')}
                     </p>
                   </div>
                 </div>
@@ -66,25 +67,25 @@ const Shipping = () => {
                     <div>
                       <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 text-green-600 text-xs font-semibold rounded-full">
                         <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                        Raktáron
+                        {t('shipping.inStock')}
                       </span>
                     </div>
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-3">
-                    Raktáron lévő termékek
+                    {t('shipping.inStockTitle')}
                   </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <Clock className="w-4 h-4 text-cyan mt-1 flex-shrink-0" />
-                      <span>Munkanapokon <strong className="text-foreground">24 órán belül</strong> átadjuk a futárnak</span>
+                      <span>{t('shipping.inStockItem1')}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Truck className="w-4 h-4 text-cyan mt-1 flex-shrink-0" />
-                      <span>GLS futárszolgálattal <strong className="text-foreground">1-3 munkanap</strong></span>
+                      <span>{t('shipping.inStockItem2')}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Zap className="w-4 h-4 text-cyan mt-1 flex-shrink-0" />
-                      <span>Azonnali online fizetéssel gyorsabb feldolgozás</span>
+                      <span>{t('shipping.inStockItem3')}</span>
                     </li>
                   </ul>
                 </div>
@@ -97,25 +98,25 @@ const Shipping = () => {
                     </div>
                     <div>
                       <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-500/10 text-amber-600 text-xs font-semibold rounded-full">
-                        Rendelésre
+                        {t('shipping.onOrder')}
                       </span>
                     </div>
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-3">
-                    "Rendelésre" státuszú termékek
+                    {t('shipping.onOrderTitle')}
                   </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <Clock className="w-4 h-4 text-amber-500 mt-1 flex-shrink-0" />
-                      <span>Szállítási idő: <strong className="text-foreground">2-3 hét</strong></span>
+                      <span>{t('shipping.onOrderItem1')}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Package className="w-4 h-4 text-amber-500 mt-1 flex-shrink-0" />
-                      <span>Gyártótól rendeljük meg a terméket</span>
+                      <span>{t('shipping.onOrderItem2')}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <ArrowRight className="w-4 h-4 text-amber-500 mt-1 flex-shrink-0" />
-                      <span>Kérjük, vedd figyelembe a rendelés leadásakor!</span>
+                      <span>{t('shipping.onOrderItem3')}</span>
                     </li>
                   </ul>
                 </div>
@@ -124,7 +125,7 @@ const Shipping = () => {
               {/* Delivery Partner */}
               <div className="bg-muted rounded-2xl p-6 mb-10">
                 <h3 className="text-lg font-semibold text-foreground mb-4">
-                  Szállítási partner
+                  {t('shipping.deliveryPartner')}
                 </h3>
                 <div className="flex items-center gap-4">
                   <div className="w-16 h-16 rounded-xl bg-card flex items-center justify-center border border-border">
@@ -133,7 +134,7 @@ const Shipping = () => {
                   <div>
                     <p className="font-medium text-foreground">GLS General Logistics Systems</p>
                     <p className="text-muted-foreground text-sm">
-                      Megbízható futárszolgálat csomagkövetéssel az egész országban
+                      {t('shipping.deliveryPartnerDescription')}
                     </p>
                   </div>
                 </div>
@@ -142,7 +143,7 @@ const Shipping = () => {
               {/* Payment Methods */}
               <div className="bg-card rounded-2xl border border-border p-6 mb-10">
                 <h3 className="text-lg font-semibold text-foreground mb-4">
-                  Fizetési lehetőségek
+                  {t('shipping.paymentMethods')}
                 </h3>
                 <div className="grid gap-4 sm:grid-cols-3">
                   <div className="flex items-center gap-3">
@@ -150,8 +151,8 @@ const Shipping = () => {
                       <span className="text-lg">💳</span>
                     </div>
                     <div>
-                      <p className="font-medium text-foreground text-sm">Bankkártya</p>
-                      <p className="text-muted-foreground text-xs">Azonnali feldolgozás</p>
+                      <p className="font-medium text-foreground text-sm">{t('shipping.cardPayment')}</p>
+                      <p className="text-muted-foreground text-xs">{t('shipping.cardPaymentDescription')}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -159,8 +160,8 @@ const Shipping = () => {
                       <span className="text-lg">🏦</span>
                     </div>
                     <div>
-                      <p className="font-medium text-foreground text-sm">Átutalás</p>
-                      <p className="text-muted-foreground text-xs">Előre fizetés</p>
+                      <p className="font-medium text-foreground text-sm">{t('shipping.bankTransfer')}</p>
+                      <p className="text-muted-foreground text-xs">{t('shipping.bankTransferDescription')}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -168,8 +169,8 @@ const Shipping = () => {
                       <span className="text-lg">📦</span>
                     </div>
                     <div>
-                      <p className="font-medium text-foreground text-sm">Utánvét</p>
-                      <p className="text-muted-foreground text-xs">Fizetés átvételkor</p>
+                      <p className="font-medium text-foreground text-sm">{t('shipping.cashOnDelivery')}</p>
+                      <p className="text-muted-foreground text-xs">{t('shipping.cashOnDeliveryDescription')}</p>
                     </div>
                   </div>
                 </div>
@@ -178,10 +179,10 @@ const Shipping = () => {
               {/* Personal Pickup */}
               <div className="bg-secondary/50 rounded-2xl p-6">
                 <h3 className="text-lg font-semibold text-foreground mb-3">
-                  Személyes átvétel
+                  {t('shipping.personalPickup')}
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Soproni telephelyünkön lehetőség van személyes átvételre, előzetes egyeztetés után.
+                  {t('shipping.personalPickupText')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button variant="outline" size="sm" asChild>
@@ -191,8 +192,8 @@ const Shipping = () => {
                     </a>
                   </Button>
                   <Button variant="ghost" size="sm" asChild>
-                    <Link to="/contact" className="gap-2">
-                      Kapcsolatfelvétel
+                    <Link to={`${langPrefix}/contact`} className="gap-2">
+                      {t('nav.contact')}
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                   </Button>
@@ -208,11 +209,10 @@ const Shipping = () => {
             <div className="max-w-2xl mx-auto text-center">
               <Phone className="w-12 h-12 text-cyan mx-auto mb-6" />
               <h2 className="text-2xl lg:text-3xl font-bold mb-4">
-                Sürgős a rendelésed?
+                {t('shipping.urgentOrder')}
               </h2>
               <p className="text-dark-muted text-lg mb-8">
-                Ha nagyon sürgős a szűrőcsere, hívd szakértőnket közvetlenül! 
-                Segítünk a leggyorsabb megoldást megtalálni.
+                {t('shipping.urgentOrderText')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="lg" asChild>
@@ -228,7 +228,7 @@ const Shipping = () => {
                     rel="noopener noreferrer"
                     className="gap-2"
                   >
-                    Webshop megnyitása
+                    {t('shop.openWebshop')}
                     <ArrowRight className="w-5 h-5" />
                   </a>
                 </Button>

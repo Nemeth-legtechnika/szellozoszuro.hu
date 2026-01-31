@@ -99,5 +99,321 @@
     "shipping": "Versand",
     "contact": "Kontakt",
     "allRights": "Alle Rechte vorbehalten."
+  },
+  "shop": {
+    "pageTitle": "Filter für Lüftungsanlagen mit Wärmerückgewinnung",
+    "pageDescription": "Wählen Sie aus unseren Marken und finden Sie den passenden Filter für Ihren Gerätetyp in unserem Webshop.",
+    "categories": {
+      "oem": {
+        "title": "Originalfilter",
+        "description": "Originale Herstellerqualität, volle Garantie"
+      },
+      "aftermarket": {
+        "title": "Alternativfilter",
+        "description": "Ausgezeichnetes Preis-Leistungs-Verhältnis, Premium-Materialien"
+      },
+      "filterHouse": {
+        "title": "Filtergehäuse",
+        "description": "Kastenförmige Luftfilter für Rohrleitungen"
+      }
+    },
+    "byBrand": "Nach Marke",
+    "byBrandDescription": "Klicken Sie auf die Marke, um passende Filter in unserem Webshop anzuzeigen",
+    "products": "Produkte",
+    "oemFilters": "Originalfilter",
+    "aftermarketFilters": "Alternativfilter",
+    "comingSoon": "Demnächst",
+    "viewAll": "Alle Filter anzeigen",
+    "viewAllDescription": "Durchstöbern Sie unser komplettes Filterangebot im Lüftung Webshop. Original- und Alternativfilter, 85+ Produkte.",
+    "openWebshop": "Webshop öffnen",
+    "fastShipping": "Schneller Versand",
+    "fastShippingDescription": "Versand innerhalb von 24 Stunden ab Lager, 1-3 Tage mit GLS",
+    "qualityGuarantee": "Qualitätsgarantie",
+    "qualityGuaranteeDescription": "In der EU hergestellt, zertifizierte Filtermaterialien",
+    "expertAdvice": "Fachkundige Beratung",
+    "expertAdviceDescription": "Wir helfen Ihnen, den passenden Filter für Ihren Gerätetyp zu finden"
+  },
+  "about": {
+    "ourStory": "Unsere Geschichte",
+    "heroTitle": "Fachliche Präzision im Dienste des sauberen Zuhauses –",
+    "heroTitleHighlight": "Die Geschichte von Németh Légtechnika",
+    "heroDescription": "Über 15 Jahre Erfahrung von der Planung bis zur Umsetzung. Mit der fachlichen Unterstützung von szelloztetes.eu.",
+    "beginningsTitle": "Die Anfänge und Fachkompetenz",
+    "beginningsText1": "Unsere Geschichte begann nicht mit einfachem Handel. Unser Fundament wurde durch fachliche Planung und technische Beratung unter der Schirmherrschaft von Sopronterv vor mehr als 15 Jahren gelegt.",
+    "beginningsText2": "Als Experten glaubten wir daran, dass ein modernes Zuhause nicht nur aus Wänden besteht, sondern ein komplexes, atmendes System ist. Diese Sichtweise rief die Németh Légtechnika Kft. ins Leben, wo unser Ziel war, die auf Papier gebrachten Pläne in höchster Qualität umzusetzen.",
+    "expertBackground": "Fachlicher Hintergrund und Planungserfahrung",
+    "missionTitle": "Unsere Mission in der Lüftungstechnik",
+    "missionText1": "Im Laufe der Jahre wurden wir Spezialisten für Wohnraumlüftungsanlagen mit Wärmerückgewinnung und moderne Wärmepumpenlösungen.",
+    "missionText2": "Wir erkannten, dass ein gut geplantes System nur dann effizient und gesund bleibt, wenn auch die Wartung fachgerecht erfolgt. Der regelmäßige Filterwechsel ist kein Luxus – er ist die Grundvoraussetzung für die Lebensdauer des Gerätes und die Luftqualität im Haus.",
+    "heatRecoverySpecialists": "Spezialisten für Wärmerückgewinnung und Wärmepumpensysteme",
+    "portfolio": "Unser Portfolio",
+    "timelineTitle": "Unser Weg",
+    "timelineDescription": "Von der Planung über die Umsetzung bis zur Wartung – so wurde unsere Fachkompetenz aufgebaut",
+    "timeline": {
+      "beginning": {
+        "year": "Anfänge",
+        "title": "Sopronterv",
+        "subtitle": "Fachplanung",
+        "description": "Fachliche Grundlagen und technische Beratung"
+      },
+      "implementation": {
+        "year": "Umsetzung",
+        "title": "Németh Légtechnika",
+        "subtitle": "Ausführung",
+        "description": "Wärmerückgewinnungs- und Wärmepumpensysteme"
+      },
+      "today": {
+        "year": "Heute",
+        "title": "szellozoszuro.hu",
+        "subtitle": "Service & Wartung",
+        "description": "Filter in Originalqualität mit fachlicher Unterstützung"
+      }
+    },
+    "whyCreatedTitle": "Warum wurde",
+    "whyCreatedHighlight": "szellozoszuro.hu gegründet?",
+    "whyCreatedText1": "Basierend auf dem Feedback unserer Kunden erkannten wir die Marktlücke: Es war schwierig, schnell und aus zuverlässiger Quelle Filter in Originalqualität zu beziehen.",
+    "whyCreatedText2": "szellozoszuro.hu wurde gegründet, damit Sie nicht auf einen Techniker warten müssen, um den Filter zu wechseln. Wir verkaufen nicht nur Filter, sondern wissen genau, was im Inneren des Gerätes passiert, wenn der Luftstrom nicht optimal ist.",
+    "whyCreatedText3": "Aus unserem eigenen Lagerbestand, mit fachlicher Unterstützung, sorgen wir für frische Luft in Ihrem Zuhause.",
+    "nationalCoverage": "Landesweite Abdeckung:",
+    "nationalCoverageText": "Obwohl sich unser Hauptsitz in Sopron befindet, verfügen wir durch unsere Servicepartner über landesweite Abdeckung. Wo auch immer Sie im Land wohnen, unsere Experten und Partner sind bereit für die Wartung und Reinigung Ihres Systems.",
+    "valuesTitle": "Woran wir glauben",
+    "values": {
+      "family": {
+        "title": "Familienunternehmen",
+        "description": "Unser Wertesystem basiert auf persönlicher Verantwortung und langfristigen Beziehungen zu unseren Kunden."
+      },
+      "coverage": {
+        "title": "Landesweite Abdeckung",
+        "description": "Obwohl sich unser Hauptsitz in Sopron befindet, verfügen wir durch unsere Servicepartner über landesweite Abdeckung in ganz Ungarn."
+      },
+      "quality": {
+        "title": "Qualitätsgarantie",
+        "description": "Wir bieten nur Filter an (ob Original oder Alternativ), die wir selbst in unseren eigenen Projekten einbauen würden."
+      }
+    },
+    "teamTitle": "Das Team hinter uns",
+    "teamDescription": "Als Familienunternehmen kümmern wir uns persönlich um jeden Kunden",
+    "team": {
+      "founder": {
+        "name": "Kálmán Németh",
+        "role": "Gründer, leitender Experte",
+        "description": "Über 15 Jahre Erfahrung in der Lüftungstechnik"
+      },
+      "assistant": {
+        "name": "Kundenservice-Assistent",
+        "role": "Kundenbeziehungen",
+        "description": "Individuelle Beratung und Unterstützung"
+      }
+    },
+    "ctaTitle": "Haben Sie Fragen?",
+    "ctaDescription": "Kontaktieren Sie uns, und wir helfen Ihnen, den perfekten Filter zu finden.",
+    "ctaButton": "Kontakt aufnehmen"
+  },
+  "contact": {
+    "pageTitle": "Kontakt",
+    "pageDescription": "Haben Sie Fragen zu Filtern? Wir helfen Ihnen, die passende Lösung für Ihren Gerätetyp zu finden.",
+    "nationalCoverage": "Landesweite Abdeckung:",
+    "nationalCoverageText": "Obwohl sich unser Hauptsitz in Sopron befindet, sind wir durch unsere Servicepartner im ganzen Land erreichbar!",
+    "form": {
+      "title": "Nachricht senden!",
+      "name": "Name",
+      "namePlaceholder": "Ihr Name",
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "beispiel@email.com",
+      "phone": "Telefon (optional)",
+      "phonePlaceholder": "+43 123 456 789",
+      "message": "Nachricht",
+      "messagePlaceholder": "Beschreiben Sie Ihre Frage oder Anmerkung...",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht gesendet!",
+      "successDescription": "Vielen Dank für Ihre Anfrage! Wir werden uns in Kürze bei Ihnen melden.",
+      "error": "Fehler aufgetreten",
+      "errorDescription": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut."
+    },
+    "orderContact": "Bestellung, Versand",
+    "technicalContact": "Fachliche, technische Fragen",
+    "availability": "Erreichbarkeit",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "skype": "Skype",
+    "headquarters": "Hauptsitz",
+    "headquartersValue": "Sopron, Ungarn",
+    "headquartersSubtext": "Mit landesweitem Servicepartner-Netzwerk",
+    "customerService": "Kundenservice",
+    "customerServiceValue": "Mo-Fr: 8:00 - 16:00",
+    "fastResponse": "Schnelle Antwort garantiert",
+    "fastResponseDescription": "An Werktagen antworten wir innerhalb von 24 Stunden auf alle Anfragen. Bei dringenden Bestellungen rufen Sie uns an!",
+    "companyName": "Németh Légtechnika Kft.",
+    "taxId": "Steuernummer",
+    "registrationNumber": "Handelsregisternummer"
+  },
+  "faqPage": {
+    "pageTitle": "Häufig gestellte Fragen",
+    "pageDescription": "Wir haben die häufigsten Fragen zur Filterauswahl, zum Wechsel und zur Wartung zusammengestellt. Finden Sie keine Antwort? Rufen Sie uns an!",
+    "categories": {
+      "filterSelection": "Filterauswahl",
+      "maintenance": "Filterwechsel und Wartung",
+      "orderAndShipping": "Bestellung und Versand",
+      "qualityAndWarranty": "Qualität und Garantie"
+    },
+    "notFoundTitle": "Keine Antwort gefunden?",
+    "notFoundDescription": "Unser Expertenteam hilft Ihnen gerne. Mit der fachlichen Unterstützung von szelloztetes.eu beantworten wir Ihre Fragen mit über 15 Jahren Erfahrung.",
+    "contactButton": "Kontakt aufnehmen"
+  },
+  "blogPage": {
+    "pageTitle": "Wissensdatenbank",
+    "pageDescription": "Nützliche Artikel über Lüftung, Filterwartung und gesunde Innenraumluft. Mit der fachlichen Unterstützung von szelloztetes.eu, über 15 Jahre Erfahrung.",
+    "backToBlog": "Zurück zur Wissensdatenbank",
+    "readTime": "Min."
+  },
+  "terms": {
+    "pageTitle": "Allgemeine Geschäftsbedingungen",
+    "pageDescription": "Der Inhalt des zwischen uns geschlossenen Vertrages wird neben den Bestimmungen der geltenden zwingenden Rechtsvorschriften durch diese AGB sowie die weiteren Informationen auf der Website bestimmt.",
+    "toc": "Inhaltsverzeichnis",
+    "sections": {
+      "provider": {
+        "title": "Anbieterinformationen",
+        "companyName": "Firmenname",
+        "companyNameValue": "Németh Légtechnika Korlátolt Felelősségű Társaság",
+        "headquarters": "Sitz",
+        "headquartersValue": "9400 Sopron, Szent György utca 4. 2. Stock 3.",
+        "taxId": "Steuernummer",
+        "registrationNumber": "Handelsregisternummer",
+        "representative": "Vertreter",
+        "representativeValue": "Kálmán Németh, Geschäftsführer",
+        "email": "E-Mail",
+        "hostingProvider": "Hosting-Anbieter"
+      },
+      "subject": {
+        "title": "Vertragsgegenstand und Geltungsbereich",
+        "text1": "Diese AGB regeln die Kaufbedingungen im Webshop www.szelloztetes.eu (und verbundenen Domains).",
+        "text2": "Mit der Bestellung bestätigt der Besteller, dass er die Bestimmungen dieser AGB zur Kenntnis genommen hat und als für sich verbindlich anerkennt."
+      },
+      "payment": {
+        "title": "Bestellung und Zahlung",
+        "contractCreation": "Vertragsabschluss",
+        "contractCreationText": "Mit der Bestellbestätigung kommt ein schriftlicher Vertrag zustande.",
+        "paymentMethods": "Zahlungsmethoden:",
+        "cardPayment": "Kartenzahlung über Barion",
+        "bankTransfer": "Banküberweisung im Voraus",
+        "prices": "Preise",
+        "pricesText": "Die Preise sind Bruttopreise in HUF. Der Händler behält sich das Recht vor, Preise bei einer signifikanten (über 5%) Forint-Abwertung durch die Nationalbank zu ändern."
+      },
+      "withdrawal": {
+        "title": "Widerrufsrecht",
+        "text": "Der Verbraucher hat das Recht, innerhalb von 14 Kalendertagen nach Erhalt der Ware ohne Angabe von Gründen vom Vertrag zurückzutreten.",
+        "notice1": "Die Widerrufsabsicht muss schriftlich mitgeteilt werden.",
+        "notice2": "Die direkten Kosten der Rücksendung trägt der Verbraucher."
+      },
+      "warranty": {
+        "title": "Gewährleistung und Garantie",
+        "text1": "Der Händler übernimmt die Mängelhaftung gemäß dem Bürgerlichen Gesetzbuch und die gesetzlich vorgeschriebene Garantie in den vorgesehenen Fällen.",
+        "text2": "Bei mangelhafter Erfüllung kann der Käufer die Reparatur oder den Austausch des Produkts verlangen."
+      },
+      "complaints": {
+        "title": "Beschwerdebearbeitung und Rechtsbehelfe",
+        "text": "Beschwerden können an folgende E-Mail-Adresse gerichtet werden:",
+        "arbitration": "In Streitfällen können Sie sich an die örtlich zuständige Schlichtungsstelle wenden:",
+        "arbitrationBody": "Schlichtungsstelle des Komitats Győr-Moson-Sopron",
+        "arbitrationAddress": "9021 Győr, Szent István út 10/a."
+      }
+    },
+    "checkoutNote": "Hinweis: Der Kauf erfolgt über den externen Webshop szelloztetes.eu, wo die AGB beim Checkout akzeptiert werden müssen, um die Bestellung abzuschließen."
+  },
+  "privacy": {
+    "pageTitle": "Datenschutzrichtlinie",
+    "pageDescription": "Die Németh Légtechnika Kft. verpflichtet sich zum Schutz personenbezogener Daten und gibt auf Grundlage der Datenschutz-Grundverordnung (DSGVO) der Europäischen Union folgende Informationen.",
+    "dataController": "Daten des Verantwortlichen",
+    "mainPoints": "Wichtigste Verarbeitungspunkte",
+    "sections": {
+      "purchase": {
+        "title": "Kauf auf der Website",
+        "text": "Zweck der Datenverarbeitung ist der Online-Produktverkauf, die Identifizierung des Käufers, die Auftragsabwicklung und die Rechnungsstellung.",
+        "dataHandled": "Verarbeitete Daten:",
+        "name": "Name",
+        "billingAddress": "Rechnungsadresse",
+        "shippingAddress": "Lieferadresse",
+        "email": "E-Mail-Adresse",
+        "phone": "Telefonnummer"
+      },
+      "retention": {
+        "title": "Dauer der Datenverarbeitung",
+        "text1": "Zur Erfüllung der Buchhaltungspflichten ist der Verantwortliche verpflichtet, Rechnungsdaten 8 Jahre aufzubewahren.",
+        "text2": "Bei Beschwerdemeldungen bewahren wir das Protokoll 5 Jahre auf."
+      },
+      "transfer": {
+        "title": "Datenübermittlung",
+        "text": "Für die Produktlieferung werden Name und Adresse des Empfängers an den Versanddienstleister übermittelt.",
+        "onlinePayment": "Online-Zahlung",
+        "onlinePaymentText": "Online-Kartenzahlungen werden über das Barion-System abgewickelt. Die Kartendaten gelangen nicht zum Händler."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "text": "Die Website verwendet Cookies zur Gewährleistung des Betriebs und zur Bedienung der Besucher. Deren Zulassung ist für die Nutzung des Systems erforderlich."
+      }
+    },
+    "yourRights": "Ihre Rechte",
+    "yourRightsText": "Gemäß den DSGVO-Bestimmungen haben Sie folgende Rechte in Bezug auf Ihre personenbezogenen Daten:",
+    "rights": {
+      "access": {
+        "title": "Recht auf Auskunft",
+        "description": "Sie haben das Recht, Informationen darüber zu erhalten, welche Daten wir über Sie verarbeiten."
+      },
+      "rectification": {
+        "title": "Recht auf Berichtigung",
+        "description": "Sie können die Berichtigung unrichtiger Daten verlangen."
+      },
+      "erasure": {
+        "title": "Recht auf Löschung",
+        "description": "Bei Einwilligung können Sie die Löschung Ihrer Daten verlangen."
+      },
+      "restriction": {
+        "title": "Recht auf Einschränkung",
+        "description": "Sie können die Einschränkung der Verarbeitung verlangen."
+      }
+    },
+    "legalRemedies": "Rechtsbehelfe",
+    "legalRemediesText": "Wenn Sie der Ansicht sind, dass wir Ihr Recht auf Schutz personenbezogener Daten verletzt haben, können Sie Beschwerde bei der Aufsichtsbehörde einlegen:",
+    "naih": "Nationale Behörde für Datenschutz und Informationsfreiheit (NAIH)",
+    "naihAddress": "Adresse: 1055 Budapest, Falk Miksa utca 9-11.",
+    "naihPostal": "Postanschrift: 1363 Budapest, Pf. 9.",
+    "naihWebsite": "Website:",
+    "questionsTitle": "Haben Sie Fragen zur Datenverarbeitung?",
+    "questionsText": "Bei Fragen zu Ihren personenbezogenen Daten wenden Sie sich vertrauensvoll an uns:"
+  },
+  "shipping": {
+    "pageTitle": "Versandinformationen",
+    "pageDescription": "Schnelle und zuverlässige Lieferung im ganzen Land. Ab Lager sofort, Bestellartikel mit zuverlässiger Lieferfrist.",
+    "fastDeliveryTitle": "Schnelle Lieferung ab Lager",
+    "fastDeliveryText": "Lagerware übergeben wir an Werktagen innerhalb von 24 Stunden an den Versanddienstleister. Das bedeutet, dass Ihr Paket in den meisten Fällen innerhalb von 1-3 Werktagen ankommt!",
+    "inStock": "Auf Lager",
+    "inStockTitle": "Lagerware",
+    "inStockItem1": "An Werktagen innerhalb von 24 Stunden an den Kurier übergeben",
+    "inStockItem2": "Mit GLS Kurierdienst 1-3 Werktage",
+    "inStockItem3": "Schnellere Bearbeitung bei sofortiger Online-Zahlung",
+    "onOrder": "Auf Bestellung",
+    "onOrderTitle": "Artikel mit Status \"Auf Bestellung\"",
+    "onOrderItem1": "Lieferzeit: 2-3 Wochen",
+    "onOrderItem2": "Wir bestellen das Produkt beim Hersteller",
+    "onOrderItem3": "Bitte beachten Sie dies bei der Bestellung!",
+    "deliveryPartner": "Versandpartner",
+    "deliveryPartnerDescription": "Zuverlässiger Kurierdienst mit Sendungsverfolgung im ganzen Land",
+    "paymentMethods": "Zahlungsmöglichkeiten",
+    "cardPayment": "Kreditkarte",
+    "cardPaymentDescription": "Sofortige Bearbeitung",
+    "bankTransfer": "Überweisung",
+    "bankTransferDescription": "Vorkasse",
+    "cashOnDelivery": "Nachnahme",
+    "cashOnDeliveryDescription": "Zahlung bei Lieferung",
+    "personalPickup": "Persönliche Abholung",
+    "personalPickupText": "An unserem Standort in Sopron ist nach vorheriger Vereinbarung eine persönliche Abholung möglich.",
+    "urgentOrder": "Ist Ihre Bestellung dringend?",
+    "urgentOrderText": "Wenn der Filterwechsel sehr dringend ist, rufen Sie unseren Experten direkt an! Wir helfen Ihnen, die schnellste Lösung zu finden."
+  },
+  "notFound": {
+    "title": "404",
+    "description": "Seite nicht gefunden",
+    "backHome": "Zurück zur Startseite"
   }
 }
