@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 import { ExternalLink, Filter, ArrowRight, Truck, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/layout/Header';
@@ -104,31 +106,37 @@ const brands = [
   },
 ];
 
-// Category sections
-const categories = [
-  {
-    title: 'Gyári szűrők',
-    description: 'Eredeti gyártói minőség, teljes garancia',
-    link: 'https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/',
-    icon: '🏭',
-  },
-  {
-    title: 'Utángyártott szűrők',
-    description: 'Kiváló ár-érték arány, prémium anyagok',
-    link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/',
-    icon: '⭐',
-  },
-  {
-    title: 'Szűrőház',
-    description: 'Dobozos légszűrők csővezetékekhez',
-    link: 'https://szelloztetes.eu/termekkategoria/szurok/szurohaz/',
-    icon: '📦',
-  },
-];
-
 const Shop = () => {
+  const { t } = useTranslation();
+
+  const categories = [
+    {
+      title: t('shop.categories.oem.title'),
+      description: t('shop.categories.oem.description'),
+      link: 'https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/',
+      icon: '🏭',
+    },
+    {
+      title: t('shop.categories.aftermarket.title'),
+      description: t('shop.categories.aftermarket.description'),
+      link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/',
+      icon: '⭐',
+    },
+    {
+      title: t('shop.categories.filterHouse.title'),
+      description: t('shop.categories.filterHouse.description'),
+      link: 'https://szelloztetes.eu/termekkategoria/szurok/szurohaz/',
+      icon: '📦',
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{t('shop.pageTitle')} | szellozoszuro.hu</title>
+        <meta name="description" content={t('shop.pageDescription')} />
+      </Helmet>
+      
       <Header />
       
       <main className="pt-20 lg:pt-24">
@@ -136,10 +144,10 @@ const Shop = () => {
         <section className="section-dark py-12 lg:py-16">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl lg:text-4xl font-bold mb-3">
-              <span className="gradient-cyan-text">Szűrők</span> hővisszanyerős gépekhez
+              <span className="gradient-cyan-text">{t('nav.filters')}</span> {t('shop.pageTitle').split(' ').slice(1).join(' ')}
             </h1>
             <p className="text-dark-muted text-lg max-w-2xl">
-              Válassz a forgalmazott márkáink közül és találd meg a géped típusához illő szűrőt webáruházunkban.
+              {t('shop.pageDescription')}
             </p>
           </div>
         </section>
@@ -190,9 +198,9 @@ const Shop = () => {
           
           <div className="container relative z-10 mx-auto px-4">
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-foreground mb-2">Márkák szerint</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-2">{t('shop.byBrand')}</h2>
               <p className="text-muted-foreground">
-                Kattints a márkára a megfelelő szűrők megtekintéséhez webáruházunkban
+                {t('shop.byBrandDescription')}
               </p>
             </div>
 
@@ -209,7 +217,7 @@ const Shop = () => {
                         <Filter className="w-6 h-6 text-cyan" />
                       </div>
                       <span className="text-xs text-foreground font-medium">
-                        {brand.productCount} termék
+                        {brand.productCount} {t('shop.products')}
                       </span>
                     </div>
                     <h3 className="font-bold text-xl text-foreground">{brand.name}</h3>
@@ -227,7 +235,7 @@ const Shop = () => {
                       >
                         <span className="flex items-center gap-2">
                           <span className="w-2 h-2 rounded-full bg-cyan" />
-                          Gyári szűrők
+                          {t('shop.oemFilters')}
                         </span>
                         <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                       </a>
@@ -241,14 +249,14 @@ const Shop = () => {
                       >
                         <span className="flex items-center gap-2">
                           <span className="w-2 h-2 rounded-full bg-secondary-foreground/50" />
-                          Utángyártott szűrők
+                          {t('shop.aftermarketFilters')}
                         </span>
                         <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                       </a>
                     )}
                     {!brand.oemLink && !brand.aftermarketLink && (
                       <p className="text-muted-foreground text-sm text-center py-2">
-                        Hamarosan
+                        {t('shop.comingSoon')}
                       </p>
                     )}
                   </div>
@@ -262,11 +270,10 @@ const Shop = () => {
         <section className="py-12 lg:py-16 section-dark">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl lg:text-3xl font-bold text-dark-foreground mb-4">
-              Összes szűrő megtekintése
+              {t('shop.viewAll')}
             </h2>
             <p className="text-dark-muted max-w-xl mx-auto mb-8">
-              Böngéssz a teljes szűrő kínálatunkban a Szellőztetés Webshop oldalán. 
-              Gyári és utángyártott szűrők 85+ termék.
+              {t('shop.viewAllDescription')}
             </p>
             <Button variant="cta" size="lg" asChild>
               <a 
@@ -275,7 +282,7 @@ const Shop = () => {
                 rel="noopener noreferrer"
                 className="gap-2"
               >
-                Webshop megnyitása
+                {t('shop.openWebshop')}
                 <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
@@ -292,28 +299,28 @@ const Shop = () => {
                 </div>
                 <h3 className="font-semibold text-foreground mb-2 flex items-center justify-center gap-2">
                   <Zap className="w-4 h-4 text-cyan" />
-                  Gyors szállítás
+                  {t('shop.fastShipping')}
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  Raktárról <strong className="text-foreground">24 órán belül</strong> postázzuk, GLS-sel 1-3 nap
+                  {t('shop.fastShippingDescription')}
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-cyan/10 flex items-center justify-center">
                   <span className="text-2xl">✅</span>
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Minőségi garancia</h3>
+                <h3 className="font-semibold text-foreground mb-2">{t('shop.qualityGuarantee')}</h3>
                 <p className="text-muted-foreground text-sm">
-                  EU-ban gyártott, tanúsított szűrőanyagok
+                  {t('shop.qualityGuaranteeDescription')}
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-cyan/10 flex items-center justify-center">
                   <span className="text-2xl">💬</span>
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Szakértő tanácsadás</h3>
+                <h3 className="font-semibold text-foreground mb-2">{t('shop.expertAdvice')}</h3>
                 <p className="text-muted-foreground text-sm">
-                  Segítünk megtalálni a géped típusához illő szűrőt
+                  {t('shop.expertAdviceDescription')}
                 </p>
               </div>
             </div>

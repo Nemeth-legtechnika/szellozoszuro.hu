@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -16,21 +17,20 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 
-const contactSchema = z.object({
-  name: z.string().min(2, 'A név legalább 2 karakter legyen').max(100, 'A név max 100 karakter lehet'),
-  email: z.string().email('Érvénytelen e-mail cím').max(255, 'Az e-mail max 255 karakter lehet'),
-  phone: z.string().optional(),
-  machine: z.string().optional(),
-  message: z.string().min(10, 'Az üzenet legalább 10 karakter legyen').max(2000, 'Az üzenet max 2000 karakter lehet'),
-  // Honeypot field - should remain empty
-  website: z.string().max(0, 'Bot detected').optional(),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
-
 const ContactForm = () => {
+  const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+
+  const contactSchema = z.object({
+    name: z.string().min(2, t('contact.form.name')).max(100),
+    email: z.string().email().max(255),
+    phone: z.string().optional(),
+    message: z.string().min(10).max(2000),
+    website: z.string().max(0).optional(),
+  });
+
+  type ContactFormData = z.infer<typeof contactSchema>;
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -38,44 +38,37 @@ const ContactForm = () => {
       name: '',
       email: '',
       phone: '',
-      machine: '',
       message: '',
-      website: '', // Honeypot
+      website: '',
     },
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    // Check honeypot
     if (data.website && data.website.length > 0) {
-      // Bot detected, silently fail
-      toast.success('Köszönjük megkeresését!');
+      toast.success(t('contact.form.success'));
       return;
     }
 
     setIsSubmitting(true);
 
     try {
-      // Build mailto URL
-      const subject = encodeURIComponent(`Kapcsolatfelvétel: ${data.name}`);
+      const subject = encodeURIComponent(`Kontakt: ${data.name}`);
       const body = encodeURIComponent(
-        `Név: ${data.name}\n` +
-        `E-mail: ${data.email}\n` +
-        `Telefon: ${data.phone || 'Nincs megadva'}\n` +
-        `Gép típusa: ${data.machine || 'Nincs megadva'}\n\n` +
-        `Üzenet:\n${data.message}`
+        `${t('contact.form.name')}: ${data.name}\n` +
+        `${t('contact.form.email')}: ${data.email}\n` +
+        `${t('contact.form.phone')}: ${data.phone || '-'}\n\n` +
+        `${t('contact.form.message')}:\n${data.message}`
       );
       
-      // Open email client
       window.location.href = `mailto:office@sopronterv.hu?subject=${subject}&body=${body}`;
       
       setIsSuccess(true);
-      toast.success('Köszönjük megkeresését! Szakértőnk hamarosan felveszi Önnel a kapcsolatot a megadott elérhetőségeken.');
+      toast.success(t('contact.form.successDescription'));
       form.reset();
       
-      // Reset success state after 5 seconds
       setTimeout(() => setIsSuccess(false), 5000);
     } catch (error) {
-      toast.error('Sajnáljuk, hiba történt a küldés során. Kérjük, írjon közvetlenül az office@sopronterv.hu címre!');
+      toast.error(t('contact.form.errorDescription'));
     } finally {
       setIsSubmitting(false);
     }
@@ -87,15 +80,15 @@ const ContactForm = () => {
         <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500/10 flex items-center justify-center">
           <CheckCircle className="w-8 h-8 text-green-500" />
         </div>
-        <h3 className="text-xl font-semibold text-foreground mb-2">Köszönjük!</h3>
+        <h3 className="text-xl font-semibold text-foreground mb-2">{t('contact.form.success')}</h3>
         <p className="text-muted-foreground mb-4">
-          Szakértőnk hamarosan felveszi Önnel a kapcsolatot a megadott elérhetőségeken.
+          {t('contact.form.successDescription')}
         </p>
         <Button 
           variant="outline" 
           onClick={() => setIsSuccess(false)}
         >
-          Új üzenet küldése
+          {t('contact.form.submit')}
         </Button>
       </div>
     );
@@ -104,12 +97,11 @@ const ContactForm = () => {
   return (
     <div className="bg-card rounded-2xl border border-border p-8">
       <h2 className="text-xl font-semibold text-foreground mb-6">
-        Küldj üzenetet
+        {t('contact.form.title')}
       </h2>
       
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          {/* Honeypot field - hidden from users */}
           <div className="hidden" aria-hidden="true">
             <Input
               {...form.register('website')}
@@ -124,9 +116,9 @@ const ContactForm = () => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Név *</FormLabel>
+                  <FormLabel>{t('contact.form.name')} *</FormLabel>
                   <FormControl>
-                    <Input placeholder="A neved" {...field} />
+                    <Input placeholder={t('contact.form.namePlaceholder')} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -137,9 +129,9 @@ const ContactForm = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>E-mail *</FormLabel>
+                  <FormLabel>{t('contact.form.email')} *</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="email@example.com" {...field} />
+                    <Input type="email" placeholder={t('contact.form.emailPlaceholder')} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -152,23 +144,9 @@ const ContactForm = () => {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Telefonszám</FormLabel>
+                <FormLabel>{t('contact.form.phone')}</FormLabel>
                 <FormControl>
-                  <Input type="tel" placeholder="+36 30 123 4567" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          
-          <FormField
-            control={form.control}
-            name="machine"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Gép típusa (opcionális)</FormLabel>
-                <FormControl>
-                  <Input placeholder="pl. Zehnder ComfoAir Q350" {...field} />
+                  <Input type="tel" placeholder={t('contact.form.phonePlaceholder')} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -180,10 +158,10 @@ const ContactForm = () => {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Üzenet *</FormLabel>
+                <FormLabel>{t('contact.form.message')} *</FormLabel>
                 <FormControl>
                   <Textarea 
-                    placeholder="Írd le kérdésedet vagy kérésedet..." 
+                    placeholder={t('contact.form.messagePlaceholder')} 
                     rows={5}
                     {...field}
                   />
@@ -197,12 +175,12 @@ const ContactForm = () => {
             {isSubmitting ? (
               <>
                 <Loader2 className="w-4 h-4 animate-spin" />
-                Küldés...
+                {t('contact.form.sending')}
               </>
             ) : (
               <>
                 <Send className="w-4 h-4" />
-                Üzenet küldése
+                {t('contact.form.submit')}
               </>
             )}
           </Button>

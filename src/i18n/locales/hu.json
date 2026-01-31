@@ -99,5 +99,321 @@
     "shipping": "Szállítás",
     "contact": "Kapcsolat",
     "allRights": "Minden jog fenntartva."
+  },
+  "shop": {
+    "pageTitle": "Szűrők hővisszanyerős gépekhez",
+    "pageDescription": "Válassz a forgalmazott márkáink közül és találd meg a géped típusához illő szűrőt webáruházunkban.",
+    "categories": {
+      "oem": {
+        "title": "Gyári szűrők",
+        "description": "Eredeti gyártói minőség, teljes garancia"
+      },
+      "aftermarket": {
+        "title": "Utángyártott szűrők",
+        "description": "Kiváló ár-érték arány, prémium anyagok"
+      },
+      "filterHouse": {
+        "title": "Szűrőház",
+        "description": "Dobozos légszűrők csővezetékekhez"
+      }
+    },
+    "byBrand": "Márkák szerint",
+    "byBrandDescription": "Kattints a márkára a megfelelő szűrők megtekintéséhez webáruházunkban",
+    "products": "termék",
+    "oemFilters": "Gyári szűrők",
+    "aftermarketFilters": "Utángyártott szűrők",
+    "comingSoon": "Hamarosan",
+    "viewAll": "Összes szűrő megtekintése",
+    "viewAllDescription": "Böngéssz a teljes szűrő kínálatunkban a Szellőztetés Webshop oldalán. Gyári és utángyártott szűrők 85+ termék.",
+    "openWebshop": "Webshop megnyitása",
+    "fastShipping": "Gyors szállítás",
+    "fastShippingDescription": "Raktárról 24 órán belül postázzuk, GLS-sel 1-3 nap",
+    "qualityGuarantee": "Minőségi garancia",
+    "qualityGuaranteeDescription": "EU-ban gyártott, tanúsított szűrőanyagok",
+    "expertAdvice": "Szakértő tanácsadás",
+    "expertAdviceDescription": "Segítünk megtalálni a géped típusához illő szűrőt"
+  },
+  "about": {
+    "ourStory": "A mi történetünk",
+    "heroTitle": "Szakértői precizitás a tiszta otthon szolgálatában –",
+    "heroTitleHighlight": "A Németh Légtechnika története",
+    "heroDescription": "Több mint 15 év tapasztalat a tervezéstől a megvalósításig. A szelloztetes.eu szakmai támogatásával.",
+    "beginningsTitle": "A kezdetek és a szakértelem",
+    "beginningsText1": "A mi történetünk nem egy egyszerű kereskedelemmel kezdődött. Alapjainkat a szakértői tervezés és a műszaki tanácsadás fektette le a Sopronterv égisze alatt, több mint 15 éve.",
+    "beginningsText2": "Szakértőkként hittünk abban, hogy a modern otthon nemcsak falakból áll, hanem egy komplex, lélegző rendszerből. Ez a szemlélet hívta életre a Németh Légtechnika Kft.-t, ahol a célunk az volt, hogy a papírra vetett terveket a legmagasabb minőségben váltsuk valóra.",
+    "expertBackground": "Szakértői háttér és tervezési tapasztalat",
+    "missionTitle": "Küldetésünk a szellőztetésben",
+    "missionText1": "Az évek során specialistává váltunk a hővisszanyerős szellőztető rendszerek és a modern hőszivattyús megoldások területén.",
+    "missionText2": "Felismertük, hogy egy jól megtervezett rendszer csak akkor marad hatékony és egészséges, ha a karbantartása is szakszerű. A rendszeres szűrőcsere nem luxus – a gép élettartamának és az otthon levegőminőségének alapfeltétele.",
+    "heatRecoverySpecialists": "Hővisszanyerős és hőszivattyús rendszerek specialistái",
+    "portfolio": "Portfóliónk",
+    "timelineTitle": "Útunk",
+    "timelineDescription": "A tervezéstől a megvalósításon át a karbantartásig – így épült fel szakértelmünk",
+    "timeline": {
+      "beginning": {
+        "year": "Kezdetek",
+        "title": "Sopronterv",
+        "subtitle": "Szakértői tervezés",
+        "description": "Szakértői alapok és műszaki tanácsadás"
+      },
+      "implementation": {
+        "year": "Megvalósítás",
+        "title": "Németh Légtechnika",
+        "subtitle": "Kivitelezés",
+        "description": "Hővisszanyerős és hőszivattyús rendszerek"
+      },
+      "today": {
+        "year": "Ma",
+        "title": "szellozoszuro.hu",
+        "subtitle": "Szerviz & Karbantartás",
+        "description": "Gyári minőségű szűrők, szakértői támogatással"
+      }
+    },
+    "whyCreatedTitle": "Miért jött létre a",
+    "whyCreatedHighlight": "szellozoszuro.hu",
+    "whyCreatedText1": "Ügyfeleink visszajelzései alapján láttuk a piaci rést: nehéz volt gyorsan, megbízható forrásból beszerezni a gyári minőségű szűrőket.",
+    "whyCreatedText2": "A szellozoszuro.hu azért jött létre, hogy Önnek ne kelljen szakemberre várnia a szűrőcseréhez. Mi nemcsak eladjuk a szűrőt, hanem pontosan tudjuk, mi történik a gép belsejében, ha nem megfelelő a légáramlás.",
+    "whyCreatedText3": "Saját raktárkészletünkből, szakértői támogatással biztosítjuk a friss levegőt otthonába.",
+    "nationalCoverage": "Országos lefedettség:",
+    "nationalCoverageText": "Bár központunk Sopronban található, szervizpartnereink révén országos lefedettséggel rendelkezünk. Bárhol is éljen az országban, szakértőink és partnereink készen állnak rendszere karbantartására és tisztítására.",
+    "valuesTitle": "Amiben hiszünk",
+    "values": {
+      "family": {
+        "title": "Családi vállalkozás",
+        "description": "Értékrendünk alapja a személyes felelősségvállalás és a hosszú távú kapcsolat az ügyfeleinkkel."
+      },
+      "coverage": {
+        "title": "Országos lefedettség",
+        "description": "Bár központunk Sopronban található, szervizpartnereink révén országos lefedettséggel rendelkezünk Magyarország egész területén."
+      },
+      "quality": {
+        "title": "Minőség garancia",
+        "description": "Csak olyan szűrőket kínálunk (legyen az gyári vagy utángyártott), amiket mi magunk is beszerelnénk saját projektjeinkbe."
+      }
+    },
+    "teamTitle": "A csapat mögöttünk",
+    "teamDescription": "Családi vállalkozásként minden ügyfelünkkel személyesen foglalkozunk",
+    "team": {
+      "founder": {
+        "name": "Németh Kálmán",
+        "role": "Alapító, vezető szakértő",
+        "description": "Több mint 15 év légtechnikai tapasztalat"
+      },
+      "assistant": {
+        "name": "Ügyfélszolgálati Asszisztens",
+        "role": "Ügyfélkapcsolatok",
+        "description": "Személyre szabott tanácsadás és támogatás"
+      }
+    },
+    "ctaTitle": "Kérdésed van?",
+    "ctaDescription": "Vedd fel velünk a kapcsolatot, és segítünk megtalálni a tökéletes szűrőt.",
+    "ctaButton": "Kapcsolatfelvétel"
+  },
+  "contact": {
+    "pageTitle": "Kapcsolat",
+    "pageDescription": "Kérdésed van a szűrőkkel kapcsolatban? Segítünk megtalálni a géped típusához illő megoldást.",
+    "nationalCoverage": "Országos lefedettség:",
+    "nationalCoverageText": "Bár központunk Sopronban található, szervizpartnereink révén az ország egész területén elérhetőek vagyunk!",
+    "form": {
+      "title": "Küldj üzenetet!",
+      "name": "Név",
+      "namePlaceholder": "Az Ön neve",
+      "email": "E-mail cím",
+      "emailPlaceholder": "pelda@email.com",
+      "phone": "Telefon (opcionális)",
+      "phonePlaceholder": "+36 20 123 4567",
+      "message": "Üzenet",
+      "messagePlaceholder": "Írja le kérdését vagy észrevételét...",
+      "submit": "Üzenet küldése",
+      "sending": "Küldés...",
+      "success": "Üzenet elküldve!",
+      "successDescription": "Köszönjük megkeresését! Hamarosan felvesszük Önnel a kapcsolatot.",
+      "error": "Hiba történt",
+      "errorDescription": "Az üzenet küldése sikertelen. Kérjük, próbálja újra később."
+    },
+    "orderContact": "Rendelés, Szállítás",
+    "technicalContact": "Szakmai, technikai kérdések",
+    "availability": "Elérhetőség",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "skype": "Skype",
+    "headquarters": "Központ",
+    "headquartersValue": "Sopron, Magyarország",
+    "headquartersSubtext": "Országos szervizpartneri hálózattal",
+    "customerService": "Ügyfélszolgálat",
+    "customerServiceValue": "H-P: 8:00 - 16:00",
+    "fastResponse": "Gyors válasz garantált",
+    "fastResponseDescription": "Munkanapokon 24 órán belül válaszolunk minden megkeresésre. Sürgős rendelés esetén hívj minket telefonon!",
+    "companyName": "Németh Légtechnika Kft.",
+    "taxId": "Adószám",
+    "registrationNumber": "Cégjegyzékszám"
+  },
+  "faqPage": {
+    "pageTitle": "Gyakori Kérdések",
+    "pageDescription": "Összegyűjtöttük a leggyakrabban felmerülő kérdéseket a szűrőválasztásról, cseréről és karbantartásról. Nem találod a választ? Hívj minket!",
+    "categories": {
+      "filterSelection": "Szűrőválasztás",
+      "maintenance": "Szűrőcsere és karbantartás",
+      "orderAndShipping": "Rendelés és szállítás",
+      "qualityAndWarranty": "Minőség és garancia"
+    },
+    "notFoundTitle": "Nem találtad meg a választ?",
+    "notFoundDescription": "Szakértő csapatunk készséggel segít. A szelloztetes.eu szakmai támogatásával 15+ év tapasztalattal válaszolunk kérdéseidre.",
+    "contactButton": "Kapcsolatfelvétel"
+  },
+  "blogPage": {
+    "pageTitle": "Tudástár",
+    "pageDescription": "Hasznos cikkek a szellőztetésről, szűrőkarbantartásról és az egészséges beltéri levegőről. A szelloztetes.eu szakmai támogatásával, 15+ év tapasztalattal.",
+    "backToBlog": "Vissza a Tudástárhoz",
+    "readTime": "perc"
+  },
+  "terms": {
+    "pageTitle": "Általános Szerződési Feltételek",
+    "pageDescription": "A közöttünk létrejövő szerződés tartalmát – a vonatkozó kötelező érvényű jogszabályok rendelkezései mellett – a jelen ÁSZF, valamint a honlapon található további tájékoztatások határozzák meg.",
+    "toc": "Tartalomjegyzék",
+    "sections": {
+      "provider": {
+        "title": "Szolgáltató adatai",
+        "companyName": "Cégnév",
+        "companyNameValue": "Németh Légtechnika Korlátolt Felelősségű Társaság",
+        "headquarters": "Székhely",
+        "headquartersValue": "9400 Sopron, Szent György utca 4. 2. em. 3.",
+        "taxId": "Adószám",
+        "registrationNumber": "Cégjegyzékszám",
+        "representative": "Képviselő",
+        "representativeValue": "Németh Kálmán ügyvezető",
+        "email": "E-mail",
+        "hostingProvider": "Tárhelyszolgáltató"
+      },
+      "subject": {
+        "title": "A szerződés tárgya és hatálya",
+        "text1": "Jelen ÁSZF szabályozza a www.szelloztetes.eu (és kapcsolódó domainek) webáruházban történő vásárlás feltételeit.",
+        "text2": "A megrendelés leadásával a Megrendelő elismeri, hogy jelen ÁSZF rendelkezéseit megismerte és azokat magára nézve kötelezőnek ismeri el."
+      },
+      "payment": {
+        "title": "Megrendelés és fizetés",
+        "contractCreation": "Szerződés létrejötte",
+        "contractCreationText": "A megrendelés visszaigazolásával írásba foglalt szerződés jön létre.",
+        "paymentMethods": "Fizetési módok:",
+        "cardPayment": "Barion bankkártyás fizetés",
+        "bankTransfer": "Banki előreutalás",
+        "prices": "Árak",
+        "pricesText": "Az árak bruttó árak, HUF-ban értendők. A Kereskedő fenntartja a jogot az árváltoztatásra jelentős (5% feletti) MNB forintleértékelés esetén."
+      },
+      "withdrawal": {
+        "title": "Elállási jog",
+        "text": "A Fogyasztót a termék átvételétől számított 14 naptári napon belül indokolás nélküli elállási jog illeti meg.",
+        "notice1": "Az elállási szándékot írásban kell jelezni.",
+        "notice2": "A termék visszaküldésének közvetlen költsége a Fogyasztót terheli."
+      },
+      "warranty": {
+        "title": "Szavatosság és Jótállás",
+        "text1": "A Kereskedő a Polgári Törvénykönyv (Ptk.) szerinti kellékszavatosságot és a jogszabályban előírt esetekben kötelező jótállást vállal.",
+        "text2": "Hibás teljesítés esetén a vásárló kérheti a termék kijavítását vagy kicserélését."
+      },
+      "complaints": {
+        "title": "Panaszkezelés és Jogorvoslat",
+        "text": "Panaszait az alábbi e-mail címen teheti meg:",
+        "arbitration": "Vitás esetekben a területileg illetékes Békéltető Testülethez fordulhat:",
+        "arbitrationBody": "Győr-Moson-Sopron Megyei Békéltető Testület",
+        "arbitrationAddress": "9021 Győr, Szent István út 10/a."
+      }
+    },
+    "checkoutNote": "Megjegyzés: A vásárlás a külső szelloztetes.eu webáruházon keresztül történik, ahol a pénztár lépésnél szükséges elfogadni az ÁSZF-et a megrendelés véglegesítéséhez."
+  },
+  "privacy": {
+    "pageTitle": "Adatvédelmi Irányelvek",
+    "pageDescription": "A Németh Légtechnika Kft. elkötelezett a személyes adatok védelme mellett, és az Európai Unió Általános Adatvédelmi Rendelete (GDPR) alapján az alábbi tájékoztatást adja.",
+    "dataController": "Az Adatkezelő adatai",
+    "mainPoints": "Főbb adatkezelési pontok",
+    "sections": {
+      "purchase": {
+        "title": "Vásárlás a weboldalon",
+        "text": "Az adatkezelés célja az online termékértékesítés, a vásárló beazonosítása, a megrendelés teljesítése és a számlakiállítás.",
+        "dataHandled": "Kezelt adatok:",
+        "name": "Név",
+        "billingAddress": "Számlázási cím",
+        "shippingAddress": "Szállítási cím",
+        "email": "E-mail cím",
+        "phone": "Telefonszám"
+      },
+      "retention": {
+        "title": "Adatkezelés időtartama",
+        "text1": "A számviteli kötelezettség teljesítése érdekében a számlázási adatokat 8 évig köteles megőrizni az Adatkezelő.",
+        "text2": "Panaszbejelentés esetén a jegyzőkönyvet 5 évig őrizzük meg."
+      },
+      "transfer": {
+        "title": "Adattovábbítás",
+        "text": "A termékek kiszállítása érdekében a címzett neve és címe a futárszolgálat részére továbbításra kerül.",
+        "onlinePayment": "Online fizetés",
+        "onlinePaymentText": "Az online bankkártyás fizetések a Barion rendszerén keresztül valósulnak meg. A bankkártya adatok a kereskedőhöz nem jutnak el."
+      },
+      "cookies": {
+        "title": "Sütik (Cookie-k)",
+        "text": "A weboldal a működés biztosítása és a látogatók kiszolgálása érdekében sütiket használ. Ezek engedélyezése szükséges a rendszer használatához."
+      }
+    },
+    "yourRights": "Az Ön jogai",
+    "yourRightsText": "A GDPR rendelkezései alapján Ön az alábbi jogokkal rendelkezik személyes adatai tekintetében:",
+    "rights": {
+      "access": {
+        "title": "Hozzáférés joga",
+        "description": "Jogosult tájékoztatást kérni arról, hogy milyen adatokat kezelünk Önről."
+      },
+      "rectification": {
+        "title": "Helyesbítés joga",
+        "description": "Kérheti pontatlan adatainak helyesbítését."
+      },
+      "erasure": {
+        "title": "Törlés joga",
+        "description": "Hozzájárulás esetén kérheti adatai törlését."
+      },
+      "restriction": {
+        "title": "Korlátozás joga",
+        "description": "Kérheti az adatkezelés korlátozását."
+      }
+    },
+    "legalRemedies": "Jogorvoslat",
+    "legalRemediesText": "Amennyiben úgy érzi, hogy megsértettük személyes adatai védelméhez való jogát, panasszal fordulhat a felügyeleti hatósághoz:",
+    "naih": "Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)",
+    "naihAddress": "Cím: 1055 Budapest, Falk Miksa utca 9-11.",
+    "naihPostal": "Postacím: 1363 Budapest, Pf. 9.",
+    "naihWebsite": "Weboldal:",
+    "questionsTitle": "Kérdése van az adatkezeléssel kapcsolatban?",
+    "questionsText": "Személyes adataival kapcsolatos kérdéseivel forduljon hozzánk bizalommal:"
+  },
+  "shipping": {
+    "pageTitle": "Szállítási információk",
+    "pageDescription": "Gyors és megbízható kiszállítás az egész országban. Raktárkészletről azonnal, rendelésre termékek megbízható határidővel.",
+    "fastDeliveryTitle": "Gyors kiszállítás raktárról",
+    "fastDeliveryText": "A raktáron lévő termékeket munkanapokon 24 órán belül átadjuk a futárszolgálatnak. Ez azt jelenti, hogy a legtöbb esetben 1-3 munkanapon belül megérkezik a csomagod!",
+    "inStock": "Raktáron",
+    "inStockTitle": "Raktáron lévő termékek",
+    "inStockItem1": "Munkanapokon 24 órán belül átadjuk a futárnak",
+    "inStockItem2": "GLS futárszolgálattal 1-3 munkanap",
+    "inStockItem3": "Azonnali online fizetéssel gyorsabb feldolgozás",
+    "onOrder": "Rendelésre",
+    "onOrderTitle": "\"Rendelésre\" státuszú termékek",
+    "onOrderItem1": "Szállítási idő: 2-3 hét",
+    "onOrderItem2": "Gyártótól rendeljük meg a terméket",
+    "onOrderItem3": "Kérjük, vedd figyelembe a rendelés leadásakor!",
+    "deliveryPartner": "Szállítási partner",
+    "deliveryPartnerDescription": "Megbízható futárszolgálat csomagkövetéssel az egész országban",
+    "paymentMethods": "Fizetési lehetőségek",
+    "cardPayment": "Bankkártya",
+    "cardPaymentDescription": "Azonnali feldolgozás",
+    "bankTransfer": "Átutalás",
+    "bankTransferDescription": "Előre fizetés",
+    "cashOnDelivery": "Utánvét",
+    "cashOnDeliveryDescription": "Fizetés átvételkor",
+    "personalPickup": "Személyes átvétel",
+    "personalPickupText": "Soproni telephelyünkön lehetőség van személyes átvételre, előzetes egyeztetés után.",
+    "urgentOrder": "Sürgős a rendelésed?",
+    "urgentOrderText": "Ha nagyon sürgős a szűrőcsere, hívd szakértőnket közvetlenül! Segítünk a leggyorsabb megoldást megtalálni."
+  },
+  "notFound": {
+    "title": "404",
+    "description": "Az oldal nem található",
+    "backHome": "Vissza a főoldalra"
   }
 }

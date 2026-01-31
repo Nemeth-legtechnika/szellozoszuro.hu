@@ -1,15 +1,17 @@
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
-import { FileText, Building2, CreditCard, RotateCcw, Shield, Scale, Phone, Mail, Globe, Server } from 'lucide-react';
+import { FileText, Building2, CreditCard, RotateCcw, Shield, Scale, Mail, Server } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 const Terms = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Általános Szerződési Feltételek (ÁSZF) | Németh Légtechnika Kft.</title>
-        <meta name="description" content="A Németh Légtechnika Kft. Általános Szerződési Feltételei. Tájékozódjon a rendelés, fizetés, elállási jog és szavatosság feltételeiről." />
-        <link rel="canonical" href="https://szellozoszuro.hu/aszf" />
+        <title>{t('terms.pageTitle')} | Németh Légtechnika Kft.</title>
+        <meta name="description" content={t('terms.pageDescription')} />
       </Helmet>
       
       <Header />
@@ -21,13 +23,11 @@ const Terms = () => {
             <div className="flex items-center gap-3 mb-4">
               <FileText className="w-8 h-8 text-cyan" />
               <h1 className="text-3xl lg:text-4xl font-bold">
-                <span className="gradient-cyan-text">Általános Szerződési Feltételek</span>
+                <span className="gradient-cyan-text">{t('terms.pageTitle')}</span>
               </h1>
             </div>
             <p className="text-dark-muted text-lg max-w-3xl">
-              A közöttünk létrejövő szerződés tartalmát – a vonatkozó kötelező érvényű jogszabályok 
-              rendelkezései mellett – a jelen ÁSZF, valamint a honlapon található további tájékoztatások 
-              határozzák meg.
+              {t('terms.pageDescription')}
             </p>
           </div>
         </section>
@@ -40,42 +40,42 @@ const Terms = () => {
               {/* Sidebar Navigation */}
               <aside className="lg:w-64 flex-shrink-0">
                 <nav className="lg:sticky lg:top-28 bg-card rounded-2xl border border-border p-4">
-                  <p className="text-sm font-semibold text-muted-foreground mb-3 uppercase tracking-wide">Tartalomjegyzék</p>
+                  <p className="text-sm font-semibold text-muted-foreground mb-3 uppercase tracking-wide">{t('terms.toc')}</p>
                   <ul className="space-y-2">
                     <li>
                       <a href="#szolgaltato" className="flex items-center gap-2 text-sm text-foreground hover:text-cyan transition-colors py-1.5">
                         <span className="w-5 h-5 rounded bg-cyan/10 flex items-center justify-center text-xs font-bold text-cyan">1</span>
-                        Szolgáltató adatai
+                        {t('terms.sections.provider.title')}
                       </a>
                     </li>
                     <li>
                       <a href="#targy" className="flex items-center gap-2 text-sm text-foreground hover:text-cyan transition-colors py-1.5">
                         <span className="w-5 h-5 rounded bg-cyan/10 flex items-center justify-center text-xs font-bold text-cyan">2</span>
-                        Szerződés tárgya
+                        {t('terms.sections.subject.title')}
                       </a>
                     </li>
                     <li>
                       <a href="#fizetes" className="flex items-center gap-2 text-sm text-foreground hover:text-cyan transition-colors py-1.5">
                         <span className="w-5 h-5 rounded bg-cyan/10 flex items-center justify-center text-xs font-bold text-cyan">3</span>
-                        Megrendelés és fizetés
+                        {t('terms.sections.payment.title')}
                       </a>
                     </li>
                     <li>
                       <a href="#elallas" className="flex items-center gap-2 text-sm text-foreground hover:text-cyan transition-colors py-1.5">
                         <span className="w-5 h-5 rounded bg-cyan/10 flex items-center justify-center text-xs font-bold text-cyan">4</span>
-                        Elállási jog
+                        {t('terms.sections.withdrawal.title')}
                       </a>
                     </li>
                     <li>
                       <a href="#szavatossag" className="flex items-center gap-2 text-sm text-foreground hover:text-cyan transition-colors py-1.5">
                         <span className="w-5 h-5 rounded bg-cyan/10 flex items-center justify-center text-xs font-bold text-cyan">5</span>
-                        Szavatosság és jótállás
+                        {t('terms.sections.warranty.title')}
                       </a>
                     </li>
                     <li>
                       <a href="#panasz" className="flex items-center gap-2 text-sm text-foreground hover:text-cyan transition-colors py-1.5">
                         <span className="w-5 h-5 rounded bg-cyan/10 flex items-center justify-center text-xs font-bold text-cyan">6</span>
-                        Panaszkezelés
+                        {t('terms.sections.complaints.title')}
                       </a>
                     </li>
                   </ul>
@@ -92,31 +92,31 @@ const Terms = () => {
                       <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center">
                         <Building2 className="w-5 h-5 text-cyan" />
                       </div>
-                      <h2 className="text-xl font-semibold text-foreground">1. Szolgáltató adatai</h2>
+                      <h2 className="text-xl font-semibold text-foreground">1. {t('terms.sections.provider.title')}</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <p className="text-sm text-muted-foreground mb-1">Cégnév</p>
-                        <p className="font-medium text-foreground">Németh Légtechnika Korlátolt Felelősségű Társaság</p>
+                        <p className="text-sm text-muted-foreground mb-1">{t('terms.sections.provider.companyName')}</p>
+                        <p className="font-medium text-foreground">{t('terms.sections.provider.companyNameValue')}</p>
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground mb-1">Székhely</p>
-                        <p className="font-medium text-foreground">9400 Sopron, Szent György utca 4. 2. em. 3.</p>
+                        <p className="text-sm text-muted-foreground mb-1">{t('terms.sections.provider.headquarters')}</p>
+                        <p className="font-medium text-foreground">{t('terms.sections.provider.headquartersValue')}</p>
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground mb-1">Adószám</p>
+                        <p className="text-sm text-muted-foreground mb-1">{t('terms.sections.provider.taxId')}</p>
                         <p className="font-medium text-foreground">26290438-2-08</p>
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground mb-1">Cégjegyzékszám</p>
+                        <p className="text-sm text-muted-foreground mb-1">{t('terms.sections.provider.registrationNumber')}</p>
                         <p className="font-medium text-foreground">08-09-029861</p>
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground mb-1">Képviselő</p>
-                        <p className="font-medium text-foreground">Németh Kálmán ügyvezető</p>
+                        <p className="text-sm text-muted-foreground mb-1">{t('terms.sections.provider.representative')}</p>
+                        <p className="font-medium text-foreground">{t('terms.sections.provider.representativeValue')}</p>
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground mb-1">E-mail</p>
+                        <p className="text-sm text-muted-foreground mb-1">{t('terms.sections.provider.email')}</p>
                         <a href="mailto:info@sopronterv.hu" className="font-medium text-cyan hover:underline flex items-center gap-1.5">
                           <Mail className="w-4 h-4" />
                           info@sopronterv.hu
@@ -127,7 +127,7 @@ const Terms = () => {
                     <div className="mt-6 pt-6 border-t border-border">
                       <div className="flex items-center gap-2 mb-3">
                         <Server className="w-4 h-4 text-muted-foreground" />
-                        <p className="text-sm text-muted-foreground">Tárhelyszolgáltató</p>
+                        <p className="text-sm text-muted-foreground">{t('terms.sections.provider.hostingProvider')}</p>
                       </div>
                       <p className="font-medium text-foreground">EZIT Kft.</p>
                       <p className="text-sm text-muted-foreground">1132 Budapest, Victor Hugo u. 18-22.</p>
@@ -142,17 +142,11 @@ const Terms = () => {
                       <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center">
                         <FileText className="w-5 h-5 text-cyan" />
                       </div>
-                      <h2 className="text-xl font-semibold text-foreground">2. A szerződés tárgya és hatálya</h2>
+                      <h2 className="text-xl font-semibold text-foreground">2. {t('terms.sections.subject.title')}</h2>
                     </div>
                     <div className="space-y-4 text-muted-foreground leading-relaxed">
-                      <p>
-                        Jelen ÁSZF szabályozza a <strong className="text-foreground">www.szelloztetes.eu</strong> (és kapcsolódó domainek) 
-                        webáruházban történő vásárlás feltételeit.
-                      </p>
-                      <p>
-                        A megrendelés leadásával a Megrendelő elismeri, hogy jelen ÁSZF rendelkezéseit megismerte 
-                        és azokat magára nézve <strong className="text-foreground">kötelezőnek ismeri el</strong>.
-                      </p>
+                      <p>{t('terms.sections.subject.text1')}</p>
+                      <p>{t('terms.sections.subject.text2')}</p>
                     </div>
                   </div>
                 </section>
@@ -164,28 +158,23 @@ const Terms = () => {
                       <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center">
                         <CreditCard className="w-5 h-5 text-cyan" />
                       </div>
-                      <h2 className="text-xl font-semibold text-foreground">3. Megrendelés és fizetés</h2>
+                      <h2 className="text-xl font-semibold text-foreground">3. {t('terms.sections.payment.title')}</h2>
                     </div>
                     <div className="space-y-4 text-muted-foreground leading-relaxed">
                       <div className="bg-secondary/50 rounded-lg p-4">
-                        <p className="font-medium text-foreground mb-2">Szerződés létrejötte</p>
-                        <p className="text-sm">
-                          A megrendelés visszaigazolásával írásba foglalt szerződés jön létre.
-                        </p>
+                        <p className="font-medium text-foreground mb-2">{t('terms.sections.payment.contractCreation')}</p>
+                        <p className="text-sm">{t('terms.sections.payment.contractCreationText')}</p>
                       </div>
                       <div>
-                        <p className="font-medium text-foreground mb-2">Fizetési módok:</p>
+                        <p className="font-medium text-foreground mb-2">{t('terms.sections.payment.paymentMethods')}</p>
                         <ul className="list-disc list-inside space-y-1 ml-2">
-                          <li>Barion bankkártyás fizetés</li>
-                          <li>Banki előreutalás</li>
+                          <li>{t('terms.sections.payment.cardPayment')}</li>
+                          <li>{t('terms.sections.payment.bankTransfer')}</li>
                         </ul>
                       </div>
                       <div>
-                        <p className="font-medium text-foreground mb-2">Árak</p>
-                        <p>
-                          Az árak <strong className="text-foreground">bruttó árak</strong>, HUF-ban értendők. 
-                          A Kereskedő fenntartja a jogot az árváltoztatásra jelentős (5% feletti) MNB forintleértékelés esetén.
-                        </p>
+                        <p className="font-medium text-foreground mb-2">{t('terms.sections.payment.prices')}</p>
+                        <p>{t('terms.sections.payment.pricesText')}</p>
                       </div>
                     </div>
                   </div>
@@ -198,22 +187,19 @@ const Terms = () => {
                       <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center">
                         <RotateCcw className="w-5 h-5 text-cyan" />
                       </div>
-                      <h2 className="text-xl font-semibold text-foreground">4. Elállási jog</h2>
+                      <h2 className="text-xl font-semibold text-foreground">4. {t('terms.sections.withdrawal.title')}</h2>
                     </div>
                     <div className="space-y-4 text-muted-foreground leading-relaxed">
-                      <p>
-                        A Fogyasztót a termék átvételétől számított <strong className="text-foreground">14 naptári napon belül</strong> indokolás 
-                        nélküli elállási jog illeti meg.
-                      </p>
+                      <p>{t('terms.sections.withdrawal.text')}</p>
                       <div className="bg-cyan/5 border border-cyan/20 rounded-lg p-4">
                         <ul className="space-y-2 text-sm">
                           <li className="flex items-start gap-2">
                             <span className="text-cyan font-bold">•</span>
-                            Az elállási szándékot <strong className="text-foreground">írásban</strong> kell jelezni.
+                            {t('terms.sections.withdrawal.notice1')}
                           </li>
                           <li className="flex items-start gap-2">
                             <span className="text-cyan font-bold">•</span>
-                            A termék visszaküldésének közvetlen költsége a <strong className="text-foreground">Fogyasztót terheli</strong>.
+                            {t('terms.sections.withdrawal.notice2')}
                           </li>
                         </ul>
                       </div>
@@ -228,16 +214,11 @@ const Terms = () => {
                       <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center">
                         <Shield className="w-5 h-5 text-cyan" />
                       </div>
-                      <h2 className="text-xl font-semibold text-foreground">5. Szavatosság és Jótállás</h2>
+                      <h2 className="text-xl font-semibold text-foreground">5. {t('terms.sections.warranty.title')}</h2>
                     </div>
                     <div className="space-y-4 text-muted-foreground leading-relaxed">
-                      <p>
-                        A Kereskedő a Polgári Törvénykönyv (Ptk.) szerinti <strong className="text-foreground">kellékszavatosságot</strong> és 
-                        a jogszabályban előírt esetekben kötelező jótállást vállal.
-                      </p>
-                      <p>
-                        Hibás teljesítés esetén a vásárló kérheti a termék <strong className="text-foreground">kijavítását</strong> vagy <strong className="text-foreground">kicserélését</strong>.
-                      </p>
+                      <p>{t('terms.sections.warranty.text1')}</p>
+                      <p>{t('terms.sections.warranty.text2')}</p>
                     </div>
                   </div>
                 </section>
@@ -249,24 +230,20 @@ const Terms = () => {
                       <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center">
                         <Scale className="w-5 h-5 text-cyan" />
                       </div>
-                      <h2 className="text-xl font-semibold text-foreground">6. Panaszkezelés és Jogorvoslat</h2>
+                      <h2 className="text-xl font-semibold text-foreground">6. {t('terms.sections.complaints.title')}</h2>
                     </div>
                     <div className="space-y-4 text-muted-foreground leading-relaxed">
-                      <p>
-                        Panaszait az alábbi e-mail címen teheti meg:
-                      </p>
+                      <p>{t('terms.sections.complaints.text')}</p>
                       <a href="mailto:info@sopronterv.hu" className="inline-flex items-center gap-2 text-cyan hover:underline font-medium">
                         <Mail className="w-4 h-4" />
                         info@sopronterv.hu
                       </a>
                       
                       <div className="mt-6 pt-6 border-t border-border">
-                        <p className="mb-3">
-                          Vitás esetekben a területileg illetékes <strong className="text-foreground">Békéltető Testülethez</strong> fordulhat:
-                        </p>
+                        <p className="mb-3">{t('terms.sections.complaints.arbitration')}</p>
                         <div className="bg-secondary/50 rounded-lg p-4">
-                          <p className="font-medium text-foreground mb-2">Győr-Moson-Sopron Megyei Békéltető Testület</p>
-                          <p className="text-sm">9021 Győr, Szent István út 10/a.</p>
+                          <p className="font-medium text-foreground mb-2">{t('terms.sections.complaints.arbitrationBody')}</p>
+                          <p className="text-sm">{t('terms.sections.complaints.arbitrationAddress')}</p>
                         </div>
                       </div>
                     </div>
@@ -276,8 +253,7 @@ const Terms = () => {
                 {/* Checkout Note */}
                 <div className="bg-cyan/5 border border-cyan/20 rounded-2xl p-6">
                   <p className="text-sm text-muted-foreground">
-                    <strong className="text-foreground">Megjegyzés:</strong> A vásárlás a külső <strong className="text-foreground">szelloztetes.eu</strong> webáruházon 
-                    keresztül történik, ahol a pénztár lépésnél szükséges elfogadni az ÁSZF-et a megrendelés véglegesítéséhez.
+                    <strong className="text-foreground">{t('terms.checkoutNote')}</strong>
                   </p>
                 </div>
 
