@@ -1,23 +1,27 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 const Footer = () => {
+  const { t, i18n } = useTranslation();
+  const langPrefix = i18n.language === 'de' ? '/de' : '';
+
   const partnerPortals = [
     {
       name: 'szelloztetes.eu',
       url: 'https://szelloztetes.eu',
-      description: 'Szellőztetési webshop',
+      description: i18n.language === 'de' ? 'Lüftungs-Webshop' : 'Szellőztetési webshop',
     },
     {
       name: 'hoszivattyu.online',
       url: 'https://hoszivattyu.online',
-      description: 'Hőszivattyú szakportál',
+      description: i18n.language === 'de' ? 'Wärmepumpen-Portal' : 'Hőszivattyú szakportál',
     },
     {
       name: 'sopronterv.hu',
       url: 'https://sopronterv.hu',
-      description: 'Műszaki tervezés',
+      description: i18n.language === 'de' ? 'Technische Planung' : 'Műszaki tervezés',
     },
   ];
 
@@ -29,33 +33,32 @@ const Footer = () => {
           <div className="space-y-4">
             <img src={logo} alt="Németh Légtechnika" className="h-12 w-auto" />
             <p className="text-dark-muted text-sm leading-relaxed">
-              Prémium szűrők hővisszanyerős szellőztetőrendszerekhez. 
-              Szakértelem és minőség egy helyen.
+              {t('footer.description')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Gyors linkek</h4>
+            <h4 className="font-semibold text-lg mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/shop" className="text-dark-muted hover:text-cyan transition-colors text-sm">
-                  Szűrők
+                <Link to={`${langPrefix}/shop`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                  {t('nav.filters')}
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-dark-muted hover:text-cyan transition-colors text-sm">
-                  Tudástár
+                <Link to={`${langPrefix}/blog`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                  {t('nav.knowledge')}
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-dark-muted hover:text-cyan transition-colors text-sm">
-                  Rólunk
+                <Link to={`${langPrefix}/about`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                  {t('nav.about')}
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-dark-muted hover:text-cyan transition-colors text-sm">
-                  Kapcsolat
+                <Link to={`${langPrefix}/contact`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                  {t('nav.contact')}
                 </Link>
               </li>
             </ul>
@@ -63,26 +66,26 @@ const Footer = () => {
 
           {/* Support */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Segítség</h4>
+            <h4 className="font-semibold text-lg mb-4">{t('footer.legal')}</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/shipping" className="text-dark-muted hover:text-cyan transition-colors text-sm">
-                  Szállítási információk
+                <Link to={`${langPrefix}/shipping`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                  {t('footer.shipping')}
                 </Link>
               </li>
               <li>
-                <Link to="/gyik" className="text-dark-muted hover:text-cyan transition-colors text-sm">
-                  Gyakori kérdések
+                <Link to={`${langPrefix}/gyik`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                  {i18n.language === 'de' ? 'Häufige Fragen' : 'Gyakori kérdések'}
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="text-dark-muted hover:text-cyan transition-colors text-sm">
-                  Adatvédelmi irányelvek
+                <Link to={`${langPrefix}/privacy`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                  {t('footer.privacy')}
                 </Link>
               </li>
               <li>
-                <Link to="/aszf" className="text-dark-muted hover:text-cyan transition-colors text-sm">
-                  Általános szerződési feltételek
+                <Link to={`${langPrefix}/aszf`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                  {t('footer.terms')}
                 </Link>
               </li>
             </ul>
@@ -90,7 +93,9 @@ const Footer = () => {
 
           {/* Partner Portals - Knowledge Graph */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Szakportáljaink</h4>
+            <h4 className="font-semibold text-lg mb-4">
+              {i18n.language === 'de' ? 'Unsere Portale' : 'Szakportáljaink'}
+            </h4>
             <ul className="space-y-3">
               {partnerPortals.map((portal) => (
                 <li key={portal.name}>
@@ -110,15 +115,19 @@ const Footer = () => {
               ))}
             </ul>
             <p className="text-dark-muted/60 text-xs mt-4 leading-relaxed">
-              A Németh Légtechnika Kft. szakportál-hálózata
+              {i18n.language === 'de' 
+                ? 'Das Fachportal-Netzwerk der Németh Légtechnika Kft.' 
+                : 'A Németh Légtechnika Kft. szakportál-hálózata'}
             </p>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Kapcsolat</h4>
+            <h4 className="font-semibold text-lg mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-3">
-              <li className="text-dark-muted text-xs font-medium uppercase tracking-wide mb-1">Rendelés</li>
+              <li className="text-dark-muted text-xs font-medium uppercase tracking-wide mb-1">
+                {i18n.language === 'de' ? 'Bestellung' : 'Rendelés'}
+              </li>
               <li className="flex items-center gap-3 text-dark-muted text-sm">
                 <Phone className="w-4 h-4 text-cyan" />
                 <a href="tel:+36208069072" className="hover:text-cyan transition-colors">
@@ -131,7 +140,9 @@ const Footer = () => {
                   office@sopronterv.hu
                 </a>
               </li>
-              <li className="text-dark-muted text-xs font-medium uppercase tracking-wide mb-1 mt-4">Szakmai kérdések</li>
+              <li className="text-dark-muted text-xs font-medium uppercase tracking-wide mb-1 mt-4">
+                {i18n.language === 'de' ? 'Fachfragen' : 'Szakmai kérdések'}
+              </li>
               <li className="flex items-center gap-3 text-dark-muted text-sm">
                 <Phone className="w-4 h-4 text-cyan" />
                 <a href="tel:+36203238172" className="hover:text-cyan transition-colors">
@@ -146,7 +157,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3 text-dark-muted text-sm mt-4">
                 <MapPin className="w-4 h-4 text-cyan mt-0.5" />
-                <span>Sopron, Magyarország</span>
+                <span>{i18n.language === 'de' ? 'Sopron, Ungarn' : 'Sopron, Magyarország'}</span>
               </li>
             </ul>
           </div>
@@ -155,14 +166,14 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-dark-secondary mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-dark-muted text-sm">
-            © 2024 Németh Légtechnika Kft. Minden jog fenntartva.
+            © 2024 Németh Légtechnika Kft. {t('footer.allRights')}
           </p>
           <div className="flex items-center gap-6">
-            <Link to="/privacy" className="text-dark-muted hover:text-cyan transition-colors text-sm">
-              Adatvédelem
+            <Link to={`${langPrefix}/privacy`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+              {t('footer.privacy')}
             </Link>
-            <Link to="/aszf" className="text-dark-muted hover:text-cyan transition-colors text-sm">
-              ÁSZF
+            <Link to={`${langPrefix}/aszf`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+              {t('footer.terms')}
             </Link>
           </div>
         </div>

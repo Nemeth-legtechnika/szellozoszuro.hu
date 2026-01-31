@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ArrowRight, Wind } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const CtaBanner = () => {
+  const { t, i18n } = useTranslation();
+  const langPrefix = i18n.language === 'de' ? '/de' : '';
+
   return (
     <section className="py-20 lg:py-28 section-dark relative overflow-hidden">
       {/* Background Glow */}
@@ -15,25 +19,24 @@ const CtaBanner = () => {
           </div>
           
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Készen állsz a{' '}
-            <span className="gradient-cyan-text">friss levegőre?</span>
+            {t('cta.title').split(' ').slice(0, -1).join(' ')}{' '}
+            <span className="gradient-cyan-text">{t('cta.title').split(' ').slice(-1)}</span>
           </h2>
           
           <p className="text-dark-muted text-lg mb-8 max-w-xl mx-auto">
-            Keresd meg a géped típusához illő szűrőt, és rendeld meg még ma! 
-            Készletről azonnal, vagy 2-3 héten belül.
+            {t('cta.description')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" asChild>
-              <Link to="/shop">
-                Szűrőkereső indítása
+              <Link to={`${langPrefix}/shop`}>
+                {t('cta.button')}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
             <Button variant="heroOutline" asChild>
-              <Link to="/contact">
-                Kérdésed van?
+              <Link to={`${langPrefix}/contact`}>
+                {t('nav.contact')}
               </Link>
             </Button>
           </div>

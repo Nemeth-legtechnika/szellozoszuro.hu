@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ArrowRight, Shield, Truck, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroBg from '@/assets/hero-bg.jpg';
 
 const Hero = () => {
+  const { t, i18n } = useTranslation();
+  const langPrefix = i18n.language === 'de' ? '/de' : '';
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -23,29 +27,28 @@ const Hero = () => {
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 bg-cyan/10 border border-cyan/30 rounded-full px-4 py-2 mb-6 animate-fade-in">
             <Shield className="w-4 h-4 text-cyan" />
-            <span className="text-cyan text-sm font-medium">Minőségi szűrők, megbízható forrásból</span>
+            <span className="text-cyan text-sm font-medium">{t('hero.badge')}</span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-foreground mb-6 leading-tight animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            Tiszta levegő,{' '}
-            <span className="gradient-cyan-text">egészséges otthon</span>
+            {t('hero.title')}{' '}
+            <span className="gradient-cyan-text">{t('hero.titleHighlight')}</span>
           </h1>
           
           <p className="text-lg md:text-xl text-dark-muted mb-8 leading-relaxed max-w-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Prémium csereszűrők hővisszanyerős szellőztetőrendszerekhez. 
-            Vaillant, Helios, Bosch, Wolf és más márkákhoz – gyári és kiváló minőségű utángyártott változatban.
+            {t('hero.description')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <Button variant="hero" asChild>
-              <Link to="/shop">
-                Szűrők böngészése
+              <Link to={`${langPrefix}/shop`}>
+                {t('hero.browseFilters')}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
             <Button variant="heroOutline" asChild>
-              <Link to="/blog">
-                Tudástár
+              <Link to={`${langPrefix}/blog`}>
+                {t('hero.knowledgeBase')}
               </Link>
             </Button>
           </div>
@@ -57,8 +60,8 @@ const Hero = () => {
                 <Shield className="w-6 h-6 text-cyan" />
               </div>
               <div>
-                <p className="text-dark-foreground font-semibold text-sm">Minőséggarancia</p>
-                <p className="text-dark-muted text-xs">Prémium anyagok</p>
+                <p className="text-dark-foreground font-semibold text-sm">{t('hero.qualityGuarantee')}</p>
+                <p className="text-dark-muted text-xs">{t('hero.premiumMaterials')}</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -66,8 +69,8 @@ const Hero = () => {
                 <Truck className="w-6 h-6 text-cyan" />
               </div>
               <div>
-                <p className="text-dark-foreground font-semibold text-sm">Gyors szállítás</p>
-                <p className="text-dark-muted text-xs">Készletről, vagy 2-3 hét</p>
+                <p className="text-dark-foreground font-semibold text-sm">{t('hero.fastShipping')}</p>
+                <p className="text-dark-muted text-xs">{t('hero.shippingTime')}</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -75,8 +78,8 @@ const Hero = () => {
                 <Award className="w-6 h-6 text-cyan" />
               </div>
               <div>
-                <p className="text-dark-foreground font-semibold text-sm">Szakértelem</p>
-                <p className="text-dark-muted text-xs">15+ év tapasztalat</p>
+                <p className="text-dark-foreground font-semibold text-sm">{t('hero.expertise')}</p>
+                <p className="text-dark-muted text-xs">{t('hero.yearsExperience')}</p>
               </div>
             </div>
           </div>
