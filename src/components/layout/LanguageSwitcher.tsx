@@ -33,32 +33,30 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="flex items-center gap-1 bg-dark-secondary/50 rounded-full p-1">
+    <div className="flex items-center gap-1.5">
       <button
         onClick={() => switchLanguage('hu')}
         className={cn(
-          "flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200",
+          "w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 text-lg",
           currentLang === 'hu'
-            ? "bg-cyan text-dark shadow-sm"
-            : "text-dark-foreground/70 hover:text-dark-foreground hover:bg-dark-secondary"
+            ? "bg-cyan ring-2 ring-cyan ring-offset-2 ring-offset-dark"
+            : "bg-dark-secondary/50 hover:bg-dark-secondary opacity-60 hover:opacity-100"
         )}
         aria-label="Magyar nyelv"
       >
-        <span className="text-base leading-none">🇭🇺</span>
-        <span>HU</span>
+        🇭🇺
       </button>
       <button
         onClick={() => switchLanguage('de')}
         className={cn(
-          "flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200",
+          "w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 text-lg",
           currentLang === 'de'
-            ? "bg-cyan text-dark shadow-sm"
-            : "text-dark-foreground/70 hover:text-dark-foreground hover:bg-dark-secondary"
+            ? "bg-cyan ring-2 ring-cyan ring-offset-2 ring-offset-dark"
+            : "bg-dark-secondary/50 hover:bg-dark-secondary opacity-60 hover:opacity-100"
         )}
         aria-label="Deutsche Sprache"
       >
-        <span className="text-base leading-none">🇩🇪</span>
-        <span>DE</span>
+        🇩🇪
       </button>
     </div>
   );

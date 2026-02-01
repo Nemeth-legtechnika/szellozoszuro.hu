@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ArrowRight, Home, MapPin, Award, Users, Building2, Wrench, Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -9,46 +10,49 @@ import JsonLdSchema from '@/components/seo/JsonLdSchema';
 import nemethKalmanImage from '@/assets/team/nemeth-kalman.jpg';
 
 const About = () => {
+  const { t, i18n } = useTranslation();
+  const langPrefix = i18n.language === 'de' ? '/de' : '';
+
   const highlights = [
     {
       icon: Home,
-      title: 'Családi vállalkozás',
-      description: 'Értékrendünk alapja a személyes felelősségvállalás és a hosszú távú kapcsolat az ügyfeleinkkel.',
+      title: t('about.values.family.title'),
+      description: t('about.values.family.description'),
     },
     {
       icon: MapPin,
-      title: 'Országos lefedettség',
-      description: 'Bár központunk Sopronban található, szervizpartnereink révén országos lefedettséggel rendelkezünk Magyarország egész területén.',
+      title: t('about.values.coverage.title'),
+      description: t('about.values.coverage.description'),
     },
     {
       icon: Award,
-      title: 'Minőség garancia',
-      description: 'Csak olyan szűrőket kínálunk (legyen az gyári vagy utángyártott), amiket mi magunk is beszerelnénk saját projektjeinkbe.',
+      title: t('about.values.quality.title'),
+      description: t('about.values.quality.description'),
     },
   ];
 
   const timeline = [
     {
-      year: 'Kezdetek',
-      title: 'Sopronterv',
-      subtitle: 'Szakértői tervezés',
-      description: 'Szakértői alapok és műszaki tanácsadás',
+      year: t('about.timeline.beginning.year'),
+      title: t('about.timeline.beginning.title'),
+      subtitle: t('about.timeline.beginning.subtitle'),
+      description: t('about.timeline.beginning.description'),
       icon: Building2,
       color: 'bg-muted',
     },
     {
-      year: 'Megvalósítás',
-      title: 'Németh Légtechnika',
-      subtitle: 'Kivitelezés',
-      description: 'Hővisszanyerős és hőszivattyús rendszerek',
+      year: t('about.timeline.implementation.year'),
+      title: t('about.timeline.implementation.title'),
+      subtitle: t('about.timeline.implementation.subtitle'),
+      description: t('about.timeline.implementation.description'),
       icon: Wrench,
       color: 'bg-cyan/20',
     },
     {
-      year: 'Ma',
-      title: 'szellozoszuro.hu',
-      subtitle: 'Szerviz & Karbantartás',
-      description: 'Gyári minőségű szűrők, szakértői támogatással',
+      year: t('about.timeline.today.year'),
+      title: t('about.timeline.today.title'),
+      subtitle: t('about.timeline.today.subtitle'),
+      description: t('about.timeline.today.description'),
       icon: Filter,
       color: 'bg-cyan',
     },
@@ -56,26 +60,38 @@ const About = () => {
 
   const team = [
     {
-      name: 'Németh Kálmán',
-      role: 'Alapító, vezető szakértő',
-      description: 'Több mint 15 év légtechnikai tapasztalat',
+      name: t('about.team.founder.name'),
+      role: t('about.team.founder.role'),
+      description: t('about.team.founder.description'),
       image: nemethKalmanImage,
     },
     {
-      name: 'Ügyfélszolgálati Asszisztens',
-      role: 'Ügyfélkapcsolatok',
-      description: 'Személyre szabott tanácsadás és támogatás',
+      name: t('about.team.assistant.name'),
+      role: t('about.team.assistant.role'),
+      description: t('about.team.assistant.description'),
       image: null,
     },
   ];
 
+  const signature = {
+    quote: i18n.language === 'de' 
+      ? "Hinter jedem Filterwechsel steht unser Engagement für saubere Luft und ein gesundes Zuhause."
+      : "Minden szűrőcsere mögött a tiszta levegő és az egészséges otthon iránti elkötelezettségünk áll.",
+    family: i18n.language === 'de' ? "– Die Familie Németh" : "– A Németh család",
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Rólunk | Németh Légtechnika Kft. - 15+ év szakértelem, országos lefedettség</title>
-        <meta name="description" content="Ismerje meg a Németh Légtechnika Kft. történetét: 15+ év légtechnikai tapasztalat, családi vállalkozás Sopronból. Országos szervizpartneri hálózattal rendelkezünk!" />
-        <meta name="keywords" content="országos szellőztető szerviz, hővisszanyerő tisztítás Magyarország, szellőztető rendszer karbantartás partnerhálózat" />
-        <link rel="canonical" href="https://szellozoszuro.hu/about" />
+        <title>{i18n.language === 'de' 
+          ? 'Über uns | Németh Légtechnika Kft. - 15+ Jahre Expertise, landesweite Abdeckung'
+          : 'Rólunk | Németh Légtechnika Kft. - 15+ év szakértelem, országos lefedettség'
+        }</title>
+        <meta name="description" content={i18n.language === 'de'
+          ? 'Lernen Sie die Geschichte der Németh Légtechnika Kft. kennen: 15+ Jahre Lüftungstechnik-Erfahrung, Familienunternehmen aus Sopron. Landesweites Servicepartner-Netzwerk!'
+          : 'Ismerje meg a Németh Légtechnika Kft. történetét: 15+ év légtechnikai tapasztalat, családi vállalkozás Sopronból. Országos szervizpartneri hálózattal rendelkezünk!'
+        } />
+        <link rel="canonical" href={`https://szellozoszuro.hu${langPrefix}/about`} />
       </Helmet>
       
       <JsonLdSchema includeLocalBusiness={true} includeOrganization={true} />
@@ -91,23 +107,14 @@ const About = () => {
           <div className="relative container mx-auto px-4">
             <div className="max-w-4xl">
               <p className="text-cyan font-medium mb-4 tracking-wide uppercase text-sm">
-                A mi történetünk
+                {t('about.ourStory')}
               </p>
               <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-                Szakértői precizitás a tiszta otthon szolgálatában –{' '}
-                <span className="gradient-cyan-text">A Németh Légtechnika története</span>
+                {t('about.heroTitle')}{' '}
+                <span className="gradient-cyan-text">{t('about.heroTitleHighlight')}</span>
               </h1>
               <p className="text-dark-muted text-lg lg:text-xl leading-relaxed">
-                Több mint 15 év tapasztalat a tervezéstől a megvalósításig. A{' '}
-                <a 
-                  href="https://szelloztetes.eu" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-cyan hover:underline"
-                >
-                  szelloztetes.eu
-                </a>{' '}
-                szakmai támogatásával.
+                {t('about.heroDescription')}
               </p>
             </div>
           </div>
@@ -119,28 +126,14 @@ const About = () => {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="order-2 lg:order-1">
                 <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
-                  A kezdetek és a szakértelem
+                  {t('about.beginningsTitle')}
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    A mi történetünk nem egy egyszerű kereskedelemmel kezdődött. Alapjainkat a 
-                    <strong className="text-foreground"> szakértői tervezés és a műszaki tanácsadás</strong> fektette 
-                    le a{' '}
-                    <a 
-                      href="https://sopronterv.hu" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-cyan hover:underline"
-                    >
-                      Sopronterv
-                    </a>{' '}
-                    égisze alatt, több mint 15 éve.
+                    {t('about.beginningsText1')}
                   </p>
                   <p>
-                    Szakértőkként hittünk abban, hogy a modern otthon nemcsak falakból áll, 
-                    hanem egy komplex, lélegző rendszerből. Ez a szemlélet hívta életre a 
-                    <strong className="text-foreground"> Németh Légtechnika Kft.</strong>-t, ahol a célunk 
-                    az volt, hogy a papírra vetett terveket a legmagasabb minőségben váltsuk valóra.
+                    {t('about.beginningsText2')}
                   </p>
                 </div>
               </div>
@@ -150,7 +143,7 @@ const About = () => {
                   <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center overflow-hidden border border-border">
                     <div className="text-center p-8">
                       <Building2 className="w-20 h-20 text-cyan mx-auto mb-4" />
-                      <p className="text-muted-foreground text-sm">Szakértői háttér és tervezési tapasztalat</p>
+                      <p className="text-muted-foreground text-sm">{t('about.expertBackground')}</p>
                     </div>
                   </div>
                   <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-cyan/20 rounded-xl flex items-center justify-center">
@@ -171,11 +164,11 @@ const About = () => {
                   <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-dark to-dark-secondary flex items-center justify-center overflow-hidden border border-dark-secondary">
                     <div className="text-center p-8">
                       <Wrench className="w-20 h-20 text-cyan mx-auto mb-4" />
-                      <p className="text-dark-muted text-sm">Hővisszanyerős és hőszivattyús rendszerek specialistái</p>
+                      <p className="text-dark-muted text-sm">{t('about.heatRecoverySpecialists')}</p>
                     </div>
                   </div>
                   <div className="absolute -top-4 -left-4 glass-card rounded-xl p-4 shadow-lg">
-                    <p className="text-xs text-muted-foreground mb-1">Portfóliónk</p>
+                    <p className="text-xs text-muted-foreground mb-1">{t('about.portfolio')}</p>
                     <p className="text-sm font-semibold text-foreground">szelloztetes.eu</p>
                     <p className="text-sm font-semibold text-foreground">hoszivattyu.online</p>
                   </div>
@@ -184,36 +177,14 @@ const About = () => {
               
               <div>
                 <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6">
-                  Küldetésünk a szellőztetésben
+                  {t('about.missionTitle')}
                 </h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Az évek során specialistává váltunk a <strong className="text-foreground">hővisszanyerős 
-                    szellőztető rendszerek</strong> és a <strong className="text-foreground">modern hőszivattyús 
-                    megoldások</strong> területén. Szakértelmünket a{' '}
-                    <a 
-                      href="https://szelloztetes.eu" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-cyan hover:underline"
-                    >
-                      szelloztetes.eu
-                    </a>{' '}
-                    és{' '}
-                    <a 
-                      href="https://hoszivattyu.online" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-cyan hover:underline"
-                    >
-                      hoszivattyu.online
-                    </a>{' '}
-                    szakportáljaink is tükrözik.
+                    {t('about.missionText1')}
                   </p>
                   <p>
-                    Felismertük, hogy egy jól megtervezett rendszer csak akkor marad hatékony és egészséges, 
-                    ha a karbantartása is szakszerű. A rendszeres szűrőcsere nem luxus – a gép élettartamának 
-                    és az otthon levegőminőségének alapfeltétele.
+                    {t('about.missionText2')}
                   </p>
                 </div>
               </div>
@@ -226,10 +197,10 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                Útunk
+                {t('about.timelineTitle')}
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                A tervezéstől a megvalósításon át a karbantartásig – így épült fel szakértelmünk
+                {t('about.timelineDescription')}
               </p>
             </div>
             
@@ -278,24 +249,21 @@ const About = () => {
           <div className="relative container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-2xl lg:text-3xl font-bold mb-6">
-                Miért jött létre a <span className="gradient-cyan-text">szellozoszuro.hu</span>?
+                {t('about.whyCreatedTitle')} <span className="gradient-cyan-text">{t('about.whyCreatedHighlight')}</span>?
               </h2>
               <div className="space-y-4 text-dark-muted text-lg leading-relaxed">
                 <p>
-                  Ügyfeleink visszajelzései alapján láttuk a piaci rést: nehéz volt gyorsan, 
-                  megbízható forrásból beszerezni a gyári minőségű szűrőket.
+                  {t('about.whyCreatedText1')}
                 </p>
                 <p>
-                  A szellozoszuro.hu azért jött létre, hogy <strong className="text-dark-foreground">Önnek 
-                  ne kelljen szakemberre várnia</strong> a szűrőcseréhez. Mi nemcsak eladjuk a szűrőt, 
-                  hanem pontosan tudjuk, mi történik a gép belsejében, ha nem megfelelő a légáramlás.
+                  {t('about.whyCreatedText2')}
                 </p>
                 <p className="text-xl font-medium text-dark-foreground">
-                  Saját raktárkészletünkből, szakértői támogatással biztosítjuk a friss levegőt otthonába.
+                  {t('about.whyCreatedText3')}
                 </p>
                 <p className="mt-4 p-4 bg-cyan/10 rounded-xl border border-cyan/20">
-                  <strong className="text-cyan">🇭🇺 Országos lefedettség:</strong>{' '}
-                  <span className="text-dark-foreground">Bár központunk Sopronban található, szervizpartnereink révén országos lefedettséggel rendelkezünk. Bárhol is éljen az országban, szakértőink és partnereink készen állnak rendszere karbantartására és tisztítására.</span>
+                  <strong className="text-cyan">🇭🇺 {t('about.nationalCoverage')}</strong>{' '}
+                  <span className="text-dark-foreground">{t('about.nationalCoverageText')}</span>
                 </p>
               </div>
             </div>
@@ -307,7 +275,7 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                Amiben hiszünk
+                {t('about.valuesTitle')}
               </h2>
             </div>
             
@@ -339,10 +307,10 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                A csapat mögöttünk
+                {t('about.teamTitle')}
               </h2>
               <p className="text-muted-foreground max-w-xl mx-auto">
-                Családi vállalkozásként minden ügyfelünkkel személyesen foglalkozunk
+                {t('about.teamDescription')}
               </p>
             </div>
             
@@ -382,9 +350,9 @@ const About = () => {
             <div className="mt-12 text-center">
               <div className="inline-block bg-card rounded-2xl border border-border p-8">
                 <p className="text-muted-foreground italic mb-4">
-                  "Minden szűrőcsere mögött a tiszta levegő és az egészséges otthon iránti elkötelezettségünk áll."
+                  "{signature.quote}"
                 </p>
-                <p className="text-foreground font-semibold">– A Németh család</p>
+                <p className="text-foreground font-semibold">{signature.family}</p>
                 <p className="text-sm text-muted-foreground">Sopron, 2024</p>
               </div>
             </div>
@@ -395,22 +363,21 @@ const About = () => {
         <section className="py-16 lg:py-24 section-dark">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl lg:text-3xl font-bold mb-4">
-              Kérdése van a szűrőkkel kapcsolatban?
+              {t('about.ctaTitle')}
             </h2>
             <p className="text-dark-muted text-lg mb-8 max-w-xl mx-auto">
-              Szakértői háttérrel rendelkező csapatunk készséggel segít megtalálni 
-              a gépe típusához legmegfelelőbb szűrőt.
+              {t('about.ctaDescription')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" asChild>
-                <Link to="/contact">
-                  Kapcsolatfelvétel
+                <Link to={`${langPrefix}/contact`}>
+                  {t('about.ctaButton')}
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
               <Button variant="heroOutline" asChild>
-                <Link to="/shop">
-                  Szűrők böngészése
+                <Link to={`${langPrefix}/shop`}>
+                  {t('cta.button')}
                 </Link>
               </Button>
             </div>
