@@ -41,7 +41,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename="/szellozoszuro.hu">
           <ScrollToTop />
           <Routes>
             {/* Hungarian routes (default) */}
