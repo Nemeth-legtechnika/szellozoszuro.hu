@@ -3,10 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { ArrowRight, Shield, Truck, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroBg from '@/assets/hero-bg.jpg';
+import usePath from "@/hooks/use-path.tsx";
 
 const Hero = () => {
-  const { t, i18n } = useTranslation();
-  const langPrefix = i18n.language === 'de' ? '/de' : '';
+  const { t } = useTranslation();
+  const paths = usePath();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -41,13 +42,13 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <Button variant="hero" asChild>
-              <Link to={`${langPrefix}/shop`}>
+              <Link to={paths.shop}>
                 {t('hero.browseFilters')}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
             <Button variant="heroOutline" asChild>
-              <Link to={`${langPrefix}/blog`}>
+              <Link to={paths.blog.base}>
                 {t('hero.knowledgeBase')}
               </Link>
             </Button>

@@ -8,10 +8,11 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLdSchema from '@/components/seo/JsonLdSchema';
 import nemethKalmanImage from '@/assets/team/nemeth-kalman.jpg';
+import usePath from "@/hooks/use-path.tsx";
 
 const About = () => {
   const { t, i18n } = useTranslation();
-  const langPrefix = i18n.language === 'de' ? '/de' : '';
+  const paths = usePath()
 
   const highlights = [
     {
@@ -91,7 +92,7 @@ const About = () => {
           ? 'Lernen Sie die Geschichte der Németh Légtechnika Kft. kennen: 15+ Jahre Lüftungstechnik-Erfahrung, Familienunternehmen aus Sopron. Landesweites Servicepartner-Netzwerk!'
           : 'Ismerje meg a Németh Légtechnika Kft. történetét: 15+ év légtechnikai tapasztalat, családi vállalkozás Sopronból. Országos szervizpartneri hálózattal rendelkezünk!'
         } />
-        <link rel="canonical" href={`https://szellozoszuro.hu${langPrefix}/about`} />
+        <link rel="canonical" href={`https://szellozoszuro.hu${paths.about}`} />
       </Helmet>
       
       <JsonLdSchema includeLocalBusiness={true} includeOrganization={true} />
@@ -370,13 +371,13 @@ const About = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" asChild>
-                <Link to={`${langPrefix}/contact`}>
+                <Link to={paths.contact}>
                   {t('about.ctaButton')}
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
               <Button variant="heroOutline" asChild>
-                <Link to={`${langPrefix}/shop`}>
+                <Link to={paths.shop}>
                   {t('cta.button')}
                 </Link>
               </Button>

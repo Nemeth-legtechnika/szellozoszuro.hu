@@ -5,19 +5,19 @@ import { Menu, X, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import LanguageSwitcher from './LanguageSwitcher';
 import logo from '@/assets/logo.png';
+import usePath from "@/hooks/use-path.tsx";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t, i18n } = useTranslation();
-  
-  const langPrefix = i18n.language === 'de' ? '/de' : '';
+  const { t } = useTranslation();
+  const paths = usePath();
 
   const navLinks = [
-    { name: t('nav.home'), href: `${langPrefix}/` },
-    { name: t('nav.filters'), href: `${langPrefix}/shop` },
-    { name: t('nav.knowledge'), href: `${langPrefix}/blog` },
-    { name: t('nav.about'), href: `${langPrefix}/about` },
-    { name: t('nav.contact'), href: `${langPrefix}/contact` },
+    { name: t('nav.home'), href: paths.home },
+    { name: t('nav.filters'), href: paths.shop },
+    { name: t('nav.knowledge'), href: paths.blog.base },
+    { name: t('nav.about'), href: paths.about },
+    { name: t('nav.contact'), href: paths.contact },
   ];
 
   return (
@@ -25,7 +25,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to={`${langPrefix}/`} className="flex items-center gap-2">
+          <Link to={paths.home} className="flex items-center gap-2">
             <img src={logo} alt="Németh Légtechnika" className="h-10 lg:h-12 w-auto" />
             <span className="text-lg lg:text-xl font-bold text-dark-foreground">
               szellozoszuro<span className="text-cyan">.hu</span>
@@ -49,7 +49,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
             <Button variant="cta" size="lg" asChild>
-              <Link to={`${langPrefix}/shop`}>
+              <Link to={paths.shop}>
                 <ShoppingCart className="w-4 h-4" />
                 {t('nav.shopFilters')}
               </Link>
@@ -84,7 +84,7 @@ const Header = () => {
               </Link>
             ))}
             <Button variant="cta" className="mt-4" asChild>
-              <Link to={`${langPrefix}/shop`} onClick={() => setIsMenuOpen(false)}>
+              <Link to={paths.shop} onClick={() => setIsMenuOpen(false)}>
                 <ShoppingCart className="w-4 h-4" />
                 {t('nav.buyFilters')}
               </Link>
