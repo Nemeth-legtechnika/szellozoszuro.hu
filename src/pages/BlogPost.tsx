@@ -4,6 +4,7 @@ import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLdSchema from '@/components/seo/JsonLdSchema';
+import usePath from "@/hooks/use-path.tsx";
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg';
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg';
@@ -296,10 +297,11 @@ const blogPosts = [
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
+  const paths = usePath();
   const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return <Navigate to={paths.blog.base} replace />;
   }
 
   return (
@@ -330,7 +332,7 @@ const BlogPost = () => {
           <div className="max-w-3xl mx-auto">
             {/* Back Link */}
             <Link
-              to="/blog"
+              to={paths.blog.base}
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-cyan transition-colors mb-6"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -437,7 +439,7 @@ const BlogPost = () => {
                   Szeretné megrendelni a megfelelő szűrőket?
                 </p>
                 <Link
-                  to="/shop"
+                  to={paths.shop}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-cyan text-primary-foreground font-medium rounded-lg hover:bg-cyan/90 transition-colors"
                 >
                   Szűrők böngészése

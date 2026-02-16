@@ -5,6 +5,7 @@ import { ArrowRight, Calendar, User } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLdSchema from '@/components/seo/JsonLdSchema';
+import usePath from "@/hooks/use-path.tsx";
 
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg';
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
@@ -126,7 +127,7 @@ const blogPosts = [
 
 const Blog = () => {
   const { t, i18n } = useTranslation();
-  const langPrefix = i18n.language === 'de' ? '/de' : '';
+  const paths = usePath();
   const isGerman = i18n.language === 'de';
 
   return (
@@ -160,7 +161,7 @@ const Blog = () => {
               {blogPosts.map((post) => (
                 <Link
                   key={post.id}
-                  to={`${langPrefix}/blog/${post.slug}`}
+                  to={paths.blog.getPost(post.slug)}
                   className="group block"
                 >
                   <article className="h-full bg-card rounded-2xl border border-border hover:border-cyan/30 transition-all duration-300 hover:shadow-card overflow-hidden flex flex-col">

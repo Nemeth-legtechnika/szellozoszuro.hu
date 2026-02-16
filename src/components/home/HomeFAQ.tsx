@@ -8,10 +8,11 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import faqBgImage from '@/assets/faq-bg.jpg';
+import usePath from "@/hooks/use-path.tsx";
 
 const HomeFAQ = () => {
-  const { t, i18n } = useTranslation();
-  const langPrefix = i18n.language === 'de' ? '/de' : '';
+  const { t } = useTranslation();
+  const paths = usePath();
 
   const faqItems = [
     {
@@ -87,7 +88,7 @@ const HomeFAQ = () => {
 
           <div className="text-center mt-8">
             <Link 
-              to={`${langPrefix}/gyik`} 
+              to={paths.faq}
               className="inline-flex items-center gap-2 text-cyan hover:text-cyan-light transition-colors font-medium"
             >
               {t('faq.viewAll')}
