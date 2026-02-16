@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
 import logo from '@/assets/logo.png';
+import usePath from "@/hooks/use-path.tsx";
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
-  const langPrefix = i18n.language === 'de' ? '/de' : '';
+  const paths = usePath();
 
   const partnerPortals = [
     {
@@ -42,22 +43,22 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-3">
               <li>
-                <Link to={`${langPrefix}/shop`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link to={paths.shop} className="text-dark-muted hover:text-cyan transition-colors text-sm">
                   {t('nav.filters')}
                 </Link>
               </li>
               <li>
-                <Link to={`${langPrefix}/blog`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link to={paths.blog.base} className="text-dark-muted hover:text-cyan transition-colors text-sm">
                   {t('nav.knowledge')}
                 </Link>
               </li>
               <li>
-                <Link to={`${langPrefix}/about`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link to={paths.about} className="text-dark-muted hover:text-cyan transition-colors text-sm">
                   {t('nav.about')}
                 </Link>
               </li>
               <li>
-                <Link to={`${langPrefix}/contact`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link to={paths.contact} className="text-dark-muted hover:text-cyan transition-colors text-sm">
                   {t('nav.contact')}
                 </Link>
               </li>
@@ -69,22 +70,22 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">{t('footer.legal')}</h4>
             <ul className="space-y-3">
               <li>
-                <Link to={`${langPrefix}/shipping`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link to={paths.shipping} className="text-dark-muted hover:text-cyan transition-colors text-sm">
                   {t('footer.shipping')}
                 </Link>
               </li>
               <li>
-                <Link to={`${langPrefix}/gyik`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link to={paths.faq} className="text-dark-muted hover:text-cyan transition-colors text-sm">
                   {i18n.language === 'de' ? 'Häufige Fragen' : 'Gyakori kérdések'}
                 </Link>
               </li>
               <li>
-                <Link to={`${langPrefix}/privacy`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link to={paths.privacy} className="text-dark-muted hover:text-cyan transition-colors text-sm">
                   {t('footer.privacy')}
                 </Link>
               </li>
               <li>
-                <Link to={`${langPrefix}/aszf`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link to={paths.terms} className="text-dark-muted hover:text-cyan transition-colors text-sm">
                   {t('footer.terms')}
                 </Link>
               </li>
@@ -169,10 +170,10 @@ const Footer = () => {
             © 2024 Németh Légtechnika Kft. {t('footer.allRights')}
           </p>
           <div className="flex items-center gap-6">
-            <Link to={`${langPrefix}/privacy`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+            <Link to={paths.privacy} className="text-dark-muted hover:text-cyan transition-colors text-sm">
               {t('footer.privacy')}
             </Link>
-            <Link to={`${langPrefix}/aszf`} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+            <Link to={paths.terms} className="text-dark-muted hover:text-cyan transition-colors text-sm">
               {t('footer.terms')}
             </Link>
           </div>

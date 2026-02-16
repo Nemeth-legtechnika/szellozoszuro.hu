@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import usePath from "@/hooks/use-path.tsx";
 
 const BlogPreview = () => {
   const { t, i18n } = useTranslation();
-  const langPrefix = i18n.language === 'de' ? '/de' : '';
+  const paths = usePath();
 
   const blogPosts = [
     {
@@ -60,7 +61,7 @@ const BlogPreview = () => {
             </p>
           </div>
           <Button variant="outline" asChild>
-            <Link to={`${langPrefix}/blog`}>
+            <Link to={paths.blog.base}>
               {t('blog.viewAll')}
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -71,7 +72,7 @@ const BlogPreview = () => {
           {blogPosts.map((post) => (
             <Link
               key={post.id}
-              to={`${langPrefix}/blog/${post.slug}`}
+              to={paths.blog.getPost(post.slug)}
               className="group block"
             >
               <article className="h-full p-6 rounded-2xl bg-card border border-border hover:border-cyan/30 transition-all duration-300 hover:shadow-card flex flex-col">

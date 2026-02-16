@@ -5,10 +5,11 @@ import { Truck, Clock, Package, Phone, ArrowRight, Zap, Calendar } from 'lucide-
 import { Button } from '@/components/ui/button';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import usePath from "@/hooks/use-path.tsx";
 
 const Shipping = () => {
-  const { t, i18n } = useTranslation();
-  const langPrefix = i18n.language === 'de' ? '/de' : '';
+  const { t } = useTranslation();
+  const paths = usePath();
 
   return (
     <div className="min-h-screen bg-background">
@@ -192,7 +193,7 @@ const Shipping = () => {
                     </a>
                   </Button>
                   <Button variant="ghost" size="sm" asChild>
-                    <Link to={`${langPrefix}/contact`} className="gap-2">
+                    <Link to={paths.contact} className="gap-2">
                       {t('nav.contact')}
                       <ArrowRight className="w-4 h-4" />
                     </Link>

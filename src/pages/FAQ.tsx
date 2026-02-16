@@ -12,10 +12,11 @@ import {
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLdSchema from '@/components/seo/JsonLdSchema';
+import usePath from "@/hooks/use-path.tsx";
 
 const FAQ = () => {
   const { t, i18n } = useTranslation();
-  const langPrefix = i18n.language === 'de' ? '/de' : '';
+  const paths = usePath();
 
   const faqData = [
     {
@@ -214,7 +215,7 @@ const FAQ = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" asChild>
-                  <Link to={`${langPrefix}/contact`}>
+                  <Link to={paths.contact}>
                     {t('faqPage.contactButton')}
                     <ArrowRight className="w-5 h-5" />
                   </Link>

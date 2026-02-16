@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Wind } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import usePath from "@/hooks/use-path.tsx";
 
 const CtaBanner = () => {
-  const { t, i18n } = useTranslation();
-  const langPrefix = i18n.language === 'de' ? '/de' : '';
+  const { t } = useTranslation();
+  const paths = usePath();
 
   return (
     <section className="py-20 lg:py-28 section-dark relative overflow-hidden">
@@ -29,13 +30,13 @@ const CtaBanner = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" asChild>
-              <Link to={`${langPrefix}/shop`}>
+              <Link to={paths.shop}>
                 {t('cta.button')}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
             <Button variant="heroOutline" asChild>
-              <Link to={`${langPrefix}/contact`}>
+              <Link to={paths.contact}>
                 {t('nav.contact')}
               </Link>
             </Button>
