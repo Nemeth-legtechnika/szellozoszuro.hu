@@ -1,4 +1,5 @@
 import { ArrowRight, Award, Shield, Truck } from 'lucide-react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
@@ -6,7 +7,7 @@ import heroBg from '@/assets/hero-bg.jpg'
 import { Button } from '@/components/ui/button'
 import usePath from '@/hooks/use-path'
 
-const Hero = () => {
+const Hero = (): React.ReactElement => {
   const { t } = useTranslation()
   const paths = usePath()
 

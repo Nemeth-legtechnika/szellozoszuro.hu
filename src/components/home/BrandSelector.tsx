@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import brandSelectorBg from '@/assets/brand-selector-bg.jpg'
@@ -27,7 +28,7 @@ const brands = [
   { name: 'Zehnder', link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/zehnder/' },
 ]
 
-const BrandSelector = () => {
+const BrandSelector = (): React.ReactElement => {
   const { t } = useTranslation()
 
   return (
@@ -58,7 +59,7 @@ const BrandSelector = () => {
               href={brand.link}
               target='_blank'
               rel='noopener noreferrer'
-              className='bg-dark-bg-secondary/60 hover:bg-dark-bg-secondary/80 group relative flex items-center justify-center rounded-2xl border border-white/10 p-5 backdrop-blur-md transition-all duration-300 hover:border-cyan/40 lg:p-6'
+              className='group relative flex items-center justify-center rounded-2xl border border-white/10 bg-dark-secondary/60 p-5 backdrop-blur-md transition-all duration-300 hover:border-cyan/40 hover:bg-dark-secondary/80 lg:p-6'
             >
               <span className='text-lg font-semibold text-dark-foreground transition-colors group-hover:text-cyan lg:text-xl'>
                 {brand.name}

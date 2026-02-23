@@ -1,4 +1,5 @@
 import { ArrowRight, Calendar, User } from 'lucide-react'
+import type { ReactElement } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -137,7 +138,7 @@ const blogPosts = [
   },
 ]
 
-const Blog = () => {
+const Blog = (): ReactElement => {
   const { t, i18n } = useTranslation()
   const paths = usePath()
   const isGerman = i18n.language === 'de'

@@ -1,3 +1,4 @@
+import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
 interface JsonLdSchemaProps {
@@ -15,7 +16,7 @@ const JsonLdSchema = ({
   includeOrganization = true,
   includeFAQ = false,
   faqItems = [],
-}: JsonLdSchemaProps) => {
+}: JsonLdSchemaProps): React.ReactElement => {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',

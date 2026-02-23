@@ -1,4 +1,5 @@
 import { ArrowRight, Award, Building2, Filter, Home, MapPin, Users, Wrench } from 'lucide-react'
+import type { ReactElement } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -11,7 +12,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import usePath from '@/hooks/use-path'
 
-const About = () => {
+const About = (): ReactElement => {
   const { t, i18n } = useTranslation()
   const paths = usePath()
 
@@ -307,7 +308,7 @@ const About = () => {
             {/* Signature */}
             <div className='mt-12 text-center'>
               <div className='inline-block rounded-2xl border border-border bg-card p-8'>
-                <p className='mb-4 italic text-muted-foreground'>"{signature.quote}"</p>
+                <p className='mb-4 italic text-muted-foreground'>&ldquo;{signature.quote}&rdquo;</p>
                 <p className='font-semibold text-foreground'>{signature.family}</p>
                 <p className='text-sm text-muted-foreground'>Sopron, 2024</p>
               </div>

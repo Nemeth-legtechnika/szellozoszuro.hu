@@ -1,11 +1,12 @@
 import { Building2, CreditCard, FileText, Mail, RotateCcw, Scale, Server, Shield } from 'lucide-react'
+import type { ReactElement } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 
-const Terms = () => {
+const Terms = (): ReactElement => {
   const { t } = useTranslation()
 
   return (

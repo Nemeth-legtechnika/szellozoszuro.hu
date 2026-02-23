@@ -1,3 +1,4 @@
+import type { ReactElement } from 'react'
 import { Helmet } from 'react-helmet-async'
 
 import BlogPreview from '@/components/home/BlogPreview'
@@ -10,7 +11,7 @@ import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
 
-const Index = () => (
+const Index = (): ReactElement => (
   <div className='min-h-screen bg-background'>
     <Helmet>
       <title>Szellőztető Szűrők és Szerviz | Országos Lefedettség | Németh Légtechnika</title>

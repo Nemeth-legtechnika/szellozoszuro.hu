@@ -1,11 +1,12 @@
 import { ArrowRight, Wind } from 'lucide-react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import { Button } from '@/components/ui/button'
 import usePath from '@/hooks/use-path'
 
-const CtaBanner = () => {
+const CtaBanner = (): React.ReactElement => {
   const { t } = useTranslation()
   const paths = usePath()
 

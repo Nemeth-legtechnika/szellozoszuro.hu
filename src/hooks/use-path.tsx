@@ -27,7 +27,9 @@ const pagePaths = (langPrefix: string = '') => ({
   shipping: `${langPrefix}/shipping`,
 })
 
-const usePath = () => {
+type PagePaths = ReturnType<typeof pagePaths>
+
+const usePath = (): PagePaths => {
   const { i18n } = useTranslation()
   const langPrefix = i18n.language === 'de' ? '/de' : ''
 

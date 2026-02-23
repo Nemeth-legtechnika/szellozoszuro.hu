@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { NavLink as RouterNavLink, NavLinkProps } from 'react-router-dom'
 
-import { cn } from '@/lib/utils'
+import cn from '@/lib/utils'
 
 interface NavLinkCompatProps extends Omit<NavLinkProps, 'className'> {
   className?: string
@@ -20,6 +20,4 @@ const NavLink = forwardRef<HTMLAnchorElement, NavLinkCompatProps>(
   ),
 )
 
-NavLink.displayName = 'NavLink'
-
-export { NavLink }
+export default NavLink

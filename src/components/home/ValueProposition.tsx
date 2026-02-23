@@ -1,7 +1,8 @@
 import { CheckCircle2, Clock, Wind, Wrench } from 'lucide-react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 
-const ValueProposition = () => {
+const ValueProposition = (): React.ReactElement => {
   const { t } = useTranslation()
 
   const features = [

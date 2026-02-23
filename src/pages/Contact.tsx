@@ -1,4 +1,5 @@
 import { Clock, Mail, MapPin, MessageSquare, Phone } from 'lucide-react'
+import type { ReactElement } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 
@@ -6,7 +7,7 @@ import ContactForm from '@/components/contact/ContactForm'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 
-const Contact = () => {
+const Contact = (): ReactElement => {
   const { t } = useTranslation()
 
   const orderContact = [

@@ -1,9 +1,10 @@
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { useLocation, useNavigate } from 'react-router-dom'
 
-import { cn } from '@/lib/utils'
+import cn from '@/lib/utils'
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = (): React.ReactElement => {
   const { i18n } = useTranslation()
   const navigate = useNavigate()
   const location = useLocation()
@@ -24,18 +25,17 @@ const LanguageSwitcher = () => {
         const newPath = currentPath === '/' ? '/de' : `/de${currentPath}`
         navigate(newPath, { replace: true })
       }
-    } else {
+    } else if (currentPath.startsWith('/de')) {
       // Remove /de prefix for Hungarian
-      if (currentPath.startsWith('/de')) {
-        const newPath = currentPath.replace(/^\/de/, '') || '/'
-        navigate(newPath, { replace: true })
-      }
+      const newPath = currentPath.replace(/^\/de/, '') || '/'
+      navigate(newPath, { replace: true })
     }
   }
 
   return (
     <div className='flex items-center gap-1.5'>
       <button
+        type='button'
         onClick={() => switchLanguage('hu')}
         className={cn(
           'w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 text-lg',
@@ -48,6 +48,7 @@ const LanguageSwitcher = () => {
         🇭🇺
       </button>
       <button
+        type='button'
         onClick={() => switchLanguage('de')}
         className={cn(
           'w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 text-lg',

@@ -1,4 +1,5 @@
 import { ArrowRight, ExternalLink, Filter, Truck, Zap } from 'lucide-react'
+import type { ReactElement } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 
@@ -107,7 +108,7 @@ const brands = [
   },
 ]
 
-const Shop = () => {
+const Shop = (): ReactElement => {
   const { t } = useTranslation()
 
   const categories = [

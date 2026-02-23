@@ -10,13 +10,14 @@ import {
   ShieldCheck,
   UserCheck,
 } from 'lucide-react'
+import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 
-const Privacy = () => {
+const Privacy = (): React.ReactElement => {
   const { t } = useTranslation()
 
   return (

@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import React from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
@@ -37,7 +38,7 @@ const routes = [
   { path: '/shipping', element: <Shipping /> },
 ]
 
-const App = () => (
+const App = (): React.ReactElement => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>

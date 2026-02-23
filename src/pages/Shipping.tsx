@@ -1,4 +1,5 @@
 import { ArrowRight, Calendar, Clock, Package, Phone, Truck, Zap } from 'lucide-react'
+import type { ReactElement } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -8,7 +9,7 @@ import Header from '@/components/layout/Header'
 import { Button } from '@/components/ui/button'
 import usePath from '@/hooks/use-path'
 
-const Shipping = () => {
+const Shipping = (): ReactElement => {
   const { t } = useTranslation()
   const paths = usePath()
 

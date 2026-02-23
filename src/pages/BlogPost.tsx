@@ -1,4 +1,5 @@
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react'
+import type { ReactElement } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link, Navigate, useParams } from 'react-router-dom'
 
@@ -29,29 +30,34 @@ const blogPosts = [
     readTime: '5 perc',
     sections: [
       {
+        id: 1,
         type: 'intro',
         content:
           'Sokan kérdezik tőlünk, hogy mi történik, ha „csak még egy hónapot" marad a régi szűrő a gépben. Szakértőként látjuk a számokat: egy elhanyagolt szűrő nemcsak a levegő minőségét rontja, hanem komoly anyagi károkat is okozhat.',
       },
       {
+        id: 2,
         type: 'heading',
         title: 'Veszélyben a hőcserélő',
         content:
           'A szűrő az első védelmi vonal. Ha telítődik, a finom por átjuthat rajta, és lerakódik a hőcserélő kocka lamellái között. Egy szűrő ára töredéke egy professzionális tisztításnak vagy egy új hőcserélőnek.',
       },
       {
+        id: 3,
         type: 'heading',
         title: 'Emelkedő villanyszámla',
         content:
           'A koszos szűrő nagyobb ellenállást jelent. A gép ventilátorai keményebben dolgoznak, magasabb fordulatszámon pörögnek, ami érezhetően növeli az energiafogyasztást.',
       },
       {
+        id: 4,
         type: 'heading',
         title: 'Zajterhelés',
         content:
           'A fojtott levegőáramlás miatt a rendszer hangosabbá válik, elvész a hővisszanyerős szellőztetés egyik legnagyobb előnye: a csendes, észrevétlen működés.',
       },
       {
+        id: 5,
         type: 'callout',
         title: 'Szakértői tanácsunk',
         content: 'Ellenőrizze szűrőit 3-4 havonta, és évente legalább kétszer végezzen teljes cserét!',
@@ -71,35 +77,41 @@ const blogPosts = [
     readTime: '7 perc',
     sections: [
       {
+        id: 1,
         type: 'intro',
         content:
           'Gyakran tapasztaljuk, hogy a felhasználók elvesznek a betűk és számok rengetegében. A képen látható pitypang gyönyörű, de az allergiásoknak maga az ellenség. Szakértőként segítünk egyszerűen elmagyarázni, melyik szűrő mire való.',
       },
       {
+        id: 2,
         type: 'heading',
         title: 'G4 (Durva szűrő) – A gép testőre',
         content:
           'Ez a "munkás" szűrő. Megfogja a bogarakat, a nagyobb porszöszöket, hajszálakat és a nyárfapelyhet.\n\nCélja: Elsősorban a hővisszanyerő gép mechanikai védelme a nagy szennyeződésektől.',
       },
       {
+        id: 3,
         type: 'heading',
         title: 'F7 (Finom szűrő) – A család védelmezője',
         content:
           'Ez az a szint, ami megállítja a szabad szemmel alig látható veszélyeket: a virágport (pollent), a finomport és a szmog egy részét.\n\nCélja: Az egészséges, tiszta belső levegő biztosítása. Ha allergiás van a családban, vagy forgalmas út mellett laknak, ez a típus elengedhetetlen.',
       },
       {
+        id: 4,
         type: 'heading',
         title: 'M5 (Közepes szűrő)',
         content:
           'Az arany középút. Jobban szűr, mint a G4, de még nem fogja meg a legfinomabb polleneket olyan hatékonysággal, mint az F7.',
       },
       {
+        id: 5,
         type: 'heading',
         title: 'F9 / ePM1 – Prémium védelem és nagyvárosi szmogszűrés',
         content:
           'A legmagasabb szintű szűrés, amely már a láthatatlan koromszemcséket, a baktériumok egy részét és a szmogért felelős mikroporokat is megfogja.\n\nMikor válassza? Ha forgalmas út mellett lakik, nagyvárosi környezetben él, vagy asztmával küzd.\n\nMikor ne válassza? Téli időszakban, ahol magas páratartalom és a levegőben található apró korom részecskék nagyon gyorsan eltömíthetik. Tehát ebben az időszakban lerövidül a minőségi védelem időszaka.\n\nFontos: Az ePM1 minősítésű szűrők (minél magasabb a százalékos érték, annál jobb) nyújtják a legtisztább levegőt.',
       },
       {
+        id: 6,
         type: 'callout',
         title: 'Szakértői tanácsunk',
         content:
@@ -121,35 +133,41 @@ const blogPosts = [
     readTime: '6 perc',
     sections: [
       {
+        id: 1,
         type: 'intro',
         content:
           'Télen sokan tapasztalják, hogy a benti levegő páratartalma drasztikusan lecsökken, ami torokszárazsághoz és komfortérzet-csökkenéshez vezet. A képen látható 25%-os páratartalom tipikus példája ennek. Szakértőként azonban látjuk a folyamat másik, rejtett oldalát is, ami a gép belsejében zajlik.',
       },
       {
+        id: 2,
         type: 'heading',
         title: 'Miért olyan száraz a téli levegő?',
         content:
           'A kinti hideg levegő kevés párát tartalmaz, és amint a gép felmelegíti, a relatív páratartalom leesik. Ezen a modern entalpia hőcserélők segíthetnek, de a rendszer lelke továbbra is a tiszta szűrő marad. Itt jön a képbe egy kritikus összefüggés:',
       },
       {
+        id: 3,
         type: 'heading',
         title: 'A nedvesség és a koszos szűrő veszélyes párosa',
         content:
           'A téli párás, ködös időben a külső szűrőbetétek (különösen a papír alapúak) óhatatlanul benedvesednek. Ha a szűrő már telített és koszos, a sűrű porréteg megköti a nedvességet, és a szűrő nem tud gyorsan, hatékonyan kiszáradni.',
       },
       {
+        id: 4,
         type: 'heading',
         title: 'Ennek súlyos következményei lehetnek',
         content:
           '• Kellemetlen szagok: A tartósan nedves porrétegben mikroorganizmusok szaporodhatnak el, dohos szagot árasztva a lakásban.\n\n• Strukturális deformáció: A nedvességtől átázott, nehéz és koszos szűrőkeret vagy betét eldeformálódhat.\n\n• Gépkárosodás: Az eldeformálódott szűrő mellett a levegő szűretlenül szökik el, így a szennyeződés közvetlenül a méregdrága hőcserélő kockát kezdi el tömíteni.',
       },
       {
+        id: 5,
         type: 'heading',
         title: 'A megoldás kulcsa',
         content:
           'A tiszta szűrő tehát télen nemcsak a levegőminőség záloga, hanem a gép fizikai épségének és a szagtalan működésnek is az alapfeltétele.',
       },
       {
+        id: 6,
         type: 'callout',
         title: 'Szakértői tanácsunk',
         content:
@@ -171,47 +189,55 @@ const blogPosts = [
     readTime: '8 perc',
     sections: [
       {
+        id: 1,
         type: 'intro',
         content:
           'A szűrők rendszeres cseréje mellett a teljes rendszer (gép és légcsatornák) időszakos tisztítása elengedhetetlen. Szakértői tapasztalatunk szerint legkésőbb 2 évente javasolt a hálózat teljes átvizsgálása és fertőtlenítése. Ez az az időtáv, ami felett a lerakódások már érezhetően ronthatják a rendszer hatékonyságát.',
       },
       {
+        id: 2,
         type: 'heading',
         title: 'Mikor jön el a tisztítás ideje?',
         content:
           'A szakértői ajánlás egyértelmű: legkésőbb 2 évente érdemes a teljes rendszert átvizsgáltatni és fertőtleníttetni. Ez az az időtáv, ami felett a lerakódások már érezhetően ronthatják a rendszer hatékonyságát és a beltéri levegő minőségét.',
       },
       {
+        id: 3,
         type: 'heading',
         title: 'Az elszívó csőhálózat védelme: A láthatatlan veszély',
         content:
           'Sokan csak a gépben lévő szűrőkre koncentrálnak, de a rendszer tisztasága már az elszívási pontokon (konyha, fürdő, WC) eldől. Ha a szelepcsatlakozóknál szabadon hagyjuk az elszívó oldalt, egy veszélyes láncreakció indul el:',
       },
       {
+        id: 4,
         type: 'heading',
         title: 'Lerakódás és szűkülő keresztmetszet',
         content:
           'A bejutott por, szösz és konyhai pára elkezd a cső belső falára lerakódni. Ez a réteg folyamatosan vastagszik, így a cső hasznos keresztmetszete egyre kisebb lesz.',
       },
       {
+        id: 5,
         type: 'heading',
         title: 'Ventilátor túlterhelés',
         content:
           'A szűkebb keresztmetszet miatt a gépnek sokkal nagyobb ellenállást kell legyőznie. A ventilátorok magasabb fordulatszámon, folyamatosan nagyobb terhelés mellett dolgoznak.',
       },
       {
+        id: 6,
         type: 'heading',
         title: 'Meghibásodás',
         content:
           'Ez a folyamatos erőltetés előbb-utóbb a ventilátor motorjának idő előtti, költséges meghibásodásához vezet.',
       },
       {
+        id: 7,
         type: 'heading',
         title: 'A megoldás: G2 szűrőpaplan és szakértői karbantartás',
         content:
           'A megoldás egyszerűbb, mint gondolná: a szelepcsatlakozókba helyezhető G2 szűrőpaplan (kónuszos szűrő) megállítja a szennyeződést még a belépési ponton. Ezzel nemcsak a csőhálózat tisztasága őrizhető meg, hanem a szellőztető gép élettartama is jelentősen meghosszabbítható.',
       },
       {
+        id: 8,
         type: 'callout',
         title: 'Szakértői tanácsunk',
         content:
@@ -233,35 +259,41 @@ const blogPosts = [
     readTime: '6 perc',
     sections: [
       {
+        id: 1,
         type: 'intro',
         content:
           'Közeleg a tavasz, és vele együtt a pollenszezon is? Az allergiások számára az otthonuknak a biztonság szigetének kellene lennie. A szelloztetes.eu szakmai tapasztalatai alapján mutatjuk be, hogyan érheti ezt el.',
       },
       {
+        id: 2,
         type: 'heading',
         title: 'Miért nem elég a sima szűrő?',
         content:
           'A legtöbb szellőztető gép alapfelszereltsége a G4-es szűrő. A G4-es osztály csak a nagyobb porszöszöket és bogarakat fogja meg. A pollenszemcsék (melyek mérete gyakran 10-100 µm között van) könnyedén átjutnak rajta.',
       },
       {
+        id: 3,
         type: 'heading',
         title: 'Az F7-es szűrő: A pollenmentes otthon záloga',
         content:
           'A megoldás az F7-es (ePM1) finompor-szűrő alkalmazása a friss levegő ágban.\n\nHatékonyság: Ez a szűrőosztály már a 0,3-1 µm közötti részecskék jelentős részét is megfogja, a pollent pedig szinte 100%-os hatékonysággal szűri ki.\n\nÉletminőség: Nincs többé tüsszögés, vörös szemek és éjszakai nehézlégzés a saját lakásában.',
       },
       {
+        id: 4,
         type: 'heading',
         title: 'Szakértői tippek az allergiaszezonra',
         content:
           '• Időzített csere: Ne várja meg a szezon csúcsát! Cserélje le szűrőit már február végén vagy március elején.\n\n• Szelepvédelem: Ne felejtse el az elszívó oldali szelepek védelmét sem (G2 kónuszos szűrőkkel), hogy a rendszer minden pontja tiszta maradjon.\n\n• Ellenőrzés: Ha nagyon magas a porkoncentráció (pl. útépítés vagy intenzív virágzás a környéken), havonta nézzen rá az F7-es szűrő állapotára!',
       },
       {
+        id: 5,
         type: 'heading',
         title: 'Kövessen minket Facebookon is!',
         content:
           'Folyamatosan frissülő tanácsokért, videós segítségért és aktuális akciókért látogasson el Facebook oldalunkra is. Ott közösségünk tagjaként azonnal értesülhet a legújabb technológiákról és karbantartási tippekről.',
       },
       {
+        id: 6,
         type: 'image',
         image: filterClassesChartImage,
         imageAlt:
@@ -270,6 +302,7 @@ const blogPosts = [
           'A szűrőosztályok és hatékonyságuk különböző szemcseméreteknél. Jól látható, hogy csak az F7-es és magasabb osztály nyújt valódi védelmet a pollen ellen.',
       },
       {
+        id: 7,
         type: 'callout',
         title: 'Készen áll az allergiaszezonra?',
         content:
@@ -291,45 +324,53 @@ const blogPosts = [
     readTime: '6 perc',
     sections: [
       {
+        id: 1,
         type: 'intro',
         content:
           'A hővisszanyerős szellőztető rendszerek tulajdonosaiként tudjuk: a szűrőcsere a gép lelke. Sokan tartanak az utángyártott megoldásoktól, de szakértőként eláruljuk: létezik okos megtakarítás a hatékonyság feláldozása nélkül is.',
       },
       {
+        id: 2,
         type: 'heading',
         title: 'Miért lehet „bosszantó" egy rossz minőségű utángyártott szűrő?',
         content:
           'A nem megfelelő szűrők két fő problémát okozhatnak:\n\n• Túl magas légellenállás: Ha az anyag nem megfelelő, a ventilátornak nagyobb erővel kell dolgoznia. Ez magasabb villanyszámlát és a motor idő előtti elhasználódását eredményezi.\n\n• Gyenge szűrési hatékonyság: Ha az anyag szerkezete nem fogja meg a finomport, az lerakódik a hőcserélőben és a csövekben, ami később méregdrága tisztítást igényel.',
       },
       {
+        id: 3,
         type: 'heading',
         title: '4 dolog, amit mi garantálunk szakértőként',
         content: 'A szellozoszuro.hu kínálatának összeállításakor mi már elvégeztük a szűrést Ön helyett:',
       },
       {
+        id: 4,
         type: 'heading',
         title: '1. Német prémium alapanyag (Sandler AG)',
         content:
           'Csak olyan szintetikus anyagokat használunk, amelyek légáteresztése pontosan megfelel a gyári (Vaillant, Bosch, Helios, stb.) előírásoknak.',
       },
       {
+        id: 5,
         type: 'heading',
         title: '2. ISO 16890 tanúsítvány',
         content:
           'Szűrőinket akkreditált laboratóriumokban tesztelik. Az ePM1 70% nálunk valóban a szmog és pollenek megfogását jelenti.',
       },
       {
+        id: 6,
         type: 'heading',
         title: '3. PFAS-mentes és higiénikus',
         content: 'Megfelelnek a VDI 6022 előírásoknak, így nem juttatnak káros vegyi anyagokat otthonába.',
       },
       {
+        id: 7,
         type: 'heading',
         title: '4. Pontos illeszkedés',
         content:
           'Termékeink (legyen szó Wolf, Zehnder vagy Stiebel Eltron típusról) milliméterre pontosan illeszkednek a gyári foglalatba.',
       },
       {
+        id: 8,
         type: 'callout',
         title: 'Szakértői tanácsunk',
         content:
@@ -339,7 +380,7 @@ const blogPosts = [
   },
 ]
 
-const BlogPost = () => {
+const BlogPost = (): ReactElement => {
   const { slug } = useParams<{ slug: string }>()
   const paths = usePath()
   const post = blogPosts.find((p) => p.slug === slug)
@@ -409,10 +450,10 @@ const BlogPost = () => {
             {/* Article Body */}
             <div className='rounded-2xl border border-border bg-card p-6 shadow-lg lg:p-10'>
               <div className='prose prose-lg max-w-none'>
-                {post.sections.map((section, index) => {
+                {post.sections.map((section) => {
                   if (section.type === 'intro') {
                     return (
-                      <p key={index} className='mb-8 text-lg leading-relaxed text-foreground'>
+                      <p key={section.id} className='mb-8 text-lg leading-relaxed text-foreground'>
                         {section.content}
                       </p>
                     )
@@ -420,7 +461,7 @@ const BlogPost = () => {
 
                   if (section.type === 'heading') {
                     return (
-                      <div key={index} className='mb-8'>
+                      <div key={section.id} className='mb-8'>
                         <h2 className='mb-3 text-xl font-semibold text-foreground lg:text-2xl'>{section.title}</h2>
                         <p className='leading-relaxed text-muted-foreground'>{section.content}</p>
                       </div>
@@ -429,7 +470,7 @@ const BlogPost = () => {
 
                   if (section.type === 'callout') {
                     return (
-                      <div key={index} className='mt-10 rounded-xl border-l-4 border-cyan bg-cyan/10 p-6'>
+                      <div key={section.id} className='mt-10 rounded-xl border-l-4 border-cyan bg-cyan/10 p-6'>
                         <h3 className='mb-2 flex items-center gap-2 text-lg font-semibold text-foreground'>
                           <span className='text-cyan'>💡</span>
                           {section.title}
@@ -441,7 +482,7 @@ const BlogPost = () => {
 
                   if (section.type === 'image') {
                     return (
-                      <div key={index} className='my-10'>
+                      <div key={section.id} className='my-10'>
                         <img
                           src={section.image}
                           alt={section.imageAlt}

@@ -1,4 +1,5 @@
 import { ArrowRight, HelpCircle } from 'lucide-react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
@@ -6,28 +7,33 @@ import faqBgImage from '@/assets/faq-bg.jpg'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import usePath from '@/hooks/use-path'
 
-const HomeFAQ = () => {
+const HomeFAQ = (): React.ReactElement => {
   const { t } = useTranslation()
   const paths = usePath()
 
   const faqItems = [
     {
+      id: 1,
       questionKey: 'faq.items.filterType.question',
       answerKey: 'faq.items.filterType.answer',
     },
     {
+      id: 2,
       questionKey: 'faq.items.delivery.question',
       answerKey: 'faq.items.delivery.answer',
     },
     {
+      id: 3,
       questionKey: 'faq.items.filterClass.question',
       answerKey: 'faq.items.filterClass.answer',
     },
     {
+      id: 4,
       questionKey: 'faq.items.replacement.question',
       answerKey: 'faq.items.replacement.answer',
     },
     {
+      id: 5,
       questionKey: 'faq.items.aftermarket.question',
       answerKey: 'faq.items.aftermarket.answer',
     },
@@ -63,10 +69,10 @@ const HomeFAQ = () => {
           </div>
 
           <Accordion type='single' collapsible className='space-y-3'>
-            {faqItems.map((item, index) => (
+            {faqItems.map((item) => (
               <AccordionItem
-                key={index}
-                value={`faq-${index}`}
+                key={item.id}
+                value={`faq-${item.id}`}
                 className='rounded-xl border border-border bg-card/95 px-6 shadow-md backdrop-blur-sm transition-colors data-[state=open]:border-cyan/30'
               >
                 <AccordionTrigger className='py-5 text-left font-medium text-foreground hover:text-cyan'>

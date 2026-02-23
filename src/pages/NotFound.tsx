@@ -1,17 +1,12 @@
-import { useEffect } from 'react'
+import type { ReactElement } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import usePath from '@/hooks/use-path'
 
-const NotFound = () => {
-  const location = useLocation()
+const NotFound = (): ReactElement => {
   const { t } = useTranslation()
   const paths = usePath()
-
-  useEffect(() => {
-    console.error('404 Error: User attempted to access non-existent route:', location.pathname)
-  }, [location.pathname])
 
   return (
     <div className='flex min-h-screen items-center justify-center bg-muted'>

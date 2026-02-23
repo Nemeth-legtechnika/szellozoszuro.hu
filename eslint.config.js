@@ -29,6 +29,7 @@ export default [
       '**/dist/**',
       '**/build/**',
       'src/components/ui/**',
+      'src/hooks/use-toast.ts',
     ],
   },
 

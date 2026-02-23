@@ -1,5 +1,5 @@
 import { Menu, ShoppingCart, X } from 'lucide-react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
@@ -9,7 +9,7 @@ import usePath from '@/hooks/use-path'
 
 import LanguageSwitcher from './LanguageSwitcher'
 
-const Header = () => {
+const Header = (): React.ReactElement => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { t } = useTranslation()
   const paths = usePath()
@@ -61,7 +61,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <div className='flex items-center gap-3 lg:hidden'>
             <LanguageSwitcher />
-            <button className='p-2 text-dark-foreground' onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <button type='button' className='p-2 text-dark-foreground' onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className='size-6' /> : <Menu className='size-6' />}
             </button>
           </div>

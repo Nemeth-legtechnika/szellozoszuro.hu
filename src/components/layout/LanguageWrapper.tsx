@@ -1,13 +1,12 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Outlet, useLocation, useParams } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 
 interface LanguageWrapperProps {
   children?: React.ReactNode
 }
 
-const LanguageWrapper = ({ children }: LanguageWrapperProps) => {
-  const { lang } = useParams<{ lang?: string }>()
+const LanguageWrapper = ({ children }: LanguageWrapperProps): React.ReactElement => {
   const { i18n } = useTranslation()
   const location = useLocation()
 
@@ -19,7 +18,7 @@ const LanguageWrapper = ({ children }: LanguageWrapperProps) => {
     }
   }, [location.pathname, i18n])
 
-  return <>{children || <Outlet />}</>
+  return (children || <Outlet />) as React.ReactElement
 }
 
 export default LanguageWrapper

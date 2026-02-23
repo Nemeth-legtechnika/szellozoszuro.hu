@@ -1,4 +1,5 @@
 import { ArrowRight, Clock, Filter, HelpCircle, Phone, Shield, Truck } from 'lucide-react'
+import type { ReactElement } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -10,7 +11,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Button } from '@/components/ui/button'
 import usePath from '@/hooks/use-path'
 
-const FAQ = () => {
+const FAQ = (): ReactElement => {
   const { t, i18n } = useTranslation()
   const paths = usePath()
 
@@ -164,7 +165,7 @@ const FAQ = () => {
         <section className='py-12 lg:py-16'>
           <div className='container mx-auto px-4'>
             <div className='mx-auto max-w-4xl space-y-12'>
-              {faqData.map((category, categoryIndex) => (
+              {faqData.map((category) => (
                 <div key={category.category}>
                   <div className='mb-6 flex items-center gap-3'>
                     <div className='flex size-10 items-center justify-center rounded-lg bg-cyan/10'>
@@ -174,10 +175,10 @@ const FAQ = () => {
                   </div>
 
                   <Accordion type='single' collapsible className='space-y-3'>
-                    {category.questions.map((item, index) => (
+                    {category.questions.map((item) => (
                       <AccordionItem
-                        key={index}
-                        value={`${categoryIndex}-${index}`}
+                        key={item.question}
+                        value={item.question}
                         className='rounded-xl border border-border bg-card px-6 data-[state=open]:border-cyan/30'
                       >
                         <AccordionTrigger className='py-5 text-left font-medium text-foreground hover:text-cyan'>
