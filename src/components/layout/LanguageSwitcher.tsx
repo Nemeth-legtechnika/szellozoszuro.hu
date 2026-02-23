@@ -2,7 +2,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { useLocation, useNavigate } from 'react-router-dom'
 
-import cn from '@/shadcn/lib/utils'
+import { cn } from '@/shadcn/lib/utils'
 
 const LanguageSwitcher = (): React.ReactElement => {
   const { i18n } = useTranslation()
