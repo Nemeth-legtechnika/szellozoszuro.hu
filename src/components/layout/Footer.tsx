@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
 import logo from '@/assets/logo.png';
-import usePath from "@/hooks/use-path.tsx";
+import usePath from "@/hooks/use-path";
 
 const Footer = () => {
   const { t, i18n } = useTranslation();

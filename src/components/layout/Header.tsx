@@ -5,7 +5,7 @@ import { Menu, X, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import LanguageSwitcher from './LanguageSwitcher';
 import logo from '@/assets/logo.png';
-import usePath from "@/hooks/use-path.tsx";
+import usePath from "@/hooks/use-path";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

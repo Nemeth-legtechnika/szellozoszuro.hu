@@ -12,7 +12,7 @@ import {
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLdSchema from '@/components/seo/JsonLdSchema';
-import usePath from "@/hooks/use-path.tsx";
+import usePath from "@/hooks/use-path";
 
 const FAQ = () => {
   const { t, i18n } = useTranslation();

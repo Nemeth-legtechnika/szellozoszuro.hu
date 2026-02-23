@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ArrowRight, Shield, Truck, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroBg from '@/assets/hero-bg.jpg';
-import usePath from "@/hooks/use-path.tsx";
+import usePath from "@/hooks/use-path";
 
 const Hero = () => {
   const { t } = useTranslation();

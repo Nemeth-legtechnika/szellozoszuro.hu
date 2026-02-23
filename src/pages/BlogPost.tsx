@@ -4,7 +4,7 @@ import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLdSchema from '@/components/seo/JsonLdSchema';
-import usePath from "@/hooks/use-path.tsx";
+import usePath from "@/hooks/use-path";
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg';
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg';
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg';
