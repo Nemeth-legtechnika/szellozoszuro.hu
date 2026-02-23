@@ -28,8 +28,7 @@ export default [
       '**/public/**',
       '**/dist/**',
       '**/build/**',
-      'src/components/ui/**',
-      'src/hooks/use-toast.ts',
+      'src/shadcn/**',
     ],
   },
 

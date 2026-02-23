@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import faqBgImage from '@/assets/faq-bg.jpg'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import usePath from '@/hooks/use-path'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/shadcn/ui/accordion.tsx'
 
 const HomeFAQ = (): React.ReactElement => {
   const { t } = useTranslation()

@@ -27,5 +27,5 @@
     }
   },
   "include": ["src"],
-  "exclude": ["src/components/ui"]
+  "exclude": ["src/shadcn"]
 }

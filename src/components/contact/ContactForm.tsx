@@ -6,10 +6,10 @@ import { useTranslation } from 'react-i18next'
 import { toast } from 'sonner'
 import { z } from 'zod'
 
-import { Button } from '@/components/ui/button'
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/shadcn/ui/button.tsx'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/shadcn/ui/form.tsx'
+import { Input } from '@/shadcn/ui/input.tsx'
+import { Textarea } from '@/shadcn/ui/textarea.tsx'
 
 const ContactForm = (): React.ReactElement => {
   const { t } = useTranslation()

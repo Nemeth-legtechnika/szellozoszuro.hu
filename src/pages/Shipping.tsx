@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom'
 
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
-import { Button } from '@/components/ui/button'
 import usePath from '@/hooks/use-path'
+import { Button } from '@/shadcn/ui/button.tsx'
 
 const Shipping = (): ReactElement => {
   const { t } = useTranslation()

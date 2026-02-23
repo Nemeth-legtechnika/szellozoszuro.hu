@@ -8,9 +8,9 @@ import nemethKalmanImage from '@/assets/team/nemeth-kalman.jpg'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
 import usePath from '@/hooks/use-path'
+import { Button } from '@/shadcn/ui/button.tsx'
+import { Card, CardContent } from '@/shadcn/ui/card.tsx'
 
 const About = (): ReactElement => {
   const { t, i18n } = useTranslation()

@@ -9,5 +9,5 @@
     "skipLibCheck": true,
     "allowJs": true
   },
-  "exclude": ["src/components/ui"]
+  "exclude": ["src/shadcn"]
 }

@@ -3,9 +3,9 @@ import React from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { Toaster as Sonner } from '@/components/ui/sonner'
-import { Toaster } from '@/components/ui/toaster'
-import { TooltipProvider } from '@/components/ui/tooltip'
+import { Toaster as Sonner } from '@/shadcn/ui/sonner.tsx'
+import { Toaster } from '@/shadcn/ui/toaster.tsx'
+import { TooltipProvider } from '@/shadcn/ui/tooltip.tsx'
 
 import LanguageWrapper from './components/layout/LanguageWrapper'
 import ScrollToTop from './components/ScrollToTop'

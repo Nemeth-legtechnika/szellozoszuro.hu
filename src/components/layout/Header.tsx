@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import logo from '@/assets/logo.png'
-import { Button } from '@/components/ui/button'
 import usePath from '@/hooks/use-path'
+import { Button } from '@/shadcn/ui/button.tsx'
 
 import LanguageSwitcher from './LanguageSwitcher'
 

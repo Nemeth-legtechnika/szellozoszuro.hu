@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Button } from '@/components/ui/button'
 import usePath from '@/hooks/use-path'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/shadcn/ui/accordion.tsx'
+import { Button } from '@/shadcn/ui/button.tsx'
 
 const FAQ = (): ReactElement => {
   const { t, i18n } = useTranslation()

@@ -3,8 +3,8 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-import { Button } from '@/components/ui/button'
 import usePath from '@/hooks/use-path'
+import { Button } from '@/shadcn/ui/button.tsx'
 
 const CtaBanner = (): React.ReactElement => {
   const { t } = useTranslation()

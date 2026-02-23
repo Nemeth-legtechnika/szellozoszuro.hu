@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 import shopBrandsBg from '@/assets/shop-brands-bg.jpg'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
-import { Button } from '@/components/ui/button'
+import { Button } from '@/shadcn/ui/button.tsx'
 
 // Brand data with external webshop links
 const brands = [
