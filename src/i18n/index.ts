@@ -1,14 +1,14 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import i18n from 'i18next'
+import LanguageDetector from 'i18next-browser-languagedetector'
+import { initReactI18next } from 'react-i18next'
 
-import hu from './locales/hu.json';
-import de from './locales/de.json';
+import de from './locales/de.json'
+import hu from './locales/hu.json'
 
 const resources = {
   hu: { translation: hu },
   de: { translation: de },
-};
+}
 
 i18n
   .use(LanguageDetector)
@@ -25,6 +25,6 @@ i18n
       lookupFromPathIndex: 0,
       caches: ['localStorage'],
     },
-  });
+  })
 
-export default i18n;
+export default i18n

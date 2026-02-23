@@ -1,5 +1,5 @@
-import {useTranslation} from "react-i18next";
-import {useMemo} from "react";
+import { useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const pagePaths = (langPrefix: string = '') => ({
   home: `${langPrefix}/`,
@@ -28,10 +28,10 @@ const pagePaths = (langPrefix: string = '') => ({
 })
 
 const usePath = () => {
-  const { i18n } = useTranslation();
-  const langPrefix = i18n.language === 'de' ? '/de' : '';
+  const { i18n } = useTranslation()
+  const langPrefix = i18n.language === 'de' ? '/de' : ''
 
-  return useMemo(() => pagePaths(langPrefix), [langPrefix]);
+  return useMemo(() => pagePaths(langPrefix), [langPrefix])
 }
 
 export default usePath

@@ -1,12 +1,13 @@
-import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet-async';
-import { Mail, Phone, MapPin, Clock, MessageSquare } from 'lucide-react';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import ContactForm from '@/components/contact/ContactForm';
+import { Clock, Mail, MapPin, MessageSquare, Phone } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import { useTranslation } from 'react-i18next'
+
+import ContactForm from '@/components/contact/ContactForm'
+import Footer from '@/components/layout/Footer'
+import Header from '@/components/layout/Header'
 
 const Contact = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const orderContact = [
     {
@@ -21,7 +22,7 @@ const Contact = () => {
       value: 'office@sopronterv.hu',
       href: 'mailto:office@sopronterv.hu',
     },
-  ];
+  ]
 
   const technicalContact = [
     {
@@ -42,7 +43,7 @@ const Contact = () => {
       value: 'nemeth_kalman',
       href: 'skype:nemeth_kalman?chat',
     },
-  ];
+  ]
 
   const generalInfo = [
     {
@@ -59,30 +60,28 @@ const Contact = () => {
       subtext: null,
       href: null,
     },
-  ];
+  ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className='min-h-screen bg-background'>
       <Helmet>
         <title>{t('contact.pageTitle')} | szellozoszuro.hu</title>
-        <meta name="description" content={t('contact.pageDescription')} />
+        <meta name='description' content={t('contact.pageDescription')} />
       </Helmet>
-      
+
       <Header />
-      
-      <main className="pt-20 lg:pt-24">
+
+      <main className='pt-20 lg:pt-24'>
         {/* Page Header */}
-        <section className="section-dark py-12 lg:py-16">
-          <div className="container mx-auto px-4">
-            <h1 className="text-3xl lg:text-4xl font-bold mb-3">
-              <span className="gradient-cyan-text">{t('contact.pageTitle')}</span>
+        <section className='section-dark py-12 lg:py-16'>
+          <div className='container mx-auto px-4'>
+            <h1 className='mb-3 text-3xl font-bold lg:text-4xl'>
+              <span className='gradient-cyan-text'>{t('contact.pageTitle')}</span>
             </h1>
-            <p className="text-dark-muted text-lg max-w-2xl mb-4">
-              {t('contact.pageDescription')}
-            </p>
-            <div className="inline-flex items-center gap-2 bg-cyan/10 border border-cyan/30 rounded-lg px-4 py-2">
-              <MapPin className="w-4 h-4 text-cyan" />
-              <span className="text-dark-foreground text-sm">
+            <p className='mb-4 max-w-2xl text-lg text-dark-muted'>{t('contact.pageDescription')}</p>
+            <div className='inline-flex items-center gap-2 rounded-lg border border-cyan/30 bg-cyan/10 px-4 py-2'>
+              <MapPin className='size-4 text-cyan' />
+              <span className='text-sm text-dark-foreground'>
                 <strong>{t('contact.nationalCoverage')}</strong> {t('contact.nationalCoverageText')}
               </span>
             </div>
@@ -90,34 +89,26 @@ const Contact = () => {
         </section>
 
         {/* Contact Content */}
-        <section className="py-12 lg:py-16">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12">
+        <section className='py-12 lg:py-16'>
+          <div className='container mx-auto px-4'>
+            <div className='grid gap-12 lg:grid-cols-2'>
               {/* Contact Form */}
               <ContactForm />
 
               {/* Contact Info */}
-              <div className="space-y-8">
+              <div className='space-y-8'>
                 {/* Order & Shipping */}
                 <div>
-                  <h2 className="text-xl font-semibold text-foreground mb-4">
-                    {t('contact.orderContact')}
-                  </h2>
-                  <div className="space-y-3">
+                  <h2 className='mb-4 text-xl font-semibold text-foreground'>{t('contact.orderContact')}</h2>
+                  <div className='space-y-3'>
                     {orderContact.map((item) => (
-                      <div 
-                        key={item.title + item.value}
-                        className="flex items-start gap-4 p-4 rounded-xl bg-muted/50"
-                      >
-                        <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center flex-shrink-0">
-                          <item.icon className="w-5 h-5 text-cyan" />
+                      <div key={item.title + item.value} className='flex items-start gap-4 rounded-xl bg-muted/50 p-4'>
+                        <div className='flex size-10 shrink-0 items-center justify-center rounded-lg bg-cyan/10'>
+                          <item.icon className='size-5 text-cyan' />
                         </div>
                         <div>
-                          <p className="text-sm text-muted-foreground mb-1">{item.title}</p>
-                          <a 
-                            href={item.href}
-                            className="font-medium text-foreground hover:text-cyan transition-colors"
-                          >
+                          <p className='mb-1 text-sm text-muted-foreground'>{item.title}</p>
+                          <a href={item.href} className='font-medium text-foreground transition-colors hover:text-cyan'>
                             {item.value}
                           </a>
                         </div>
@@ -128,24 +119,16 @@ const Contact = () => {
 
                 {/* Technical Support */}
                 <div>
-                  <h2 className="text-xl font-semibold text-foreground mb-4">
-                    {t('contact.technicalContact')}
-                  </h2>
-                  <div className="space-y-3">
+                  <h2 className='mb-4 text-xl font-semibold text-foreground'>{t('contact.technicalContact')}</h2>
+                  <div className='space-y-3'>
                     {technicalContact.map((item) => (
-                      <div 
-                        key={item.title + item.value}
-                        className="flex items-start gap-4 p-4 rounded-xl bg-muted/50"
-                      >
-                        <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center flex-shrink-0">
-                          <item.icon className="w-5 h-5 text-cyan" />
+                      <div key={item.title + item.value} className='flex items-start gap-4 rounded-xl bg-muted/50 p-4'>
+                        <div className='flex size-10 shrink-0 items-center justify-center rounded-lg bg-cyan/10'>
+                          <item.icon className='size-5 text-cyan' />
                         </div>
                         <div>
-                          <p className="text-sm text-muted-foreground mb-1">{item.title}</p>
-                          <a 
-                            href={item.href}
-                            className="font-medium text-foreground hover:text-cyan transition-colors"
-                          >
+                          <p className='mb-1 text-sm text-muted-foreground'>{item.title}</p>
+                          <a href={item.href} className='font-medium text-foreground transition-colors hover:text-cyan'>
                             {item.value}
                           </a>
                         </div>
@@ -156,24 +139,17 @@ const Contact = () => {
 
                 {/* General Info */}
                 <div>
-                  <h2 className="text-xl font-semibold text-foreground mb-4">
-                    {t('contact.availability')}
-                  </h2>
-                  <div className="space-y-3">
+                  <h2 className='mb-4 text-xl font-semibold text-foreground'>{t('contact.availability')}</h2>
+                  <div className='space-y-3'>
                     {generalInfo.map((item) => (
-                      <div 
-                        key={item.title}
-                        className="flex items-start gap-4 p-4 rounded-xl bg-muted/50"
-                      >
-                        <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center flex-shrink-0">
-                          <item.icon className="w-5 h-5 text-cyan" />
+                      <div key={item.title} className='flex items-start gap-4 rounded-xl bg-muted/50 p-4'>
+                        <div className='flex size-10 shrink-0 items-center justify-center rounded-lg bg-cyan/10'>
+                          <item.icon className='size-5 text-cyan' />
                         </div>
                         <div>
-                          <p className="text-sm text-muted-foreground mb-1">{item.title}</p>
-                          <p className="font-medium text-foreground">{item.value}</p>
-                          {item.subtext && (
-                            <p className="text-xs text-cyan mt-1">{item.subtext}</p>
-                          )}
+                          <p className='mb-1 text-sm text-muted-foreground'>{item.title}</p>
+                          <p className='font-medium text-foreground'>{item.value}</p>
+                          {item.subtext && <p className='mt-1 text-xs text-cyan'>{item.subtext}</p>}
                         </div>
                       </div>
                     ))}
@@ -181,24 +157,20 @@ const Contact = () => {
                 </div>
 
                 {/* Additional Info */}
-                <div className="bg-dark rounded-2xl p-8">
-                  <h3 className="text-lg font-semibold text-dark-foreground mb-4">
-                    {t('contact.fastResponse')}
-                  </h3>
-                  <p className="text-dark-muted text-sm leading-relaxed mb-4">
-                    {t('contact.fastResponseDescription')}
-                  </p>
-                  <div className="flex items-center gap-2 text-cyan font-medium">
-                    <Phone className="w-4 h-4" />
-                    <a href="tel:+36208069072" className="hover:underline">
+                <div className='rounded-2xl bg-dark p-8'>
+                  <h3 className='mb-4 text-lg font-semibold text-dark-foreground'>{t('contact.fastResponse')}</h3>
+                  <p className='mb-4 text-sm leading-relaxed text-dark-muted'>{t('contact.fastResponseDescription')}</p>
+                  <div className='flex items-center gap-2 font-medium text-cyan'>
+                    <Phone className='size-4' />
+                    <a href='tel:+36208069072' className='hover:underline'>
                       +36 20 806 9072
                     </a>
                   </div>
                 </div>
 
                 {/* Company Info */}
-                <div className="text-sm text-muted-foreground">
-                  <p className="font-medium text-foreground mb-2">{t('contact.companyName')}</p>
+                <div className='text-sm text-muted-foreground'>
+                  <p className='mb-2 font-medium text-foreground'>{t('contact.companyName')}</p>
                   <p>{t('contact.taxId')}: 26290438-2-08</p>
                   <p>{t('contact.registrationNumber')}: 08 09 029861</p>
                 </div>
@@ -210,7 +182,7 @@ const Contact = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

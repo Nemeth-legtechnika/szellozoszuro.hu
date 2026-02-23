@@ -1,8 +1,8 @@
-import { useTranslation } from 'react-i18next';
-import { CheckCircle2, Wind, Wrench, Clock } from 'lucide-react';
+import { CheckCircle2, Clock, Wind, Wrench } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 const ValueProposition = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const features = [
     {
@@ -25,43 +25,36 @@ const ValueProposition = () => {
       titleKey: 'valueProps.easyOrder.title',
       descriptionKey: 'valueProps.easyOrder.description',
     },
-  ];
+  ]
 
   return (
-    <section className="py-20 lg:py-28 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            {t('valueProps.title')}{' '}
-            <span className="gradient-cyan-text">{t('valueProps.titleHighlight')}</span>
+    <section className='bg-background py-20 lg:py-28'>
+      <div className='container mx-auto px-4'>
+        <div className='mx-auto mb-16 max-w-3xl text-center'>
+          <h2 className='mb-4 text-3xl font-bold text-foreground lg:text-4xl'>
+            {t('valueProps.title')} <span className='gradient-cyan-text'>{t('valueProps.titleHighlight')}</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
-            {t('valueProps.description')}
-          </p>
+          <p className='text-lg text-muted-foreground'>{t('valueProps.description')}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4'>
           {features.map((feature, index) => (
-            <div 
+            <div
               key={feature.titleKey}
-              className="group p-6 rounded-2xl bg-card border-2 border-border hover:border-cyan hover:bg-white hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] transition-all duration-[250ms] ease-out"
+              className='duration-[250ms] group rounded-2xl border-2 border-border bg-card p-6 transition-all ease-out hover:-translate-y-2.5 hover:border-cyan hover:bg-white hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)]'
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 rounded-xl bg-cyan/10 flex items-center justify-center mb-5 group-hover:bg-cyan/20 transition-all duration-[250ms] ease-out">
-                <feature.icon className="w-7 h-7 text-cyan transition-transform duration-[250ms] ease-out group-hover:scale-110" />
+              <div className='duration-[250ms] mb-5 flex size-14 items-center justify-center rounded-xl bg-cyan/10 transition-all ease-out group-hover:bg-cyan/20'>
+                <feature.icon className='duration-[250ms] size-7 text-cyan transition-transform ease-out group-hover:scale-110' />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                {t(feature.titleKey)}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {t(feature.descriptionKey)}
-              </p>
+              <h3 className='mb-2 text-lg font-semibold text-foreground'>{t(feature.titleKey)}</h3>
+              <p className='text-sm leading-relaxed text-muted-foreground'>{t(feature.descriptionKey)}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ValueProposition;
+export default ValueProposition
