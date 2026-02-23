@@ -1,7 +1,7 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import usePath from "@/hooks/use-path.tsx";
+import usePath from "@/hooks/use-path";
 
 const NotFound = () => {
   const location = useLocation();

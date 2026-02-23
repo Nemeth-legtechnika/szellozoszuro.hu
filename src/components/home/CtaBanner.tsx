@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, Wind } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import usePath from "@/hooks/use-path.tsx";
+import usePath from "@/hooks/use-path";
 
 const CtaBanner = () => {
   const { t } = useTranslation();

@@ -8,7 +8,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLdSchema from '@/components/seo/JsonLdSchema';
 import nemethKalmanImage from '@/assets/team/nemeth-kalman.jpg';
-import usePath from "@/hooks/use-path.tsx";
+import usePath from "@/hooks/use-path";
 
 const About = () => {
   const { t, i18n } = useTranslation();

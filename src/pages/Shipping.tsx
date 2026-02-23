@@ -5,7 +5,7 @@ import { Truck, Clock, Package, Phone, ArrowRight, Zap, Calendar } from 'lucide-
 import { Button } from '@/components/ui/button';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import usePath from "@/hooks/use-path.tsx";
+import usePath from "@/hooks/use-path";
 
 const Shipping = () => {
   const { t } = useTranslation();

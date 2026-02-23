@@ -8,7 +8,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import faqBgImage from '@/assets/faq-bg.jpg';
-import usePath from "@/hooks/use-path.tsx";
+import usePath from "@/hooks/use-path";
 
 const HomeFAQ = () => {
   const { t } = useTranslation();
