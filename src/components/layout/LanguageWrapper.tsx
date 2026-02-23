@@ -6,7 +6,7 @@ interface LanguageWrapperProps {
   children?: React.ReactNode
 }
 
-const LanguageWrapper = ({ children }: LanguageWrapperProps): React.ReactElement => {
+const LanguageWrapper = ({ children }: LanguageWrapperProps): React.ReactNode => {
   const { i18n } = useTranslation()
   const location = useLocation()
 
@@ -18,7 +18,7 @@ const LanguageWrapper = ({ children }: LanguageWrapperProps): React.ReactElement
     }
   }, [location.pathname, i18n])
 
-  return (children || <Outlet />) as React.ReactElement
+  return children || <Outlet />
 }
 
 export default LanguageWrapper
