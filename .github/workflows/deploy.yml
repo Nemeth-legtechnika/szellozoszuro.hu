@@ -1,9 +1,7 @@
 name: Deploy
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -15,7 +13,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  ci:
+    uses: ./.github/workflows/ci.yml
+
   build:
+    needs: ci
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,7 +30,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm i
+        run: npm ci
 
       - name: Build
         run: npm run build
