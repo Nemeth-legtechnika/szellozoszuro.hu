@@ -1,4 +1,5 @@
 import { Toaster as Sonner, toast } from "sonner";
+import React from "react";
 
 type ToasterProps = React.ComponentProps<typeof Sonner>;
 
