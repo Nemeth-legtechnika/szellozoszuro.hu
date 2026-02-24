@@ -43,7 +43,7 @@ const ValueProposition = () => {
             <div
               key={feature.titleKey}
               className="group p-6 rounded-2xl bg-card border-2 border-border hover:border-cyan hover:bg-white hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] transition-all duration-[250ms] ease-out"
-              style={{ animationDelay: `${String(index * 0.1)}s` }}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="w-14 h-14 rounded-xl bg-cyan/10 flex items-center justify-center mb-5 group-hover:bg-cyan/20 transition-all duration-[250ms] ease-out">
                 <feature.icon className="w-7 h-7 text-cyan transition-transform duration-[250ms] ease-out group-hover:scale-110" />

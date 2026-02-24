@@ -25,6 +25,7 @@ const FAQ = () => {
       icon: Filter,
       questions: [
         {
+          id: 1,
           question:
             i18n.language === 'de'
               ? 'Welcher Filter passt in mein Zehnder Gerät?'
@@ -35,14 +36,17 @@ const FAQ = () => {
               : 'A Zehnder hővisszanyerős gépekhez (ComfoAir, ComfoD, ComfoFond stb.) mind gyári, mind kiváló minőségű utángyártott szűrőket kínálunk. A pontos típusválasztáshoz szükséges a gép pontos modellszáma (pl. ComfoAir Q350, ComfoAir 350). Ha bizonytalan vagy, keress minket a +36 20 323 8172 számon, és segítünk azonosítani a megfelelő szűrőt.',
         },
         {
+          id: 2,
           question: t('faq.items.filterClass.question'),
           answer: t('faq.items.filterClass.answer'),
         },
         {
+          id: 3,
           question: t('faq.items.aftermarket.question'),
           answer: t('faq.items.aftermarket.answer'),
         },
         {
+          id: 4,
           question:
             i18n.language === 'de'
               ? 'Wie finde ich heraus, welcher Filter in mein Gerät passt?'
@@ -59,10 +63,12 @@ const FAQ = () => {
       icon: Clock,
       questions: [
         {
+          id: 5,
           question: t('faq.items.replacement.question'),
           answer: t('faq.items.replacement.answer'),
         },
         {
+          id: 6,
           question:
             i18n.language === 'de'
               ? 'Was passiert, wenn ich den Filter nicht rechtzeitig wechsle?'
@@ -73,6 +79,7 @@ const FAQ = () => {
               : 'Az eltömődött szűrő csökkenti a légáramlást, ami a gép túlterheléséhez és magasabb energiafogyasztáshoz vezet. Hosszú távon károsíthatja a hővisszanyerő cellát és a ventilátorokat. Emellett a szűrési hatékonyság csökkenésével szennyezett levegő kerül a lakásba. A rendszeres csere olcsóbb, mint a gép javítása.',
         },
         {
+          id: 7,
           question:
             i18n.language === 'de'
               ? 'Kann ich den Filter selbst wechseln?'
@@ -89,10 +96,12 @@ const FAQ = () => {
       icon: Truck,
       questions: [
         {
+          id: 8,
           question: t('faq.items.delivery.question'),
           answer: t('faq.items.delivery.answer'),
         },
         {
+          id: 9,
           question:
             i18n.language === 'de'
               ? 'Ist eine persönliche Abholung möglich?'
@@ -103,6 +112,7 @@ const FAQ = () => {
               : 'Igen, soproni telephelyünkön lehetőség van személyes átvételre előzetes egyeztetés után. Időpontfoglaláshoz hívd a +36 20 806 9072 számot.',
         },
         {
+          id: 10,
           question: i18n.language === 'de' ? 'Wie kann ich bezahlen?' : 'Hogyan fizethetek?',
           answer:
             i18n.language === 'de'
@@ -116,6 +126,7 @@ const FAQ = () => {
       icon: Shield,
       questions: [
         {
+          id: 11,
           question:
             i18n.language === 'de'
               ? 'Welche Garantie geben Sie auf die Filter?'
@@ -126,6 +137,7 @@ const FAQ = () => {
               : 'Minden általunk forgalmazott szűrőre a jogszabályban előírt 2 év jótállást biztosítunk. Gyártási hiba esetén díjmentesen cseréljük a terméket. Elégedetlenség esetén 14 napon belül visszaküldhető a bontatlan termék.',
         },
         {
+          id: 12,
           question:
             i18n.language === 'de'
               ? 'Woher stammen Ihre Filter?'
@@ -181,7 +193,7 @@ const FAQ = () => {
         <section className="py-12 lg:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-12">
-              {faqData.map((category, categoryIndex) => (
+              {faqData.map((category) => (
                 <div key={category.category}>
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center">
@@ -191,10 +203,10 @@ const FAQ = () => {
                   </div>
 
                   <Accordion type="single" collapsible className="space-y-3">
-                    {category.questions.map((item, index) => (
+                    {category.questions.map((item) => (
                       <AccordionItem
-                        key={index}
-                        value={`${String(categoryIndex)}-${String(index)}`}
+                        key={item.id}
+                        value={item.id.toString()}
                         className="bg-card rounded-xl border border-border px-6 data-[state=open]:border-cyan/30"
                       >
                         <AccordionTrigger className="text-left font-medium text-foreground hover:text-cyan py-5">

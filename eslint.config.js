@@ -37,8 +37,9 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      // React prop-types not needed with TypeScript
+      // React rules
       'react/prop-types': 'off',
+      'react/no-array-index-key': 'error',
 
       // TypeScript rules
       '@typescript-eslint/no-explicit-any': 'error',
@@ -56,6 +57,7 @@ export default tseslint.config(
         },
       ],
       '@typescript-eslint/no-require-imports': 'error',
+      '@typescript-eslint/restrict-template-expressions': 'off',
 
       // Base rules
       'no-shadow': 'off',
