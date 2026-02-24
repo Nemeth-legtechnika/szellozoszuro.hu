@@ -1,16 +1,18 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { Menu, X, ShoppingCart } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import LanguageSwitcher from './LanguageSwitcher';
-import logo from '@/assets/logo.png';
-import usePath from "@/hooks/use-path";
+import { Menu, ShoppingCart, X } from 'lucide-react'
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+
+import logo from '@/assets/logo.png'
+import { Button } from '@/components/ui/button'
+import usePath from '@/hooks/use-path'
+
+import LanguageSwitcher from './LanguageSwitcher'
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t } = useTranslation();
-  const paths = usePath();
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { t } = useTranslation()
+  const paths = usePath()
 
   const navLinks = [
     { name: t('nav.home'), href: paths.home },
@@ -18,7 +20,7 @@ const Header = () => {
     { name: t('nav.knowledge'), href: paths.blog.base },
     { name: t('nav.about'), href: paths.about },
     { name: t('nav.contact'), href: paths.contact },
-  ];
+  ]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-dark/95 backdrop-blur-md border-b border-dark-secondary">
@@ -61,7 +63,9 @@ const Header = () => {
             <LanguageSwitcher />
             <button
               className="text-dark-foreground p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen)
+              }}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -78,13 +82,20 @@ const Header = () => {
                 key={link.name}
                 to={link.href}
                 className="text-dark-foreground/80 hover:text-cyan transition-colors duration-200 font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setIsMenuOpen(false)
+                }}
               >
                 {link.name}
               </Link>
             ))}
             <Button variant="cta" className="mt-4" asChild>
-              <Link to={paths.shop} onClick={() => setIsMenuOpen(false)}>
+              <Link
+                to={paths.shop}
+                onClick={() => {
+                  setIsMenuOpen(false)
+                }}
+              >
                 <ShoppingCart className="w-4 h-4" />
                 {t('nav.buyFilters')}
               </Link>
@@ -93,7 +104,7 @@ const Header = () => {
         </div>
       )}
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

@@ -1,11 +1,23 @@
-import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet-async';
-import { ShieldCheck, Building2, Database, Clock, CreditCard, Cookie, UserCheck, Scale, Mail, Phone } from 'lucide-react';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import {
+  Building2,
+  Clock,
+  Cookie,
+  CreditCard,
+  Database,
+  Mail,
+  Phone,
+  Scale,
+  ShieldCheck,
+  UserCheck,
+} from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import { useTranslation } from 'react-i18next'
+
+import Footer from '@/components/layout/Footer'
+import Header from '@/components/layout/Header'
 
 const Privacy = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <div className="min-h-screen bg-background">
@@ -13,9 +25,9 @@ const Privacy = () => {
         <title>{t('privacy.pageTitle')} | Németh Légtechnika Kft.</title>
         <meta name="description" content={t('privacy.pageDescription')} />
       </Helmet>
-      
+
       <Header />
-      
+
       <main className="pt-20 lg:pt-24">
         {/* Page Header */}
         <section className="section-dark py-12 lg:py-16">
@@ -26,9 +38,7 @@ const Privacy = () => {
                 <span className="gradient-cyan-text">{t('privacy.pageTitle')}</span>
               </h1>
             </div>
-            <p className="text-dark-muted text-lg max-w-3xl">
-              {t('privacy.pageDescription')}
-            </p>
+            <p className="text-dark-muted text-lg max-w-3xl">{t('privacy.pageDescription')}</p>
           </div>
         </section>
 
@@ -36,27 +46,39 @@ const Privacy = () => {
         <section className="py-12 lg:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-8">
-              
               {/* Data Controller */}
               <div className="bg-card rounded-2xl border border-border p-6 lg:p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center">
                     <Building2 className="w-5 h-5 text-cyan" />
                   </div>
-                  <h2 className="text-xl font-semibold text-foreground">{t('privacy.dataController')}</h2>
+                  <h2 className="text-xl font-semibold text-foreground">
+                    {t('privacy.dataController')}
+                  </h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <p className="text-sm text-muted-foreground mb-1">{t('terms.sections.provider.companyName')}</p>
+                    <p className="text-sm text-muted-foreground mb-1">
+                      {t('terms.sections.provider.companyName')}
+                    </p>
                     <p className="font-medium text-foreground">Németh Légtechnika Kft.</p>
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground mb-1">{t('terms.sections.provider.headquarters')}</p>
-                    <p className="font-medium text-foreground">9400 Sopron, Szent György utca 4. 2. em. 3.</p>
+                    <p className="text-sm text-muted-foreground mb-1">
+                      {t('terms.sections.provider.headquarters')}
+                    </p>
+                    <p className="font-medium text-foreground">
+                      9400 Sopron, Szent György utca 4. 2. em. 3.
+                    </p>
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground mb-1">{t('terms.sections.provider.email')}</p>
-                    <a href="mailto:info@sopronterv.hu" className="font-medium text-cyan hover:underline">
+                    <p className="text-sm text-muted-foreground mb-1">
+                      {t('terms.sections.provider.email')}
+                    </p>
+                    <a
+                      href="mailto:info@sopronterv.hu"
+                      className="font-medium text-cyan hover:underline"
+                    >
                       info@sopronterv.hu
                     </a>
                   </div>
@@ -71,8 +93,10 @@ const Privacy = () => {
 
               {/* Data Processing Points */}
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">{t('privacy.mainPoints')}</h2>
-                
+                <h2 className="text-2xl font-bold text-foreground mb-6">
+                  {t('privacy.mainPoints')}
+                </h2>
+
                 <div className="space-y-6">
                   {/* Online Purchase */}
                   <div className="bg-card rounded-2xl border border-border p-6 lg:p-8">
@@ -81,12 +105,16 @@ const Privacy = () => {
                         <Database className="w-5 h-5 text-cyan" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-foreground mb-3">{t('privacy.sections.purchase.title')}</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-3">
+                          {t('privacy.sections.purchase.title')}
+                        </h3>
                         <p className="text-muted-foreground leading-relaxed mb-4">
                           {t('privacy.sections.purchase.text')}
                         </p>
                         <div className="bg-secondary/50 rounded-lg p-4">
-                          <p className="text-sm font-medium text-foreground mb-2">{t('privacy.sections.purchase.dataHandled')}</p>
+                          <p className="text-sm font-medium text-foreground mb-2">
+                            {t('privacy.sections.purchase.dataHandled')}
+                          </p>
                           <ul className="text-sm text-muted-foreground space-y-1">
                             <li>• {t('privacy.sections.purchase.name')}</li>
                             <li>• {t('privacy.sections.purchase.billingAddress')}</li>
@@ -106,7 +134,9 @@ const Privacy = () => {
                         <Clock className="w-5 h-5 text-cyan" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-foreground mb-3">{t('privacy.sections.retention.title')}</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-3">
+                          {t('privacy.sections.retention.title')}
+                        </h3>
                         <div className="space-y-3 text-muted-foreground">
                           <p className="leading-relaxed">{t('privacy.sections.retention.text1')}</p>
                           <p className="leading-relaxed">{t('privacy.sections.retention.text2')}</p>
@@ -122,12 +152,18 @@ const Privacy = () => {
                         <CreditCard className="w-5 h-5 text-cyan" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-foreground mb-3">{t('privacy.sections.transfer.title')}</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-3">
+                          {t('privacy.sections.transfer.title')}
+                        </h3>
                         <div className="space-y-4 text-muted-foreground">
                           <p className="leading-relaxed">{t('privacy.sections.transfer.text')}</p>
                           <div className="bg-secondary/50 rounded-lg p-4">
-                            <p className="font-medium text-foreground mb-2">{t('privacy.sections.transfer.onlinePayment')}</p>
-                            <p className="text-sm">{t('privacy.sections.transfer.onlinePaymentText')}</p>
+                            <p className="font-medium text-foreground mb-2">
+                              {t('privacy.sections.transfer.onlinePayment')}
+                            </p>
+                            <p className="text-sm">
+                              {t('privacy.sections.transfer.onlinePaymentText')}
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -141,7 +177,9 @@ const Privacy = () => {
                         <Cookie className="w-5 h-5 text-cyan" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-foreground mb-3">{t('privacy.sections.cookies.title')}</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-3">
+                          {t('privacy.sections.cookies.title')}
+                        </h3>
                         <p className="text-muted-foreground leading-relaxed">
                           {t('privacy.sections.cookies.text')}
                         </p>
@@ -157,27 +195,45 @@ const Privacy = () => {
                   <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center">
                     <UserCheck className="w-5 h-5 text-cyan" />
                   </div>
-                  <h2 className="text-xl font-semibold text-foreground">{t('privacy.yourRights')}</h2>
+                  <h2 className="text-xl font-semibold text-foreground">
+                    {t('privacy.yourRights')}
+                  </h2>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {t('privacy.yourRightsText')}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-secondary/50 rounded-lg p-4">
-                    <p className="font-medium text-foreground mb-1">{t('privacy.rights.access.title')}</p>
-                    <p className="text-sm text-muted-foreground">{t('privacy.rights.access.description')}</p>
+                    <p className="font-medium text-foreground mb-1">
+                      {t('privacy.rights.access.title')}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {t('privacy.rights.access.description')}
+                    </p>
                   </div>
                   <div className="bg-secondary/50 rounded-lg p-4">
-                    <p className="font-medium text-foreground mb-1">{t('privacy.rights.rectification.title')}</p>
-                    <p className="text-sm text-muted-foreground">{t('privacy.rights.rectification.description')}</p>
+                    <p className="font-medium text-foreground mb-1">
+                      {t('privacy.rights.rectification.title')}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {t('privacy.rights.rectification.description')}
+                    </p>
                   </div>
                   <div className="bg-secondary/50 rounded-lg p-4">
-                    <p className="font-medium text-foreground mb-1">{t('privacy.rights.erasure.title')}</p>
-                    <p className="text-sm text-muted-foreground">{t('privacy.rights.erasure.description')}</p>
+                    <p className="font-medium text-foreground mb-1">
+                      {t('privacy.rights.erasure.title')}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {t('privacy.rights.erasure.description')}
+                    </p>
                   </div>
                   <div className="bg-secondary/50 rounded-lg p-4">
-                    <p className="font-medium text-foreground mb-1">{t('privacy.rights.restriction.title')}</p>
-                    <p className="text-sm text-muted-foreground">{t('privacy.rights.restriction.description')}</p>
+                    <p className="font-medium text-foreground mb-1">
+                      {t('privacy.rights.restriction.title')}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {t('privacy.rights.restriction.description')}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -188,7 +244,9 @@ const Privacy = () => {
                   <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center">
                     <Scale className="w-5 h-5 text-cyan" />
                   </div>
-                  <h2 className="text-xl font-semibold text-foreground">{t('privacy.legalRemedies')}</h2>
+                  <h2 className="text-xl font-semibold text-foreground">
+                    {t('privacy.legalRemedies')}
+                  </h2>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {t('privacy.legalRemediesText')}
@@ -200,9 +258,9 @@ const Privacy = () => {
                     <p>{t('privacy.naihPostal')}</p>
                     <p>
                       {t('privacy.naihWebsite')}{' '}
-                      <a 
-                        href="https://naih.hu" 
-                        target="_blank" 
+                      <a
+                        href="https://naih.hu"
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="text-cyan hover:underline"
                       >
@@ -215,20 +273,20 @@ const Privacy = () => {
 
               {/* Contact for Questions */}
               <div className="bg-cyan/5 border border-cyan/20 rounded-2xl p-6 lg:p-8">
-                <h3 className="text-lg font-semibold text-foreground mb-4">{t('privacy.questionsTitle')}</h3>
-                <p className="text-muted-foreground mb-4">
-                  {t('privacy.questionsText')}
-                </p>
+                <h3 className="text-lg font-semibold text-foreground mb-4">
+                  {t('privacy.questionsTitle')}
+                </h3>
+                <p className="text-muted-foreground mb-4">{t('privacy.questionsText')}</p>
                 <div className="flex flex-wrap gap-4">
-                  <a 
-                    href="mailto:info@sopronterv.hu" 
+                  <a
+                    href="mailto:info@sopronterv.hu"
                     className="flex items-center gap-2 text-cyan hover:underline"
                   >
                     <Mail className="w-4 h-4" />
                     info@sopronterv.hu
                   </a>
-                  <a 
-                    href="tel:+36203238172" 
+                  <a
+                    href="tel:+36203238172"
                     className="flex items-center gap-2 text-cyan hover:underline"
                   >
                     <Phone className="w-4 h-4" />
@@ -236,7 +294,6 @@ const Privacy = () => {
                   </a>
                 </div>
               </div>
-
             </div>
           </div>
         </section>
@@ -244,7 +301,7 @@ const Privacy = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Privacy;
+export default Privacy

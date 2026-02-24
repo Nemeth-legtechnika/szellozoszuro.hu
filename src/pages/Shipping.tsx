@@ -1,15 +1,16 @@
-import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Truck, Clock, Package, Phone, ArrowRight, Zap, Calendar } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import usePath from "@/hooks/use-path";
+import { ArrowRight, Calendar, Clock, Package, Phone, Truck, Zap } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+
+import Footer from '@/components/layout/Footer'
+import Header from '@/components/layout/Header'
+import { Button } from '@/components/ui/button'
+import usePath from '@/hooks/use-path'
 
 const Shipping = () => {
-  const { t } = useTranslation();
-  const paths = usePath();
+  const { t } = useTranslation()
+  const paths = usePath()
 
   return (
     <div className="min-h-screen bg-background">
@@ -17,9 +18,9 @@ const Shipping = () => {
         <title>{t('shipping.pageTitle')} | szellozoszuro.hu</title>
         <meta name="description" content={t('shipping.pageDescription')} />
       </Helmet>
-      
+
       <Header />
-      
+
       <main className="pt-20 lg:pt-24">
         {/* Page Header */}
         <section className="section-dark py-12 lg:py-16">
@@ -30,9 +31,7 @@ const Shipping = () => {
                 <span className="gradient-cyan-text">{t('shipping.pageTitle')}</span>
               </h1>
             </div>
-            <p className="text-dark-muted text-lg max-w-2xl">
-              {t('shipping.pageDescription')}
-            </p>
+            <p className="text-dark-muted text-lg max-w-2xl">{t('shipping.pageDescription')}</p>
           </div>
         </section>
 
@@ -152,8 +151,12 @@ const Shipping = () => {
                       <span className="text-lg">💳</span>
                     </div>
                     <div>
-                      <p className="font-medium text-foreground text-sm">{t('shipping.cardPayment')}</p>
-                      <p className="text-muted-foreground text-xs">{t('shipping.cardPaymentDescription')}</p>
+                      <p className="font-medium text-foreground text-sm">
+                        {t('shipping.cardPayment')}
+                      </p>
+                      <p className="text-muted-foreground text-xs">
+                        {t('shipping.cardPaymentDescription')}
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -161,8 +164,12 @@ const Shipping = () => {
                       <span className="text-lg">🏦</span>
                     </div>
                     <div>
-                      <p className="font-medium text-foreground text-sm">{t('shipping.bankTransfer')}</p>
-                      <p className="text-muted-foreground text-xs">{t('shipping.bankTransferDescription')}</p>
+                      <p className="font-medium text-foreground text-sm">
+                        {t('shipping.bankTransfer')}
+                      </p>
+                      <p className="text-muted-foreground text-xs">
+                        {t('shipping.bankTransferDescription')}
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -170,8 +177,12 @@ const Shipping = () => {
                       <span className="text-lg">📦</span>
                     </div>
                     <div>
-                      <p className="font-medium text-foreground text-sm">{t('shipping.cashOnDelivery')}</p>
-                      <p className="text-muted-foreground text-xs">{t('shipping.cashOnDeliveryDescription')}</p>
+                      <p className="font-medium text-foreground text-sm">
+                        {t('shipping.cashOnDelivery')}
+                      </p>
+                      <p className="text-muted-foreground text-xs">
+                        {t('shipping.cashOnDeliveryDescription')}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -182,9 +193,7 @@ const Shipping = () => {
                 <h3 className="text-lg font-semibold text-foreground mb-3">
                   {t('shipping.personalPickup')}
                 </h3>
-                <p className="text-muted-foreground mb-4">
-                  {t('shipping.personalPickupText')}
-                </p>
+                <p className="text-muted-foreground mb-4">{t('shipping.personalPickupText')}</p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button variant="outline" size="sm" asChild>
                     <a href="tel:+36208069072" className="gap-2">
@@ -209,12 +218,8 @@ const Shipping = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center">
               <Phone className="w-12 h-12 text-cyan mx-auto mb-6" />
-              <h2 className="text-2xl lg:text-3xl font-bold mb-4">
-                {t('shipping.urgentOrder')}
-              </h2>
-              <p className="text-dark-muted text-lg mb-8">
-                {t('shipping.urgentOrderText')}
-              </p>
+              <h2 className="text-2xl lg:text-3xl font-bold mb-4">{t('shipping.urgentOrder')}</h2>
+              <p className="text-dark-muted text-lg mb-8">{t('shipping.urgentOrderText')}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="lg" asChild>
                   <a href="tel:+36208069072" className="gap-2">
@@ -223,9 +228,9 @@ const Shipping = () => {
                   </a>
                 </Button>
                 <Button variant="heroOutline" size="lg" asChild>
-                  <a 
-                    href="https://szelloztetes.eu/termekkategoria/szurok/" 
-                    target="_blank" 
+                  <a
+                    href="https://szelloztetes.eu/termekkategoria/szurok/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="gap-2"
                   >
@@ -241,7 +246,7 @@ const Shipping = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Shipping;
+export default Shipping
