@@ -52,29 +52,24 @@ const ContactForm = () => {
 
     setIsSubmitting(true)
 
-    try {
-      const subject = encodeURIComponent(`Kontakt: ${data.name}`)
-      const body = encodeURIComponent(
-        `${t('contact.form.name')}: ${data.name}\n` +
-          `${t('contact.form.email')}: ${data.email}\n` +
-          `${t('contact.form.phone')}: ${data.phone || '-'}\n\n` +
-          `${t('contact.form.message')}:\n${data.message}`,
-      )
+    const subject = encodeURIComponent(`Kontakt: ${data.name}`)
+    const body = encodeURIComponent(
+      `${t('contact.form.name')}: ${data.name}\n` +
+        `${t('contact.form.email')}: ${data.email}\n` +
+        `${t('contact.form.phone')}: ${data.phone || '-'}\n\n` +
+        `${t('contact.form.message')}:\n${data.message}`,
+    )
 
-      window.location.href = `mailto:office@sopronterv.hu?subject=${subject}&body=${body}`
+    window.location.href = `mailto:office@sopronterv.hu?subject=${subject}&body=${body}`
 
-      setIsSuccess(true)
-      toast.success(t('contact.form.successDescription'))
-      form.reset()
+    setIsSuccess(true)
+    toast.success(t('contact.form.successDescription'))
+    form.reset()
 
-      setTimeout(() => {
-        setIsSuccess(false)
-      }, 5000)
-    } catch (_error) {
-      toast.error(t('contact.form.errorDescription'))
-    } finally {
-      setIsSubmitting(false)
-    }
+    setTimeout(() => {
+      setIsSuccess(false)
+    }, 5000)
+    setIsSubmitting(false)
   }
 
   if (isSuccess) {
