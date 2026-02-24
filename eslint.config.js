@@ -1,18 +1,18 @@
-import path from 'path'
-import { fileURLToPath } from 'url'
-
-import globals from 'globals'
+import vitestPlugin from '@vitest/eslint-plugin'
 import { configs as airbnbConfigs } from 'eslint-config-airbnb-extended/legacy'
 import prettierConfig from 'eslint-config-prettier'
-import prettierPlugin from 'eslint-plugin-prettier'
 import jestDomPlugin from 'eslint-plugin-jest-dom'
-import testingLibraryPlugin from 'eslint-plugin-testing-library'
-import vitestPlugin from '@vitest/eslint-plugin'
-import tailwindPlugin from 'eslint-plugin-tailwindcss'
-import simpleImportSort from 'eslint-plugin-simple-import-sort'
+import prettierPlugin from 'eslint-plugin-prettier'
 import reactRefresh from 'eslint-plugin-react-refresh'
+import simpleImportSort from 'eslint-plugin-simple-import-sort'
+import tailwindPlugin from 'eslint-plugin-tailwindcss'
+import testingLibraryPlugin from 'eslint-plugin-testing-library'
+import globals from 'globals'
+import path from 'path'
 import typescriptEslint from 'typescript-eslint'
+import { fileURLToPath } from 'url'
 
+// eslint-disable-next-line no-underscore-dangle
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default [
@@ -23,13 +23,7 @@ export default [
 
   // ── Global ignores ────────────────────────────────────────────
   {
-    ignores: [
-      '**/node_modules/**',
-      '**/public/**',
-      '**/dist/**',
-      '**/build/**',
-      'src/shadcn/**',
-    ],
+    ignores: ['**/node_modules/**', '**/public/**', '**/dist/**', '**/build/**'],
   },
 
   // ── Main rules (all JS/TS files) ─────────────────────────────
@@ -83,13 +77,7 @@ export default [
       'import/no-extraneous-dependencies': [
         'error',
         {
-          devDependencies: [
-            'eslint.config.js',
-            '**/*.test.*',
-            '**/*.spec.*',
-            '**/__tests__/**',
-            'src/test/**',
-          ],
+          devDependencies: ['eslint.config.js', '**/*.test.*', '**/*.spec.*', '**/__tests__/**', 'src/test/**'],
           optionalDependencies: false,
         },
       ],
@@ -99,10 +87,7 @@ export default [
       'simple-import-sort/exports': 'error',
 
       // ── Code quality ──────────────────────────────────────────
-      'no-param-reassign': [
-        'error',
-        { props: true, ignorePropertyModificationsForRegex: ['^draft'] },
-      ],
+      'no-param-reassign': ['error', { props: true, ignorePropertyModificationsForRegex: ['^draft'] }],
       'no-unused-vars': [
         'error',
         {
@@ -111,19 +96,12 @@ export default [
           caughtErrors: 'none',
         },
       ],
-      'no-use-before-define': [
-        'error',
-        { variables: true, functions: false, classes: false },
-      ],
+      'no-use-before-define': ['error', { variables: true, functions: false, classes: false }],
 
       // ── Formatting (delegated to Prettier) ────────────────────
       'prettier/prettier': ['error'],
       'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }],
-      quotes: [
-        'error',
-        'single',
-        { avoidEscape: true, allowTemplateLiterals: false },
-      ],
+      quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
     },
   },
 
@@ -182,6 +160,48 @@ export default [
 
       // React Refresh (Vite HMR safety)
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    },
+  },
+
+  // ── shadcn/ui (relaxed – auto-generated code) ──────────────────
+  {
+    files: ['src/shadcn/**/*.ts', 'src/shadcn/**/*.tsx'],
+    rules: {
+      // shadcn components don't declare explicit return types
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      // Common pattern: callbacks shadow outer variables (e.g. `open`, `api`)
+      '@typescript-eslint/no-shadow': 'off',
+      // Generated code may have placeholder params
+      '@typescript-eslint/no-unused-vars': 'off',
+      // shadcn uses named exports by design
+      'import/prefer-default-export': 'off',
+      // Inline context values are standard in shadcn providers
+      'react/jsx-no-constructed-context-values': 'off',
+      // Calendar uses nested component definitions via render props
+      'react/no-unstable-nested-components': 'off',
+      // Files export types + components together
+      'react-refresh/only-export-components': 'off',
+      // Forwarded <button> without explicit type attribute
+      'react/button-has-type': 'off',
+      // Chart component uses dangerouslySetInnerHTML
+      'react/no-danger': 'off',
+      // Custom attributes like cmdk-input-wrapper
+      'react/no-unknown-property': 'off',
+      // Type + const with same name (React.createContext pattern)
+      'no-redeclare': 'off',
+      // Sidebar reassigns `tooltip` param
+      'no-param-reassign': 'off',
+      // useEffect callbacks with conditional early returns
+      'consistent-return': 'off',
+      // Reducer without default case
+      'default-case': 'off',
+      // Destructuring preference
+      'prefer-destructuring': 'off',
+      // shadcn uses custom classnames (e.g. `toaster`, `destructive`)
+      'tailwindcss/no-custom-classname': 'off',
+      // Spread-only heading/content/anchor components
+      'jsx-a11y/heading-has-content': 'off',
+      'jsx-a11y/anchor-has-content': 'off',
     },
   },
 ]
