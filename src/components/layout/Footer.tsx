@@ -1,12 +1,13 @@
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
-import logo from '@/assets/logo.png';
-import usePath from "@/hooks/use-path";
+import { ExternalLink, Mail, MapPin, Phone } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+
+import logo from '@/assets/logo.png'
+import usePath from '@/hooks/use-path'
 
 const Footer = () => {
-  const { t, i18n } = useTranslation();
-  const paths = usePath();
+  const { t, i18n } = useTranslation()
+  const paths = usePath()
 
   const partnerPortals = [
     {
@@ -24,7 +25,7 @@ const Footer = () => {
       url: 'https://sopronterv.hu',
       description: i18n.language === 'de' ? 'Technische Planung' : 'Műszaki tervezés',
     },
-  ];
+  ]
 
   return (
     <footer className="bg-dark text-dark-foreground">
@@ -33,9 +34,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <img src={logo} alt="Németh Légtechnika" className="h-12 w-auto" />
-            <p className="text-dark-muted text-sm leading-relaxed">
-              {t('footer.description')}
-            </p>
+            <p className="text-dark-muted text-sm leading-relaxed">{t('footer.description')}</p>
           </div>
 
           {/* Quick Links */}
@@ -43,22 +42,34 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-3">
               <li>
-                <Link to={paths.shop} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link
+                  to={paths.shop}
+                  className="text-dark-muted hover:text-cyan transition-colors text-sm"
+                >
                   {t('nav.filters')}
                 </Link>
               </li>
               <li>
-                <Link to={paths.blog.base} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link
+                  to={paths.blog.base}
+                  className="text-dark-muted hover:text-cyan transition-colors text-sm"
+                >
                   {t('nav.knowledge')}
                 </Link>
               </li>
               <li>
-                <Link to={paths.about} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link
+                  to={paths.about}
+                  className="text-dark-muted hover:text-cyan transition-colors text-sm"
+                >
                   {t('nav.about')}
                 </Link>
               </li>
               <li>
-                <Link to={paths.contact} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link
+                  to={paths.contact}
+                  className="text-dark-muted hover:text-cyan transition-colors text-sm"
+                >
                   {t('nav.contact')}
                 </Link>
               </li>
@@ -70,22 +81,34 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">{t('footer.legal')}</h4>
             <ul className="space-y-3">
               <li>
-                <Link to={paths.shipping} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link
+                  to={paths.shipping}
+                  className="text-dark-muted hover:text-cyan transition-colors text-sm"
+                >
                   {t('footer.shipping')}
                 </Link>
               </li>
               <li>
-                <Link to={paths.faq} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link
+                  to={paths.faq}
+                  className="text-dark-muted hover:text-cyan transition-colors text-sm"
+                >
                   {i18n.language === 'de' ? 'Häufige Fragen' : 'Gyakori kérdések'}
                 </Link>
               </li>
               <li>
-                <Link to={paths.privacy} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link
+                  to={paths.privacy}
+                  className="text-dark-muted hover:text-cyan transition-colors text-sm"
+                >
                   {t('footer.privacy')}
                 </Link>
               </li>
               <li>
-                <Link to={paths.terms} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+                <Link
+                  to={paths.terms}
+                  className="text-dark-muted hover:text-cyan transition-colors text-sm"
+                >
                   {t('footer.terms')}
                 </Link>
               </li>
@@ -100,7 +123,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {partnerPortals.map((portal) => (
                 <li key={portal.name}>
-                  <a 
+                  <a
                     href={portal.url}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -116,8 +139,8 @@ const Footer = () => {
               ))}
             </ul>
             <p className="text-dark-muted/60 text-xs mt-4 leading-relaxed">
-              {i18n.language === 'de' 
-                ? 'Das Fachportal-Netzwerk der Németh Légtechnika Kft.' 
+              {i18n.language === 'de'
+                ? 'Das Fachportal-Netzwerk der Németh Légtechnika Kft.'
                 : 'A Németh Légtechnika Kft. szakportál-hálózata'}
             </p>
           </div>
@@ -170,17 +193,23 @@ const Footer = () => {
             © 2024 Németh Légtechnika Kft. {t('footer.allRights')}
           </p>
           <div className="flex items-center gap-6">
-            <Link to={paths.privacy} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+            <Link
+              to={paths.privacy}
+              className="text-dark-muted hover:text-cyan transition-colors text-sm"
+            >
               {t('footer.privacy')}
             </Link>
-            <Link to={paths.terms} className="text-dark-muted hover:text-cyan transition-colors text-sm">
+            <Link
+              to={paths.terms}
+              className="text-dark-muted hover:text-cyan transition-colors text-sm"
+            >
               {t('footer.terms')}
             </Link>
           </div>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

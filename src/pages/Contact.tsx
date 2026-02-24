@@ -1,12 +1,13 @@
-import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet-async';
-import { Mail, Phone, MapPin, Clock, MessageSquare } from 'lucide-react';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import ContactForm from '@/components/contact/ContactForm';
+import { Clock, Mail, MapPin, MessageSquare, Phone } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import { useTranslation } from 'react-i18next'
+
+import ContactForm from '@/components/contact/ContactForm'
+import Footer from '@/components/layout/Footer'
+import Header from '@/components/layout/Header'
 
 const Contact = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const orderContact = [
     {
@@ -21,7 +22,7 @@ const Contact = () => {
       value: 'office@sopronterv.hu',
       href: 'mailto:office@sopronterv.hu',
     },
-  ];
+  ]
 
   const technicalContact = [
     {
@@ -42,7 +43,7 @@ const Contact = () => {
       value: 'nemeth_kalman',
       href: 'skype:nemeth_kalman?chat',
     },
-  ];
+  ]
 
   const generalInfo = [
     {
@@ -59,7 +60,7 @@ const Contact = () => {
       subtext: null,
       href: null,
     },
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-background">
@@ -67,9 +68,9 @@ const Contact = () => {
         <title>{t('contact.pageTitle')} | szellozoszuro.hu</title>
         <meta name="description" content={t('contact.pageDescription')} />
       </Helmet>
-      
+
       <Header />
-      
+
       <main className="pt-20 lg:pt-24">
         {/* Page Header */}
         <section className="section-dark py-12 lg:py-16">
@@ -77,9 +78,7 @@ const Contact = () => {
             <h1 className="text-3xl lg:text-4xl font-bold mb-3">
               <span className="gradient-cyan-text">{t('contact.pageTitle')}</span>
             </h1>
-            <p className="text-dark-muted text-lg max-w-2xl mb-4">
-              {t('contact.pageDescription')}
-            </p>
+            <p className="text-dark-muted text-lg max-w-2xl mb-4">{t('contact.pageDescription')}</p>
             <div className="inline-flex items-center gap-2 bg-cyan/10 border border-cyan/30 rounded-lg px-4 py-2">
               <MapPin className="w-4 h-4 text-cyan" />
               <span className="text-dark-foreground text-sm">
@@ -105,7 +104,7 @@ const Contact = () => {
                   </h2>
                   <div className="space-y-3">
                     {orderContact.map((item) => (
-                      <div 
+                      <div
                         key={item.title + item.value}
                         className="flex items-start gap-4 p-4 rounded-xl bg-muted/50"
                       >
@@ -114,7 +113,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <p className="text-sm text-muted-foreground mb-1">{item.title}</p>
-                          <a 
+                          <a
                             href={item.href}
                             className="font-medium text-foreground hover:text-cyan transition-colors"
                           >
@@ -133,7 +132,7 @@ const Contact = () => {
                   </h2>
                   <div className="space-y-3">
                     {technicalContact.map((item) => (
-                      <div 
+                      <div
                         key={item.title + item.value}
                         className="flex items-start gap-4 p-4 rounded-xl bg-muted/50"
                       >
@@ -142,7 +141,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <p className="text-sm text-muted-foreground mb-1">{item.title}</p>
-                          <a 
+                          <a
                             href={item.href}
                             className="font-medium text-foreground hover:text-cyan transition-colors"
                           >
@@ -161,7 +160,7 @@ const Contact = () => {
                   </h2>
                   <div className="space-y-3">
                     {generalInfo.map((item) => (
-                      <div 
+                      <div
                         key={item.title}
                         className="flex items-start gap-4 p-4 rounded-xl bg-muted/50"
                       >
@@ -171,9 +170,7 @@ const Contact = () => {
                         <div>
                           <p className="text-sm text-muted-foreground mb-1">{item.title}</p>
                           <p className="font-medium text-foreground">{item.value}</p>
-                          {item.subtext && (
-                            <p className="text-xs text-cyan mt-1">{item.subtext}</p>
-                          )}
+                          {item.subtext && <p className="text-xs text-cyan mt-1">{item.subtext}</p>}
                         </div>
                       </div>
                     ))}
@@ -210,7 +207,7 @@ const Contact = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

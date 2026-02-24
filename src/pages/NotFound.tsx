@@ -1,16 +1,17 @@
-import { useLocation, Link } from "react-router-dom";
-import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import usePath from "@/hooks/use-path";
+import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+import { Link, useLocation } from 'react-router-dom'
+
+import usePath from '@/hooks/use-path'
 
 const NotFound = () => {
-  const location = useLocation();
-  const { t } = useTranslation();
-  const paths = usePath();
+  const location = useLocation()
+  const { t } = useTranslation()
+  const paths = usePath()
 
   useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-  }, [location.pathname]);
+    console.error('404 Error: User attempted to access non-existent route:', location.pathname)
+  }, [location.pathname])
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-muted">
@@ -22,7 +23,7 @@ const NotFound = () => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound

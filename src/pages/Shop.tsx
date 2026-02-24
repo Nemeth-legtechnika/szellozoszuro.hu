@@ -1,113 +1,118 @@
-import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet-async';
-import { ExternalLink, Filter, ArrowRight, Truck, Zap } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import shopBrandsBg from '@/assets/shop-brands-bg.jpg';
+import { ArrowRight, ExternalLink, Filter, Truck, Zap } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import { useTranslation } from 'react-i18next'
+
+import shopBrandsBg from '@/assets/shop-brands-bg.jpg'
+import Footer from '@/components/layout/Footer'
+import Header from '@/components/layout/Header'
+import { Button } from '@/components/ui/button'
 
 // Brand data with external webshop links
 const brands = [
-  { 
-    id: 'vaillant', 
-    name: 'Vaillant', 
+  {
+    id: 'vaillant',
+    name: 'Vaillant',
     description: 'recoVAIR szűrők',
     productCount: 13,
     oemLink: 'https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/vaillant-szurok/',
-    aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/vaillant-szuro/',
+    aftermarketLink:
+      'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/vaillant-szuro/',
   },
-  { 
-    id: 'helios', 
-    name: 'Helios', 
+  {
+    id: 'helios',
+    name: 'Helios',
     description: 'KWL szűrők',
     productCount: 15,
     oemLink: 'https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/helios/',
-    aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/helios-utangyartott-szurok/',
+    aftermarketLink:
+      'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/helios-utangyartott-szurok/',
   },
-  { 
-    id: 'bosch', 
-    name: 'BOSCH', 
+  {
+    id: 'bosch',
+    name: 'BOSCH',
     description: 'Vent szűrők',
     productCount: 5,
     oemLink: 'https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/bosch-szuro/',
-    aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/bosch-utangyartott-szurok/',
+    aftermarketLink:
+      'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/bosch-utangyartott-szurok/',
   },
-  { 
-    id: 'defro', 
-    name: 'DEFRO air', 
+  {
+    id: 'defro',
+    name: 'DEFRO air',
     description: 'DRT szűrők',
     productCount: 7,
     oemLink: 'https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/defro-air-szuro/',
     aftermarketLink: null,
   },
-  { 
-    id: 'wolf', 
-    name: 'Wolf', 
+  {
+    id: 'wolf',
+    name: 'Wolf',
     description: 'CWL szűrők',
     productCount: 10,
     oemLink: null,
     aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/wolf/',
   },
-  { 
-    id: 'zehnder', 
-    name: 'Zehnder', 
+  {
+    id: 'zehnder',
+    name: 'Zehnder',
     description: 'ComfoAir szűrők',
     productCount: 6,
     oemLink: null,
     aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/zehnder/',
   },
-  { 
-    id: 'vents', 
-    name: 'Vents', 
+  {
+    id: 'vents',
+    name: 'Vents',
     description: 'VUT szűrők',
     productCount: 7,
     oemLink: null,
     aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/vents/',
   },
-  { 
-    id: 'aldes', 
-    name: 'Aldes', 
+  {
+    id: 'aldes',
+    name: 'Aldes',
     description: 'InspirAIR szűrők',
     productCount: 7,
     oemLink: null,
     aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/aldes/',
   },
-  { 
-    id: 'blauberg', 
-    name: 'Blauberg', 
+  {
+    id: 'blauberg',
+    name: 'Blauberg',
     description: 'KOMFORT szűrők',
     productCount: 5,
     oemLink: null,
     aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/blauberg/',
   },
-  { 
-    id: 'stiebel', 
-    name: 'Stiebel Eltron', 
+  {
+    id: 'stiebel',
+    name: 'Stiebel Eltron',
     description: 'LWZ szűrők',
     productCount: 3,
     oemLink: null,
-    aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/stiebel-eltron/',
+    aftermarketLink:
+      'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/stiebel-eltron/',
   },
-  { 
-    id: 'hoval', 
-    name: 'Hoval', 
+  {
+    id: 'hoval',
+    name: 'Hoval',
     description: 'HomeVent szűrők',
     productCount: 1,
     oemLink: null,
     aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/hoval/',
   },
-  { 
-    id: 'hungaroklima', 
-    name: 'Hungaroklíma', 
+  {
+    id: 'hungaroklima',
+    name: 'Hungaroklíma',
     description: 'HKV szűrők',
     productCount: 1,
     oemLink: 'https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/hungaroklima-szurok/',
     aftermarketLink: null,
   },
-];
+]
 
 const Shop = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   const categories = [
     {
@@ -128,7 +133,7 @@ const Shop = () => {
       link: 'https://szelloztetes.eu/termekkategoria/szurok/szurohaz/',
       icon: '📦',
     },
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-background">
@@ -136,19 +141,18 @@ const Shop = () => {
         <title>{t('shop.pageTitle')} | szellozoszuro.hu</title>
         <meta name="description" content={t('shop.pageDescription')} />
       </Helmet>
-      
+
       <Header />
-      
+
       <main className="pt-20 lg:pt-24">
         {/* Page Header */}
         <section className="section-dark py-12 lg:py-16">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl lg:text-4xl font-bold mb-3">
-              <span className="gradient-cyan-text">{t('nav.filters')}</span> {t('shop.pageTitle').split(' ').slice(1).join(' ')}
+              <span className="gradient-cyan-text">{t('nav.filters')}</span>{' '}
+              {t('shop.pageTitle').split(' ').slice(1).join(' ')}
             </h1>
-            <p className="text-dark-muted text-lg max-w-2xl">
-              {t('shop.pageDescription')}
-            </p>
+            <p className="text-dark-muted text-lg max-w-2xl">{t('shop.pageDescription')}</p>
           </div>
         </section>
 
@@ -183,7 +187,7 @@ const Shop = () => {
         {/* Brands Section */}
         <section className="relative py-8 lg:py-12 overflow-hidden">
           {/* Background image */}
-          <div 
+          <div
             className="absolute inset-0 z-0"
             style={{
               backgroundImage: `url(${shopBrandsBg})`,
@@ -195,13 +199,11 @@ const Shop = () => {
           />
           {/* Gradient overlay */}
           <div className="absolute inset-0 z-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
-          
+
           <div className="container relative z-10 mx-auto px-4">
             <div className="mb-8">
               <h2 className="text-2xl font-bold text-foreground mb-2">{t('shop.byBrand')}</h2>
-              <p className="text-muted-foreground">
-                {t('shop.byBrandDescription')}
-              </p>
+              <p className="text-muted-foreground">{t('shop.byBrandDescription')}</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -272,13 +274,11 @@ const Shop = () => {
             <h2 className="text-2xl lg:text-3xl font-bold text-dark-foreground mb-4">
               {t('shop.viewAll')}
             </h2>
-            <p className="text-dark-muted max-w-xl mx-auto mb-8">
-              {t('shop.viewAllDescription')}
-            </p>
+            <p className="text-dark-muted max-w-xl mx-auto mb-8">{t('shop.viewAllDescription')}</p>
             <Button variant="cta" size="lg" asChild>
-              <a 
-                href="https://szelloztetes.eu/termekkategoria/szurok/" 
-                target="_blank" 
+              <a
+                href="https://szelloztetes.eu/termekkategoria/szurok/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="gap-2"
               >
@@ -301,9 +301,7 @@ const Shop = () => {
                   <Zap className="w-4 h-4 text-cyan" />
                   {t('shop.fastShipping')}
                 </h3>
-                <p className="text-muted-foreground text-sm">
-                  {t('shop.fastShippingDescription')}
-                </p>
+                <p className="text-muted-foreground text-sm">{t('shop.fastShippingDescription')}</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-cyan/10 flex items-center justify-center">
@@ -319,9 +317,7 @@ const Shop = () => {
                   <span className="text-2xl">💬</span>
                 </div>
                 <h3 className="font-semibold text-foreground mb-2">{t('shop.expertAdvice')}</h3>
-                <p className="text-muted-foreground text-sm">
-                  {t('shop.expertAdviceDescription')}
-                </p>
+                <p className="text-muted-foreground text-sm">{t('shop.expertAdviceDescription')}</p>
               </div>
             </div>
           </div>
@@ -330,7 +326,7 @@ const Shop = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Shop;
+export default Shop

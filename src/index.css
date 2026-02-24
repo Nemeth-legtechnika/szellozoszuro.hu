@@ -10,7 +10,7 @@
     --cyan-glow: 187 100% 50%;
     --cyan-light: 187 100% 70%;
     --cyan-dark: 187 100% 40%;
-    
+
     /* Light theme */
     --background: 210 20% 98%;
     --foreground: 220 25% 10%;
@@ -51,7 +51,11 @@
     /* Gradients */
     --gradient-cyan: linear-gradient(135deg, hsl(187 100% 50%) 0%, hsl(200 100% 60%) 100%);
     --gradient-dark: linear-gradient(180deg, hsl(220 30% 6%) 0%, hsl(220 25% 12%) 100%);
-    --gradient-glow: radial-gradient(ellipse at center, hsl(187 100% 50% / 0.15) 0%, transparent 70%);
+    --gradient-glow: radial-gradient(
+      ellipse at center,
+      hsl(187 100% 50% / 0.15) 0%,
+      transparent 70%
+    );
 
     /* Shadows */
     --shadow-cyan: 0 4px 30px -5px hsl(187 100% 50% / 0.4);
@@ -96,7 +100,7 @@
     --border: 220 20% 18%;
     --input: 220 20% 18%;
     --ring: 187 100% 50%;
-    
+
     --sidebar-background: 220 30% 6%;
     --sidebar-foreground: 210 20% 90%;
     --sidebar-primary: 187 100% 50%;
@@ -118,7 +122,12 @@
     font-family: 'Inter', system-ui, sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-semibold tracking-tight;
   }
 }
@@ -168,7 +177,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -177,7 +187,8 @@
 }
 
 @keyframes glow-pulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 20px hsl(187 100% 50% / 0.3);
   }
   50% {
