@@ -190,7 +190,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-dark-secondary mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-dark-muted text-sm">
-            © 2024 Németh Légtechnika Kft. {t('footer.allRights')}
+            © {new Date().getFullYear()} Németh Légtechnika Kft. {t('footer.allRights')}
           </p>
           <div className="flex items-center gap-6">
             <Link
