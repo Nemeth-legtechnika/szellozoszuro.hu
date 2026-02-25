@@ -28,6 +28,7 @@ jobs:
 
       - name: Rebase developer onto main
         run: |
+          git fetch origin
           git checkout developer || git checkout -b developer origin/main
           git rebase origin/main || {
             echo "::error::Rebase conflict detected when syncing main into developer. Please resolve conflicts manually."
