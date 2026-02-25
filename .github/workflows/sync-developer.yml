@@ -1,0 +1,35 @@
+name: Sync developer with main
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Rebase developer onto main
+        run: |
+          git checkout developer
+          git rebase origin/main || {
+            echo "::error::Rebase conflict detected when syncing main into developer. Please resolve conflicts manually."
+            git rebase --abort
+            exit 1
+          }
+
+      - name: Push updated developer branch
+        run: git push origin developer --force-with-lease
