@@ -47,16 +47,31 @@ describe('ContactForm', () => {
     expect(screen.getByPlaceholderText('contact.form.messagePlaceholder')).toBeInTheDocument()
   })
 
-  it('shows validation errors when submitting empty form', async () => {
+  it('marks required fields as invalid when submitting empty form', async () => {
     render(<ContactForm />)
 
     fireEvent.click(screen.getByRole('button', { name: /contact\.form\.submit/i }))
 
     await waitFor(() => {
-      // Zod validation errors should appear as FormMessage elements
-      const alerts = screen.getAllByRole('paragraph')
-      expect(alerts.length).toBeGreaterThan(0)
+      expect(screen.getByPlaceholderText('contact.form.namePlaceholder')).toHaveAttribute(
+        'aria-invalid',
+        'true',
+      )
     })
+
+    expect(screen.getByPlaceholderText('contact.form.emailPlaceholder')).toHaveAttribute(
+      'aria-invalid',
+      'true',
+    )
+    expect(screen.getByPlaceholderText('contact.form.messagePlaceholder')).toHaveAttribute(
+      'aria-invalid',
+      'true',
+    )
+    // Phone is optional — should not be invalid
+    expect(screen.getByPlaceholderText('contact.form.phonePlaceholder')).not.toHaveAttribute(
+      'aria-invalid',
+      'true',
+    )
   })
 
   it('constructs mailto link and shows success state on valid submission', async () => {
