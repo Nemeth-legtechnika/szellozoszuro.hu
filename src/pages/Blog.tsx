@@ -9,6 +9,7 @@ import allergySeasonHeroImage from '@/assets/blog/allergy-season-hero-generated.
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg'
 import dirtyFiltersImage from '@/assets/blog/dirty-filters-used.jpg'
 import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg'
+import foggyMorningImage from '@/assets/blog/foggy-morning-condensation.jpg'
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg'
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg'
 import Footer from '@/components/layout/Footer'
@@ -176,6 +177,26 @@ const blogPosts = [
     categoryDe: 'Wartung',
     readTime: '7 perc',
     readTimeDe: '7 Min.',
+  },
+  {
+    id: 9,
+    title: 'Vigyázat! A nyirkos idő a szellőzőrendszer csendes ellensége!',
+    titleDe: 'Achtung! Feuchtigkeit ist der stille Feind Ihrer Lüftungsanlage!',
+    excerpt:
+      'Tudta, hogy a szűrők ködös, nyirkos őszi-téli időben sokkal keményebben dolgoznak, mint nyáron? A nedvesség és a por együtt csendes, de súlyos károkat okozhat.',
+    excerptDe:
+      'Wussten Sie, dass Filter bei nebligem, feuchtem Herbst-/Winterwetter viel härter arbeiten als im Sommer? Feuchtigkeit und Staub zusammen können stille, aber schwere Schäden verursachen.',
+    image: foggyMorningImage,
+    imageAlt: 'Ködös őszi reggel páralecsapódással az ablakon - nyirkos időjárás szellőztetési kihívásai',
+    date: '2024. március 20.',
+    dateDe: '20. März 2024',
+    author: 'Németh Kálmán',
+    authorDe: 'Kálmán Németh',
+    slug: 'nyirkos-ido-szellozorendszer-ellensege',
+    category: 'Karbantartás',
+    categoryDe: 'Wartung',
+    readTime: '6 perc',
+    readTimeDe: '6 Min.',
   },
 ]
 

@@ -11,6 +11,7 @@ import dirtyDuctImage from '@/assets/blog/dirty-duct-interior.jpg'
 import dirtyFiltersImage from '@/assets/blog/dirty-filters-used.jpg'
 import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg'
 import filterClassesChartImage from '@/assets/blog/filter-classes-chart.jpg'
+import foggyMorningImage from '@/assets/blog/foggy-morning-condensation.jpg'
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg'
 import vaillantMukFiltersImage from '@/assets/blog/vaillant-muk-filters.png'
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg'
@@ -570,6 +571,62 @@ const blogPosts = [
         title: 'Nálad mikor voltak utoljára ellenőrizve az anemosztát szűrők?',
         content:
           'Ha nem emlékszel, mikor nézted meg utoljára a szűrőidet, itt az ideje! Ne várd meg, amíg a rendszered „jelzi" a problémát zajjal vagy kellemetlen szagokkal. A megelőzés mindig olcsóbb, mint a javítás.',
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: 'Vigyázat! A nyirkos idő a szellőzőrendszer csendes ellensége!',
+    excerpt:
+      'Tudta, hogy a szűrők ködös, nyirkos őszi-téli időben sokkal keményebben dolgoznak, mint nyáron? A nedvesség és a por együtt csendes, de súlyos károkat okozhat.',
+    heroImage: foggyMorningImage,
+    heroAlt: 'Ködös őszi reggel páralecsapódással az ablakon - nyirkos időjárás szellőztetési kihívásai',
+    date: '2024. március 20.',
+    author: 'Németh Kálmán',
+    slug: 'nyirkos-ido-szellozorendszer-ellensege',
+    category: 'Karbantartás',
+    readTime: '6 perc',
+    sections: [
+      {
+        id: 1,
+        type: 'intro',
+        content:
+          'Tudta, hogy a szellőztető szűrők ködös, nyirkos őszi-téli időben sokkal keményebben dolgoznak, mint a száraz nyári hónapokban? Sokan nem gondolnak bele, de a páratartalom drámaian befolyásolja a szűrők élettartamát és a rendszer hatékonyságát. A nedvesség és a por együtt egy csendes, de annál veszélyesebb ellenséget hoz létre.',
+      },
+      {
+        id: 2,
+        type: 'heading',
+        title: 'A „Sár-hatás": Amikor a por ragacsossá válik',
+        content:
+          'Száraz időben a porszemcsék lazán tapadnak a szűrő szálaihoz, és a levegő viszonylag könnyen átáramlik rajtuk. Nyirkos, ködös időben azonban teljesen más a helyzet.\n\nA magas páratartalmú levegőben a finom porszemcsék nedvességet szívnak magukba, és egy ragacsos, sárszerű réteget képeznek a szűrő szálain. Ez a „sár-hatás" drámaian felgyorsítja a szűrő eltömődését – akár 2-3-szor gyorsabban telítődhet, mint száraz időben!\n\nKépzeljük el úgy: száraz porral könnyű söpörni, de sáros porral? Az ráragad mindenre, és szinte lehetetlen eltávolítani. Pontosan ez történik a szűrő belsejében is.',
+      },
+      {
+        id: 3,
+        type: 'heading',
+        title: 'Megnőtt ellenállás: A rendszer „fullad"',
+        content:
+          'Amikor a szűrő szálai közé beragadt nedves por egyre vastagabb réteget képez, a levegő egyre nehezebben jut át rajta. A rendszer „fullad" – és ennek azonnali, mérhető következményei vannak:\n\n• Magasabb villanyszámla: A ventilátornak nagyobb teljesítményen kell dolgoznia, hogy ugyanazt a légmennyiséget biztosítsa. Ez akár 20-30%-kal is növelheti az energiafogyasztást.\n\n• Hangosabb működés: A motor magasabb fordulatszámon pörög, a légellenállás növekedésével a rendszer hallhatóan zúg és búg – éjszaka különösen zavaró.\n\n• Felesleges terhelés a gépen: A folyamatos túlterhelés lerövidíti a ventilátor és a motor élettartamát. Egy idő előtti motorcsere ára a szűrő árának többszöröse!',
+      },
+      {
+        id: 4,
+        type: 'heading',
+        title: 'Higiénia és egészség: A láthatatlan veszély',
+        content:
+          'A nedves, poros szűrő nem csak mechanikai probléma – komoly egészségügyi kockázatot is jelent. A tartósan nedves, szerves anyagokkal teli környezet ideális táptalaj a mikroorganizmusok számára:\n\n• Penészgombák: A nedves szűrőanyagban penésztelepek alakulhatnak ki, amelyek spóráikat a lakásba fújják.\n\n• Baktériumok: A meleg, nyirkos közeg kedvez a baktériumok szaporodásának.\n\n• Kellemetlen szagok: A mikrobiológiai aktivitás dohos, áporodott szagot eredményez, amit a szellőztetés széthord a lakásban.\n\nA tiszta szűrő az egyetlen garancia az egészséges beltéri levegőre. Különösen nyirkos időszakban, amikor a természetes szellőztetés (ablaknyitás) sem jelent megoldást a ködös, párás külső levegő miatt.',
+      },
+      {
+        id: 5,
+        type: 'callout',
+        title: 'Szakértői tanács a szellozoszuro.hu-tól',
+        content:
+          'Nyirkos időszakban (ősz-tél) 2-3 hetente ellenőrizze a szűrőit! Ha sötétszürkék, elszíneződtek, vagy tapintásra nedvesek – azonnal cserélje ki őket! Ne várja meg a szokásos karbantartási ciklust. A megelőző csere mindig olcsóbb, mint a következményes javítás.',
+      },
+      {
+        id: 6,
+        type: 'heading',
+        title: 'Ne hagyd, hogy a géped erőlködjön!',
+        content:
+          'A nyirkos időszak extra terhelést jelent a szellőztető rendszerednek. A rendszeres szűrőellenőrzés és a gyors csere biztosítja, hogy a géped csendesen, hatékonyan és higiénikusan működjön egész télen át. Rendelj friss szűrőt még ma, és védd meg a rendszered a nedvesség csendes pusztításától!',
       },
     ],
   },
