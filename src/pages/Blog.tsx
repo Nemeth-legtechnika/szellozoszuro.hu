@@ -298,7 +298,7 @@ const Blog = () => {
                 </p>
               </div>
               <a
-                href="https://www.facebook.com/szelloztetes.eu"
+                href="https://www.facebook.com/share/1a9KhV94Ct/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-[hsl(220_46%_48%)] px-6 py-3 text-sm font-semibold text-[hsl(0_0%_100%)] transition-all duration-300 hover:bg-[hsl(220_46%_42%)] hover:shadow-lg flex-shrink-0"
