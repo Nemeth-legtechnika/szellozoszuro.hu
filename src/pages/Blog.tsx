@@ -220,7 +220,6 @@ const Blog = () => {
                 </Link>
               ))}
             </div>
-          </div>
 
             {/* Facebook Card */}
             <div className="mt-12 rounded-2xl border border-border bg-card p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
