@@ -493,6 +493,86 @@ const blogPosts = [
       },
     ],
   },
+  {
+    id: 8,
+    title: 'Ez történik a szellőztető rendszereddel, ha kispórolod a szűrőt!',
+    excerpt:
+      'Valós esettanulmány: a szűrők nem luxus, hanem a rendszer pajzsa. Mutatjuk, mit okoz az elhanyagolt karbantartás.',
+    heroImage: dirtyFiltersImage,
+    heroAlt: 'Használt, koszos szellőztető szűrők - szűrőcsere fontossága',
+    date: '2024. március 15.',
+    author: 'Németh Kálmán',
+    slug: 'mi-tortenik-ha-kisporolod-a-szurot',
+    category: 'Karbantartás',
+    readTime: '7 perc',
+    sections: [
+      {
+        id: 1,
+        type: 'intro',
+        content:
+          'Sokan gondolják, hogy a szellőztető szűrő csupán egy „plusz költség", amit ki lehet spórolni. A valóság azonban egészen más képet mutat. Nap mint nap találkozunk olyan rendszerekkel, ahol a karbantartás elmaradása súlyos – és drága – következményekkel járt. A szűrő nem luxus: a szűrő a rendszered pajzsa. És ha a pajzsot elveszed, a csapások közvetlenül a rendszert érik.',
+      },
+      {
+        id: 2,
+        type: 'heading',
+        title: '„Horror" a csövekben',
+        content:
+          'Szűrők nélkül – vagy elhanyagolt, telített szűrőkkel – a szöszök, a por, a konyhai zsírpára és a háztartási szennyeződések szabad utat kapnak a csőhálózatba. Idővel ez egy ragacsos, nehezen eltávolítható réteget képez a csövek belső falán.\n\nEnnek azonnali következményei:\n\n• Megnövekedett zaj: A szűkülő keresztmetszet miatt a levegő nagyobb sebességgel áramlik, ami hallható süvítést és zúgást okoz.\n\n• Magasabb villanyszámla: A ventilátornak sokkal keményebben kell dolgoznia, hogy ugyanazt a légmennyiséget biztosítsa. Ez akár 15-25%-kal is növelheti az energiafogyasztást.\n\n• Extrém drága csőtisztítás: Egy professzionális légcsatorna-tisztítás ára több tízezer forint – és nem is biztos, hogy teljes mértékben visszaállítható az eredeti állapot.',
+      },
+      {
+        id: 3,
+        type: 'image',
+        image: dirtyDuctImage,
+        imageAlt: 'Koszos, szennyezett légcsatorna belülről - szöszök és por lerakódás a cső falán',
+        caption:
+          'Így néz ki egy légcsatorna belülről, ha a szűrők nem végzik a dolgukat. A lerakódás folyamatosan vastagszik és szűkíti a keresztmetszetet.',
+      },
+      {
+        id: 4,
+        type: 'heading',
+        title: 'A „hős", aki feláldozta magát',
+        content:
+          'Nézd meg figyelmesen a képen látható szűrőket! Ezek a szűrők pontosan azt tették, amit kellett: megállították a szennyeződést, MIELŐTT az bejuthatott volna a csövekbe és a hőcserélő kockába.\n\nIgen, csúnyán néznek ki. De gondolj bele: mindez a kosz, szösz és por a te tüdődben, a csöveidben vagy a gép hőcserélőjén landolt volna. A szűrő „feláldozta magát", hogy a rendszered és a családod egészsége érintetlen maradjon.\n\nAz üzenet egyszerű: Jobb, ha a szűrő koszos, mint a tüdőd vagy a csöveid!',
+      },
+      {
+        id: 5,
+        type: 'image',
+        image: dirtyFiltersImage,
+        imageAlt: 'Két erősen szennyezett kerek szellőztető szűrő egy asztalon - a szűrőcsere fontossága',
+        caption:
+          'Ezek a szűrők elvégezték a feladatukat: megvédték a rendszert és a család egészségét. Ideje volt a cserének!',
+      },
+      {
+        id: 6,
+        type: 'heading',
+        title: 'A tiszta cél: Higiénikus csőhálózat',
+        content:
+          'Így kellene kinéznie minden szellőztető csőhálózat belsejének: tisztán, higiénikusan, lerakódások nélkül. Ez az állapot biztosítja a zavartalan légáramlást, a csendes működést és az egészséges beltéri levegőt.\n\nDe ez az állapot nem jön magától – ehhez rendszeres szűrőcsere és az elszívó oldali védelem szükséges. Itt lépnek színre a G2 típusú anemosztát szűrők (kónuszos szűrőpaplanok), amelyek az elszívási pontoknál (konyha, fürdő, WC) védik a csőhálózatot a bejutó szennyeződésektől.',
+      },
+      {
+        id: 7,
+        type: 'image',
+        image: cleanDuctImage,
+        imageAlt: 'Tiszta, higiénikus légcsatorna belülről - karbantartott szellőztető rendszer',
+        caption:
+          'A cél: minden légcsatorna belül ilyen tiszta maradjon. Ez rendszeres szűrőcserével és anemosztát szűrők használatával érhető el.',
+      },
+      {
+        id: 8,
+        type: 'callout',
+        title: 'Szakértői tanács a szellozoszuro.hu-tól',
+        content:
+          'Fontos megérteni a különbséget: A központi egységben lévő szűrők (G4, F7, F9) a gépet és a befújt friss levegőt védik – ezek az Ön és családja egészségéért felelnek. Az elszívó oldali anemosztát szűrők (G2 kónuszos szűrők) viszont a csőhálózatot védik a visszafelé érkező szennyeződésektől (konyhai pára, fürdőszobai szöszök). Mindkét védelmi vonal elengedhetetlen a rendszer hosszú élettartamához!',
+      },
+      {
+        id: 9,
+        type: 'heading',
+        title: 'Nálad mikor voltak utoljára ellenőrizve az anemosztát szűrők?',
+        content:
+          'Ha nem emlékszel, mikor nézted meg utoljára a szűrőidet, itt az ideje! Ne várd meg, amíg a rendszered „jelzi" a problémát zajjal vagy kellemetlen szagokkal. A megelőzés mindig olcsóbb, mint a javítás.',
+      },
+    ],
+  },
 ]
 
 const BlogPost = () => {
