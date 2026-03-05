@@ -3,11 +3,13 @@ import { Helmet } from 'react-helmet-async'
 import { Link, Navigate, useParams } from 'react-router-dom'
 
 import aftermarketFiltersImage from '@/assets/blog/aftermarket-filters.jpg'
+import aktivSzenHeroImage from '@/assets/blog/aktiv-szen-hero.jpg'
 import allergySeasonHeroImage from '@/assets/blog/allergy-season-hero-generated.jpg'
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg'
 import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg'
 import filterClassesChartImage from '@/assets/blog/filter-classes-chart.jpg'
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg'
+import vaillantMukFiltersImage from '@/assets/blog/vaillant-muk-filters.png'
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
@@ -379,6 +381,112 @@ const blogPosts = [
         title: 'Szakértői tanácsunk',
         content:
           'Ne csak az árat nézze! Egy silány szűrő okozta motorcsere tíz évnyi megtakarítást emészthet fel egyetlen nap alatt. Válasszon tesztelt minőséget!',
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: 'Az aktív szén ereje: Több, mint egy egyszerű porszűrő!',
+    excerpt:
+      'Hogyan működik az aktív szenes szűrő, és miben különbözik a hagyományos mechanikai szűréstől? Ismerd meg a MUK 10 és MUK 25 közötti különbséget.',
+    heroImage: aktivSzenHeroImage,
+    heroAlt: 'Aktív szén granulátum szűrőanyagon - aktivált szenes levegőszűrés',
+    date: '2024. március 5.',
+    author: 'Németh Kálmán',
+    slug: 'aktiv-szen-szuro-mukodes',
+    category: 'Technológia',
+    readTime: '8 perc',
+    sections: [
+      {
+        id: 1,
+        type: 'intro',
+        content:
+          'Amikor levegőszűrésről beszélünk, a legtöbben a hagyományos G4-es, F7-es vagy F9-es mechanikai szűrőkre gondolnak. Ezek a szűrők „szitaként" működnek: a levegőt átengedik, a részecskéket (port, pollent, finomport) pedig a szöveteikben fogják meg. De mi a helyzet azokkal a szennyeződésekkel, amelyek nem részecskék, hanem gázok? Gondoljunk a kellemetlen szagokra, az illékony szerves vegyületekre (VOC-ok), a kipufogógáz bűzére vagy az ipari légszennyezésre. Ezek ellen a hagyományos szűrők tehetetlenek.',
+      },
+      {
+        id: 2,
+        type: 'heading',
+        title: 'A mechanikai szűrés korlátai',
+        content:
+          'Egy G4, F7 vagy akár F9-es szűrő kiválóan teljesít a szilárd részecskék megfogásában. A működési elvük egyszerű: minél finomabb a szövet, annál kisebb részecskéket is megfog. De a szagmolekulák és a gáz halmazállapotú szennyezők olyan aprók, hogy simán átjutnak még a legsűrűbb szöveten is. Egy konyhai égett szag, a közeli forgalom kipufogógáza, vagy a szomszéd kandallójának füstje mind olyan probléma, amire más megoldás kell.',
+      },
+      {
+        id: 3,
+        type: 'heading',
+        title: 'Az aktív szén: A „mágneses felület" analógiája',
+        content:
+          'Az aktív szén (aktivált szén) működése alapvetően eltér a mechanikai szűréstől. Az eljárás neve: adszorpció. Képzeljük el úgy, mint egy hatalmas, mikroszkopikus szivacs-felületet, amelynek belső felülete elképesztően nagy – mindössze 1 gramm aktív szénnek akár 3000 m² belső felülete is lehet!\n\nEz a felület úgy működik, mint egy mágnes a gázmolekulák számára: a szagmolekulák, a VOC-ok és egyéb gáz szennyezők „ráragadnak" erre a felületre, és ott maradnak. A levegő tisztán és szagmentesen távozik.',
+      },
+      {
+        id: 4,
+        type: 'heading',
+        title: 'MUK 10 vs. MUK 25 – Melyiket válasszam?',
+        content:
+          'A szellőztető rendszerek aktív szenes szűrőit a szénmennyiségük alapján különböztetjük meg. A két legelterjedtebb kategória a MUK 10 és a MUK 25.',
+      },
+      {
+        id: 5,
+        type: 'heading',
+        title: 'MUK 10 – Alap városi védelem',
+        content:
+          'A MUK 10 szűrők kb. 100 g/m² aktív szenet tartalmaznak. Ez a szint ideális az alapvető szagvédelemre: ha forgalmasabb úton lakik, vagy időszakosan érzi a városi légszennyezést. A MUK 10 hatékonyan szűri a közlekedési eredetű szennyeződéseket és az enyhe ipari szagokat.',
+      },
+      {
+        id: 6,
+        type: 'heading',
+        title: 'MUK 25 – Intenzív védelem, 2,5-szörös szénmennyiséggel',
+        content:
+          'A MUK 25 szűrők kb. 250 g/m² aktív szenet tartalmaznak – ez 2,5-szer több, mint a MUK 10! Ez a kategória ajánlott, ha:\n\n• Szmogos, erősen terhelt városi környezetben lakik\n• A szomszédban rendszeresen tüzelnek fával vagy szénnel (kandallófüst)\n• Mezőgazdasági szagok (trágyázás, állattartás) érik az ingatlant\n• Ipari létesítmény közelében él',
+      },
+      {
+        id: 7,
+        type: 'image',
+        image: vaillantMukFiltersImage,
+        imageAlt: 'Vaillant szellőztető berendezés G4 és F7 szűrőkkel behelyezve - szellozoszuro.hu márkajelzéssel',
+        caption:
+          'A szűrők a „második védelmi vonalat" képezik a gépben. Az aktív szenes szűrő a mechanikai szűrő mellé kerülve a gáz halmazállapotú szennyezőket is megfogja.',
+      },
+      {
+        id: 8,
+        type: 'heading',
+        title: 'A tervezés fontossága: A beszívási pont elhelyezése',
+        content:
+          'Az aktív szenes szűrő hatékonyságát nem csak a szűrő minősége határozza meg, hanem a szellőztető rendszer friss levegő beszívási pontjának elhelyezése is. Rossz helyen elhelyezett beszívó nyílás esetén még a legerősebb szűrő sem tud csodát tenni.',
+      },
+      {
+        id: 9,
+        type: 'heading',
+        title: 'Szélirány (Magyarországon ÉNY)',
+        content:
+          'A friss levegő beszívási pontját lehetőleg az uralkodó szélirány felőli oldalra tervezzük. Magyarországon ez jellemzően az északnyugati oldal. Így a legtisztább levegőt kapjuk.',
+      },
+      {
+        id: 10,
+        type: 'heading',
+        title: 'Védett elhelyezés',
+        content:
+          'Kerüljük a fedett parkolók (carportok), kukatárolók vagy a garázs szellőzőnyílásai melletti elhelyezést! Az ilyen helyekről beszívott levegő eleve szennyezett lehet.',
+      },
+      {
+        id: 11,
+        type: 'heading',
+        title: '„Kémény-effektus" – Távolság az elszívástól',
+        content:
+          'A szellőztető rendszer elszívó nyílása (ahol a „használt" levegőt kifújja) és a beszívó nyílás között legalább 2-3 méter távolságot tartsunk. Ha túl közel vannak, az elszívott, elhasznált levegőt rögtön visszaszívja a rendszer – ez az ún. „kémény-effektus" vagy rövidzárlat.',
+      },
+      {
+        id: 12,
+        type: 'heading',
+        title: 'Magasság: Ne túl alacsonyan, ne túl magasan',
+        content:
+          'A talaj szintjén több a felvert por és allergén. A tető szintjén viszont – különösen nyáron – a felmelegedett tetőfelület hősugárzása befolyásolhatja a beszívott levegő hőmérsékletét. Az optimális magasság általában 2-3 méter a talaj felett.',
+      },
+      {
+        id: 13,
+        type: 'callout',
+        title: 'Szakértői tanácsunk',
+        content:
+          'Használjon aktív szenes (MUK) szűrőt a szagokkal terhelt időszakokban (őszi-téli fűtésszezon, tavaszi trágyázás), majd allergiaszezonban váltson F9-es finomszűrőre a maximális pollenvédelemért. A két szűrőtípus váltogatása az évszaknak megfelelően biztosítja a legmagasabb védelmet egész évben!',
       },
     ],
   },
