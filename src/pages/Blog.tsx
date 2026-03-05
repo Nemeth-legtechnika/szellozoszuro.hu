@@ -157,6 +157,26 @@ const blogPosts = [
     readTime: '8 perc',
     readTimeDe: '8 Min.',
   },
+  {
+    id: 8,
+    title: 'Ez történik a szellőztető rendszereddel, ha kispórolod a szűrőt!',
+    titleDe: 'Das passiert mit Ihrer Lüftungsanlage, wenn Sie am Filter sparen!',
+    excerpt:
+      'Valós esettanulmány: a szűrők nem luxus, hanem a rendszer pajzsa. Mutatjuk, mit okoz az elhanyagolt karbantartás a csövekben, és hogyan védheted meg a rendszered.',
+    excerptDe:
+      'Echte Fallstudie: Filter sind kein Luxus, sondern der Schutzschild der Anlage. Wir zeigen, was vernachlässigte Wartung in den Rohren anrichtet.',
+    image: dirtyFiltersImage,
+    imageAlt: 'Használt, koszos szellőztető szűrők - szűrőcsere fontossága',
+    date: '2024. március 15.',
+    dateDe: '15. März 2024',
+    author: 'Németh Kálmán',
+    authorDe: 'Kálmán Németh',
+    slug: 'mi-tortenik-ha-kisporolod-a-szurot',
+    category: 'Karbantartás',
+    categoryDe: 'Wartung',
+    readTime: '7 perc',
+    readTimeDe: '7 Min.',
+  },
 ]
 
 const Blog = () => {
