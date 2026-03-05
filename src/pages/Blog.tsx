@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import aftermarketFiltersImage from '@/assets/blog/aftermarket-filters.jpg'
+import aktivSzenHeroImage from '@/assets/blog/aktiv-szen-hero.jpg'
 import allergySeasonHeroImage from '@/assets/blog/allergy-season-hero-generated.jpg'
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg'
 import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg'
@@ -134,6 +135,26 @@ const blogPosts = [
     categoryDe: 'Kaufberatung',
     readTime: '6 perc',
     readTimeDe: '6 Min.',
+  },
+  {
+    id: 7,
+    title: 'Az aktív szén ereje: Több, mint egy egyszerű porszűrő!',
+    titleDe: 'Die Kraft der Aktivkohle: Mehr als ein einfacher Staubfilter!',
+    excerpt:
+      'Hogyan működik az aktív szenes szűrő, és miben különbözik a hagyományos mechanikai szűréstől? Ismerd meg a MUK 10 és MUK 25 közötti különbséget, és tudd meg, mikor érdemes aktív szénhez nyúlni.',
+    excerptDe:
+      'Wie funktioniert ein Aktivkohlefilter und was unterscheidet ihn von der herkömmlichen mechanischen Filtration? Lernen Sie den Unterschied zwischen MUK 10 und MUK 25 kennen.',
+    image: aktivSzenHeroImage,
+    imageAlt: 'Aktív szén granulátum szűrőanyagon - aktivált szenes levegőszűrés',
+    date: '2024. március 5.',
+    dateDe: '5. März 2024',
+    author: 'Németh Kálmán',
+    authorDe: 'Kálmán Németh',
+    slug: 'aktiv-szen-szuro-mukodes',
+    category: 'Technológia',
+    categoryDe: 'Technologie',
+    readTime: '8 perc',
+    readTimeDe: '8 Min.',
   },
 ]
 
