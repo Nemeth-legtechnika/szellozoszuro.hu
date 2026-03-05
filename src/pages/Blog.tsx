@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, User } from 'lucide-react'
+import { ArrowRight, Calendar, ExternalLink, Facebook, User } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -219,6 +219,30 @@ const Blog = () => {
                   </article>
                 </Link>
               ))}
+            </div>
+
+            {/* Facebook Card */}
+            <div className="mt-12 rounded-2xl border border-border bg-card p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[hsl(220_46%_48%)] flex items-center justify-center">
+                <Facebook className="w-8 h-8 text-[hsl(0_0%_100%)]" fill="hsl(0 0% 100%)" />
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-xl font-semibold text-foreground mb-2">
+                  {t('blogPage.facebookTitle')}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {t('blogPage.facebookDescription')}
+                </p>
+              </div>
+              <a
+                href="https://www.facebook.com/szelloztetes.eu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-[hsl(220_46%_48%)] px-6 py-3 text-sm font-semibold text-[hsl(0_0%_100%)] transition-all duration-300 hover:bg-[hsl(220_46%_42%)] hover:shadow-lg flex-shrink-0"
+              >
+                {t('blogPage.facebookButton')}
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </section>
