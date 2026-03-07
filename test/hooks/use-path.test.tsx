@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 
-import usePath from './use-path'
+import usePath from '@/hooks/use-path'
 
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({

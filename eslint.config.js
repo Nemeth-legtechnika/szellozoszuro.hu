@@ -71,7 +71,7 @@ export default tseslint.config(
 
   // Test file overrides
   {
-    files: ['src/**/*.{test,spec}.{ts,tsx}'],
+    files: ['test/**/*.{test,spec}.{ts,tsx}'],
     plugins: {
       vitest,
     },
@@ -80,7 +80,7 @@ export default tseslint.config(
     },
   },
   {
-    files: ['src/**/*.{test,spec}.{ts,tsx}'],
+    files: ['test/**/*.{test,spec}.{ts,tsx}'],
     ...testingLibrary.configs['flat/react'],
   },
 

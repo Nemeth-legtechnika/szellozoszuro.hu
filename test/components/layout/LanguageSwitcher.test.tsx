@@ -27,7 +27,7 @@ vi.mock('react-i18next', () => ({
 }))
 
 // Import after mocks are set up
-const { default: LanguageSwitcher } = await import('./LanguageSwitcher')
+const { default: LanguageSwitcher } = await import('@/components/layout/LanguageSwitcher')
 
 describe('LanguageSwitcher', () => {
   beforeEach(() => {

@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 
-import { useIsMobile } from './use-mobile'
+import { useIsMobile } from '@/hooks/use-mobile'
 
 describe('useIsMobile', () => {
   it('returns false when window is wider than 768px', () => {

@@ -12,7 +12,7 @@ vi.mock('sonner', () => ({
   toast: { success: vi.fn() },
 }))
 
-const { default: ContactForm } = await import('./ContactForm')
+const { default: ContactForm } = await import('@/components/contact/ContactForm')
 
 const fillForm = (overrides: Record<string, string> = {}) => {
   const values = {
