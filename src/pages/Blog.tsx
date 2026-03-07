@@ -1,14 +1,18 @@
-import { ArrowRight, Calendar, User } from 'lucide-react'
+import { ArrowRight, Calendar, ExternalLink, User } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import aftermarketFiltersImage from '@/assets/blog/aftermarket-filters.jpg'
+import aktivSzenHeroImage from '@/assets/blog/aktiv-szen-hero.jpg'
 import allergySeasonHeroImage from '@/assets/blog/allergy-season-hero-generated.jpg'
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg'
+import dirtyFiltersImage from '@/assets/blog/dirty-filters-used.jpg'
 import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg'
+import foggyMorningImage from '@/assets/blog/foggy-morning-condensation.jpg'
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg'
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg'
+import Facebook from '@/components/icon/Facebook.tsx'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
@@ -135,6 +139,67 @@ const blogPosts = [
     readTime: '6 perc',
     readTimeDe: '6 Min.',
   },
+  {
+    id: 7,
+    title: 'Az aktív szén ereje: Több, mint egy egyszerű porszűrő!',
+    titleDe: 'Die Kraft der Aktivkohle: Mehr als ein einfacher Staubfilter!',
+    excerpt:
+      'Hogyan működik az aktív szenes szűrő, és miben különbözik a hagyományos mechanikai szűréstől? Ismerd meg a MUK 10 és MUK 25 közötti különbséget, és tudd meg, mikor érdemes aktív szénhez nyúlni.',
+    excerptDe:
+      'Wie funktioniert ein Aktivkohlefilter und was unterscheidet ihn von der herkömmlichen mechanischen Filtration? Lernen Sie den Unterschied zwischen MUK 10 und MUK 25 kennen.',
+    image: aktivSzenHeroImage,
+    imageAlt: 'Aktív szén granulátum szűrőanyagon - aktivált szenes levegőszűrés',
+    date: '2024. március 5.',
+    dateDe: '5. März 2024',
+    author: 'Németh Kálmán',
+    authorDe: 'Kálmán Németh',
+    slug: 'aktiv-szen-szuro-mukodes',
+    category: 'Technológia',
+    categoryDe: 'Technologie',
+    readTime: '8 perc',
+    readTimeDe: '8 Min.',
+  },
+  {
+    id: 8,
+    title: 'Ez történik a szellőztető rendszereddel, ha kispórolod a szűrőt!',
+    titleDe: 'Das passiert mit Ihrer Lüftungsanlage, wenn Sie am Filter sparen!',
+    excerpt:
+      'Valós esettanulmány: a szűrők nem luxus, hanem a rendszer pajzsa. Mutatjuk, mit okoz az elhanyagolt karbantartás a csövekben, és hogyan védheted meg a rendszered.',
+    excerptDe:
+      'Echte Fallstudie: Filter sind kein Luxus, sondern der Schutzschild der Anlage. Wir zeigen, was vernachlässigte Wartung in den Rohren anrichtet.',
+    image: dirtyFiltersImage,
+    imageAlt: 'Használt, koszos szellőztető szűrők - szűrőcsere fontossága',
+    date: '2024. március 15.',
+    dateDe: '15. März 2024',
+    author: 'Németh Kálmán',
+    authorDe: 'Kálmán Németh',
+    slug: 'mi-tortenik-ha-kisporolod-a-szurot',
+    category: 'Karbantartás',
+    categoryDe: 'Wartung',
+    readTime: '7 perc',
+    readTimeDe: '7 Min.',
+  },
+  {
+    id: 9,
+    title: 'Vigyázat! A nyirkos idő a szellőzőrendszer csendes ellensége!',
+    titleDe: 'Achtung! Feuchtigkeit ist der stille Feind Ihrer Lüftungsanlage!',
+    excerpt:
+      'Tudta, hogy a szűrők ködös, nyirkos őszi-téli időben sokkal keményebben dolgoznak, mint nyáron? A nedvesség és a por együtt csendes, de súlyos károkat okozhat.',
+    excerptDe:
+      'Wussten Sie, dass Filter bei nebligem, feuchtem Herbst-/Winterwetter viel härter arbeiten als im Sommer? Feuchtigkeit und Staub zusammen können stille, aber schwere Schäden verursachen.',
+    image: foggyMorningImage,
+    imageAlt:
+      'Ködös őszi reggel páralecsapódással az ablakon - nyirkos időjárás szellőztetési kihívásai',
+    date: '2024. március 20.',
+    dateDe: '20. März 2024',
+    author: 'Németh Kálmán',
+    authorDe: 'Kálmán Németh',
+    slug: 'nyirkos-ido-szellozorendszer-ellensege',
+    category: 'Karbantartás',
+    categoryDe: 'Wartung',
+    readTime: '6 perc',
+    readTimeDe: '6 Min.',
+  },
 ]
 
 const Blog = () => {
@@ -219,6 +284,28 @@ const Blog = () => {
                   </article>
                 </Link>
               ))}
+            </div>
+
+            {/* Facebook Card */}
+            <div className="mt-12 rounded-2xl border border-border bg-card p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+              <Facebook />
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-xl font-semibold text-foreground mb-2">
+                  {t('blogPage.facebookTitle')}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {t('blogPage.facebookDescription')}
+                </p>
+              </div>
+              <a
+                href="https://www.facebook.com/share/1a9KhV94Ct/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-[hsl(220_46%_48%)] px-6 py-3 text-sm font-semibold text-[hsl(0_0%_100%)] transition-all duration-300 hover:bg-[hsl(220_46%_42%)] hover:shadow-lg flex-shrink-0"
+              >
+                {t('blogPage.facebookButton')}
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </section>

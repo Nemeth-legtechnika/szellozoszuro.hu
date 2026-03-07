@@ -264,6 +264,9 @@
   "blogPage": {
     "pageTitle": "Tudástár",
     "pageDescription": "Hasznos cikkek a szellőztetésről, szűrőkarbantartásról és az egészséges beltéri levegőről. A szelloztetes.eu szakmai támogatásával, 15+ év tapasztalattal.",
+    "facebookTitle": "Naprakész hírek és szakmai érdekességek",
+    "facebookDescription": "Kövessen minket Facebookon is, ahol rendszeresen osztunk meg friss híreket, karbantartási tippeket és aktualitásokat a szellőztetés világából.",
+    "facebookButton": "Irány a Facebook oldalunk",
     "backToBlog": "Vissza a Tudástárhoz",
     "readTime": "perc"
   },

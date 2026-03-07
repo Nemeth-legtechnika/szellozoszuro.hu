@@ -264,6 +264,9 @@
   "blogPage": {
     "pageTitle": "Wissensdatenbank",
     "pageDescription": "Nützliche Artikel über Lüftung, Filterwartung und gesunde Innenraumluft. Mit der fachlichen Unterstützung von szelloztetes.eu, über 15 Jahre Erfahrung.",
+    "facebookTitle": "Aktuelle Nachrichten und Fachtipps",
+    "facebookDescription": "Folgen Sie uns auch auf Facebook, wo wir regelmäßig aktuelle Nachrichten, Wartungstipps und Neuigkeiten aus der Welt der Lüftung teilen.",
+    "facebookButton": "Zu unserer Facebook-Seite",
     "backToBlog": "Zurück zur Wissensdatenbank",
     "readTime": "Min."
   },

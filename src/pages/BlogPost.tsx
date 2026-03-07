@@ -3,11 +3,17 @@ import { Helmet } from 'react-helmet-async'
 import { Link, Navigate, useParams } from 'react-router-dom'
 
 import aftermarketFiltersImage from '@/assets/blog/aftermarket-filters.jpg'
+import aktivSzenHeroImage from '@/assets/blog/aktiv-szen-hero.jpg'
 import allergySeasonHeroImage from '@/assets/blog/allergy-season-hero-generated.jpg'
+import cleanDuctImage from '@/assets/blog/clean-duct-interior.jpg'
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg'
+import dirtyDuctImage from '@/assets/blog/dirty-duct-interior.jpg'
+import dirtyFiltersImage from '@/assets/blog/dirty-filters-used.jpg'
 import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg'
 import filterClassesChartImage from '@/assets/blog/filter-classes-chart.jpg'
+import foggyMorningImage from '@/assets/blog/foggy-morning-condensation.jpg'
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg'
+import vaillantMukFiltersImage from '@/assets/blog/vaillant-muk-filters.png'
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
@@ -379,6 +385,248 @@ const blogPosts = [
         title: 'Szakértői tanácsunk',
         content:
           'Ne csak az árat nézze! Egy silány szűrő okozta motorcsere tíz évnyi megtakarítást emészthet fel egyetlen nap alatt. Válasszon tesztelt minőséget!',
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: 'Az aktív szén ereje: Több, mint egy egyszerű porszűrő!',
+    excerpt:
+      'Hogyan működik az aktív szenes szűrő, és miben különbözik a hagyományos mechanikai szűréstől? Ismerd meg a MUK 10 és MUK 25 közötti különbséget.',
+    heroImage: aktivSzenHeroImage,
+    heroAlt: 'Aktív szén granulátum szűrőanyagon - aktivált szenes levegőszűrés',
+    date: '2024. március 5.',
+    author: 'Németh Kálmán',
+    slug: 'aktiv-szen-szuro-mukodes',
+    category: 'Technológia',
+    readTime: '8 perc',
+    sections: [
+      {
+        id: 1,
+        type: 'intro',
+        content:
+          'Amikor levegőszűrésről beszélünk, a legtöbben a hagyományos G4-es, F7-es vagy F9-es mechanikai szűrőkre gondolnak. Ezek a szűrők „szitaként" működnek: a levegőt átengedik, a részecskéket (port, pollent, finomport) pedig a szöveteikben fogják meg. De mi a helyzet azokkal a szennyeződésekkel, amelyek nem részecskék, hanem gázok? Gondoljunk a kellemetlen szagokra, az illékony szerves vegyületekre (VOC-ok), a kipufogógáz bűzére vagy az ipari légszennyezésre. Ezek ellen a hagyományos szűrők tehetetlenek.',
+      },
+      {
+        id: 2,
+        type: 'heading',
+        title: 'A mechanikai szűrés korlátai',
+        content:
+          'Egy G4, F7 vagy akár F9-es szűrő kiválóan teljesít a szilárd részecskék megfogásában. A működési elvük egyszerű: minél finomabb a szövet, annál kisebb részecskéket is megfog. De a szagmolekulák és a gáz halmazállapotú szennyezők olyan aprók, hogy simán átjutnak még a legsűrűbb szöveten is. Egy konyhai égett szag, a közeli forgalom kipufogógáza, vagy a szomszéd kandallójának füstje mind olyan probléma, amire más megoldás kell.',
+      },
+      {
+        id: 3,
+        type: 'heading',
+        title: 'Az aktív szén: A „mágneses felület" analógiája',
+        content:
+          'Az aktív szén (aktivált szén) működése alapvetően eltér a mechanikai szűréstől. Az eljárás neve: adszorpció. Képzeljük el úgy, mint egy hatalmas, mikroszkopikus szivacs-felületet, amelynek belső felülete elképesztően nagy – mindössze 1 gramm aktív szénnek akár 3000 m² belső felülete is lehet!\n\nEz a felület úgy működik, mint egy mágnes a gázmolekulák számára: a szagmolekulák, a VOC-ok és egyéb gáz szennyezők „ráragadnak" erre a felületre, és ott maradnak. A levegő tisztán és szagmentesen távozik.',
+      },
+      {
+        id: 4,
+        type: 'heading',
+        title: 'MUK 10 vs. MUK 25 – Melyiket válasszam?',
+        content:
+          'A szellőztető rendszerek aktív szenes szűrőit a szénmennyiségük alapján különböztetjük meg. A két legelterjedtebb kategória a MUK 10 és a MUK 25.',
+      },
+      {
+        id: 5,
+        type: 'heading',
+        title: 'MUK 10 – Alap városi védelem',
+        content:
+          'A MUK 10 szűrők kb. 100 g/m² aktív szenet tartalmaznak. Ez a szint ideális az alapvető szagvédelemre: ha forgalmasabb úton lakik, vagy időszakosan érzi a városi légszennyezést. A MUK 10 hatékonyan szűri a közlekedési eredetű szennyeződéseket és az enyhe ipari szagokat.',
+      },
+      {
+        id: 6,
+        type: 'heading',
+        title: 'MUK 25 – Intenzív védelem, 2,5-szörös szénmennyiséggel',
+        content:
+          'A MUK 25 szűrők kb. 250 g/m² aktív szenet tartalmaznak – ez 2,5-szer több, mint a MUK 10! Ez a kategória ajánlott, ha:\n\n• Szmogos, erősen terhelt városi környezetben lakik\n• A szomszédban rendszeresen tüzelnek fával vagy szénnel (kandallófüst)\n• Mezőgazdasági szagok (trágyázás, állattartás) érik az ingatlant\n• Ipari létesítmény közelében él',
+      },
+      {
+        id: 7,
+        type: 'image',
+        image: vaillantMukFiltersImage,
+        imageAlt: 'Vaillant szellőztető berendezés G4 és F7 szűrőkkel behelyezve - szellozoszuro.hu márkajelzéssel',
+        caption:
+          'A szűrők a „második védelmi vonalat" képezik a gépben. Az aktív szenes szűrő a mechanikai szűrő mellé kerülve a gáz halmazállapotú szennyezőket is megfogja.',
+      },
+      {
+        id: 8,
+        type: 'heading',
+        title: 'A tervezés fontossága: A beszívási pont elhelyezése',
+        content:
+          'Az aktív szenes szűrő hatékonyságát nem csak a szűrő minősége határozza meg, hanem a szellőztető rendszer friss levegő beszívási pontjának elhelyezése is. Rossz helyen elhelyezett beszívó nyílás esetén még a legerősebb szűrő sem tud csodát tenni.',
+      },
+      {
+        id: 9,
+        type: 'heading',
+        title: 'Szélirány (Magyarországon ÉNY)',
+        content:
+          'A friss levegő beszívási pontját lehetőleg az uralkodó szélirány felőli oldalra tervezzük. Magyarországon ez jellemzően az északnyugati oldal. Így a legtisztább levegőt kapjuk.',
+      },
+      {
+        id: 10,
+        type: 'heading',
+        title: 'Védett elhelyezés',
+        content:
+          'Kerüljük a fedett parkolók (carportok), kukatárolók vagy a garázs szellőzőnyílásai melletti elhelyezést! Az ilyen helyekről beszívott levegő eleve szennyezett lehet.',
+      },
+      {
+        id: 11,
+        type: 'heading',
+        title: '„Kémény-effektus" – Távolság az elszívástól',
+        content:
+          'A szellőztető rendszer elszívó nyílása (ahol a „használt" levegőt kifújja) és a beszívó nyílás között legalább 2-3 méter távolságot tartsunk. Ha túl közel vannak, az elszívott, elhasznált levegőt rögtön visszaszívja a rendszer – ez az ún. „kémény-effektus" vagy rövidzárlat.',
+      },
+      {
+        id: 12,
+        type: 'heading',
+        title: 'Magasság: Ne túl alacsonyan, ne túl magasan',
+        content:
+          'A talaj szintjén több a felvert por és allergén. A tető szintjén viszont – különösen nyáron – a felmelegedett tetőfelület hősugárzása befolyásolhatja a beszívott levegő hőmérsékletét. Az optimális magasság általában 2-3 méter a talaj felett.',
+      },
+      {
+        id: 13,
+        type: 'callout',
+        title: 'Szakértői tanácsunk',
+        content:
+          'Használjon aktív szenes (MUK) szűrőt a szagokkal terhelt időszakokban (őszi-téli fűtésszezon, tavaszi trágyázás), majd allergiaszezonban váltson F9-es finomszűrőre a maximális pollenvédelemért. A két szűrőtípus váltogatása az évszaknak megfelelően biztosítja a legmagasabb védelmet egész évben!',
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: 'Ez történik a szellőztető rendszereddel, ha kispórolod a szűrőt!',
+    excerpt:
+      'Valós esettanulmány: a szűrők nem luxus, hanem a rendszer pajzsa. Mutatjuk, mit okoz az elhanyagolt karbantartás.',
+    heroImage: dirtyFiltersImage,
+    heroAlt: 'Használt, koszos szellőztető szűrők - szűrőcsere fontossága',
+    date: '2024. március 15.',
+    author: 'Németh Kálmán',
+    slug: 'mi-tortenik-ha-kisporolod-a-szurot',
+    category: 'Karbantartás',
+    readTime: '7 perc',
+    sections: [
+      {
+        id: 1,
+        type: 'intro',
+        content:
+          'Sokan gondolják, hogy a szellőztető szűrő csupán egy „plusz költség", amit ki lehet spórolni. A valóság azonban egészen más képet mutat. Nap mint nap találkozunk olyan rendszerekkel, ahol a karbantartás elmaradása súlyos – és drága – következményekkel járt. A szűrő nem luxus: a szűrő a rendszered pajzsa. És ha a pajzsot elveszed, a csapások közvetlenül a rendszert érik.',
+      },
+      {
+        id: 2,
+        type: 'heading',
+        title: '„Horror" a csövekben',
+        content:
+          'Szűrők nélkül – vagy elhanyagolt, telített szűrőkkel – a szöszök, a por, a konyhai zsírpára és a háztartási szennyeződések szabad utat kapnak a csőhálózatba. Idővel ez egy ragacsos, nehezen eltávolítható réteget képez a csövek belső falán.\n\nEnnek azonnali következményei:\n\n• Megnövekedett zaj: A szűkülő keresztmetszet miatt a levegő nagyobb sebességgel áramlik, ami hallható süvítést és zúgást okoz.\n\n• Magasabb villanyszámla: A ventilátornak sokkal keményebben kell dolgoznia, hogy ugyanazt a légmennyiséget biztosítsa. Ez akár 15-25%-kal is növelheti az energiafogyasztást.\n\n• Extrém drága csőtisztítás: Egy professzionális légcsatorna-tisztítás ára több tízezer forint – és nem is biztos, hogy teljes mértékben visszaállítható az eredeti állapot.',
+      },
+      {
+        id: 3,
+        type: 'image',
+        image: dirtyDuctImage,
+        imageAlt: 'Koszos, szennyezett légcsatorna belülről - szöszök és por lerakódás a cső falán',
+        caption:
+          'Így néz ki egy légcsatorna belülről, ha a szűrők nem végzik a dolgukat. A lerakódás folyamatosan vastagszik és szűkíti a keresztmetszetet.',
+      },
+      {
+        id: 4,
+        type: 'heading',
+        title: 'A „hős", aki feláldozta magát',
+        content:
+          'Nézd meg figyelmesen a képen látható szűrőket! Ezek a szűrők pontosan azt tették, amit kellett: megállították a szennyeződést, MIELŐTT az bejuthatott volna a csövekbe és a hőcserélő kockába.\n\nIgen, csúnyán néznek ki. De gondolj bele: mindez a kosz, szösz és por a te tüdődben, a csöveidben vagy a gép hőcserélőjén landolt volna. A szűrő „feláldozta magát", hogy a rendszered és a családod egészsége érintetlen maradjon.\n\nAz üzenet egyszerű: Jobb, ha a szűrő koszos, mint a tüdőd vagy a csöveid!',
+      },
+      {
+        id: 5,
+        type: 'image',
+        image: dirtyFiltersImage,
+        imageAlt: 'Két erősen szennyezett kerek szellőztető szűrő egy asztalon - a szűrőcsere fontossága',
+        caption:
+          'Ezek a szűrők elvégezték a feladatukat: megvédték a rendszert és a család egészségét. Ideje volt a cserének!',
+      },
+      {
+        id: 6,
+        type: 'heading',
+        title: 'A tiszta cél: Higiénikus csőhálózat',
+        content:
+          'Így kellene kinéznie minden szellőztető csőhálózat belsejének: tisztán, higiénikusan, lerakódások nélkül. Ez az állapot biztosítja a zavartalan légáramlást, a csendes működést és az egészséges beltéri levegőt.\n\nDe ez az állapot nem jön magától – ehhez rendszeres szűrőcsere és az elszívó oldali védelem szükséges. Itt lépnek színre a G2 típusú anemosztát szűrők (kónuszos szűrőpaplanok), amelyek az elszívási pontoknál (konyha, fürdő, WC) védik a csőhálózatot a bejutó szennyeződésektől.',
+      },
+      {
+        id: 7,
+        type: 'image',
+        image: cleanDuctImage,
+        imageAlt: 'Tiszta, higiénikus légcsatorna belülről - karbantartott szellőztető rendszer',
+        caption:
+          'A cél: minden légcsatorna belül ilyen tiszta maradjon. Ez rendszeres szűrőcserével és anemosztát szűrők használatával érhető el.',
+      },
+      {
+        id: 8,
+        type: 'callout',
+        title: 'Szakértői tanács a szellozoszuro.hu-tól',
+        content:
+          'Fontos megérteni a különbséget: A központi egységben lévő szűrők (G4, F7, F9) a gépet és a befújt friss levegőt védik – ezek az Ön és családja egészségéért felelnek. Az elszívó oldali anemosztát szűrők (G2 kónuszos szűrők) viszont a csőhálózatot védik a visszafelé érkező szennyeződésektől (konyhai pára, fürdőszobai szöszök). Mindkét védelmi vonal elengedhetetlen a rendszer hosszú élettartamához!',
+      },
+      {
+        id: 9,
+        type: 'heading',
+        title: 'Nálad mikor voltak utoljára ellenőrizve az anemosztát szűrők?',
+        content:
+          'Ha nem emlékszel, mikor nézted meg utoljára a szűrőidet, itt az ideje! Ne várd meg, amíg a rendszered „jelzi" a problémát zajjal vagy kellemetlen szagokkal. A megelőzés mindig olcsóbb, mint a javítás.',
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: 'Vigyázat! A nyirkos idő a szellőzőrendszer csendes ellensége!',
+    excerpt:
+      'Tudta, hogy a szűrők ködös, nyirkos őszi-téli időben sokkal keményebben dolgoznak, mint nyáron? A nedvesség és a por együtt csendes, de súlyos károkat okozhat.',
+    heroImage: foggyMorningImage,
+    heroAlt: 'Ködös őszi reggel páralecsapódással az ablakon - nyirkos időjárás szellőztetési kihívásai',
+    date: '2024. március 20.',
+    author: 'Németh Kálmán',
+    slug: 'nyirkos-ido-szellozorendszer-ellensege',
+    category: 'Karbantartás',
+    readTime: '6 perc',
+    sections: [
+      {
+        id: 1,
+        type: 'intro',
+        content:
+          'Tudta, hogy a szellőztető szűrők ködös, nyirkos őszi-téli időben sokkal keményebben dolgoznak, mint a száraz nyári hónapokban? Sokan nem gondolnak bele, de a páratartalom drámaian befolyásolja a szűrők élettartamát és a rendszer hatékonyságát. A nedvesség és a por együtt egy csendes, de annál veszélyesebb ellenséget hoz létre.',
+      },
+      {
+        id: 2,
+        type: 'heading',
+        title: 'A „Sár-hatás": Amikor a por ragacsossá válik',
+        content:
+          'Száraz időben a porszemcsék lazán tapadnak a szűrő szálaihoz, és a levegő viszonylag könnyen átáramlik rajtuk. Nyirkos, ködös időben azonban teljesen más a helyzet.\n\nA magas páratartalmú levegőben a finom porszemcsék nedvességet szívnak magukba, és egy ragacsos, sárszerű réteget képeznek a szűrő szálain. Ez a „sár-hatás" drámaian felgyorsítja a szűrő eltömődését – akár 2-3-szor gyorsabban telítődhet, mint száraz időben!\n\nKépzeljük el úgy: száraz porral könnyű söpörni, de sáros porral? Az ráragad mindenre, és szinte lehetetlen eltávolítani. Pontosan ez történik a szűrő belsejében is.',
+      },
+      {
+        id: 3,
+        type: 'heading',
+        title: 'Megnőtt ellenállás: A rendszer „fullad"',
+        content:
+          'Amikor a szűrő szálai közé beragadt nedves por egyre vastagabb réteget képez, a levegő egyre nehezebben jut át rajta. A rendszer „fullad" – és ennek azonnali, mérhető következményei vannak:\n\n• Magasabb villanyszámla: A ventilátornak nagyobb teljesítményen kell dolgoznia, hogy ugyanazt a légmennyiséget biztosítsa. Ez akár 20-30%-kal is növelheti az energiafogyasztást.\n\n• Hangosabb működés: A motor magasabb fordulatszámon pörög, a légellenállás növekedésével a rendszer hallhatóan zúg és búg – éjszaka különösen zavaró.\n\n• Felesleges terhelés a gépen: A folyamatos túlterhelés lerövidíti a ventilátor és a motor élettartamát. Egy idő előtti motorcsere ára a szűrő árának többszöröse!',
+      },
+      {
+        id: 4,
+        type: 'heading',
+        title: 'Higiénia és egészség: A láthatatlan veszély',
+        content:
+          'A nedves, poros szűrő nem csak mechanikai probléma – komoly egészségügyi kockázatot is jelent. A tartósan nedves, szerves anyagokkal teli környezet ideális táptalaj a mikroorganizmusok számára:\n\n• Penészgombák: A nedves szűrőanyagban penésztelepek alakulhatnak ki, amelyek spóráikat a lakásba fújják.\n\n• Baktériumok: A meleg, nyirkos közeg kedvez a baktériumok szaporodásának.\n\n• Kellemetlen szagok: A mikrobiológiai aktivitás dohos, áporodott szagot eredményez, amit a szellőztetés széthord a lakásban.\n\nA tiszta szűrő az egyetlen garancia az egészséges beltéri levegőre. Különösen nyirkos időszakban, amikor a természetes szellőztetés (ablaknyitás) sem jelent megoldást a ködös, párás külső levegő miatt.',
+      },
+      {
+        id: 5,
+        type: 'callout',
+        title: 'Szakértői tanács a szellozoszuro.hu-tól',
+        content:
+          'Nyirkos időszakban (ősz-tél) 2-3 hetente ellenőrizze a szűrőit! Ha sötétszürkék, elszíneződtek, vagy tapintásra nedvesek – azonnal cserélje ki őket! Ne várja meg a szokásos karbantartási ciklust. A megelőző csere mindig olcsóbb, mint a következményes javítás.',
+      },
+      {
+        id: 6,
+        type: 'heading',
+        title: 'Ne hagyd, hogy a géped erőlködjön!',
+        content:
+          'A nyirkos időszak extra terhelést jelent a szellőztető rendszerednek. A rendszeres szűrőellenőrzés és a gyors csere biztosítja, hogy a géped csendesen, hatékonyan és higiénikusan működjön egész télen át. Rendelj friss szűrőt még ma, és védd meg a rendszered a nedvesség csendes pusztításától!',
       },
     ],
   },
