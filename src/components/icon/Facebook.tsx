@@ -9,7 +9,7 @@ interface FacebookProps {
 
 const Facebook = ({
   className = 'size-8 fill-white',
-  bgClassName = 'size-16 bg-[#4268B3]',
+  bgClassName = 'size-16 bg-facebook',
 }: FacebookProps) => <Icon path={siFacebook.path} className={className} bgClassName={bgClassName} />
 
 export default Facebook

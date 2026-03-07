@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, ExternalLink, User } from 'lucide-react'
+import { ArrowRight, Calendar, User } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
@@ -12,7 +12,7 @@ import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg'
 import foggyMorningImage from '@/assets/blog/foggy-morning-condensation.jpg'
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg'
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg'
-import Facebook from '@/components/icon/Facebook.tsx'
+import FacebookCard from '@/components/common/FacebookCard.tsx'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
@@ -285,28 +285,7 @@ const Blog = () => {
                 </Link>
               ))}
             </div>
-
-            {/* Facebook Card */}
-            <div className="mt-12 rounded-2xl border border-border bg-card p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10">
-              <Facebook />
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-xl font-semibold text-foreground mb-2">
-                  {t('blogPage.facebookTitle')}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {t('blogPage.facebookDescription')}
-                </p>
-              </div>
-              <a
-                href="https://www.facebook.com/share/1a9KhV94Ct/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-[hsl(220_46%_48%)] px-6 py-3 text-sm font-semibold text-[hsl(0_0%_100%)] transition-all duration-300 hover:bg-[hsl(220_46%_42%)] hover:shadow-lg flex-shrink-0"
-              >
-                {t('blogPage.facebookButton')}
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
+            <FacebookCard className={'mt-12'} />
           </div>
         </section>
       </main>

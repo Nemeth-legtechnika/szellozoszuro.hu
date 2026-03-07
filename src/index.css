@@ -42,6 +42,9 @@
 
     --radius: 0.75rem;
 
+    /* Brand / social */
+    --facebook: 220 46% 48%;
+
     /* Dark sections */
     --dark-bg: 220 30% 6%;
     --dark-bg-secondary: 220 25% 10%;
