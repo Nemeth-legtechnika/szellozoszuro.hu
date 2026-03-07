@@ -11,30 +11,54 @@ jobs:
   visual-regression:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
 
       - name: Install Playwright Chromium
         run: npx playwright install chromium --with-deps
 
-      - name: Run visual regression tests
-        run: npm run test:visual
+      # --- Baseline from main ---
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: baseline
+
+      - name: Install dependencies (main)
+        run: npm ci
+        working-directory: baseline
+
+      - name: Generate baseline screenshots
+        run: npx playwright test --update-snapshots
+        working-directory: baseline
+
+      # --- Current branch ---
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          path: current
+
+      - name: Install dependencies (PR)
+        run: npm ci
+        working-directory: current
+
+      - name: Copy baseline snapshots to PR branch
+        run: |
+          mkdir -p current/test/visual/snapshots
+          cp baseline/test/visual/snapshots/* current/test/visual/snapshots/
+
+      - name: Compare screenshots against baseline
+        run: npx playwright test
+        working-directory: current
 
       - name: Upload diff artifacts on failure
         if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: visual-regression-diffs
-          path: test-results/
+          path: current/test-results/
           retention-days: 7
 
       - name: Comment on PR with visual diff info
@@ -45,16 +69,12 @@ jobs:
             const body = [
               '## Visual Regression Tests Failed',
               '',
-              'Screenshots differ from baselines. This may be an intentional change or a regression.',
+              'Screenshots differ from the `main` branch. This may be an intentional change or a regression.',
               '',
               '**To review:** Download the `visual-regression-diffs` artifact from this workflow run.',
+              'Each diff folder contains `*-expected.png` (main), `*-actual.png` (this PR), and `*-diff.png`.',
               '',
-              '**To update baselines (if changes are intentional):**',
-              '```bash',
-              'npm run test:visual:update',
-              'git add test/visual/snapshots/',
-              'git commit -m "chore: update visual regression baselines"',
-              '```',
+              'If the visual changes are intentional, a maintainer can approve and merge.',
             ].join('\n')
 
             await github.rest.issues.createComment({

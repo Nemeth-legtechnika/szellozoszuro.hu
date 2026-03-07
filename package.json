@@ -15,8 +15,7 @@
     "tsc": "tsc --noEmit -p tsconfig.app.json",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:visual": "playwright test",
-    "test:visual:update": "playwright test --update-snapshots"
+    "test:visual": "playwright test"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

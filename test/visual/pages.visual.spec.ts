@@ -10,7 +10,6 @@ const pages = [
   { name: 'about', path: '/about' },
   { name: 'privacy', path: '/privacy' },
   { name: 'terms', path: '/aszf' },
-  { name: 'shipping', path: '/shipping' },
 ]
 
 for (const { name, path } of pages) {
