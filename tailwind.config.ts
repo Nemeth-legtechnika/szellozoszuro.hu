@@ -76,6 +76,7 @@ export default {
           foreground: 'hsl(var(--dark-foreground))',
           muted: 'hsl(var(--dark-muted))',
         },
+        facebook: 'hsl(var(--facebook))',
       },
       borderRadius: {
         lg: 'var(--radius)',

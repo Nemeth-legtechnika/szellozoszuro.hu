@@ -4,11 +4,15 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import aftermarketFiltersImage from '@/assets/blog/aftermarket-filters.jpg'
+import activeCoalHeroImage from '@/assets/blog/aktiv-szen-hero.jpg'
 import allergySeasonHeroImage from '@/assets/blog/allergy-season-hero-generated.jpg'
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg'
+import dirtyFiltersImage from '@/assets/blog/dirty-filters-used.jpg'
 import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg'
+import foggyMorningImage from '@/assets/blog/foggy-morning-condensation.jpg'
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg'
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg'
+import FacebookCard from '@/components/common/FacebookCard'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
@@ -135,6 +139,67 @@ const blogPosts = [
     readTime: '6 perc',
     readTimeDe: '6 Min.',
   },
+  {
+    id: 7,
+    title: 'Az aktív szén ereje: Több, mint egy egyszerű porszűrő!',
+    titleDe: 'Die Kraft der Aktivkohle: Mehr als ein einfacher Staubfilter!',
+    excerpt:
+      'Hogyan működik az aktív szenes szűrő, és miben különbözik a hagyományos mechanikai szűréstől? Ismerd meg a MUK 10 és MUK 25 közötti különbséget, és tudd meg, mikor érdemes aktív szénhez nyúlni.',
+    excerptDe:
+      'Wie funktioniert ein Aktivkohlefilter und was unterscheidet ihn von der herkömmlichen mechanischen Filtration? Lernen Sie den Unterschied zwischen MUK 10 und MUK 25 kennen.',
+    image: activeCoalHeroImage,
+    imageAlt: 'Aktív szén granulátum szűrőanyagon - aktivált szenes levegőszűrés',
+    date: '2024. március 5.',
+    dateDe: '5. März 2024',
+    author: 'Németh Kálmán',
+    authorDe: 'Kálmán Németh',
+    slug: 'aktiv-szen-szuro-mukodes',
+    category: 'Technológia',
+    categoryDe: 'Technologie',
+    readTime: '8 perc',
+    readTimeDe: '8 Min.',
+  },
+  {
+    id: 8,
+    title: 'Ez történik a szellőztető rendszereddel, ha kispórolod a szűrőt!',
+    titleDe: 'Das passiert mit Ihrer Lüftungsanlage, wenn Sie am Filter sparen!',
+    excerpt:
+      'Valós esettanulmány: a szűrők nem luxus, hanem a rendszer pajzsa. Mutatjuk, mit okoz az elhanyagolt karbantartás a csövekben, és hogyan védheted meg a rendszered.',
+    excerptDe:
+      'Echte Fallstudie: Filter sind kein Luxus, sondern der Schutzschild der Anlage. Wir zeigen, was vernachlässigte Wartung in den Rohren anrichtet.',
+    image: dirtyFiltersImage,
+    imageAlt: 'Használt, koszos szellőztető szűrők - szűrőcsere fontossága',
+    date: '2024. március 15.',
+    dateDe: '15. März 2024',
+    author: 'Németh Kálmán',
+    authorDe: 'Kálmán Németh',
+    slug: 'mi-tortenik-ha-kisporolod-a-szurot',
+    category: 'Karbantartás',
+    categoryDe: 'Wartung',
+    readTime: '7 perc',
+    readTimeDe: '7 Min.',
+  },
+  {
+    id: 9,
+    title: 'Vigyázat! A nyirkos idő a szellőzőrendszer csendes ellensége!',
+    titleDe: 'Achtung! Feuchtigkeit ist der stille Feind Ihrer Lüftungsanlage!',
+    excerpt:
+      'Tudta, hogy a szűrők ködös, nyirkos őszi-téli időben sokkal keményebben dolgoznak, mint nyáron? A nedvesség és a por együtt csendes, de súlyos károkat okozhat.',
+    excerptDe:
+      'Wussten Sie, dass Filter bei nebligem, feuchtem Herbst-/Winterwetter viel härter arbeiten als im Sommer? Feuchtigkeit und Staub zusammen können stille, aber schwere Schäden verursachen.',
+    image: foggyMorningImage,
+    imageAlt:
+      'Ködös őszi reggel páralecsapódással az ablakon - nyirkos időjárás szellőztetési kihívásai',
+    date: '2024. március 20.',
+    dateDe: '20. März 2024',
+    author: 'Németh Kálmán',
+    authorDe: 'Kálmán Németh',
+    slug: 'nyirkos-ido-szellozorendszer-ellensege',
+    category: 'Karbantartás',
+    categoryDe: 'Wartung',
+    readTime: '6 perc',
+    readTimeDe: '6 Min.',
+  },
 ]
 
 const Blog = () => {
@@ -220,6 +285,7 @@ const Blog = () => {
                 </Link>
               ))}
             </div>
+            <FacebookCard className="mt-12" />
           </div>
         </section>
       </main>

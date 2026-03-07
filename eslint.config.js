@@ -63,15 +63,22 @@ export default tseslint.config(
       'no-shadow': 'off',
       'no-param-reassign': 'error',
 
-      // Import sorting
+      // Import rules
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
+      'no-restricted-syntax': [
+        'error',
+        {
+          selector: 'ImportDeclaration[source.value=/\\.tsx?$/]',
+          message: 'Do not include .ts/.tsx extensions in imports.',
+        },
+      ],
     },
   },
 
   // Test file overrides
   {
-    files: ['src/**/*.{test,spec}.{ts,tsx}'],
+    files: ['test/**/*.{test,spec}.{ts,tsx}'],
     plugins: {
       vitest,
     },
@@ -80,7 +87,7 @@ export default tseslint.config(
     },
   },
   {
-    files: ['src/**/*.{test,spec}.{ts,tsx}'],
+    files: ['test/**/*.{test,spec}.{ts,tsx}'],
     ...testingLibrary.configs['flat/react'],
   },
 
