@@ -418,5 +418,8 @@
     "title": "404",
     "description": "Az oldal nem található",
     "backHome": "Vissza a főoldalra"
+  },
+  "icon": {
+    "facebook": "Facebook ikon"
   }
 }

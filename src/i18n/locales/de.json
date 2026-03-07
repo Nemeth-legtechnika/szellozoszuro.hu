@@ -418,5 +418,8 @@
     "title": "404",
     "description": "Seite nicht gefunden",
     "backHome": "Zurück zur Startseite"
+  },
+  "icon": {
+    "facebook": "Facebook Icon"
   }
 }

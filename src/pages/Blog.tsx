@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import aftermarketFiltersImage from '@/assets/blog/aftermarket-filters.jpg'
-import aktivSzenHeroImage from '@/assets/blog/aktiv-szen-hero.jpg'
+import activeCoalHeroImage from '@/assets/blog/aktiv-szen-hero.jpg'
 import allergySeasonHeroImage from '@/assets/blog/allergy-season-hero-generated.jpg'
 import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg'
 import dirtyFiltersImage from '@/assets/blog/dirty-filters-used.jpg'
@@ -12,7 +12,7 @@ import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg'
 import foggyMorningImage from '@/assets/blog/foggy-morning-condensation.jpg'
 import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg'
 import winterHumidityImage from '@/assets/blog/winter-humidity.jpg'
-import FacebookCard from '@/components/common/FacebookCard.tsx'
+import FacebookCard from '@/components/common/FacebookCard'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
@@ -147,7 +147,7 @@ const blogPosts = [
       'Hogyan működik az aktív szenes szűrő, és miben különbözik a hagyományos mechanikai szűréstől? Ismerd meg a MUK 10 és MUK 25 közötti különbséget, és tudd meg, mikor érdemes aktív szénhez nyúlni.',
     excerptDe:
       'Wie funktioniert ein Aktivkohlefilter und was unterscheidet ihn von der herkömmlichen mechanischen Filtration? Lernen Sie den Unterschied zwischen MUK 10 und MUK 25 kennen.',
-    image: aktivSzenHeroImage,
+    image: activeCoalHeroImage,
     imageAlt: 'Aktív szén granulátum szűrőanyagon - aktivált szenes levegőszűrés',
     date: '2024. március 5.',
     dateDe: '5. März 2024',
@@ -285,7 +285,7 @@ const Blog = () => {
                 </Link>
               ))}
             </div>
-            <FacebookCard className={'mt-12'} />
+            <FacebookCard className="mt-12" />
           </div>
         </section>
       </main>

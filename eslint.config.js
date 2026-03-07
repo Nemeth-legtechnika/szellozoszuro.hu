@@ -63,9 +63,16 @@ export default tseslint.config(
       'no-shadow': 'off',
       'no-param-reassign': 'error',
 
-      // Import sorting
+      // Import rules
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
+      'no-restricted-syntax': [
+        'error',
+        {
+          selector: 'ImportDeclaration[source.value=/\\.tsx?$/]',
+          message: 'Do not include .ts/.tsx extensions in imports.',
+        },
+      ],
     },
   },
 

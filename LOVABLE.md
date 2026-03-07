@@ -1,5 +1,7 @@
 # STOP — READ THIS ENTIRE FILE BEFORE MAKING ANY CHANGES
 
+> **Scope:** This document contains rules for **Lovable** (the AI code editor). These rules do not apply to human contributors or other tooling — they exist because Lovable has repeatedly broken the project by modifying configs, adding unwanted dependencies, and switching package managers.
+
 You MUST read and follow every rule in this document before writing a single line of code. Violating these rules will break the project.
 
 **Important note:** The person reviewing your changes is not a developer. If you need to make any change that is not straightforward (e.g., modifying configuration, adding a dependency, changing project structure), you MUST explain in plain language WHY the change is necessary — both as a code comment and in the commit description. If something could break or confuse the reviewer, explain it clearly.

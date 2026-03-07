@@ -97,16 +97,21 @@
         ]
       }
     </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3PVJQJFNSF"></script>
+    <!-- Google tag (gtag.js) with consent mode defaults denied (GDPR) -->
     <script>
       window.dataLayer = window.dataLayer || []
       function gtag() {
         dataLayer.push(arguments)
       }
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        wait_for_update: 500,
+      })
       gtag('js', new Date())
       gtag('config', 'G-3PVJQJFNSF')
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3PVJQJFNSF"></script>
   </head>
 
   <body>
