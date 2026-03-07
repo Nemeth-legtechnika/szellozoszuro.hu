@@ -446,7 +446,8 @@ const blogPosts = [
         id: 7,
         type: 'image',
         image: vaillantMukFiltersImage,
-        imageAlt: 'Vaillant szellőztető berendezés G4 és F7 szűrőkkel behelyezve - szellozoszuro.hu márkajelzéssel',
+        imageAlt:
+          'Vaillant szellőztető berendezés G4 és F7 szűrőkkel behelyezve - szellozoszuro.hu márkajelzéssel',
         caption:
           'A szűrők a „második védelmi vonalat" képezik a gépben. Az aktív szenes szűrő a mechanikai szűrő mellé kerülve a gáz halmazállapotú szennyezőket is megfogja.',
       },
@@ -539,7 +540,8 @@ const blogPosts = [
         id: 5,
         type: 'image',
         image: dirtyFiltersImage,
-        imageAlt: 'Két erősen szennyezett kerek szellőztető szűrő egy asztalon - a szűrőcsere fontossága',
+        imageAlt:
+          'Két erősen szennyezett kerek szellőztető szűrő egy asztalon - a szűrőcsere fontossága',
         caption:
           'Ezek a szűrők elvégezték a feladatukat: megvédték a rendszert és a család egészségét. Ideje volt a cserének!',
       },
@@ -580,7 +582,8 @@ const blogPosts = [
     excerpt:
       'Tudta, hogy a szűrők ködös, nyirkos őszi-téli időben sokkal keményebben dolgoznak, mint nyáron? A nedvesség és a por együtt csendes, de súlyos károkat okozhat.',
     heroImage: foggyMorningImage,
-    heroAlt: 'Ködös őszi reggel páralecsapódással az ablakon - nyirkos időjárás szellőztetési kihívásai',
+    heroAlt:
+      'Ködös őszi reggel páralecsapódással az ablakon - nyirkos időjárás szellőztetési kihívásai',
     date: '2024. március 20.',
     author: 'Németh Kálmán',
     slug: 'nyirkos-ido-szellozorendszer-ellensege',

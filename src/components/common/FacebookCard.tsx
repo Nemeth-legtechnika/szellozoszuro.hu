@@ -12,7 +12,12 @@ const FacebookCard = ({ className }: FacebookCardProps) => {
   const { t } = useTranslation()
 
   return (
-    <div className={cn('rounded-2xl border border-border bg-card p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10', className)}>
+    <div
+      className={cn(
+        'rounded-2xl border border-border bg-card p-8 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10',
+        className,
+      )}
+    >
       <Facebook />
       <div className="flex-1 text-center md:text-left">
         <h3 className="text-xl font-semibold text-foreground mb-2">

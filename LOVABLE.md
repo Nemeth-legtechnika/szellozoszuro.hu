@@ -24,6 +24,7 @@ Do NOT modify any of these files under ANY circumstances:
 If you think a config change is needed, STOP and tell the user. Do not make the change yourself.
 
 **Exception — `package.json` dependencies only:** If the feature you are implementing genuinely requires a NEW package that is not already installed, you MAY add it to `package.json`. However, you MUST add a comment in the commit message explaining:
+
 - What package you added
 - Why it is needed
 - What breaks without it
@@ -51,20 +52,20 @@ This project uses **npm** or **pnpm**. Do NOT:
 
 ## Tech Stack
 
-| Layer            | Technology                                                  |
-| ---------------- | ----------------------------------------------------------- |
-| Framework        | React 18 with TypeScript                                    |
-| Build tool       | Vite 5 (with `@vitejs/plugin-react-swc`)                    |
-| Routing          | React Router DOM v6                                         |
-| Styling          | Tailwind CSS 3 with CSS custom properties (HSL color system)|
-| UI primitives    | shadcn/ui (Radix UI + CVA + `cn()` utility)                 |
-| Icons            | Lucide React                                                |
-| i18n             | i18next + react-i18next (Hungarian `hu` + German `de`)      |
-| Forms            | React Hook Form + Zod                                       |
-| State/data       | TanStack React Query                                        |
-| SEO              | react-helmet-async                                          |
-| Testing          | Vitest + Testing Library                                    |
-| Linting          | ESLint 9 (flat config) + Prettier                           |
+| Layer         | Technology                                                   |
+| ------------- | ------------------------------------------------------------ |
+| Framework     | React 18 with TypeScript                                     |
+| Build tool    | Vite 5 (with `@vitejs/plugin-react-swc`)                     |
+| Routing       | React Router DOM v6                                          |
+| Styling       | Tailwind CSS 3 with CSS custom properties (HSL color system) |
+| UI primitives | shadcn/ui (Radix UI + CVA + `cn()` utility)                  |
+| Icons         | Lucide React                                                 |
+| i18n          | i18next + react-i18next (Hungarian `hu` + German `de`)       |
+| Forms         | React Hook Form + Zod                                        |
+| State/data    | TanStack React Query                                         |
+| SEO           | react-helmet-async                                           |
+| Testing       | Vitest + Testing Library                                     |
+| Linting       | ESLint 9 (flat config) + Prettier                            |
 
 ## Project Structure
 
@@ -151,6 +152,7 @@ Use a short, descriptive title that explains WHAT changed. Format:
 ```
 
 Where `<type>` is one of:
+
 - `feat` — new feature or visible change
 - `fix` — bug fix
 - `style` — visual/CSS-only change
@@ -159,6 +161,7 @@ Where `<type>` is one of:
 - `content` — text, translation, or blog content changes
 
 Examples:
+
 - `feat: Add product filter sidebar to shop page`
 - `fix: Hero section CTA button not linking to shop`
 - `content: Add new blog post about filter maintenance`
@@ -167,11 +170,13 @@ Examples:
 ### Commit description
 
 Every commit MUST include a description body that explains:
+
 1. **What** was changed (list the files or components affected)
 2. **Why** it was changed (what problem does it solve or what feature does it add)
 3. If a new dependency was added: what it is and why it was needed
 
 Example:
+
 ```
 feat: Add product filter sidebar to shop page
 
