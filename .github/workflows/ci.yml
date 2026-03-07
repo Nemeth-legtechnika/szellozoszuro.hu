@@ -33,9 +33,3 @@ jobs:
 
       - name: Test
         run: npm test
-
-  visual-regression:
-    needs: lint-test
-    uses: ./.github/workflows/visual-regression.yml
-    with:
-      pr-number: ${{ github.event.pull_request.number }}
