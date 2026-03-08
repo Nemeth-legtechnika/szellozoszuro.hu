@@ -9,6 +9,7 @@ export default defineConfig({
     globals: true,
     setupFiles: ['./test/setup.ts'],
     include: ['test/**/*.{test,spec}.{ts,tsx}'],
+    exclude: ['test/visual/**'],
   },
   resolve: {
     alias: { '@': path.resolve(__dirname, './src') },

@@ -9,7 +9,7 @@ import vitest from '@vitest/eslint-plugin'
 import testingLibrary from 'eslint-plugin-testing-library'
 
 export default tseslint.config(
-  { ignores: ['dist', 'tailwind.config.ts', 'vitest.config.ts'] },
+  { ignores: ['dist', 'tailwind.config.ts', 'vitest.config.ts', 'playwright.config.ts'] },
 
   // Base TS/TSX config
   {
