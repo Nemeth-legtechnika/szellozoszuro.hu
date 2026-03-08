@@ -4,11 +4,20 @@ on:
   issue_comment:
     types: [created]
 
+permissions:
+  issues: write
+  pull-requests: read
+
 jobs:
   visual-regression:
     if: >
       github.event.issue.pull_request &&
-      contains(github.event.comment.body, '/visual-regression')
+      contains(github.event.comment.body, '/visual-regression') &&
+      (
+        github.event.comment.author_association == 'MEMBER' ||
+        github.event.comment.author_association == 'OWNER' ||
+        github.event.comment.author_association == 'COLLABORATOR'
+      )
     runs-on: ubuntu-latest
     steps:
       - name: Add reaction to comment
@@ -40,9 +49,6 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Playwright Chromium
-        run: npx playwright install chromium --with-deps
-
       # --- Baseline from main ---
       - name: Checkout main branch
         uses: actions/checkout@v4
@@ -52,6 +58,10 @@ jobs:
 
       - name: Install dependencies (main)
         run: npm ci
+        working-directory: baseline
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium --with-deps
         working-directory: baseline
 
       - name: Generate baseline screenshots
