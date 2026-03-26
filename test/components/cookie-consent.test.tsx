@@ -22,7 +22,9 @@ const getGtagScripts = () => document.querySelectorAll('script[src*="googletagma
 
 afterEach(() => {
   vi.restoreAllMocks()
-  getGtagScripts().forEach((el) => { el.remove() })
+  getGtagScripts().forEach((el) => {
+    el.remove()
+  })
 })
 
 const { CookieConsentBanner } = await import('@/components/cookie-consent')

@@ -12,7 +12,9 @@ beforeEach(() => {
   localStorage.clear()
   mockGtag.mockClear()
   vi.stubGlobal('gtag', mockGtag)
-  getGtagScripts().forEach((el) => { el.remove() })
+  getGtagScripts().forEach((el) => {
+    el.remove()
+  })
 })
 
 afterEach(() => {
