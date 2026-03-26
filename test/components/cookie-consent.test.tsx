@@ -17,9 +17,12 @@ beforeEach(() => {
   vi.stubGlobal('gtag', mockGtag)
 })
 
+// eslint-disable-next-line testing-library/no-node-access
+const getGtagScripts = () => document.querySelectorAll('script[src*="googletagmanager"]')
+
 afterEach(() => {
   vi.restoreAllMocks()
-  document.querySelectorAll('script[src*="googletagmanager"]').forEach((el) => el.remove())
+  getGtagScripts().forEach((el) => { el.remove() })
 })
 
 const { CookieConsentBanner } = await import('@/components/cookie-consent')

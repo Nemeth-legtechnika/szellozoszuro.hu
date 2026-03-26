@@ -5,12 +5,14 @@ import { useCookieConsent } from '@/hooks/use-cookie-consent'
 
 const mockGtag = vi.fn()
 
+// eslint-disable-next-line testing-library/no-node-access
+const getGtagScripts = () => document.querySelectorAll('script[src*="googletagmanager"]')
+
 beforeEach(() => {
   localStorage.clear()
   mockGtag.mockClear()
   vi.stubGlobal('gtag', mockGtag)
-  // Remove any injected gtag scripts between tests
-  document.querySelectorAll('script[src*="googletagmanager"]').forEach((el) => el.remove())
+  getGtagScripts().forEach((el) => { el.remove() })
 })
 
 afterEach(() => {
@@ -37,7 +39,7 @@ describe('useCookieConsent', () => {
     })
     expect(mockGtag).toHaveBeenCalledWith('js', expect.any(Date))
     expect(mockGtag).toHaveBeenCalledWith('config', 'G-8PZY62C9EV')
-    expect(document.querySelector('script[src*="googletagmanager"]')).not.toBeNull()
+    expect(getGtagScripts()).toHaveLength(1)
   })
 
   it('returns denied and does not call gtag when consent was previously denied', () => {
@@ -46,7 +48,7 @@ describe('useCookieConsent', () => {
 
     expect(result.current.status).toBe('denied')
     expect(mockGtag).not.toHaveBeenCalled()
-    expect(document.querySelector('script[src*="googletagmanager"]')).toBeNull()
+    expect(getGtagScripts()).toHaveLength(0)
   })
 
   it('accept() sets localStorage, calls gtag, and loads GA script', () => {
@@ -64,7 +66,7 @@ describe('useCookieConsent', () => {
       ad_personalization: 'granted',
       analytics_storage: 'granted',
     })
-    expect(document.querySelector('script[src*="googletagmanager"]')).not.toBeNull()
+    expect(getGtagScripts()).toHaveLength(1)
   })
 
   it('decline() sets localStorage to denied and does not call gtag or load script', () => {
@@ -77,7 +79,7 @@ describe('useCookieConsent', () => {
     expect(result.current.status).toBe('denied')
     expect(localStorage.getItem('cookieConsent')).toBe('denied')
     expect(mockGtag).not.toHaveBeenCalled()
-    expect(document.querySelector('script[src*="googletagmanager"]')).toBeNull()
+    expect(getGtagScripts()).toHaveLength(0)
   })
 
   it('does not inject GA script twice on repeated accept', () => {
@@ -87,15 +89,13 @@ describe('useCookieConsent', () => {
       result.current.accept()
     })
 
-    const scriptCount = document.querySelectorAll('script[src*="googletagmanager"]').length
-    expect(scriptCount).toBe(1)
+    expect(getGtagScripts()).toHaveLength(1)
 
     // Simulate a second hook mount (e.g. page navigation)
     localStorage.setItem('cookieConsent', 'granted')
     renderHook(() => useCookieConsent())
 
-    const scriptCountAfter = document.querySelectorAll('script[src*="googletagmanager"]').length
-    expect(scriptCountAfter).toBe(1)
+    expect(getGtagScripts()).toHaveLength(1)
   })
 
   it('treats invalid localStorage values as undecided', () => {
