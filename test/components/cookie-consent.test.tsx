@@ -13,11 +13,13 @@ vi.mock('react-i18next', () => ({
 
 beforeEach(() => {
   localStorage.clear()
+  mockGtag.mockClear()
   vi.stubGlobal('gtag', mockGtag)
 })
 
 afterEach(() => {
   vi.restoreAllMocks()
+  document.querySelectorAll('script[src*="googletagmanager"]').forEach((el) => el.remove())
 })
 
 const { CookieConsentBanner } = await import('@/components/cookie-consent')
