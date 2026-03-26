@@ -421,5 +421,12 @@
   },
   "icon": {
     "facebook": "Facebook Icon"
+  },
+  "cookieConsent": {
+    "title": "Wir verwenden Cookies",
+    "description": "Unsere Website verwendet Cookies für Google Analytics, um besser zu verstehen, wie unsere Besucher die Seite nutzen.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen",
+    "learnMore": "Datenschutz"
   }
 }

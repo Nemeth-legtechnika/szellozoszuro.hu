@@ -421,5 +421,12 @@
   },
   "icon": {
     "facebook": "Facebook ikon"
+  },
+  "cookieConsent": {
+    "title": "Sütiket használunk",
+    "description": "Weboldalunk sütiket használ a Google Analytics szolgáltatáshoz, hogy jobban megértsük, hogyan használják látogatóink az oldalt.",
+    "accept": "Elfogadom",
+    "decline": "Elutasítom",
+    "learnMore": "Adatvédelem"
   }
 }
