@@ -106,7 +106,7 @@ const Contact = () => {
                     {orderContact.map((item) => (
                       <div
                         key={item.title + item.value}
-                        className="flex items-start gap-4 p-4 rounded-xl bg-muted/50"
+                        className="flex items-center gap-4 p-4 rounded-xl bg-muted/50"
                       >
                         <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center flex-shrink-0">
                           <item.icon className="w-5 h-5 text-cyan" />
@@ -134,7 +134,7 @@ const Contact = () => {
                     {technicalContact.map((item) => (
                       <div
                         key={item.title + item.value}
-                        className="flex items-start gap-4 p-4 rounded-xl bg-muted/50"
+                        className="flex items-center gap-4 p-4 rounded-xl bg-muted/50"
                       >
                         <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center flex-shrink-0">
                           <item.icon className="w-5 h-5 text-cyan" />
@@ -162,7 +162,7 @@ const Contact = () => {
                     {generalInfo.map((item) => (
                       <div
                         key={item.title}
-                        className="flex items-start gap-4 p-4 rounded-xl bg-muted/50"
+                        className="flex items-center gap-4 p-4 rounded-xl bg-muted/50"
                       >
                         <div className="w-10 h-10 rounded-lg bg-cyan/10 flex items-center justify-center flex-shrink-0">
                           <item.icon className="w-5 h-5 text-cyan" />

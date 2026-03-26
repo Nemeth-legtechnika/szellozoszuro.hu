@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+import { CookieConsentBanner } from '@/components/cookie-consent'
 import { Toaster } from '@/components/ui/sonner'
 import { TooltipProvider } from '@/components/ui/tooltip'
 
@@ -48,6 +49,7 @@ const App = () => (
           }}
         >
           <ScrollToTop />
+          <CookieConsentBanner />
           <Routes>
             {/* Hungarian routes (default) */}
             <Route element={<LanguageWrapper />}>
