@@ -7,10 +7,17 @@ interface GtagConsentParams {
 
 type GtagCommand = 'consent' | 'config' | 'event' | 'js' | 'set'
 
-declare function gtag(command: 'consent', action: 'default' | 'update', params: GtagConsentParams): void
+declare function gtag(
+  command: 'consent',
+  action: 'default' | 'update',
+  params: GtagConsentParams,
+): void
 declare function gtag(command: 'js', date: Date): void
-declare function gtag(command: 'config', targetId: string, params?: Record<string, unknown>): void
-declare function gtag(command: 'event', eventName: string, params?: Record<string, unknown>): void
+declare function gtag(
+  command: 'config' | 'event',
+  value: string,
+  params?: Record<string, unknown>,
+): void
 
 interface Window {
   dataLayer: Array<unknown>
