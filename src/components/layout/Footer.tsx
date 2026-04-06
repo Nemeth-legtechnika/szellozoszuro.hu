@@ -2,7 +2,7 @@ import { ExternalLink, Mail, MapPin, Phone } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-import logo from '@/assets/logo.png'
+import logo from '@/assets/images/logo.png'
 import usePath from '@/hooks/use-path'
 
 const Footer = () => {

@@ -1,52 +1,8 @@
 import { ArrowRight } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
-import brandSelectorBg from '@/assets/brand-selector-bg.jpg'
-
-const brands = [
-  {
-    name: 'Vaillant',
-    link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/vaillant-szuro/',
-  },
-  {
-    name: 'Bosch',
-    link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/bosch-utangyartott-szurok/',
-  },
-  {
-    name: 'Helios',
-    link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/helios-utangyartott-szurok/',
-  },
-  { name: 'Atrea', link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/' },
-  { name: 'Aereco', link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/' },
-  {
-    name: 'Aldes',
-    link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/aldes/',
-  },
-  {
-    name: 'Wolf',
-    link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/wolf/',
-  },
-  {
-    name: 'Blauberg',
-    link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/blauberg/',
-  },
-  {
-    name: 'Hoval',
-    link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/hoval/',
-  },
-  {
-    name: 'Stiebel Eltron',
-    link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/stiebel-eltron/',
-  },
-  {
-    name: 'Vents',
-    link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/vents/',
-  },
-  {
-    name: 'Zehnder',
-    link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/zehnder/',
-  },
-]
+import brands from '@/assets/data/brands.json'
+import brandSelectorBg from '@/assets/images/brand-selector-bg.jpg'
 
 const BrandSelector = () => {
   const { t } = useTranslation()
@@ -76,7 +32,7 @@ const BrandSelector = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
           {brands.map((brand) => (
             <a
-              key={brand.name}
+              key={brand.id}
               href={brand.link}
               target="_blank"
               rel="noopener noreferrer"

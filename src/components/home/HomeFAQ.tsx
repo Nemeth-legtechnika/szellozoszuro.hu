@@ -2,7 +2,7 @@ import { ArrowRight, HelpCircle } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-import faqBgImage from '@/assets/faq-bg.jpg'
+import faqBgImage from '@/assets/images/faq-bg.jpg'
 import {
   Accordion,
   AccordionContent,

@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "name": "Vaillant",
+    "description": "recoVAIR szűrők",
+    "productCount": 13,
+    "oemLink": "https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/vaillant-szurok/",
+    "aftermarketLink": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/vaillant-szuro/"
+  },
+  {
+    "id": 2,
+    "name": "Helios",
+    "description": "KWL szűrők",
+    "productCount": 15,
+    "oemLink": "https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/helios/",
+    "aftermarketLink": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/helios-utangyartott-szurok/"
+  },
+  {
+    "id": 3,
+    "name": "BOSCH",
+    "description": "Vent szűrők",
+    "productCount": 5,
+    "oemLink": "https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/bosch-szuro/",
+    "aftermarketLink": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/bosch-utangyartott-szurok/"
+  },
+  {
+    "id": 4,
+    "name": "DEFRO air",
+    "description": "DRT szűrők",
+    "productCount": 7,
+    "oemLink": "https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/defro-air-szuro/"
+  },
+  {
+    "id": 5,
+    "name": "Wolf",
+    "description": "CWL szűrők",
+    "productCount": 10,
+    "aftermarketLink": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/wolf/"
+  },
+  {
+    "id": 6,
+    "name": "Zehnder",
+    "description": "ComfoAir szűrők",
+    "productCount": 6,
+    "aftermarketLink": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/zehnder/"
+  },
+  {
+    "id": 7,
+    "name": "Vents",
+    "description": "VUT szűrők",
+    "productCount": 7,
+    "aftermarketLink": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/vents/"
+  },
+  {
+    "id": 8,
+    "name": "Aldes",
+    "description": "InspirAIR szűrők",
+    "productCount": 7,
+    "aftermarketLink": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/aldes/"
+  },
+  {
+    "id": 9,
+    "name": "Blauberg",
+    "description": "KOMFORT szűrők",
+    "productCount": 5,
+    "aftermarketLink": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/blauberg/"
+  },
+  {
+    "id": 10,
+    "name": "Stiebel Eltron",
+    "description": "LWZ szűrők",
+    "productCount": 3,
+    "aftermarketLink": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/stiebel-eltron/"
+  },
+  {
+    "id": 11,
+    "name": "Hoval",
+    "description": "HomeVent szűrők",
+    "productCount": 1,
+    "aftermarketLink": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/hoval/"
+  },
+  {
+    "id": 12,
+    "name": "Hungaroklíma",
+    "description": "HKV szűrők",
+    "productCount": 1,
+    "oemLink": "https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/hungaroklima-szurok/"
+  }
+]

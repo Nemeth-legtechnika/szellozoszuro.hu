@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-import logo from '@/assets/logo.png'
+import logo from '@/assets/images/logo.png'
 import { Button } from '@/components/ui/button'
 import usePath from '@/hooks/use-path'
 

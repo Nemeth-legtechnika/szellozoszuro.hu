@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-import nemethKalmanImage from '@/assets/team/nemeth-kalman.jpg'
+import nemethKalmanImage from '@/assets/images/team/nemeth-kalman.jpg'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
