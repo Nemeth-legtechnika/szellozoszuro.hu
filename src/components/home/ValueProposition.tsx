@@ -1,31 +1,10 @@
-import { CheckCircle2, Clock, Wind, Wrench } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+
+import useValueProposition from '@/hooks/use-value-proposition'
 
 const ValueProposition = () => {
   const { t } = useTranslation()
-
-  const features = [
-    {
-      icon: Wind,
-      titleKey: 'valueProps.cleanAir.title',
-      descriptionKey: 'valueProps.cleanAir.description',
-    },
-    {
-      icon: Wrench,
-      titleKey: 'valueProps.protection.title',
-      descriptionKey: 'valueProps.protection.description',
-    },
-    {
-      icon: CheckCircle2,
-      titleKey: 'valueProps.options.title',
-      descriptionKey: 'valueProps.options.description',
-    },
-    {
-      icon: Clock,
-      titleKey: 'valueProps.easyOrder.title',
-      descriptionKey: 'valueProps.easyOrder.description',
-    },
-  ]
+  const features = useValueProposition()
 
   return (
     <section className="py-20 lg:py-28 bg-background">
@@ -41,17 +20,15 @@ const ValueProposition = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div
-              key={feature.titleKey}
+              key={feature.title}
               className="group p-6 rounded-2xl bg-card border-2 border-border hover:border-cyan hover:bg-white hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] transition-all duration-[250ms] ease-out"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="w-14 h-14 rounded-xl bg-cyan/10 flex items-center justify-center mb-5 group-hover:bg-cyan/20 transition-all duration-[250ms] ease-out">
                 <feature.icon className="w-7 h-7 text-cyan transition-transform duration-[250ms] ease-out group-hover:scale-110" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{t(feature.titleKey)}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {t(feature.descriptionKey)}
-              </p>
+              <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

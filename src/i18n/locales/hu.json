@@ -69,6 +69,38 @@
       "aftermarket": {
         "question": "Használhatok utángyártott szűrőt a gyári helyett?",
         "answer": "Igen, az általunk kínált utángyártott szűrők ugyanolyan méretpontossággal és szűrési hatékonysággal rendelkeznek. Német prémium alapanyagból (Sandler AG) készülnek, ISO 16890 tanúsítvánnyal."
+      },
+      "zehnderFilter": {
+        "question": "Milyen szűrő való a Zehnder gépembe?",
+        "answer": "A Zehnder hővisszanyerős gépekhez (ComfoAir, ComfoD, ComfoFond stb.) mind gyári, mind kiváló minőségű utángyártott szűrőket kínálunk. A pontos típusválasztáshoz szükséges a gép pontos modellszáma (pl. ComfoAir Q350, ComfoAir 350). Ha bizonytalan vagy, keress minket a +36 20 323 8172 számon, és segítünk azonosítani a megfelelő szűrőt."
+      },
+      "findFilter": {
+        "question": "Hogyan tudom megállapítani, melyik szűrő kell a gépemhez?",
+        "answer": "A legegyszerűbb módszer: nézd meg a gép típustábláját (általában a készülék oldalán vagy belsejében található), és keresd meg a pontos modellszámot. Ezt követően a szellozoszuro.hu oldalon a márka kiválasztásával megtalálod a kompatibilis szűrőket. Ha nem találod, hívj minket: +36 20 323 8172."
+      },
+      "lateReplacement": {
+        "question": "Mi történik, ha nem cserélem időben a szűrőt?",
+        "answer": "Az eltömődött szűrő csökkenti a légáramlást, ami a gép túlterheléséhez és magasabb energiafogyasztáshoz vezet. Hosszú távon károsíthatja a hővisszanyerő cellát és a ventilátorokat. Emellett a szűrési hatékonyság csökkenésével szennyezett levegő kerül a lakásba. A rendszeres csere olcsóbb, mint a gép javítása."
+      },
+      "selfReplacement": {
+        "question": "Magam is ki tudom cserélni a szűrőt?",
+        "answer": "Igen, a legtöbb hővisszanyerős gépben a szűrőcsere egyszerű, szervizre nem szükséges. A gép fedőlapjának eltávolítása után kihúzható a régi szűrő, és behelyezhető az új. Ügyelj a szűrő irányára (nyíl a légáramlás irányába mutasson). A Tudástárunkban részletes útmutatókat találsz."
+      },
+      "personalPickup": {
+        "question": "Van lehetőség személyes átvételre?",
+        "answer": "Igen, soproni telephelyünkön lehetőség van személyes átvételre előzetes egyeztetés után. Időpontfoglaláshoz hívd a +36 20 806 9072 számot."
+      },
+      "payment": {
+        "question": "Hogyan fizethetek?",
+        "answer": "Elfogadunk bankkártyás fizetést, banki átutalást és utánvétet. A leggyorsabb megoldás az online bankkártyás fizetés, melyet követően azonnal megkezdjük a rendelés feldolgozását."
+      },
+      "warranty": {
+        "question": "Milyen garanciát vállalnak a szűrőkre?",
+        "answer": "Minden általunk forgalmazott szűrőre a jogszabályban előírt 2 év jótállást biztosítunk. Gyártási hiba esetén díjmentesen cseréljük a terméket. Elégedetlenség esetén 14 napon belül visszaküldhető a bontatlan termék."
+      },
+      "filterOrigin": {
+        "question": "Honnan származnak a szűrőitek?",
+        "answer": "A gyári szűrők az eredeti gyártóktól (Zehnder, Helios, Wolf stb.) származnak. Az utángyártott szűrőket gondosan kiválasztott európai partnereinktől szerezzük be, akikkel több mint 10 éve dolgozunk együtt. Minden szűrőt saját raktárkészletből szállítunk."
       }
     }
   },
@@ -82,7 +114,8 @@
     "title": "Hasznos",
     "titleHighlight": "cikkek",
     "description": "Ismerd meg a szellőztetőrendszerek működését és karbantartását szakértő cikkeinkből.",
-    "viewAll": "Összes cikk megtekintése"
+    "viewAll": "Összes cikk megtekintése",
+    "readMore": "Tovább olvasom"
   },
   "brandSelector": {
     "title": "Válassz",
@@ -93,11 +126,22 @@
   "footer": {
     "description": "Prémium minőségű szűrők hővisszanyerős szellőztetőrendszerekhez. Szakértő tanácsadás és gyors szállítás.",
     "quickLinks": "Gyors linkek",
+    "faq": "Gyakori kérdések",
     "legal": "Jogi információk",
     "terms": "ÁSZF",
     "privacy": "Adatvédelem",
     "shipping": "Szállítás",
     "contact": "Kapcsolat",
+    "portals": "Szakportáljaink",
+    "portalsDescription": "A Németh Légtechnika Kft. szakportál-hálózata",
+    "partnerPortals": {
+      "szelloztetes": "Szellőztetési webshop",
+      "hoszivattyu": "Hőszivattyú szakportál",
+      "sopronterv": "Műszaki tervezés"
+    },
+    "orderLabel": "Rendelés",
+    "technicalLabel": "Szakmai kérdések",
+    "location": "Sopron, Magyarország",
     "allRights": "Minden jog fenntartva."
   },
   "shop": {
@@ -205,6 +249,10 @@
         "description": "Személyre szabott tanácsadás és támogatás"
       }
     },
+    "quote": "Minden szűrőcsere mögött a tiszta levegő és az egészséges otthon iránti elkötelezettségünk áll.",
+    "quoteFamily": "– A Németh család",
+    "pageTitle": "Rólunk | Németh Légtechnika Kft. - 15+ év szakértelem, országos lefedettség",
+    "pageDescription": "Ismerje meg a Németh Légtechnika Kft. történetét: 15+ év légtechnikai tapasztalat, családi vállalkozás Sopronból. Országos szervizpartneri hálózattal rendelkezünk!",
     "ctaTitle": "Kérdésed van?",
     "ctaDescription": "Vedd fel velünk a kapcsolatot, és segítünk megtalálni a tökéletes szűrőt.",
     "ctaButton": "Kapcsolatfelvétel"

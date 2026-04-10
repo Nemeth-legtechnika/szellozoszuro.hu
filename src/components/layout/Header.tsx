@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 import logo from '@/assets/images/logo.png'
 import { Button } from '@/components/ui/button'
+import useNavLinks from '@/hooks/use-nav-links'
 import usePath from '@/hooks/use-path'
 
 import LanguageSwitcher from './LanguageSwitcher'
@@ -13,14 +14,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { t } = useTranslation()
   const paths = usePath()
-
-  const navLinks = [
-    { name: t('nav.home'), href: paths.home },
-    { name: t('nav.filters'), href: paths.shop },
-    { name: t('nav.knowledge'), href: paths.blog.base },
-    { name: t('nav.about'), href: paths.about },
-    { name: t('nav.contact'), href: paths.contact },
-  ]
+  const navLinks = useNavLinks()
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-dark/95 backdrop-blur-md border-b border-dark-secondary">

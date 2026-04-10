@@ -1,11 +1,12 @@
 import { ArrowRight } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
-import brands from '@/assets/data/brands.json'
 import brandSelectorBg from '@/assets/images/brand-selector-bg.jpg'
+import useBrands from '@/hooks/use-brands'
 
 const BrandSelector = () => {
   const { t } = useTranslation()
+  const brands = useBrands()
 
   return (
     <section

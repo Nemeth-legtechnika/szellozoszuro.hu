@@ -9,39 +9,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
+import useFAQ from '@/hooks/use-faq'
 import usePath from '@/hooks/use-path'
 
 const HomeFAQ = () => {
   const { t } = useTranslation()
   const paths = usePath()
-
-  const faqItems = [
-    {
-      id: 1,
-      questionKey: 'faq.items.filterType.question',
-      answerKey: 'faq.items.filterType.answer',
-    },
-    {
-      id: 2,
-      questionKey: 'faq.items.delivery.question',
-      answerKey: 'faq.items.delivery.answer',
-    },
-    {
-      id: 3,
-      questionKey: 'faq.items.filterClass.question',
-      answerKey: 'faq.items.filterClass.answer',
-    },
-    {
-      id: 4,
-      questionKey: 'faq.items.replacement.question',
-      answerKey: 'faq.items.replacement.answer',
-    },
-    {
-      id: 5,
-      questionKey: 'faq.items.aftermarket.question',
-      answerKey: 'faq.items.aftermarket.answer',
-    },
-  ]
+  const { homeItems } = useFAQ()
 
   return (
     <section className="relative py-16 lg:py-24 overflow-hidden">
@@ -75,17 +49,17 @@ const HomeFAQ = () => {
           </div>
 
           <Accordion type="single" collapsible className="space-y-3">
-            {faqItems.map((item) => (
+            {homeItems.map((item) => (
               <AccordionItem
                 key={item.id}
                 value={item.id.toString()}
                 className="bg-card/95 backdrop-blur-sm rounded-xl border border-border px-6 data-[state=open]:border-cyan/30 transition-colors shadow-md"
               >
                 <AccordionTrigger className="text-left font-medium text-foreground hover:text-cyan py-5">
-                  {t(item.questionKey)}
+                  {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-foreground/75 leading-relaxed pb-5 font-medium">
-                  {t(item.answerKey)}
+                  {item.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}

@@ -69,6 +69,38 @@
       "aftermarket": {
         "question": "Kann ich Alternativfilter statt Originalfilter verwenden?",
         "answer": "Ja, die von uns angebotenen Alternativfilter haben die gleiche Maßgenauigkeit und Filtereffizienz. Sie werden aus deutschem Premium-Material (Sandler AG) hergestellt und sind ISO 16890 zertifiziert."
+      },
+      "zehnderFilter": {
+        "question": "Welcher Filter passt in mein Zehnder Gerät?",
+        "answer": "Für Zehnder Wärmerückgewinnungsgeräte (ComfoAir, ComfoD, ComfoFond usw.) bieten wir sowohl Original- als auch hochwertige Alternativfilter an. Für die genaue Typauswahl benötigen wir die genaue Modellnummer (z.B. ComfoAir Q350, ComfoAir 350). Bei Unsicherheiten kontaktieren Sie uns unter +36 20 323 8172, und wir helfen Ihnen bei der Identifizierung des richtigen Filters."
+      },
+      "findFilter": {
+        "question": "Wie finde ich heraus, welcher Filter in mein Gerät passt?",
+        "answer": "Die einfachste Methode: Schauen Sie sich das Typenschild des Gerätes an (normalerweise an der Seite oder im Inneren des Gerätes) und suchen Sie die genaue Modellnummer. Dann können Sie auf szellozoszuro.hu durch Auswahl der Marke die kompatiblen Filter finden. Wenn Sie es nicht finden, rufen Sie uns an: +36 20 323 8172."
+      },
+      "lateReplacement": {
+        "question": "Was passiert, wenn ich den Filter nicht rechtzeitig wechsle?",
+        "answer": "Ein verstopfter Filter reduziert den Luftstrom, was zu einer Überlastung des Gerätes und höherem Energieverbrauch führt. Langfristig kann dies den Wärmetauscher und die Ventilatoren beschädigen. Außerdem gelangt bei sinkender Filtereffizienz verunreinigte Luft in die Wohnung. Regelmäßiger Wechsel ist günstiger als eine Gerätereparatur."
+      },
+      "selfReplacement": {
+        "question": "Kann ich den Filter selbst wechseln?",
+        "answer": "Ja, bei den meisten Wärmerückgewinnungsgeräten ist der Filterwechsel einfach, ein Servicetechniker ist nicht erforderlich. Nach dem Entfernen der Geräteabdeckung kann der alte Filter herausgezogen und der neue eingesetzt werden. Achten Sie auf die Filterrichtung (der Pfeil sollte in Luftstromrichtung zeigen). In unserer Wissensdatenbank finden Sie detaillierte Anleitungen."
+      },
+      "personalPickup": {
+        "question": "Ist eine persönliche Abholung möglich?",
+        "answer": "Ja, an unserem Standort in Sopron ist nach vorheriger Vereinbarung eine persönliche Abholung möglich. Für Terminvereinbarungen rufen Sie +36 20 806 9072 an."
+      },
+      "payment": {
+        "question": "Wie kann ich bezahlen?",
+        "answer": "Wir akzeptieren Kartenzahlung, Banküberweisung und Nachnahme. Die schnellste Lösung ist die Online-Kartenzahlung, nach der wir sofort mit der Bearbeitung der Bestellung beginnen."
+      },
+      "warranty": {
+        "question": "Welche Garantie geben Sie auf die Filter?",
+        "answer": "Auf alle von uns vertriebenen Filter gewähren wir die gesetzlich vorgeschriebene 2-jährige Garantie. Bei Herstellungsfehlern tauschen wir das Produkt kostenlos aus. Bei Unzufriedenheit kann die ungeöffnete Ware innerhalb von 14 Tagen zurückgeschickt werden."
+      },
+      "filterOrigin": {
+        "question": "Woher stammen Ihre Filter?",
+        "answer": "Die Originalfilter stammen von den Original-Herstellern (Zehnder, Helios, Wolf usw.). Die Alternativfilter beziehen wir von sorgfältig ausgewählten europäischen Partnern, mit denen wir seit über 10 Jahren zusammenarbeiten. Alle Filter liefern wir aus unserem eigenen Lagerbestand."
       }
     }
   },
@@ -82,7 +114,8 @@
     "title": "Nützliche",
     "titleHighlight": "Artikel",
     "description": "Erfahren Sie mehr über die Funktionsweise und Wartung von Lüftungsanlagen in unseren Fachartikeln.",
-    "viewAll": "Alle Artikel anzeigen"
+    "viewAll": "Alle Artikel anzeigen",
+    "readMore": "Weiterlesen"
   },
   "brandSelector": {
     "title": "Auswahl nach",
@@ -93,11 +126,22 @@
   "footer": {
     "description": "Premium-Qualitätsfilter für Wohnraumlüftungsanlagen mit Wärmerückgewinnung. Fachkundige Beratung und schneller Versand.",
     "quickLinks": "Schnelllinks",
+    "faq": "Häufige Fragen",
     "legal": "Rechtliches",
     "terms": "AGB",
     "privacy": "Datenschutz",
     "shipping": "Versand",
     "contact": "Kontakt",
+    "portals": "Unsere Portale",
+    "portalsDescription": "Das Fachportal-Netzwerk der Németh Légtechnika Kft.",
+    "partnerPortals": {
+      "szelloztetes": "Lüftungs-Webshop",
+      "hoszivattyu": "Wärmepumpen-Portal",
+      "sopronterv": "Technische Planung"
+    },
+    "orderLabel": "Bestellung",
+    "technicalLabel": "Fachfragen",
+    "location": "Sopron, Ungarn",
     "allRights": "Alle Rechte vorbehalten."
   },
   "shop": {
@@ -205,6 +249,10 @@
         "description": "Individuelle Beratung und Unterstützung"
       }
     },
+    "quote": "Hinter jedem Filterwechsel steht unser Engagement für saubere Luft und ein gesundes Zuhause.",
+    "quoteFamily": "– Die Familie Németh",
+    "pageTitle": "Über uns | Németh Légtechnika Kft. - 15+ Jahre Expertise, landesweite Abdeckung",
+    "pageDescription": "Lernen Sie die Geschichte der Németh Légtechnika Kft. kennen: 15+ Jahre Lüftungstechnik-Erfahrung, Familienunternehmen aus Sopron. Landesweites Servicepartner-Netzwerk!",
     "ctaTitle": "Haben Sie Fragen?",
     "ctaDescription": "Kontaktieren Sie uns, und wir helfen Ihnen, den perfekten Filter zu finden.",
     "ctaButton": "Kontakt aufnehmen"

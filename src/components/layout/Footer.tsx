@@ -3,29 +3,17 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import logo from '@/assets/images/logo.png'
+import useContact from '@/hooks/use-contact'
 import usePath from '@/hooks/use-path'
 
 const Footer = () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const paths = usePath()
-
-  const partnerPortals = [
-    {
-      name: 'szelloztetes.eu',
-      url: 'https://szelloztetes.eu',
-      description: i18n.language === 'de' ? 'Lüftungs-Webshop' : 'Szellőztetési webshop',
-    },
-    {
-      name: 'hoszivattyu.online',
-      url: 'https://hoszivattyu.online',
-      description: i18n.language === 'de' ? 'Wärmepumpen-Portal' : 'Hőszivattyú szakportál',
-    },
-    {
-      name: 'sopronterv.hu',
-      url: 'https://sopronterv.hu',
-      description: i18n.language === 'de' ? 'Technische Planung' : 'Műszaki tervezés',
-    },
-  ]
+  const { orderContact, technicalContact, partnerPortals } = useContact()
+  const orderPhone = orderContact.find((c) => c.icon === Phone)
+  const orderEmail = orderContact.find((c) => c.icon === Mail)
+  const techPhone = technicalContact.find((c) => c.icon === Phone)
+  const techEmail = technicalContact.find((c) => c.icon === Mail)
 
   return (
     <footer className="bg-dark text-dark-foreground">
@@ -93,7 +81,7 @@ const Footer = () => {
                   to={paths.faq}
                   className="text-dark-muted hover:text-cyan transition-colors text-sm"
                 >
-                  {i18n.language === 'de' ? 'Häufige Fragen' : 'Gyakori kérdések'}
+                  {t('footer.faq')}
                 </Link>
               </li>
               <li>
@@ -117,9 +105,7 @@ const Footer = () => {
 
           {/* Partner Portals - Knowledge Graph */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">
-              {i18n.language === 'de' ? 'Unsere Portale' : 'Szakportáljaink'}
-            </h4>
+            <h4 className="font-semibold text-lg mb-4">{t('footer.portals')}</h4>
             <ul className="space-y-3">
               {partnerPortals.map((portal) => (
                 <li key={portal.name}>
@@ -139,9 +125,7 @@ const Footer = () => {
               ))}
             </ul>
             <p className="text-dark-muted/60 text-xs mt-4 leading-relaxed">
-              {i18n.language === 'de'
-                ? 'Das Fachportal-Netzwerk der Németh Légtechnika Kft.'
-                : 'A Németh Légtechnika Kft. szakportál-hálózata'}
+              {t('footer.portalsDescription')}
             </p>
           </div>
 
@@ -150,38 +134,46 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-3">
               <li className="text-dark-muted text-xs font-medium uppercase tracking-wide mb-1">
-                {i18n.language === 'de' ? 'Bestellung' : 'Rendelés'}
+                {t('footer.orderLabel')}
               </li>
-              <li className="flex items-center gap-3 text-dark-muted text-sm">
-                <Phone className="w-4 h-4 text-cyan" />
-                <a href="tel:+36208069072" className="hover:text-cyan transition-colors">
-                  +36 20 806 9072
-                </a>
-              </li>
-              <li className="flex items-center gap-3 text-dark-muted text-sm">
-                <Mail className="w-4 h-4 text-cyan" />
-                <a href="mailto:office@sopronterv.hu" className="hover:text-cyan transition-colors">
-                  office@sopronterv.hu
-                </a>
-              </li>
+              {orderPhone && (
+                <li className="flex items-center gap-3 text-dark-muted text-sm">
+                  <Phone className="w-4 h-4 text-cyan" />
+                  <a href={orderPhone.href} className="hover:text-cyan transition-colors">
+                    {orderPhone.value}
+                  </a>
+                </li>
+              )}
+              {orderEmail && (
+                <li className="flex items-center gap-3 text-dark-muted text-sm">
+                  <Mail className="w-4 h-4 text-cyan" />
+                  <a href={orderEmail.href} className="hover:text-cyan transition-colors">
+                    {orderEmail.value}
+                  </a>
+                </li>
+              )}
               <li className="text-dark-muted text-xs font-medium uppercase tracking-wide mb-1 mt-4">
-                {i18n.language === 'de' ? 'Fachfragen' : 'Szakmai kérdések'}
+                {t('footer.technicalLabel')}
               </li>
-              <li className="flex items-center gap-3 text-dark-muted text-sm">
-                <Phone className="w-4 h-4 text-cyan" />
-                <a href="tel:+36203238172" className="hover:text-cyan transition-colors">
-                  +36 20 323 8172
-                </a>
-              </li>
-              <li className="flex items-center gap-3 text-dark-muted text-sm">
-                <Mail className="w-4 h-4 text-cyan" />
-                <a href="mailto:info@sopronterv.hu" className="hover:text-cyan transition-colors">
-                  info@sopronterv.hu
-                </a>
-              </li>
+              {techPhone && (
+                <li className="flex items-center gap-3 text-dark-muted text-sm">
+                  <Phone className="w-4 h-4 text-cyan" />
+                  <a href={techPhone.href} className="hover:text-cyan transition-colors">
+                    {techPhone.value}
+                  </a>
+                </li>
+              )}
+              {techEmail && (
+                <li className="flex items-center gap-3 text-dark-muted text-sm">
+                  <Mail className="w-4 h-4 text-cyan" />
+                  <a href={techEmail.href} className="hover:text-cyan transition-colors">
+                    {techEmail.value}
+                  </a>
+                </li>
+              )}
               <li className="flex items-start gap-3 text-dark-muted text-sm mt-4">
                 <MapPin className="w-4 h-4 text-cyan mt-0.5" />
-                <span>{i18n.language === 'de' ? 'Sopron, Ungarn' : 'Sopron, Magyarország'}</span>
+                <span>{t('footer.location')}</span>
               </li>
             </ul>
           </div>

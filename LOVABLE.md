@@ -107,7 +107,7 @@ src/
 
 - Use **Tailwind CSS utility classes** for all styling. Do not write custom CSS unless absolutely necessary.
 - Use the project's **CSS custom properties** (defined in `src/index.css`) via Tailwind's configured colors: `primary`, `secondary`, `cyan`, `dark`, `muted`, etc.
-- Use the `cn()` utility from `@/lib/cn` to merge conditional class names.
+- Use the `cn()` utility from `@/lib/utils` to merge conditional class names.
 - Use the existing shadcn/ui components from `src/components/ui/` — do not recreate them.
 - The design uses a **cyan accent color** (`hsl(187, 100%, 50%)`) as the brand color.
 

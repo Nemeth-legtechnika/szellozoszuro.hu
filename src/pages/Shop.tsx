@@ -2,35 +2,17 @@ import { ArrowRight, ExternalLink, Filter, Truck, Zap } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 
-import products from '@/assets/data/products.json'
 import shopBrandsBg from '@/assets/images/shop-brands-bg.jpg'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import { Button } from '@/components/ui/button'
+import useProducts from '@/hooks/use-products'
+import useShopCategories from '@/hooks/use-shop-categories'
 
 const Shop = () => {
   const { t } = useTranslation()
-
-  const categories = [
-    {
-      title: t('shop.categories.oem.title'),
-      description: t('shop.categories.oem.description'),
-      link: 'https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/',
-      icon: '🏭',
-    },
-    {
-      title: t('shop.categories.aftermarket.title'),
-      description: t('shop.categories.aftermarket.description'),
-      link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/',
-      icon: '⭐',
-    },
-    {
-      title: t('shop.categories.filterHouse.title'),
-      description: t('shop.categories.filterHouse.description'),
-      link: 'https://szelloztetes.eu/termekkategoria/szurok/szurohaz/',
-      icon: '📦',
-    },
-  ]
+  const categories = useShopCategories()
+  const products = useProducts()
 
   return (
     <div className="min-h-screen bg-background">

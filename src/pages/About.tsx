@@ -1,104 +1,26 @@
-import { ArrowRight, Award, Building2, Filter, Home, MapPin, Users, Wrench } from 'lucide-react'
+import { ArrowRight, Building2, Users, Wrench } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-import nemethKalmanImage from '@/assets/images/team/nemeth-kalman.jpg'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import useAbout from '@/hooks/use-about'
 import usePath from '@/hooks/use-path'
 
 const About = () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const paths = usePath()
-
-  const highlights = [
-    {
-      icon: Home,
-      title: t('about.values.family.title'),
-      description: t('about.values.family.description'),
-    },
-    {
-      icon: MapPin,
-      title: t('about.values.coverage.title'),
-      description: t('about.values.coverage.description'),
-    },
-    {
-      icon: Award,
-      title: t('about.values.quality.title'),
-      description: t('about.values.quality.description'),
-    },
-  ]
-
-  const timeline = [
-    {
-      year: t('about.timeline.beginning.year'),
-      title: t('about.timeline.beginning.title'),
-      subtitle: t('about.timeline.beginning.subtitle'),
-      description: t('about.timeline.beginning.description'),
-      icon: Building2,
-      color: 'bg-muted',
-    },
-    {
-      year: t('about.timeline.implementation.year'),
-      title: t('about.timeline.implementation.title'),
-      subtitle: t('about.timeline.implementation.subtitle'),
-      description: t('about.timeline.implementation.description'),
-      icon: Wrench,
-      color: 'bg-cyan/20',
-    },
-    {
-      year: t('about.timeline.today.year'),
-      title: t('about.timeline.today.title'),
-      subtitle: t('about.timeline.today.subtitle'),
-      description: t('about.timeline.today.description'),
-      icon: Filter,
-      color: 'bg-cyan',
-    },
-  ]
-
-  const team = [
-    {
-      name: t('about.team.founder.name'),
-      role: t('about.team.founder.role'),
-      description: t('about.team.founder.description'),
-      image: nemethKalmanImage,
-    },
-    {
-      name: t('about.team.assistant.name'),
-      role: t('about.team.assistant.role'),
-      description: t('about.team.assistant.description'),
-      image: null,
-    },
-  ]
-
-  const signature = {
-    quote:
-      i18n.language === 'de'
-        ? 'Hinter jedem Filterwechsel steht unser Engagement für saubere Luft und ein gesundes Zuhause.'
-        : 'Minden szűrőcsere mögött a tiszta levegő és az egészséges otthon iránti elkötelezettségünk áll.',
-    family: i18n.language === 'de' ? '– Die Familie Németh' : '– A Németh család',
-  }
+  const { highlights, timeline, team, signature } = useAbout()
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>
-          {i18n.language === 'de'
-            ? 'Über uns | Németh Légtechnika Kft. - 15+ Jahre Expertise, landesweite Abdeckung'
-            : 'Rólunk | Németh Légtechnika Kft. - 15+ év szakértelem, országos lefedettség'}
-        </title>
-        <meta
-          name="description"
-          content={
-            i18n.language === 'de'
-              ? 'Lernen Sie die Geschichte der Németh Légtechnika Kft. kennen: 15+ Jahre Lüftungstechnik-Erfahrung, Familienunternehmen aus Sopron. Landesweites Servicepartner-Netzwerk!'
-              : 'Ismerje meg a Németh Légtechnika Kft. történetét: 15+ év légtechnikai tapasztalat, családi vállalkozás Sopronból. Országos szervizpartneri hálózattal rendelkezünk!'
-          }
-        />
+        <title>{t('about.pageTitle')}</title>
+        <meta name="description" content={t('about.pageDescription')} />
         <link rel="canonical" href={`https://szellozoszuro.hu${paths.about}`} />
       </Helmet>
 
