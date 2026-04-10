@@ -2,138 +2,17 @@ import { ArrowRight, ExternalLink, Filter, Truck, Zap } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 
-import shopBrandsBg from '@/assets/shop-brands-bg.jpg'
+import shopBrandsBg from '@/assets/images/shop-brands-bg.jpg'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import { Button } from '@/components/ui/button'
-
-// Brand data with external webshop links
-const brands = [
-  {
-    id: 'vaillant',
-    name: 'Vaillant',
-    description: 'recoVAIR szűrők',
-    productCount: 13,
-    oemLink: 'https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/vaillant-szurok/',
-    aftermarketLink:
-      'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/vaillant-szuro/',
-  },
-  {
-    id: 'helios',
-    name: 'Helios',
-    description: 'KWL szűrők',
-    productCount: 15,
-    oemLink: 'https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/helios/',
-    aftermarketLink:
-      'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/helios-utangyartott-szurok/',
-  },
-  {
-    id: 'bosch',
-    name: 'BOSCH',
-    description: 'Vent szűrők',
-    productCount: 5,
-    oemLink: 'https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/bosch-szuro/',
-    aftermarketLink:
-      'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/bosch-utangyartott-szurok/',
-  },
-  {
-    id: 'defro',
-    name: 'DEFRO air',
-    description: 'DRT szűrők',
-    productCount: 7,
-    oemLink: 'https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/defro-air-szuro/',
-    aftermarketLink: null,
-  },
-  {
-    id: 'wolf',
-    name: 'Wolf',
-    description: 'CWL szűrők',
-    productCount: 10,
-    oemLink: null,
-    aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/wolf/',
-  },
-  {
-    id: 'zehnder',
-    name: 'Zehnder',
-    description: 'ComfoAir szűrők',
-    productCount: 6,
-    oemLink: null,
-    aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/zehnder/',
-  },
-  {
-    id: 'vents',
-    name: 'Vents',
-    description: 'VUT szűrők',
-    productCount: 7,
-    oemLink: null,
-    aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/vents/',
-  },
-  {
-    id: 'aldes',
-    name: 'Aldes',
-    description: 'InspirAIR szűrők',
-    productCount: 7,
-    oemLink: null,
-    aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/aldes/',
-  },
-  {
-    id: 'blauberg',
-    name: 'Blauberg',
-    description: 'KOMFORT szűrők',
-    productCount: 5,
-    oemLink: null,
-    aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/blauberg/',
-  },
-  {
-    id: 'stiebel',
-    name: 'Stiebel Eltron',
-    description: 'LWZ szűrők',
-    productCount: 3,
-    oemLink: null,
-    aftermarketLink:
-      'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/stiebel-eltron/',
-  },
-  {
-    id: 'hoval',
-    name: 'Hoval',
-    description: 'HomeVent szűrők',
-    productCount: 1,
-    oemLink: null,
-    aftermarketLink: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/hoval/',
-  },
-  {
-    id: 'hungaroklima',
-    name: 'Hungaroklíma',
-    description: 'HKV szűrők',
-    productCount: 1,
-    oemLink: 'https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/hungaroklima-szurok/',
-    aftermarketLink: null,
-  },
-]
+import useProducts from '@/hooks/use-products'
+import useShopCategories from '@/hooks/use-shop-categories'
 
 const Shop = () => {
   const { t } = useTranslation()
-
-  const categories = [
-    {
-      title: t('shop.categories.oem.title'),
-      description: t('shop.categories.oem.description'),
-      link: 'https://szelloztetes.eu/termekkategoria/szurok/gyari-szurok/',
-      icon: '🏭',
-    },
-    {
-      title: t('shop.categories.aftermarket.title'),
-      description: t('shop.categories.aftermarket.description'),
-      link: 'https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/',
-      icon: '⭐',
-    },
-    {
-      title: t('shop.categories.filterHouse.title'),
-      description: t('shop.categories.filterHouse.description'),
-      link: 'https://szelloztetes.eu/termekkategoria/szurok/szurohaz/',
-      icon: '📦',
-    },
-  ]
+  const categories = useShopCategories()
+  const products = useProducts()
 
   return (
     <div className="min-h-screen bg-background">
@@ -207,9 +86,9 @@ const Shop = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {brands.map((brand) => (
+              {products.map((product) => (
                 <div
-                  key={brand.id}
+                  key={product.id}
                   className="group bg-card/95 backdrop-blur-sm rounded-2xl border-2 border-border hover:border-cyan hover:bg-card transition-all duration-200 ease-in-out overflow-hidden hover:shadow-[0_10px_20px_rgba(0,0,0,0.15)] hover:scale-105"
                 >
                   {/* Brand Header */}
@@ -219,18 +98,18 @@ const Shop = () => {
                         <Filter className="w-6 h-6 text-cyan" />
                       </div>
                       <span className="text-xs text-foreground font-medium">
-                        {brand.productCount} {t('shop.products')}
+                        {product.productCount} {t('shop.products')}
                       </span>
                     </div>
-                    <h3 className="font-bold text-xl text-foreground">{brand.name}</h3>
-                    <p className="text-muted-foreground text-sm">{brand.description}</p>
+                    <h3 className="font-bold text-xl text-foreground">{product.name}</h3>
+                    <p className="text-muted-foreground text-sm">{product.description}</p>
                   </div>
 
                   {/* Action Links */}
                   <div className="px-6 pb-6 space-y-2">
-                    {brand.oemLink && (
+                    {product.oemLink && (
                       <a
-                        href={brand.oemLink}
+                        href={product.oemLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-between w-full px-4 py-3 rounded-lg bg-cyan/10 hover:bg-cyan/20 text-cyan font-medium text-sm transition-colors group/link"
@@ -242,9 +121,9 @@ const Shop = () => {
                         <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                       </a>
                     )}
-                    {brand.aftermarketLink && (
+                    {product.aftermarketLink && (
                       <a
-                        href={brand.aftermarketLink}
+                        href={product.aftermarketLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-between w-full px-4 py-3 rounded-lg bg-secondary hover:bg-secondary/80 text-secondary-foreground font-medium text-sm transition-colors group/link"
@@ -256,7 +135,7 @@ const Shop = () => {
                         <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                       </a>
                     )}
-                    {!brand.oemLink && !brand.aftermarketLink && (
+                    {!product.oemLink && !product.aftermarketLink && (
                       <p className="text-muted-foreground text-sm text-center py-2">
                         {t('shop.comingSoon')}
                       </p>

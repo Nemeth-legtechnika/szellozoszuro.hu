@@ -3,208 +3,19 @@ import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-import aftermarketFiltersImage from '@/assets/blog/aftermarket-filters.jpg'
-import activeCoalHeroImage from '@/assets/blog/aktiv-szen-hero.jpg'
-import allergySeasonHeroImage from '@/assets/blog/allergy-season-hero-generated.jpg'
-import dandelionPollenImage from '@/assets/blog/dandelion-pollen.jpg'
-import dirtyFiltersImage from '@/assets/blog/dirty-filters-used.jpg'
-import ductCleaningImage from '@/assets/blog/duct-cleaning.jpg'
-import foggyMorningImage from '@/assets/blog/foggy-morning-condensation.jpg'
-import vaillantFilterImage from '@/assets/blog/vaillant-filter-change.jpg'
-import winterHumidityImage from '@/assets/blog/winter-humidity.jpg'
 import FacebookCard from '@/components/common/FacebookCard'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
+import useBlogs from '@/hooks/use-blogs'
+import useImage from '@/hooks/use-image'
 import usePath from '@/hooks/use-path'
-
-const blogPosts = [
-  {
-    id: 1,
-    title: 'Miért fontos a rendszeres szűrőcsere?',
-    titleDe: 'Warum ist der regelmäßige Filterwechsel wichtig?',
-    excerpt:
-      'A hővisszanyerős rendszer szűrőjének időben történő cseréje kulcsfontosságú a levegőminőség és a gép élettartama szempontjából. Ebben a cikkben részletesen bemutatjuk, milyen károkat okozhat az elhanyagolt karbantartás.',
-    excerptDe:
-      'Der rechtzeitige Wechsel des Filters in Ihrer Wärmerückgewinnungsanlage ist entscheidend für die Luftqualität und die Lebensdauer des Gerätes. In diesem Artikel zeigen wir detailliert, welche Schäden vernachlässigte Wartung verursachen kann.',
-    image: vaillantFilterImage,
-    imageAlt: 'Vaillant hővisszanyerő szellőztető berendezés nyitott ajtóval, F7 és G4 szűrőkkel',
-    date: '2024. január 15.',
-    dateDe: '15. Januar 2024',
-    author: 'Németh Kálmán',
-    authorDe: 'Kálmán Németh',
-    slug: 'miert-fontos-a-rendszeres-szurocsere',
-    category: 'Karbantartás',
-    categoryDe: 'Wartung',
-    readTime: '5 perc',
-    readTimeDe: '5 Min.',
-  },
-  {
-    id: 2,
-    title: 'G4, M5 vagy F7? – Segítünk eligazodni a szűrőosztályok között',
-    titleDe: 'G4, M5 oder F7? – Wir helfen Ihnen bei der Orientierung zwischen den Filterklassen',
-    excerpt:
-      'Miben különbözik a durva porszűrő a finom pollenshűrőtől? Melyiket válaszd az igényeid alapján? Részletes összehasonlítás allergiásoknak és egészségtudatos felhasználóknak.',
-    excerptDe:
-      'Was ist der Unterschied zwischen Grobstaubfilter und Feinpollenfilter? Welchen sollten Sie nach Ihren Bedürfnissen wählen? Detaillierter Vergleich für Allergiker und gesundheitsbewusste Nutzer.',
-    image: dandelionPollenImage,
-    imageAlt: 'Pitypang magok repülnek - illusztráció a pollenszűrés fontosságához',
-    date: '2024. január 10.',
-    dateDe: '10. Januar 2024',
-    author: 'Németh Kálmán',
-    authorDe: 'Kálmán Németh',
-    slug: 'szuroosztályok-magyarazata',
-    category: 'Útmutató',
-    categoryDe: 'Anleitung',
-    readTime: '7 perc',
-    readTimeDe: '7 Min.',
-  },
-  {
-    id: 3,
-    title: 'Száraz levegő és nedves szűrők? – A téli szellőztetés buktatói',
-    titleDe: 'Trockene Luft und nasse Filter? – Die Tücken der Winterlüftung',
-    excerpt:
-      'Hogyan kezeld a téli időszak páratartalom-problémáit hővisszanyerős rendszerrel? Praktikus tanácsok a páralecsapódás és a penészesedés megelőzésére.',
-    excerptDe:
-      'Wie gehen Sie mit den Feuchtigkeitsproblemen der Winterzeit bei Ihrer Wärmerückgewinnungsanlage um? Praktische Tipps zur Vermeidung von Kondensation und Schimmelbildung.',
-    image: winterHumidityImage,
-    imageAlt: 'Szellőztető vezérlő panel 25% páratartalommal téli környezetben',
-    date: '2024. január 5.',
-    dateDe: '5. Januar 2024',
-    author: 'Németh Kálmán',
-    authorDe: 'Kálmán Németh',
-    slug: 'teli-szelloztes-es-paratartalom',
-    category: 'Tippek',
-    categoryDe: 'Tipps',
-    readTime: '6 perc',
-    readTimeDe: '6 Min.',
-  },
-  {
-    id: 4,
-    title: 'A szellőztető rendszer tisztítása és a csőhálózat védelme',
-    titleDe: 'Reinigung der Lüftungsanlage und Schutz des Rohrnetzwerks',
-    excerpt:
-      'Mikor és hogyan végezd el a karbantartást? Átfogó útmutató a légcsatornák védelméhez és a szakértői tisztításhoz.',
-    excerptDe:
-      'Wann und wie führen Sie die Wartung durch? Umfassende Anleitung zum Schutz der Luftkanäle und zur fachgerechten Reinigung.',
-    image: ductCleaningImage,
-    imageAlt: 'Légcsatorna belülről nézve - tisztítás előtti állapot',
-    date: '2023. december 20.',
-    dateDe: '20. Dezember 2023',
-    author: 'Németh Kálmán',
-    authorDe: 'Kálmán Németh',
-    slug: 'szellozteto-tisztitas-csohalozat',
-    category: 'Karbantartás',
-    categoryDe: 'Wartung',
-    readTime: '8 perc',
-    readTimeDe: '8 Min.',
-  },
-  {
-    id: 5,
-    title: 'Allergiaszezon: Így varázsolja pollenmentes menedékké otthonát!',
-    titleDe: 'Allergiesaison: So verwandeln Sie Ihr Zuhause in eine pollenfreie Oase!',
-    excerpt:
-      'Közeleg a tavasz és a pollenszezon? Az allergiások számára az otthonuknak a biztonság szigetének kellene lennie. Megmutatjuk, hogyan érheti el ezt az F7-es szűrőkkel.',
-    excerptDe:
-      'Der Frühling und die Pollensaison stehen vor der Tür? Für Allergiker sollte ihr Zuhause eine Insel der Sicherheit sein. Wir zeigen Ihnen, wie Sie dies mit F7-Filtern erreichen können.',
-    image: allergySeasonHeroImage,
-    imageAlt: 'Család költözik új otthonába - tiszta levegő és pollenmentes környezet',
-    date: '2024. február 1.',
-    dateDe: '1. Februar 2024',
-    author: 'Németh Kálmán',
-    authorDe: 'Kálmán Németh',
-    slug: 'allergiaszezon-pollenmentes-otthon',
-    category: 'Egészség',
-    categoryDe: 'Gesundheit',
-    readTime: '6 perc',
-    readTimeDe: '6 Min.',
-  },
-  {
-    id: 6,
-    title: 'Utángyártott szellőzőszűrők: Hogyan válasszunk, hogy ne legyen bosszúság a vége?',
-    titleDe: 'Alternativfilter für Lüftungsanlagen: Wie wählt man richtig, um Ärger zu vermeiden?',
-    excerpt:
-      'Létezik okos megtakarítás a hatékonyság feláldozása nélkül? Szakértőként eláruljuk, mire figyeljen utángyártott szűrők vásárlásakor.',
-    excerptDe:
-      'Gibt es kluges Sparen ohne Effizienzeinbußen? Als Experten verraten wir Ihnen, worauf Sie beim Kauf von Alternativfiltern achten sollten.',
-    image: aftermarketFiltersImage,
-    imageAlt: 'G4 és F7 szűrők összehasonlítása - szűrési osztályok táblázattal',
-    date: '2024. február 10.',
-    dateDe: '10. Februar 2024',
-    author: 'Németh Kálmán',
-    authorDe: 'Kálmán Németh',
-    slug: 'utangyartott-szurok-valasztas',
-    category: 'Vásárlási tanács',
-    categoryDe: 'Kaufberatung',
-    readTime: '6 perc',
-    readTimeDe: '6 Min.',
-  },
-  {
-    id: 7,
-    title: 'Az aktív szén ereje: Több, mint egy egyszerű porszűrő!',
-    titleDe: 'Die Kraft der Aktivkohle: Mehr als ein einfacher Staubfilter!',
-    excerpt:
-      'Hogyan működik az aktív szenes szűrő, és miben különbözik a hagyományos mechanikai szűréstől? Ismerd meg a MUK 10 és MUK 25 közötti különbséget, és tudd meg, mikor érdemes aktív szénhez nyúlni.',
-    excerptDe:
-      'Wie funktioniert ein Aktivkohlefilter und was unterscheidet ihn von der herkömmlichen mechanischen Filtration? Lernen Sie den Unterschied zwischen MUK 10 und MUK 25 kennen.',
-    image: activeCoalHeroImage,
-    imageAlt: 'Aktív szén granulátum szűrőanyagon - aktivált szenes levegőszűrés',
-    date: '2024. március 5.',
-    dateDe: '5. März 2024',
-    author: 'Németh Kálmán',
-    authorDe: 'Kálmán Németh',
-    slug: 'aktiv-szen-szuro-mukodes',
-    category: 'Technológia',
-    categoryDe: 'Technologie',
-    readTime: '8 perc',
-    readTimeDe: '8 Min.',
-  },
-  {
-    id: 8,
-    title: 'Ez történik a szellőztető rendszereddel, ha kispórolod a szűrőt!',
-    titleDe: 'Das passiert mit Ihrer Lüftungsanlage, wenn Sie am Filter sparen!',
-    excerpt:
-      'Valós esettanulmány: a szűrők nem luxus, hanem a rendszer pajzsa. Mutatjuk, mit okoz az elhanyagolt karbantartás a csövekben, és hogyan védheted meg a rendszered.',
-    excerptDe:
-      'Echte Fallstudie: Filter sind kein Luxus, sondern der Schutzschild der Anlage. Wir zeigen, was vernachlässigte Wartung in den Rohren anrichtet.',
-    image: dirtyFiltersImage,
-    imageAlt: 'Használt, koszos szellőztető szűrők - szűrőcsere fontossága',
-    date: '2024. március 15.',
-    dateDe: '15. März 2024',
-    author: 'Németh Kálmán',
-    authorDe: 'Kálmán Németh',
-    slug: 'mi-tortenik-ha-kisporolod-a-szurot',
-    category: 'Karbantartás',
-    categoryDe: 'Wartung',
-    readTime: '7 perc',
-    readTimeDe: '7 Min.',
-  },
-  {
-    id: 9,
-    title: 'Vigyázat! A nyirkos idő a szellőzőrendszer csendes ellensége!',
-    titleDe: 'Achtung! Feuchtigkeit ist der stille Feind Ihrer Lüftungsanlage!',
-    excerpt:
-      'Tudta, hogy a szűrők ködös, nyirkos őszi-téli időben sokkal keményebben dolgoznak, mint nyáron? A nedvesség és a por együtt csendes, de súlyos károkat okozhat.',
-    excerptDe:
-      'Wussten Sie, dass Filter bei nebligem, feuchtem Herbst-/Winterwetter viel härter arbeiten als im Sommer? Feuchtigkeit und Staub zusammen können stille, aber schwere Schäden verursachen.',
-    image: foggyMorningImage,
-    imageAlt:
-      'Ködös őszi reggel páralecsapódással az ablakon - nyirkos időjárás szellőztetési kihívásai',
-    date: '2024. március 20.',
-    dateDe: '20. März 2024',
-    author: 'Németh Kálmán',
-    authorDe: 'Kálmán Németh',
-    slug: 'nyirkos-ido-szellozorendszer-ellensege',
-    category: 'Karbantartás',
-    categoryDe: 'Wartung',
-    readTime: '6 perc',
-    readTimeDe: '6 Min.',
-  },
-]
 
 const Blog = () => {
   const { t, i18n } = useTranslation()
   const paths = usePath()
+  const { imageSrc } = useImage()
+  const blogPosts = useBlogs({ filter: () => true })
   const isGerman = i18n.language === 'de'
 
   return (
@@ -238,15 +49,11 @@ const Blog = () => {
                   <article className="h-full bg-card rounded-2xl border border-border hover:border-cyan/30 transition-all duration-300 hover:shadow-card overflow-hidden flex flex-col">
                     {/* Post Image */}
                     <div className="aspect-video bg-muted flex items-center justify-center overflow-hidden">
-                      {post.image ? (
-                        <img
-                          src={post.image}
-                          alt={post.imageAlt || (isGerman ? post.titleDe : post.title)}
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <div className="text-4xl opacity-20">📄</div>
-                      )}
+                      <img
+                        src={imageSrc(post.image)}
+                        alt={isGerman ? post.titleDe : post.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
 
                     <div className="p-6 flex flex-col flex-grow">
@@ -254,9 +61,7 @@ const Blog = () => {
                         <span className="px-3 py-1 rounded-full bg-cyan/10 text-cyan text-xs font-medium">
                           {isGerman ? post.categoryDe : post.category}
                         </span>
-                        <span className="text-muted-foreground text-xs">
-                          {isGerman ? post.readTimeDe : post.readTime}
-                        </span>
+                        <span className="text-muted-foreground text-xs">{post.readTime}</span>
                       </div>
 
                       <h2 className="text-xl font-semibold text-foreground mb-3 group-hover:text-cyan transition-colors">
@@ -271,11 +76,13 @@ const Blog = () => {
                         <div className="flex items-center gap-4 text-xs text-muted-foreground">
                           <span className="flex items-center gap-1.5">
                             <User className="w-3.5 h-3.5" />
-                            {isGerman ? post.authorDe : post.author}
+                            {isGerman
+                              ? `${post.authorFirstName} ${post.authorLastName}`
+                              : `${post.authorLastName} ${post.authorFirstName}`}
                           </span>
                           <span className="flex items-center gap-1.5">
                             <Calendar className="w-3.5 h-3.5" />
-                            {isGerman ? post.dateDe : post.date}
+                            {post.date}
                           </span>
                         </div>
                         <ArrowRight className="w-4 h-4 text-cyan opacity-0 group-hover:opacity-100 transition-opacity" />
