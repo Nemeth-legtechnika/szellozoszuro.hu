@@ -94,9 +94,7 @@ const BlogPost = () => {
 
               {/* CTA */}
               <div className="mt-12 pt-8 border-t border-border text-center">
-                <p className="text-muted-foreground mb-4">
-                  {t('blog.ctaQuestion')}
-                </p>
+                <p className="text-muted-foreground mb-4">{t('blog.ctaQuestion')}</p>
                 <Link
                   to={paths.shop}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-cyan text-primary-foreground font-medium rounded-lg hover:bg-cyan/90 transition-colors"

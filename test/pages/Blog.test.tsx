@@ -13,12 +13,14 @@ vi.mock('react-i18next', () => ({
 
 vi.mock('@/hooks/use-image', () => ({
   default: () => ({
-    imageSrc: (filename?: string) => filename ? `/resolved/${filename}` : '/placeholder.jpg',
+    imageSrc: (filename?: string) => (filename ? `/resolved/${filename}` : '/placeholder.jpg'),
   }),
 }))
 
 vi.mock('react-helmet-async', () => ({
-  Helmet: ({ children }: { children: React.ReactNode }) => <div data-testid="helmet">{children}</div>,
+  Helmet: ({ children }: { children: React.ReactNode }) => (
+    <div data-testid="helmet">{children}</div>
+  ),
 }))
 
 vi.mock('@/components/seo/JsonLdSchema', () => ({
