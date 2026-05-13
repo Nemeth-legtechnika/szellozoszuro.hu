@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 
 const STORAGE_KEY = 'cookieConsent'
 const GA_MEASUREMENT_ID = 'G-8PZY62C9EV'
+const ADS_CONVERSION_ID = 'AW-17955476750'
 
 type ConsentStatus = 'undecided' | 'granted' | 'denied'
 
@@ -20,7 +21,9 @@ function loadGtagScript() {
   document.head.appendChild(script)
 
   gtag('js', new Date())
-  gtag('config', GA_MEASUREMENT_ID)
+  const linker = { domains: ['szellozoszuro.hu', 'szelloztetes.eu'] }
+  gtag('config', GA_MEASUREMENT_ID, { linker })
+  gtag('config', ADS_CONVERSION_ID, { linker })
 }
 
 function grantConsent() {
