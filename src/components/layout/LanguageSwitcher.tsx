@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { cn } from '@/lib/utils'
 
 const LanguageSwitcher = () => {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -45,7 +45,7 @@ const LanguageSwitcher = () => {
             ? 'bg-cyan ring-2 ring-cyan ring-offset-2 ring-offset-dark'
             : 'bg-dark-secondary/50 hover:bg-dark-secondary opacity-60 hover:opacity-100',
         )}
-        aria-label="Magyar nyelv"
+        aria-label={t('a11y.hungarianLanguage')}
       >
         🇭🇺
       </button>
@@ -59,7 +59,7 @@ const LanguageSwitcher = () => {
             ? 'bg-cyan ring-2 ring-cyan ring-offset-2 ring-offset-dark'
             : 'bg-dark-secondary/50 hover:bg-dark-secondary opacity-60 hover:opacity-100',
         )}
-        aria-label="Deutsche Sprache"
+        aria-label={t('a11y.germanLanguage')}
       >
         🇩🇪
       </button>

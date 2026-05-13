@@ -1,5 +1,5 @@
 import blogPosts from '@/assets/data/blogs.json'
-import { Blog, Callout, Heading, Image, Intro } from '@/components/blog/blog'
+import { Blog, Callout, Heading, Image, Intro, SectionItem } from '@/components/blog/blog'
 import useImage from '@/hooks/use-image'
 
 type BlogData = (typeof blogPosts)[number]
@@ -16,28 +16,24 @@ const mapBlog = (blog: BlogData, imageSrc: (filename?: string) => string): Blog 
       switch (section.type) {
         case 'callout':
           return {
-            id: section.id,
             type: section.type,
             title: section.title,
             content: section.content,
           } as Callout
         case 'heading':
           return {
-            id: section.id,
             type: section.type,
             title: section.title,
             content: section.content,
           } as Heading
         case 'image':
           return {
-            id: section.id,
             type: section.type,
             image: imageSrc(section.image),
             caption: section.caption,
           } as Image
         case 'intro':
           return {
-            id: section.id,
             type: section.type,
             content: section.content,
           } as Intro
@@ -45,7 +41,7 @@ const mapBlog = (blog: BlogData, imageSrc: (filename?: string) => string): Blog 
           return null
       }
     })
-    .filter((section) => section !== null)
+    .filter((section): section is SectionItem => section !== null)
 
   return {
     ...rest,

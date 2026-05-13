@@ -8,13 +8,11 @@ import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
 import useBlogs from '@/hooks/use-blogs'
-import useImage from '@/hooks/use-image'
 import usePath from '@/hooks/use-path'
 
 const Blog = () => {
   const { t, i18n } = useTranslation()
   const paths = usePath()
-  const { imageSrc } = useImage()
   const blogPosts = useBlogs({ filter: () => true })
   const isGerman = i18n.language === 'de'
 

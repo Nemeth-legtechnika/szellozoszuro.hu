@@ -50,7 +50,7 @@ const BlogPost = () => {
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-cyan transition-colors mb-6"
             >
               <ArrowLeft className="w-4 h-4" />
-              Vissza a tudástárhoz
+              {t('blogPage.backToBlog')}
             </Link>
 
             {/* Header Card */}

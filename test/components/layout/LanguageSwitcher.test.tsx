@@ -42,7 +42,7 @@ describe('LanguageSwitcher', () => {
       </MemoryRouter>,
     )
 
-    fireEvent.click(screen.getByLabelText('Deutsche Sprache'))
+    fireEvent.click(screen.getByLabelText('a11y.germanLanguage'))
 
     expect(mockChangeLanguage).toHaveBeenCalledWith('de')
     expect(mockNavigate).toHaveBeenCalledWith('/de/shop', { replace: true })
@@ -55,7 +55,7 @@ describe('LanguageSwitcher', () => {
       </MemoryRouter>,
     )
 
-    fireEvent.click(screen.getByLabelText('Deutsche Sprache'))
+    fireEvent.click(screen.getByLabelText('a11y.germanLanguage'))
 
     expect(mockNavigate).toHaveBeenCalledWith('/de', { replace: true })
   })
@@ -69,7 +69,7 @@ describe('LanguageSwitcher', () => {
       </MemoryRouter>,
     )
 
-    fireEvent.click(screen.getByLabelText('Magyar nyelv'))
+    fireEvent.click(screen.getByLabelText('a11y.hungarianLanguage'))
 
     expect(mockChangeLanguage).toHaveBeenCalledWith('hu')
     expect(mockNavigate).toHaveBeenCalledWith('/shop', { replace: true })
@@ -84,7 +84,7 @@ describe('LanguageSwitcher', () => {
       </MemoryRouter>,
     )
 
-    fireEvent.click(screen.getByLabelText('Magyar nyelv'))
+    fireEvent.click(screen.getByLabelText('a11y.hungarianLanguage'))
 
     expect(mockNavigate).toHaveBeenCalledWith('/', { replace: true })
   })
@@ -96,7 +96,7 @@ describe('LanguageSwitcher', () => {
       </MemoryRouter>,
     )
 
-    fireEvent.click(screen.getByLabelText('Magyar nyelv'))
+    fireEvent.click(screen.getByLabelText('a11y.hungarianLanguage'))
 
     expect(mockChangeLanguage).not.toHaveBeenCalled()
     expect(mockNavigate).not.toHaveBeenCalled()

@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async'
+import { useTranslation } from 'react-i18next'
 
 import BlogPreview from '@/components/home/BlogPreview'
 import BrandSelector from '@/components/home/BrandSelector'
@@ -11,18 +12,14 @@ import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
 
 const Index = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Szellőztető Szűrők és Szerviz | Országos Lefedettség | Németh Légtechnika</title>
-        <meta
-          name="description"
-          content="Minőségi hővisszanyerő szűrők szakértőtől. Országos szervizpartneri hálózatunkon keresztül professzionális karbantartást és tisztítást biztosítunk mindenhol Magyarországon!"
-        />
-        <meta
-          name="keywords"
-          content="országos szellőztető szerviz, hővisszanyerő tisztítás Magyarország, szellőztető rendszer karbantartás partnerhálózat, szellőztető szűrő, hővisszanyerő szűrő, Vaillant szűrő, Helios szűrő"
-        />
+        <title>{t('homePage.pageTitle')}</title>
+        <meta name="description" content={t('homePage.pageDescription')} />
+        <meta name="keywords" content={t('homePage.pageKeywords')} />
         <link rel="canonical" href="https://szellozoszuro.hu/" />
       </Helmet>
 

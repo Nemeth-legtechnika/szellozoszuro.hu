@@ -11,15 +11,15 @@ type SectionProps = {
 const Section = ({ item }: SectionProps) => {
   switch (item.type) {
     case 'callout':
-      return <Callout id={item.id} title={item.title} content={item.content} />
+      return <Callout title={item.title} content={item.content} />
     case 'heading':
-      return <Heading id={item.id} title={item.title} content={item.content} />
+      return <Heading title={item.title} content={item.content} />
     case 'image':
-      return <Image id={item.id} src={item.image} caption={item.caption} />
+      return <Image src={item.image} caption={item.caption} />
     case 'intro':
-      return <Intro id={item.id} content={item.content} />
+      return <Intro content={item.content} />
     default:
-      return null
+      return item satisfies never
   }
 }
 
