@@ -115,7 +115,9 @@
     "titleHighlight": "Artikel",
     "description": "Erfahren Sie mehr über die Funktionsweise und Wartung von Lüftungsanlagen in unseren Fachartikeln.",
     "viewAll": "Alle Artikel anzeigen",
-    "readMore": "Weiterlesen"
+    "readMore": "Weiterlesen",
+    "ctaQuestion": "Möchten Sie die passenden Filter bestellen?",
+    "ctaButton": "Filter durchsuchen"
   },
   "brandSelector": {
     "title": "Auswahl nach",

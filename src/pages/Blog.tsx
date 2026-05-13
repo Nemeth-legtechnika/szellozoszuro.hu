@@ -50,7 +50,7 @@ const Blog = () => {
                     {/* Post Image */}
                     <div className="aspect-video bg-muted flex items-center justify-center overflow-hidden">
                       <img
-                        src={imageSrc(post.image)}
+                        src={post.image}
                         alt={isGerman ? post.titleDe : post.title}
                         className="w-full h-full object-cover"
                       />

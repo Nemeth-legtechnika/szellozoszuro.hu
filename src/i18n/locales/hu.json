@@ -115,7 +115,9 @@
     "titleHighlight": "cikkek",
     "description": "Ismerd meg a szellőztetőrendszerek működését és karbantartását szakértő cikkeinkből.",
     "viewAll": "Összes cikk megtekintése",
-    "readMore": "Tovább olvasom"
+    "readMore": "Tovább olvasom",
+    "ctaQuestion": "Szeretné megrendelni a megfelelő szűrőket?",
+    "ctaButton": "Szűrők böngészése"
   },
   "brandSelector": {
     "title": "Válassz",
