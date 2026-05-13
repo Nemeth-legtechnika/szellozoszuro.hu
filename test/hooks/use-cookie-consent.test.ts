@@ -40,7 +40,9 @@ describe('useCookieConsent', () => {
       analytics_storage: 'granted',
     })
     expect(mockGtag).toHaveBeenCalledWith('js', expect.any(Date))
-    expect(mockGtag).toHaveBeenCalledWith('config', 'G-8PZY62C9EV')
+    const linker = { domains: ['szellozoszuro.hu', 'szelloztetes.eu'] }
+    expect(mockGtag).toHaveBeenCalledWith('config', 'G-8PZY62C9EV', { linker })
+    expect(mockGtag).toHaveBeenCalledWith('config', 'AW-17955476750', { linker })
     expect(getGtagScripts()).toHaveLength(1)
   })
 
