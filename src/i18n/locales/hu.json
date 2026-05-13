@@ -115,7 +115,9 @@
     "titleHighlight": "cikkek",
     "description": "Ismerd meg a szellőztetőrendszerek működését és karbantartását szakértő cikkeinkből.",
     "viewAll": "Összes cikk megtekintése",
-    "readMore": "Tovább olvasom"
+    "readMore": "Tovább olvasom",
+    "ctaQuestion": "Szeretné megrendelni a megfelelő szűrőket?",
+    "ctaButton": "Szűrők böngészése"
   },
   "brandSelector": {
     "title": "Válassz",
@@ -257,6 +259,11 @@
     "ctaDescription": "Vedd fel velünk a kapcsolatot, és segítünk megtalálni a tökéletes szűrőt.",
     "ctaButton": "Kapcsolatfelvétel"
   },
+  "homePage": {
+    "pageTitle": "Szellőztető Szűrők és Szerviz | Országos Lefedettség | Németh Légtechnika",
+    "pageDescription": "Minőségi hővisszanyerő szűrők szakértőtől. Országos szervizpartneri hálózatunkon keresztül professzionális karbantartást és tisztítást biztosítunk mindenhol Magyarországon!",
+    "pageKeywords": "országos szellőztető szerviz, hővisszanyerő tisztítás Magyarország, szellőztető rendszer karbantartás partnerhálózat, szellőztető szűrő, hővisszanyerő szűrő, Vaillant szűrő, Helios szűrő"
+  },
   "contact": {
     "pageTitle": "Kapcsolat",
     "pageDescription": "Kérdésed van a szűrőkkel kapcsolatban? Segítünk megtalálni a géped típusához illő megoldást.",
@@ -277,7 +284,8 @@
       "success": "Üzenet elküldve!",
       "successDescription": "Köszönjük megkeresését! Hamarosan felvesszük Önnel a kapcsolatot.",
       "error": "Hiba történt",
-      "errorDescription": "Az üzenet küldése sikertelen. Kérjük, próbálja újra később."
+      "errorDescription": "Az üzenet küldése sikertelen. Kérjük, próbálja újra később.",
+      "emailSubjectPrefix": "Kontakt"
     },
     "orderContact": "Rendelés, Szállítás",
     "technicalContact": "Szakmai, technikai kérdések",
@@ -315,7 +323,7 @@
     "facebookTitle": "Naprakész hírek és szakmai érdekességek",
     "facebookDescription": "Kövessen minket Facebookon is, ahol rendszeresen osztunk meg friss híreket, karbantartási tippeket és aktualitásokat a szellőztetés világából.",
     "facebookButton": "Irány a Facebook oldalunk",
-    "backToBlog": "Vissza a Tudástárhoz",
+    "backToBlog": "Vissza a tudástárhoz",
     "readTime": "perc"
   },
   "terms": {
@@ -466,6 +474,10 @@
     "title": "404",
     "description": "Az oldal nem található",
     "backHome": "Vissza a főoldalra"
+  },
+  "a11y": {
+    "hungarianLanguage": "Magyar nyelv",
+    "germanLanguage": "Német nyelv"
   },
   "icon": {
     "facebook": "Facebook ikon"

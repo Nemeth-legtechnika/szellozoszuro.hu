@@ -115,7 +115,9 @@
     "titleHighlight": "Artikel",
     "description": "Erfahren Sie mehr über die Funktionsweise und Wartung von Lüftungsanlagen in unseren Fachartikeln.",
     "viewAll": "Alle Artikel anzeigen",
-    "readMore": "Weiterlesen"
+    "readMore": "Weiterlesen",
+    "ctaQuestion": "Möchten Sie die passenden Filter bestellen?",
+    "ctaButton": "Filter durchsuchen"
   },
   "brandSelector": {
     "title": "Auswahl nach",
@@ -257,6 +259,11 @@
     "ctaDescription": "Kontaktieren Sie uns, und wir helfen Ihnen, den perfekten Filter zu finden.",
     "ctaButton": "Kontakt aufnehmen"
   },
+  "homePage": {
+    "pageTitle": "Lüftungsfilter und Service | Landesweite Abdeckung | Németh Légtechnika",
+    "pageDescription": "Qualitäts-Wärmerückgewinnungsfilter vom Fachmann. Über unser landesweites Servicepartner-Netzwerk bieten wir professionelle Wartung und Reinigung in ganz Ungarn!",
+    "pageKeywords": "landesweiter Lüftungsservice, Wärmerückgewinnung Reinigung Ungarn, Lüftungssystem Wartung Partnernetzwerk, Lüftungsfilter, Wärmerückgewinnungsfilter, Vaillant Filter, Helios Filter"
+  },
   "contact": {
     "pageTitle": "Kontakt",
     "pageDescription": "Haben Sie Fragen zu Filtern? Wir helfen Ihnen, die passende Lösung für Ihren Gerätetyp zu finden.",
@@ -277,7 +284,8 @@
       "success": "Nachricht gesendet!",
       "successDescription": "Vielen Dank für Ihre Anfrage! Wir werden uns in Kürze bei Ihnen melden.",
       "error": "Fehler aufgetreten",
-      "errorDescription": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut."
+      "errorDescription": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.",
+      "emailSubjectPrefix": "Kontakt"
     },
     "orderContact": "Bestellung, Versand",
     "technicalContact": "Fachliche, technische Fragen",
@@ -466,6 +474,10 @@
     "title": "404",
     "description": "Seite nicht gefunden",
     "backHome": "Zurück zur Startseite"
+  },
+  "a11y": {
+    "hungarianLanguage": "Ungarische Sprache",
+    "germanLanguage": "Deutsche Sprache"
   },
   "icon": {
     "facebook": "Facebook Icon"

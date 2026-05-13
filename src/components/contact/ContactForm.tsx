@@ -52,7 +52,7 @@ const ContactForm = () => {
 
     setIsSubmitting(true)
 
-    const subject = encodeURIComponent(`Kontakt: ${data.name}`)
+    const subject = encodeURIComponent(`${t('contact.form.emailSubjectPrefix')}: ${data.name}`)
     const body = encodeURIComponent(
       `${t('contact.form.name')}: ${data.name}\n` +
         `${t('contact.form.email')}: ${data.email}\n` +
