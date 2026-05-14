@@ -12,6 +12,11 @@ describe('robots.txt', () => {
     expect(content).toContain('Allow: /')
   })
 
+  it('disallows non-public routes', () => {
+    expect(content).toContain('Disallow: /api/')
+    expect(content).toContain('Disallow: /admin/')
+  })
+
   it('references sitemap', () => {
     expect(content).toContain('Sitemap: https://szellozoszuro.hu/sitemap.xml')
   })
