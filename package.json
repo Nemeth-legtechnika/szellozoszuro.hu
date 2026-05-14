@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "node scripts/generate-sitemap.mts",
+    "postbuild": "tsx scripts/generate-sitemap.mts",
     "prerender": "tsx scripts/prerender.mts",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",

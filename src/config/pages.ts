@@ -1,10 +1,21 @@
-export interface PageConfig {
+export type SitemapChangeFreq = 'daily' | 'weekly' | 'monthly' | 'yearly'
+
+export type PageConfig = {
   key: string
   path: string
   prerender: boolean
-  sitemapPriority?: string
-  sitemapChangefreq?: 'daily' | 'weekly' | 'monthly' | 'yearly'
+  sitemapPriority: string
+  sitemapChangefreq: SitemapChangeFreq
 }
+
+export type DynamicRouteConfig = {
+  pattern: string
+  prerender: boolean
+  sitemapPriority: string
+  sitemapChangefreq: SitemapChangeFreq
+}
+
+export type DynamicRoutes = Record<string, DynamicRouteConfig>
 
 export const pages = [
   { key: 'home', path: '/', prerender: true, sitemapPriority: '1.0', sitemapChangefreq: 'weekly' },
@@ -80,6 +91,6 @@ export const dynamicRoutes = {
     pattern: '/blog/:slug',
     prerender: true,
     sitemapPriority: '0.7',
-    sitemapChangefreq: 'monthly' as const,
+    sitemapChangefreq: 'monthly',
   },
-}
+} as const satisfies DynamicRoutes

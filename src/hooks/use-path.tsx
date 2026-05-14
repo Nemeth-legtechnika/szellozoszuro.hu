@@ -18,11 +18,13 @@ export const pagePaths = (langPrefix: string = ''): PagePaths => {
     string
   >
 
+  const blogBase = pathMap.blog
+
   return {
     ...pathMap,
     blog: {
-      base: `${langPrefix}/blog`,
-      getPost: (slug: string): string => `${langPrefix}/blog/${slug}`,
+      base: blogBase,
+      getPost: (slug: string): string => `${blogBase}/${slug}`,
     },
   }
 }

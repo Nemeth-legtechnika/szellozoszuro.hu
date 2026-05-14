@@ -1,13 +1,12 @@
 import { readFileSync } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { pages } from '../src/config/pages.ts'
+import { DynamicRouteConfig, dynamicRoutes, pages } from '../src/config/pages.ts'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-interface BlogSlug {
-  slug: string
+export type BlogRouteConfig = DynamicRouteConfig & {
   date: string
 }
 
@@ -15,10 +14,14 @@ export function getStaticPages() {
   return pages
 }
 
-export function getBlogSlugs(): BlogSlug[] {
+export function getBlogSlugs(): BlogRouteConfig[] {
   const blogsPath = resolve(__dirname, '..', 'src', 'assets', 'data', 'blogs.json')
   const blogs = JSON.parse(readFileSync(blogsPath, 'utf-8'))
-  return blogs.map((b: { slug: string; date: string }) => ({ slug: b.slug, date: b.date }))
+  return blogs.map((b: { slug: string; date: string }) => ({
+    ...dynamicRoutes.blogPost,
+    pattern: dynamicRoutes.blogPost.pattern.replace(':slug', b.slug),
+    date: b.date,
+  }))
 }
 
 export function getAllPrerenderRoutes(): string[] {
@@ -31,9 +34,9 @@ export function getAllPrerenderRoutes(): string[] {
     routes.push(page.path === '/' ? '/de' : `/de${page.path}`)
   }
 
-  for (const { slug } of blogSlugs) {
-    routes.push(`/blog/${slug}`)
-    routes.push(`/de/blog/${slug}`)
+  for (const post of blogSlugs) {
+    routes.push(post.pattern)
+    routes.push(`/de${post.pattern}`)
   }
 
   return routes

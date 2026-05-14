@@ -86,20 +86,24 @@ function main() {
 
   // Blog post routes — Hungarian
   for (const post of blogPosts) {
-    const huPath = `/blog/${post.slug}`
-    const dePath = `/de/blog/${post.slug}`
+    const huPath = post.pattern
+    const dePath = `/de${post.pattern}`
     const loc = `${BASE_URL}${huPath}`
     const lastmod = post.date.replace(/\./g, '-')
-    urls.push(buildUrlEntry(loc, lastmod, 'monthly', '0.7', huPath, dePath))
+    urls.push(
+      buildUrlEntry(loc, lastmod, post.sitemapChangefreq, post.sitemapPriority, huPath, dePath),
+    )
   }
 
   // Blog post routes — German
   for (const post of blogPosts) {
-    const huPath = `/blog/${post.slug}`
-    const dePath = `/de/blog/${post.slug}`
+    const huPath = post.pattern
+    const dePath = `/de${post.pattern}`
     const loc = `${BASE_URL}${dePath}`
     const lastmod = post.date.replace(/\./g, '-')
-    urls.push(buildUrlEntry(loc, lastmod, 'monthly', '0.7', huPath, dePath))
+    urls.push(
+      buildUrlEntry(loc, lastmod, post.sitemapChangefreq, post.sitemapPriority, huPath, dePath),
+    )
   }
 
   const xml = [
