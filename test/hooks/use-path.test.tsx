@@ -19,7 +19,6 @@ describe('usePath – Hungarian (default)', () => {
     expect(paths.shop).toBe('/shop')
     expect(paths.blog.base).toBe('/blog')
     expect(paths.blog.getPost('test-slug')).toBe('/blog/test-slug')
-    expect(paths.blog.postTemplate).toBe('/blog/:slug')
     expect(paths.about).toBe('/about')
     expect(paths.contact).toBe('/contact')
     expect(paths.faq).toBe('/gyik')

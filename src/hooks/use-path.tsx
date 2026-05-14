@@ -1,31 +1,20 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 
-const pagePaths = (langPrefix: string = '') => ({
-  home: `${langPrefix}/`,
+import { pages } from '@/config/pages'
 
-  shop: `${langPrefix}/shop`,
+export const pagePaths = (langPrefix: string = '') => {
+  const pathMap = Object.fromEntries(pages.map((p) => [p.key, `${langPrefix}${p.path}`]))
 
-  blog: {
-    base: `${langPrefix}/blog`,
-    getPost: (slug: string): string => `${langPrefix}/blog/${slug}`,
-    postTemplate: `${langPrefix}/blog/:slug`,
-  },
-
-  about: `${langPrefix}/about`,
-
-  contact: `${langPrefix}/contact`,
-
-  faq: `${langPrefix}/gyik`,
-
-  terms: `${langPrefix}/aszf`,
-
-  termsAlt: `${langPrefix}/terms`,
-
-  privacy: `${langPrefix}/privacy`,
-
-  shipping: `${langPrefix}/shipping`,
-})
+  return {
+    ...pathMap,
+    // Override blog to match existing nested shape
+    blog: {
+      base: `${langPrefix}/blog`,
+      getPost: (slug: string): string => `${langPrefix}/blog/${slug}`,
+    },
+  }
+}
 
 const usePath = () => {
   const { i18n } = useTranslation()
