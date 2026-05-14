@@ -8,7 +8,7 @@ import blogPosts from '@/assets/data/blogs.json'
 const BASE_URL = 'https://szellozoszuro.hu'
 const tmpDir = resolve(__dirname, '../../tmp-test-sitemap')
 const outputPath = resolve(tmpDir, 'sitemap.xml')
-const scriptPath = resolve(__dirname, '../../scripts/generate-sitemap.mjs')
+const scriptPath = resolve(__dirname, '../../scripts/generate-sitemap.mts')
 
 const staticRoutes = [
   '/',
@@ -28,7 +28,7 @@ describe('generate-sitemap', () => {
 
   beforeAll(() => {
     mkdirSync(tmpDir, { recursive: true })
-    execSync(`node ${scriptPath} --output ${outputPath}`, {
+    execSync(`npx tsx ${scriptPath} --output ${outputPath}`, {
       cwd: resolve(__dirname, '../..'),
     })
     xml = readFileSync(outputPath, 'utf-8')
