@@ -1,14 +1,25 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { pages } from '@/config/pages'
+import { type PageKey, pages } from '@/config/pages'
 
-export const pagePaths = (langPrefix: string = '') => {
-  const pathMap = Object.fromEntries(pages.map((p) => [p.key, `${langPrefix}${p.path}`]))
+type PagePaths = {
+  [K in Exclude<PageKey, 'blog'>]: string
+} & {
+  blog: {
+    base: string
+    getPost: (slug: string) => string
+  }
+}
+
+export const pagePaths = (langPrefix: string = ''): PagePaths => {
+  const pathMap = Object.fromEntries(pages.map((p) => [p.key, `${langPrefix}${p.path}`])) as Record<
+    PageKey,
+    string
+  >
 
   return {
     ...pathMap,
-    // Override blog to match existing nested shape
     blog: {
       base: `${langPrefix}/blog`,
       getPost: (slug: string): string => `${langPrefix}/blog/${slug}`,
