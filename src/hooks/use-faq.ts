@@ -109,9 +109,7 @@ const useFAQ = () => {
     },
   ]
 
-  const homeItems = categories
-    .flatMap((c) => c.questions)
-    .filter((q) => q.showOnHome)
+  const homeItems = categories.flatMap((c) => c.questions).filter((q) => q.showOnHome)
 
   const allItems = categories.flatMap((category) =>
     category.questions.map((q) => ({
