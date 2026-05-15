@@ -33,4 +33,14 @@ describe('useCanonical', () => {
     mockPathname = '/blog/my-post'
     expect(useCanonical()).toBe('https://szellozoszuro.hu/blog/my-post')
   })
+
+  it('maps /terms alias to /aszf canonical', () => {
+    mockPathname = '/terms'
+    expect(useCanonical()).toBe('https://szellozoszuro.hu/aszf')
+  })
+
+  it('maps /de/terms alias to /de/aszf canonical', () => {
+    mockPathname = '/de/terms'
+    expect(useCanonical()).toBe('https://szellozoszuro.hu/de/aszf')
+  })
 })

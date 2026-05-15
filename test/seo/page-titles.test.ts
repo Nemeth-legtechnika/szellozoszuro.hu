@@ -3,8 +3,6 @@ import { describe, expect, it } from 'vitest'
 import de from '@/i18n/locales/de.json'
 import hu from '@/i18n/locales/hu.json'
 
-const SUFFIX_LENGTH = ' | szellozoszuro.hu'.length // 17 chars
-const _MAX_TITLE_LENGTH = 60 - SUFFIX_LENGTH // 43 chars for the title value
 const MAX_DESCRIPTION_LENGTH = 155
 
 const TARGET_KEYWORDS_HU = ['hővisszanyerő', 'szűrő', 'szellőző', 'légtechnikai', 'szűrőcsere']

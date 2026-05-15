@@ -16,28 +16,32 @@ import usePath from '@/hooks/use-path'
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>()
   const paths = usePath()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const canonicalUrl = useCanonical()
   const posts = useBlogs({ filter: (p) => p.slug === slug })
+  const isGerman = i18n.language === 'de'
 
   if (posts.length === 0) {
     return <Navigate to={paths.blog.base} replace />
   }
 
   const post = posts[0]
+  const title = isGerman ? post.titleDe : post.title
+  const excerpt = isGerman ? post.excerptDe : post.excerpt
+  const alt = isGerman ? post.altDe : post.alt
   const author = `${post.authorFirstName} ${post.authorLastName}`
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{post.title} | szellozoszuro.hu</title>
-        <meta name="description" content={post.excerpt} />
+        <title>{title} | szellozoszuro.hu</title>
+        <meta name="description" content={excerpt} />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
 
       <SeoMeta
-        title={`${post.title} | szellozoszuro.hu`}
-        description={post.excerpt}
+        title={`${title} | szellozoszuro.hu`}
+        description={excerpt}
         url={canonicalUrl}
         image={post.image}
         type="article"
@@ -48,7 +52,7 @@ const BlogPost = () => {
 
       <main className="pt-20 lg:pt-24">
         {/* Hero Image */}
-        <Hero image={post.image} alt={post.alt} />
+        <Hero image={post.image} alt={alt} />
 
         {/* Article Content */}
         <article className="container mx-auto px-4 -mt-20 relative z-10">
