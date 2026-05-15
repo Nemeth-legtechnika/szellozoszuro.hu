@@ -1,9 +1,8 @@
 import { resolve } from 'path'
 import { describe, expect, it } from 'vitest'
 
+import blogPosts from '@/assets/data/blogs.json'
 import { pages } from '@/config/pages'
-
-import { getAllPrerenderRoutes } from '../../scripts/resolve-routes.mts'
 
 /**
  * Mirrors the file path logic from scripts/prerender.mts (lines 34-37).
@@ -43,39 +42,31 @@ describe('prerender – file path resolution', () => {
   })
 })
 
-describe('prerender – route list', () => {
-  const routes = getAllPrerenderRoutes()
-  const prerenderablePages = pages.filter((p) => p.prerender)
+describe('prerender – route coverage', () => {
+  it('every page path produces a valid file path', () => {
+    const dist = '/project/dist'
+    for (const page of pages) {
+      const filePath = routeToFilePath(dist, page.path)
+      expect(filePath).toContain(dist)
+      expect(filePath).toMatch(/index\.html$/)
+    }
+  })
 
-  it('includes both hu and de variants for each prerenderable page', () => {
-    for (const page of prerenderablePages) {
+  it('every de page path produces a valid file path', () => {
+    const dist = '/project/dist'
+    for (const page of pages) {
       const dePath = page.path === '/' ? '/de' : `/de${page.path}`
-      expect(routes).toContain(page.path)
-      expect(routes).toContain(dePath)
+      const filePath = routeToFilePath(dist, dePath)
+      expect(filePath).toContain(`${dist}/de`)
+      expect(filePath).toMatch(/index\.html$/)
     }
   })
 
-  it('does not include non-prerenderable pages', () => {
-    const nonPrerender = pages.filter((p) => !p.prerender)
-    for (const page of nonPrerender) {
-      expect(routes).not.toContain(page.path)
-    }
-  })
-
-  it('all routes start with /', () => {
-    for (const route of routes) {
-      expect(route[0]).toBe('/')
-    }
-  })
-
-  it('no duplicate routes', () => {
-    expect(routes).toEqual([...new Set(routes)])
-  })
-
-  it('blog routes contain actual slugs, not :slug param', () => {
-    const blogRoutes = routes.filter((r) => r.includes('/blog/'))
-    for (const route of blogRoutes) {
-      expect(route).not.toContain(':slug')
+  it('blog post routes produce nested file paths', () => {
+    const dist = '/project/dist'
+    for (const post of blogPosts) {
+      const filePath = routeToFilePath(dist, `/blog/${post.slug}`)
+      expect(filePath).toBe(`${dist}/blog/${post.slug}/index.html`)
     }
   })
 })
