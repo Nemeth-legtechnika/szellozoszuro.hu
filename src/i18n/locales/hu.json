@@ -148,7 +148,7 @@
   },
   "shop": {
     "pageTitle": "Szűrők hővisszanyerős gépekhez",
-    "pageDescription": "Válassz a forgalmazott márkáink közül és találd meg a géped típusához illő szűrőt webáruházunkban.",
+    "pageDescription": "Szellőző szűrő csere egyszerűen: Zehnder, Daikin, Vaillant szűrők egy helyen. Gyári és utángyártott hővisszanyerős szűrők széles választéka.",
     "categories": {
       "oem": {
         "title": "Gyári szűrők",
@@ -253,20 +253,20 @@
     },
     "quote": "Minden szűrőcsere mögött a tiszta levegő és az egészséges otthon iránti elkötelezettségünk áll.",
     "quoteFamily": "– A Németh család",
-    "pageTitle": "Rólunk | Németh Légtechnika Kft. - 15+ év szakértelem, országos lefedettség",
-    "pageDescription": "Ismerje meg a Németh Légtechnika Kft. történetét: 15+ év légtechnikai tapasztalat, családi vállalkozás Sopronból. Országos szervizpartneri hálózattal rendelkezünk!",
+    "pageTitle": "Légtechnikai szűrő szakértők – Rólunk",
+    "pageDescription": "Németh Légtechnika: 15+ év tapasztalat hővisszanyerős szűrők forgalmazásában. Családi vállalkozás Sopronból, országos kiszállítással.",
     "ctaTitle": "Kérdésed van?",
     "ctaDescription": "Vedd fel velünk a kapcsolatot, és segítünk megtalálni a tökéletes szűrőt.",
     "ctaButton": "Kapcsolatfelvétel"
   },
   "homePage": {
-    "pageTitle": "Szellőztető Szűrők és Szerviz | Országos Lefedettség | Németh Légtechnika",
-    "pageDescription": "Minőségi hővisszanyerő szűrők szakértőtől. Országos szervizpartneri hálózatunkon keresztül professzionális karbantartást és tisztítást biztosítunk mindenhol Magyarországon!",
+    "pageTitle": "Hővisszanyerős szűrő webáruház",
+    "pageDescription": "Hővisszanyerős szűrők Zehnder, Daikin, Vaillant és más márkákhoz. Gyári és utángyártott légtechnikai szűrők gyors szállítással, szakértő tanácsadással.",
     "pageKeywords": "országos szellőztető szerviz, hővisszanyerő tisztítás Magyarország, szellőztető rendszer karbantartás partnerhálózat, szellőztető szűrő, hővisszanyerő szűrő, Vaillant szűrő, Helios szűrő"
   },
   "contact": {
-    "pageTitle": "Kapcsolat",
-    "pageDescription": "Kérdésed van a szűrőkkel kapcsolatban? Segítünk megtalálni a géped típusához illő megoldást.",
+    "pageTitle": "Szűrő tanácsadás – Kapcsolat",
+    "pageDescription": "Kérdése van a hővisszanyerős szűrőcserével kapcsolatban? Szakértőink segítenek a megfelelő légtechnikai szűrő kiválasztásában.",
     "nationalCoverage": "Országos lefedettség:",
     "nationalCoverageText": "Bár központunk Sopronban található, szervizpartnereink révén az ország egész területén elérhetőek vagyunk!",
     "form": {
@@ -305,8 +305,8 @@
     "registrationNumber": "Cégjegyzékszám"
   },
   "faqPage": {
-    "pageTitle": "Gyakori Kérdések",
-    "pageDescription": "Összegyűjtöttük a leggyakrabban felmerülő kérdéseket a szűrőválasztásról, cseréről és karbantartásról. Nem találod a választ? Hívj minket!",
+    "pageTitle": "Hővisszanyerő szűrőcsere GYIK",
+    "pageDescription": "Válaszok a hővisszanyerős szűrőcserével kapcsolatos kérdésekre: szűrőválasztás, beépítés, karbantartás. Zehnder, Vaillant, Daikin szűrő tippek.",
     "categories": {
       "filterSelection": "Szűrőválasztás",
       "maintenance": "Szűrőcsere és karbantartás",
@@ -318,8 +318,8 @@
     "contactButton": "Kapcsolatfelvétel"
   },
   "blogPage": {
-    "pageTitle": "Tudástár",
-    "pageDescription": "Hasznos cikkek a szellőztetésről, szűrőkarbantartásról és az egészséges beltéri levegőről. A szelloztetes.eu szakmai támogatásával, 15+ év tapasztalattal.",
+    "pageTitle": "Szellőző szűrő tudástár – Blog",
+    "pageDescription": "Cikkek a hővisszanyerős szűrőcseréről, karbantartásról és a tiszta beltéri levegőről. Szakmai tippek légtechnikai szűrők gondozásához.",
     "facebookTitle": "Naprakész hírek és szakmai érdekességek",
     "facebookDescription": "Kövessen minket Facebookon is, ahol rendszeresen osztunk meg friss híreket, karbantartási tippeket és aktualitásokat a szellőztetés világából.",
     "facebookButton": "Irány a Facebook oldalunk",
@@ -327,8 +327,8 @@
     "readTime": "perc"
   },
   "terms": {
-    "pageTitle": "Általános Szerződési Feltételek",
-    "pageDescription": "A közöttünk létrejövő szerződés tartalmát – a vonatkozó kötelező érvényű jogszabályok rendelkezései mellett – a jelen ÁSZF, valamint a honlapon található további tájékoztatások határozzák meg.",
+    "pageTitle": "ÁSZF – Szűrő vásárlási feltételek",
+    "pageDescription": "A szellozoszuro.hu hővisszanyerős szűrő webáruház általános szerződési feltételei: rendelés, fizetés, elállás és garancia.",
     "toc": "Tartalomjegyzék",
     "sections": {
       "provider": {
@@ -381,8 +381,8 @@
     "checkoutNote": "Megjegyzés: A vásárlás a külső szelloztetes.eu webáruházon keresztül történik, ahol a pénztár lépésnél szükséges elfogadni az ÁSZF-et a megrendelés véglegesítéséhez."
   },
   "privacy": {
-    "pageTitle": "Adatvédelmi Irányelvek",
-    "pageDescription": "A Németh Légtechnika Kft. elkötelezett a személyes adatok védelme mellett, és az Európai Unió Általános Adatvédelmi Rendelete (GDPR) alapján az alábbi tájékoztatást adja.",
+    "pageTitle": "Adatvédelem – Szűrő webáruház",
+    "pageDescription": "A szellozoszuro.hu légtechnikai szűrő webáruház adatvédelmi tájékoztatója. GDPR-megfelelő adatkezelés a Németh Légtechnika Kft.-nél.",
     "dataController": "Az Adatkezelő adatai",
     "mainPoints": "Főbb adatkezelési pontok",
     "sections": {
@@ -442,8 +442,8 @@
     "questionsText": "Személyes adataival kapcsolatos kérdéseivel forduljon hozzánk bizalommal:"
   },
   "shipping": {
-    "pageTitle": "Szállítási információk",
-    "pageDescription": "Gyors és megbízható kiszállítás az egész országban. Raktárkészletről azonnal, rendelésre termékek megbízható határidővel.",
+    "pageTitle": "Szűrő szállítás – Gyors kiszállítás",
+    "pageDescription": "Hővisszanyerős szűrők gyors kiszállítása: raktárról 24 órán belül, GLS futárral 1-3 munkanap. Országos szállítás, utánvét is.",
     "fastDeliveryTitle": "Gyors kiszállítás raktárról",
     "fastDeliveryText": "A raktáron lévő termékeket munkanapokon 24 órán belül átadjuk a futárszolgálatnak. Ez azt jelenti, hogy a legtöbb esetben 1-3 munkanapon belül megérkezik a csomagod!",
     "inStock": "Raktáron",

@@ -8,38 +8,51 @@ import Section from '@/components/blog/section'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
+import SeoMeta from '@/components/seo/SeoMeta'
 import useBlogs from '@/hooks/use-blogs'
+import useCanonical from '@/hooks/use-canonical'
 import usePath from '@/hooks/use-path'
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>()
   const paths = usePath()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const canonicalUrl = useCanonical()
   const posts = useBlogs({ filter: (p) => p.slug === slug })
+  const isGerman = i18n.language === 'de'
 
   if (posts.length === 0) {
     return <Navigate to={paths.blog.base} replace />
   }
 
   const post = posts[0]
-
+  const title = isGerman ? post.titleDe : post.title
+  const excerpt = isGerman ? post.excerptDe : post.excerpt
+  const alt = isGerman ? post.altDe : post.alt
   const author = `${post.authorFirstName} ${post.authorLastName}`
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{post.title} | szellozoszuro.hu</title>
-        <meta name="description" content={post.excerpt} />
-        <link rel="canonical" href={`https://szellozoszuro.hu/blog/${post.slug}`} />
+        <title>{title} | szellozoszuro.hu</title>
+        <meta name="description" content={excerpt} />
+        <link rel="canonical" href={canonicalUrl} />
       </Helmet>
 
+      <SeoMeta
+        title={`${title} | szellozoszuro.hu`}
+        description={excerpt}
+        url={canonicalUrl}
+        image={post.image}
+        type="article"
+      />
       <JsonLdSchema includeLocalBusiness={false} includeOrganization={true} />
 
       <Header />
 
       <main className="pt-20 lg:pt-24">
         {/* Hero Image */}
-        <Hero image={post.image} title={post.title} />
+        <Hero image={post.image} alt={alt} />
 
         {/* Article Content */}
         <article className="container mx-auto px-4 -mt-20 relative z-10">

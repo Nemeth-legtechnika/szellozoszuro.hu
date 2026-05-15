@@ -7,11 +7,14 @@ import FacebookCard from '@/components/common/FacebookCard'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
+import SeoMeta from '@/components/seo/SeoMeta'
 import useBlogs from '@/hooks/use-blogs'
+import useCanonical from '@/hooks/use-canonical'
 import usePath from '@/hooks/use-path'
 
 const Blog = () => {
   const { t, i18n } = useTranslation()
+  const canonicalUrl = useCanonical()
   const paths = usePath()
   const blogPosts = useBlogs({ filter: () => true })
   const isGerman = i18n.language === 'de'
@@ -21,8 +24,14 @@ const Blog = () => {
       <Helmet>
         <title>{t('blogPage.pageTitle')} | szellozoszuro.hu</title>
         <meta name="description" content={t('blogPage.pageDescription')} />
+        <link rel="canonical" href={canonicalUrl} />
       </Helmet>
 
+      <SeoMeta
+        title={`${t('blogPage.pageTitle')} | szellozoszuro.hu`}
+        description={t('blogPage.pageDescription')}
+        url={canonicalUrl}
+      />
       <JsonLdSchema includeLocalBusiness={false} includeOrganization={true} />
 
       <Header />
@@ -49,7 +58,7 @@ const Blog = () => {
                     <div className="aspect-video bg-muted flex items-center justify-center overflow-hidden">
                       <img
                         src={post.image}
-                        alt={isGerman ? post.titleDe : post.title}
+                        alt={isGerman ? post.altDe : post.alt}
                         className="w-full h-full object-cover"
                       />
                     </div>

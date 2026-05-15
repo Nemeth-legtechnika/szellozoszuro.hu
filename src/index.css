@@ -166,6 +166,10 @@
 }
 
 @layer utilities {
+  .bg-fixed-desktop {
+    background-attachment: scroll;
+  }
+
   .text-balance {
     text-wrap: balance;
   }
@@ -176,6 +180,12 @@
 
   .animate-glow-pulse {
     animation: glow-pulse 3s ease-in-out infinite;
+  }
+}
+
+@media (hover: hover) {
+  .bg-fixed-desktop {
+    background-attachment: fixed;
   }
 }
 

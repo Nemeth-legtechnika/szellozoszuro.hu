@@ -21,12 +21,11 @@ const HomeFAQ = () => {
     <section className="relative py-16 lg:py-24 overflow-hidden">
       {/* Faded background image */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 bg-fixed-desktop"
         style={{
           backgroundImage: `url(${faqBgImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
           opacity: 0.25,
         }}
       />

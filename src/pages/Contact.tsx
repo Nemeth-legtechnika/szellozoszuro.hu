@@ -5,10 +5,13 @@ import { useTranslation } from 'react-i18next'
 import ContactForm from '@/components/contact/ContactForm'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
+import SeoMeta from '@/components/seo/SeoMeta'
+import useCanonical from '@/hooks/use-canonical'
 import useContact from '@/hooks/use-contact'
 
 const Contact = () => {
   const { t } = useTranslation()
+  const canonicalUrl = useCanonical()
   const { orderContact, technicalContact, generalInfo, companyInfo } = useContact()
   const orderPhone = orderContact.find((c) => c.icon === Phone)
 
@@ -17,8 +20,14 @@ const Contact = () => {
       <Helmet>
         <title>{t('contact.pageTitle')} | szellozoszuro.hu</title>
         <meta name="description" content={t('contact.pageDescription')} />
+        <link rel="canonical" href={canonicalUrl} />
       </Helmet>
 
+      <SeoMeta
+        title={`${t('contact.pageTitle')} | szellozoszuro.hu`}
+        description={t('contact.pageDescription')}
+        url={canonicalUrl}
+      />
       <Header />
 
       <main className="pt-20 lg:pt-24">

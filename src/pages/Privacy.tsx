@@ -15,17 +15,26 @@ import { useTranslation } from 'react-i18next'
 
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
+import SeoMeta from '@/components/seo/SeoMeta'
+import useCanonical from '@/hooks/use-canonical'
 
 const Privacy = () => {
   const { t } = useTranslation()
+  const canonicalUrl = useCanonical()
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>{t('privacy.pageTitle')} | Németh Légtechnika Kft.</title>
         <meta name="description" content={t('privacy.pageDescription')} />
+        <link rel="canonical" href={canonicalUrl} />
       </Helmet>
 
+      <SeoMeta
+        title={`${t('privacy.pageTitle')} | Németh Légtechnika Kft.`}
+        description={t('privacy.pageDescription')}
+        url={canonicalUrl}
+      />
       <Header />
 
       <main className="pt-20 lg:pt-24">
