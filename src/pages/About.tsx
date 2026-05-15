@@ -6,13 +6,16 @@ import { Link } from 'react-router-dom'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
+import SeoMeta from '@/components/seo/SeoMeta'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import useAbout from '@/hooks/use-about'
+import useCanonical from '@/hooks/use-canonical'
 import usePath from '@/hooks/use-path'
 
 const About = () => {
   const { t } = useTranslation()
+  const canonicalUrl = useCanonical()
   const paths = usePath()
   const { highlights, timeline, team, signature } = useAbout()
 
@@ -21,9 +24,14 @@ const About = () => {
       <Helmet>
         <title>{t('about.pageTitle')}</title>
         <meta name="description" content={t('about.pageDescription')} />
-        <link rel="canonical" href={`https://szellozoszuro.hu${paths.about}`} />
+        <link rel="canonical" href={canonicalUrl} />
       </Helmet>
 
+      <SeoMeta
+        title={t('about.pageTitle')}
+        description={t('about.pageDescription')}
+        url={canonicalUrl}
+      />
       <JsonLdSchema includeLocalBusiness={true} includeOrganization={true} />
 
       <Header />

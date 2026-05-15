@@ -11,23 +11,33 @@ const useFAQ = () => {
       questions: [
         {
           id: 1,
-          question: t('faq.items.zehnderFilter.question'),
-          answer: t('faq.items.zehnderFilter.answer'),
+          question: t('faq.items.filterType.question'),
+          answer: t('faq.items.filterType.answer'),
+          showOnHome: true,
         },
         {
           id: 2,
-          question: t('faq.items.filterClass.question'),
-          answer: t('faq.items.filterClass.answer'),
+          question: t('faq.items.zehnderFilter.question'),
+          answer: t('faq.items.zehnderFilter.answer'),
+          showOnHome: false,
         },
         {
           id: 3,
-          question: t('faq.items.aftermarket.question'),
-          answer: t('faq.items.aftermarket.answer'),
+          question: t('faq.items.filterClass.question'),
+          answer: t('faq.items.filterClass.answer'),
+          showOnHome: true,
         },
         {
           id: 4,
+          question: t('faq.items.aftermarket.question'),
+          answer: t('faq.items.aftermarket.answer'),
+          showOnHome: true,
+        },
+        {
+          id: 5,
           question: t('faq.items.findFilter.question'),
           answer: t('faq.items.findFilter.answer'),
+          showOnHome: false,
         },
       ],
     },
@@ -36,19 +46,22 @@ const useFAQ = () => {
       icon: Clock,
       questions: [
         {
-          id: 5,
+          id: 6,
           question: t('faq.items.replacement.question'),
           answer: t('faq.items.replacement.answer'),
-        },
-        {
-          id: 6,
-          question: t('faq.items.lateReplacement.question'),
-          answer: t('faq.items.lateReplacement.answer'),
+          showOnHome: true,
         },
         {
           id: 7,
+          question: t('faq.items.lateReplacement.question'),
+          answer: t('faq.items.lateReplacement.answer'),
+          showOnHome: false,
+        },
+        {
+          id: 8,
           question: t('faq.items.selfReplacement.question'),
           answer: t('faq.items.selfReplacement.answer'),
+          showOnHome: false,
         },
       ],
     },
@@ -57,19 +70,22 @@ const useFAQ = () => {
       icon: Truck,
       questions: [
         {
-          id: 8,
+          id: 9,
           question: t('faq.items.delivery.question'),
           answer: t('faq.items.delivery.answer'),
-        },
-        {
-          id: 9,
-          question: t('faq.items.personalPickup.question'),
-          answer: t('faq.items.personalPickup.answer'),
+          showOnHome: true,
         },
         {
           id: 10,
+          question: t('faq.items.personalPickup.question'),
+          answer: t('faq.items.personalPickup.answer'),
+          showOnHome: false,
+        },
+        {
+          id: 11,
           question: t('faq.items.payment.question'),
           answer: t('faq.items.payment.answer'),
+          showOnHome: false,
         },
       ],
     },
@@ -78,46 +94,24 @@ const useFAQ = () => {
       icon: Shield,
       questions: [
         {
-          id: 11,
+          id: 12,
           question: t('faq.items.warranty.question'),
           answer: t('faq.items.warranty.answer'),
+          showOnHome: false,
         },
         {
-          id: 12,
+          id: 13,
           question: t('faq.items.filterOrigin.question'),
           answer: t('faq.items.filterOrigin.answer'),
+          showOnHome: false,
         },
       ],
     },
   ]
 
-  const homeItems = [
-    {
-      id: 1,
-      question: t('faq.items.filterType.question'),
-      answer: t('faq.items.filterType.answer'),
-    },
-    {
-      id: 2,
-      question: t('faq.items.delivery.question'),
-      answer: t('faq.items.delivery.answer'),
-    },
-    {
-      id: 3,
-      question: t('faq.items.filterClass.question'),
-      answer: t('faq.items.filterClass.answer'),
-    },
-    {
-      id: 4,
-      question: t('faq.items.replacement.question'),
-      answer: t('faq.items.replacement.answer'),
-    },
-    {
-      id: 5,
-      question: t('faq.items.aftermarket.question'),
-      answer: t('faq.items.aftermarket.answer'),
-    },
-  ]
+  const homeItems = categories
+    .flatMap((c) => c.questions)
+    .filter((q) => q.showOnHome)
 
   const allItems = categories.flatMap((category) =>
     category.questions.map((q) => ({

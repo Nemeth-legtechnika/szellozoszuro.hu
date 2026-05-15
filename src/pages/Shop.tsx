@@ -5,12 +5,15 @@ import { useTranslation } from 'react-i18next'
 import shopBrandsBg from '@/assets/images/shop-brands-bg.jpg'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
+import SeoMeta from '@/components/seo/SeoMeta'
 import { Button } from '@/components/ui/button'
+import useCanonical from '@/hooks/use-canonical'
 import useProducts from '@/hooks/use-products'
 import useShopCategories from '@/hooks/use-shop-categories'
 
 const Shop = () => {
   const { t } = useTranslation()
+  const canonicalUrl = useCanonical()
   const categories = useShopCategories()
   const products = useProducts()
 
@@ -19,8 +22,14 @@ const Shop = () => {
       <Helmet>
         <title>{t('shop.pageTitle')} | szellozoszuro.hu</title>
         <meta name="description" content={t('shop.pageDescription')} />
+        <link rel="canonical" href={canonicalUrl} />
       </Helmet>
 
+      <SeoMeta
+        title={`${t('shop.pageTitle')} | szellozoszuro.hu`}
+        description={t('shop.pageDescription')}
+        url={canonicalUrl}
+      />
       <Header />
 
       <main className="pt-20 lg:pt-24">
@@ -67,12 +76,11 @@ const Shop = () => {
         <section className="relative py-8 lg:py-12 overflow-hidden">
           {/* Background image */}
           <div
-            className="absolute inset-0 z-0"
+            className="absolute inset-0 z-0 bg-fixed-desktop"
             style={{
               backgroundImage: `url(${shopBrandsBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              backgroundAttachment: 'fixed',
               opacity: 0.25,
             }}
           />

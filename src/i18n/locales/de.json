@@ -147,8 +147,8 @@
     "allRights": "Alle Rechte vorbehalten."
   },
   "shop": {
-    "pageTitle": "Filter für Lüftungsanlagen mit Wärmerückgewinnung",
-    "pageDescription": "Wählen Sie aus unseren Marken und finden Sie den passenden Filter für Ihren Gerätetyp in unserem Webshop.",
+    "pageTitle": "Lüftungsfilter wechseln – nach Marke",
+    "pageDescription": "Lüftungsfilter wechseln leicht gemacht: Zehnder, Daikin, Vaillant Filter an einem Ort. Große Auswahl an Original- und Alternativfiltern.",
     "categories": {
       "oem": {
         "title": "Originalfilter",
@@ -253,20 +253,20 @@
     },
     "quote": "Hinter jedem Filterwechsel steht unser Engagement für saubere Luft und ein gesundes Zuhause.",
     "quoteFamily": "– Die Familie Németh",
-    "pageTitle": "Über uns | Németh Légtechnika Kft. - 15+ Jahre Expertise, landesweite Abdeckung",
-    "pageDescription": "Lernen Sie die Geschichte der Németh Légtechnika Kft. kennen: 15+ Jahre Lüftungstechnik-Erfahrung, Familienunternehmen aus Sopron. Landesweites Servicepartner-Netzwerk!",
+    "pageTitle": "Lüftungsfilter-Experten – Über uns",
+    "pageDescription": "Németh Légtechnika: 15+ Jahre Erfahrung im Vertrieb von Wärmerückgewinnungsfiltern. Familienunternehmen aus Sopron, landesweiter Versand.",
     "ctaTitle": "Haben Sie Fragen?",
     "ctaDescription": "Kontaktieren Sie uns, und wir helfen Ihnen, den perfekten Filter zu finden.",
     "ctaButton": "Kontakt aufnehmen"
   },
   "homePage": {
-    "pageTitle": "Lüftungsfilter und Service | Landesweite Abdeckung | Németh Légtechnika",
-    "pageDescription": "Qualitäts-Wärmerückgewinnungsfilter vom Fachmann. Über unser landesweites Servicepartner-Netzwerk bieten wir professionelle Wartung und Reinigung in ganz Ungarn!",
+    "pageTitle": "Wärmerückgewinnungsfilter Webshop",
+    "pageDescription": "Wärmerückgewinnungsfilter für Zehnder, Daikin, Vaillant und mehr. Original- und Alternativfilter mit schnellem Versand und Fachberatung.",
     "pageKeywords": "landesweiter Lüftungsservice, Wärmerückgewinnung Reinigung Ungarn, Lüftungssystem Wartung Partnernetzwerk, Lüftungsfilter, Wärmerückgewinnungsfilter, Vaillant Filter, Helios Filter"
   },
   "contact": {
-    "pageTitle": "Kontakt",
-    "pageDescription": "Haben Sie Fragen zu Filtern? Wir helfen Ihnen, die passende Lösung für Ihren Gerätetyp zu finden.",
+    "pageTitle": "Filterberatung – Kontakt",
+    "pageDescription": "Fragen zum Wärmerückgewinnungsfilter-Wechsel? Unsere Experten helfen bei der Auswahl des passenden Lüftungsfilters.",
     "nationalCoverage": "Landesweite Abdeckung:",
     "nationalCoverageText": "Obwohl sich unser Hauptsitz in Sopron befindet, sind wir durch unsere Servicepartner im ganzen Land erreichbar!",
     "form": {
@@ -305,8 +305,8 @@
     "registrationNumber": "Handelsregisternummer"
   },
   "faqPage": {
-    "pageTitle": "Häufig gestellte Fragen",
-    "pageDescription": "Wir haben die häufigsten Fragen zur Filterauswahl, zum Wechsel und zur Wartung zusammengestellt. Finden Sie keine Antwort? Rufen Sie uns an!",
+    "pageTitle": "Filterwechsel FAQ – Häufige Fragen",
+    "pageDescription": "Antworten zum Wärmerückgewinnungsfilter-Wechsel: Filterauswahl, Einbau, Wartung. Tipps für Zehnder, Vaillant und Daikin Filter.",
     "categories": {
       "filterSelection": "Filterauswahl",
       "maintenance": "Filterwechsel und Wartung",
@@ -318,8 +318,8 @@
     "contactButton": "Kontakt aufnehmen"
   },
   "blogPage": {
-    "pageTitle": "Wissensdatenbank",
-    "pageDescription": "Nützliche Artikel über Lüftung, Filterwartung und gesunde Innenraumluft. Mit der fachlichen Unterstützung von szelloztetes.eu, über 15 Jahre Erfahrung.",
+    "pageTitle": "Lüftungsfilter Ratgeber – Blog",
+    "pageDescription": "Artikel zum Wärmerückgewinnungsfilter-Wechsel, Wartung und sauberer Raumluft. Fachtipps zur Pflege von Lüftungsfiltern.",
     "facebookTitle": "Aktuelle Nachrichten und Fachtipps",
     "facebookDescription": "Folgen Sie uns auch auf Facebook, wo wir regelmäßig aktuelle Nachrichten, Wartungstipps und Neuigkeiten aus der Welt der Lüftung teilen.",
     "facebookButton": "Zu unserer Facebook-Seite",
@@ -327,8 +327,8 @@
     "readTime": "Min."
   },
   "terms": {
-    "pageTitle": "Allgemeine Geschäftsbedingungen",
-    "pageDescription": "Der Inhalt des zwischen uns geschlossenen Vertrages wird neben den Bestimmungen der geltenden zwingenden Rechtsvorschriften durch diese AGB sowie die weiteren Informationen auf der Website bestimmt.",
+    "pageTitle": "AGB – Filter-Kaufbedingungen",
+    "pageDescription": "Allgemeine Geschäftsbedingungen des szellozoszuro.hu Wärmerückgewinnungsfilter-Webshops: Bestellung, Zahlung, Widerruf und Garantie.",
     "toc": "Inhaltsverzeichnis",
     "sections": {
       "provider": {
@@ -381,8 +381,8 @@
     "checkoutNote": "Hinweis: Der Kauf erfolgt über den externen Webshop szelloztetes.eu, wo die AGB beim Checkout akzeptiert werden müssen, um die Bestellung abzuschließen."
   },
   "privacy": {
-    "pageTitle": "Datenschutzrichtlinie",
-    "pageDescription": "Die Németh Légtechnika Kft. verpflichtet sich zum Schutz personenbezogener Daten und gibt auf Grundlage der Datenschutz-Grundverordnung (DSGVO) der Europäischen Union folgende Informationen.",
+    "pageTitle": "Datenschutz – Filter-Webshop",
+    "pageDescription": "Datenschutzerklärung des szellozoszuro.hu Lüftungsfilter-Webshops. DSGVO-konforme Datenverarbeitung bei Németh Légtechnika Kft.",
     "dataController": "Daten des Verantwortlichen",
     "mainPoints": "Wichtigste Verarbeitungspunkte",
     "sections": {
@@ -442,8 +442,8 @@
     "questionsText": "Bei Fragen zu Ihren personenbezogenen Daten wenden Sie sich vertrauensvoll an uns:"
   },
   "shipping": {
-    "pageTitle": "Versandinformationen",
-    "pageDescription": "Schnelle und zuverlässige Lieferung im ganzen Land. Ab Lager sofort, Bestellartikel mit zuverlässiger Lieferfrist.",
+    "pageTitle": "Filterversand – Schnelle Lieferung",
+    "pageDescription": "Schneller Versand von Wärmerückgewinnungsfiltern: ab Lager in 24 Stunden, mit GLS in 1-3 Werktagen. Landesweiter Versand, auch per Nachnahme.",
     "fastDeliveryTitle": "Schnelle Lieferung ab Lager",
     "fastDeliveryText": "Lagerware übergeben wir an Werktagen innerhalb von 24 Stunden an den Versanddienstleister. Das bedeutet, dass Ihr Paket in den meisten Fällen innerhalb von 1-3 Werktagen ankommt!",
     "inStock": "Auf Lager",

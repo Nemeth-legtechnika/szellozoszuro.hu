@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
+import SeoMeta from '@/components/seo/SeoMeta'
 import {
   Accordion,
   AccordionContent,
@@ -13,12 +14,14 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
+import useCanonical from '@/hooks/use-canonical'
 import useContact from '@/hooks/use-contact'
 import useFAQ from '@/hooks/use-faq'
 import usePath from '@/hooks/use-path'
 
 const FAQ = () => {
   const { t } = useTranslation()
+  const canonicalUrl = useCanonical()
   const paths = usePath()
   const { categories: faqData, allItems: allFaqItems } = useFAQ()
   const { technicalContact } = useContact()
@@ -29,8 +32,14 @@ const FAQ = () => {
       <Helmet>
         <title>{t('faqPage.pageTitle')} | szellozoszuro.hu</title>
         <meta name="description" content={t('faqPage.pageDescription')} />
+        <link rel="canonical" href={canonicalUrl} />
       </Helmet>
 
+      <SeoMeta
+        title={`${t('faqPage.pageTitle')} | szellozoszuro.hu`}
+        description={t('faqPage.pageDescription')}
+        url={canonicalUrl}
+      />
       <JsonLdSchema
         includeLocalBusiness={true}
         includeOrganization={true}

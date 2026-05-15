@@ -5,11 +5,14 @@ import { Link } from 'react-router-dom'
 
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
+import SeoMeta from '@/components/seo/SeoMeta'
 import { Button } from '@/components/ui/button'
+import useCanonical from '@/hooks/use-canonical'
 import usePath from '@/hooks/use-path'
 
 const Shipping = () => {
   const { t } = useTranslation()
+  const canonicalUrl = useCanonical()
   const paths = usePath()
 
   return (
@@ -17,8 +20,14 @@ const Shipping = () => {
       <Helmet>
         <title>{t('shipping.pageTitle')} | szellozoszuro.hu</title>
         <meta name="description" content={t('shipping.pageDescription')} />
+        <link rel="canonical" href={canonicalUrl} />
       </Helmet>
 
+      <SeoMeta
+        title={`${t('shipping.pageTitle')} | szellozoszuro.hu`}
+        description={t('shipping.pageDescription')}
+        url={canonicalUrl}
+      />
       <Header />
 
       <main className="pt-20 lg:pt-24">

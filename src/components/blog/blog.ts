@@ -35,6 +35,8 @@ export type Blog = {
   excerpt: string
   excerptDe: string
   image: string
+  alt: string
+  altDe: string
   date: string
   authorFirstName: string
   authorLastName: string

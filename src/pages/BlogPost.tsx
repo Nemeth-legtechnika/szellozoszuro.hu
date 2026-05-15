@@ -8,13 +8,16 @@ import Section from '@/components/blog/section'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
+import SeoMeta from '@/components/seo/SeoMeta'
 import useBlogs from '@/hooks/use-blogs'
+import useCanonical from '@/hooks/use-canonical'
 import usePath from '@/hooks/use-path'
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>()
   const paths = usePath()
   const { t } = useTranslation()
+  const canonicalUrl = useCanonical()
   const posts = useBlogs({ filter: (p) => p.slug === slug })
 
   if (posts.length === 0) {
@@ -22,7 +25,6 @@ const BlogPost = () => {
   }
 
   const post = posts[0]
-
   const author = `${post.authorFirstName} ${post.authorLastName}`
 
   return (
@@ -30,16 +32,23 @@ const BlogPost = () => {
       <Helmet>
         <title>{post.title} | szellozoszuro.hu</title>
         <meta name="description" content={post.excerpt} />
-        <link rel="canonical" href={`https://szellozoszuro.hu/blog/${post.slug}`} />
+        <link rel="canonical" href={canonicalUrl} />
       </Helmet>
 
+      <SeoMeta
+        title={`${post.title} | szellozoszuro.hu`}
+        description={post.excerpt}
+        url={canonicalUrl}
+        image={post.image}
+        type="article"
+      />
       <JsonLdSchema includeLocalBusiness={false} includeOrganization={true} />
 
       <Header />
 
       <main className="pt-20 lg:pt-24">
         {/* Hero Image */}
-        <Hero image={post.image} title={post.title} />
+        <Hero image={post.image} alt={post.alt} />
 
         {/* Article Content */}
         <article className="container mx-auto px-4 -mt-20 relative z-10">
