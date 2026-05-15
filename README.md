@@ -1,73 +1,77 @@
-# Welcome to your Lovable project
+# szellozoszuro.hu
 
-## Project info
+E-commerce website for ventilation filters, serving the Hungarian and German markets. Built as a single-page application with bilingual support.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**Live site:** [szellozoszuro.hu](https://szellozoszuro.hu)
 
-## How can I edit this code?
+## Tech Stack
 
-There are several ways of editing your application.
+| Layer     | Technology                                |
+| --------- | ----------------------------------------- |
+| Framework | React 18 + TypeScript                     |
+| Build     | Vite 5 (SWC)                              |
+| Routing   | React Router DOM v6                       |
+| Styling   | Tailwind CSS 3 + shadcn/ui                |
+| i18n      | i18next (Hungarian + German)              |
+| Forms     | React Hook Form + Zod                     |
+| SEO       | react-helmet-async, prerendering, sitemap |
+| Testing   | Vitest + Testing Library                  |
+| Linting   | ESLint 9 (flat config) + Prettier         |
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Getting Started
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Install dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Run tests
+npm test
 ```
 
-**Edit a file directly in GitHub**
+## Available Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+| Script               | Description                           |
+| -------------------- | ------------------------------------- |
+| `npm run dev`        | Start Vite dev server                 |
+| `npm run build`      | Production build + sitemap generation |
+| `npm run preview`    | Preview production build locally      |
+| `npm run prerender`  | Prerender routes for SEO              |
+| `npm run lint`       | Run ESLint                            |
+| `npm run lint:fix`   | Run ESLint with auto-fix              |
+| `npm run format`     | Format code with Prettier             |
+| `npm run tsc`        | Type-check without emitting           |
+| `npm test`           | Run tests with Vitest                 |
+| `npm run test:watch` | Run tests in watch mode               |
 
-**Use GitHub Codespaces**
+## Project Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+src/
+  assets/        — Static images
+  components/
+    ui/          — shadcn/ui primitives
+    layout/      — Header, Footer, LanguageSwitcher
+    home/        — Homepage sections
+    contact/     — ContactForm
+    seo/         — JSON-LD schema
+  hooks/         — Custom hooks
+  i18n/locales/  — hu.json, de.json translations
+  pages/         — Route-level components
+  lib/           — Utilities (cn helper)
+```
 
-## What technologies are used for this project?
+## Routing
 
-This project is built with:
+- Hungarian routes at root: `/shop`, `/blog`, `/rolunk`, etc.
+- German routes prefixed: `/de/shop`, `/de/blog`, `/de/uber-uns`, etc.
+- Hungarian is the default language.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Deployment
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Deployed to GitHub Pages. The build process generates a sitemap and robots.txt for SEO. Prerendering is available via `npm run prerender` for static HTML generation of all routes.
