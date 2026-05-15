@@ -35,6 +35,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Prerender
+        run: |
+          npx serve dist -l 4173 &
+          npx wait-on http://localhost:4173
+          npm run prerender
+          kill %1
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

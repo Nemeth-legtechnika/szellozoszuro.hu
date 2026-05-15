@@ -1,10 +1,12 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import React from 'react'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import { CookieConsentBanner } from '@/components/cookie-consent'
 import { Toaster } from '@/components/ui/sonner'
 import { TooltipProvider } from '@/components/ui/tooltip'
+import { PageKey, pages } from '@/config/pages'
 
 import LanguageWrapper from './components/layout/LanguageWrapper'
 import ScrollToTop from './components/ScrollToTop'
@@ -22,19 +24,25 @@ import Terms from './pages/Terms'
 
 const queryClient = new QueryClient()
 
-// Define all routes with their components
+const pageComponentMap: Record<PageKey, React.ReactNode> = {
+  home: <Index />,
+  shop: <Shop />,
+  blog: <Blog />,
+  about: <About />,
+  contact: <Contact />,
+  faq: <FAQ />,
+  terms: <Terms />,
+  termsAlt: <Terms />,
+  privacy: <Privacy />,
+  shipping: <Shipping />,
+}
+
 const routes = [
-  { path: '/', element: <Index /> },
-  { path: '/shop', element: <Shop /> },
-  { path: '/blog', element: <Blog /> },
+  ...pages.map((page) => ({
+    path: page.path,
+    element: pageComponentMap[page.key],
+  })),
   { path: '/blog/:slug', element: <BlogPost /> },
-  { path: '/about', element: <About /> },
-  { path: '/contact', element: <Contact /> },
-  { path: '/gyik', element: <FAQ /> },
-  { path: '/aszf', element: <Terms /> },
-  { path: '/terms', element: <Terms /> },
-  { path: '/privacy', element: <Privacy /> },
-  { path: '/shipping', element: <Shipping /> },
 ]
 
 const App = () => (

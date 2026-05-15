@@ -1,24 +1,8 @@
-import { readFileSync, writeFileSync, mkdirSync } from 'fs'
+import { writeFileSync, mkdirSync } from 'fs'
 import { dirname, resolve } from 'path'
-import { fileURLToPath } from 'url'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
+import { getStaticPages, getBlogSlugs } from './resolve-routes.mts'
 
 const BASE_URL = 'https://szellozoszuro.hu'
-
-const staticRoutes = [
-  { path: '/', priority: '1.0', changefreq: 'weekly' },
-  { path: '/shop', priority: '0.9', changefreq: 'weekly' },
-  { path: '/blog', priority: '0.8', changefreq: 'daily' },
-  { path: '/about', priority: '0.5', changefreq: 'monthly' },
-  { path: '/contact', priority: '0.6', changefreq: 'monthly' },
-  { path: '/gyik', priority: '0.5', changefreq: 'monthly' },
-  { path: '/aszf', priority: '0.3', changefreq: 'yearly' },
-  { path: '/terms', priority: '0.3', changefreq: 'yearly' },
-  { path: '/privacy', priority: '0.3', changefreq: 'yearly' },
-  { path: '/shipping', priority: '0.5', changefreq: 'monthly' },
-]
 
 // Parse CLI args
 function parseArgs() {
@@ -33,7 +17,7 @@ function parseArgs() {
   return { output }
 }
 
-function escapeXml(str) {
+function escapeXml(str: string) {
   return str
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -42,7 +26,7 @@ function escapeXml(str) {
     .replace(/'/g, '&apos;')
 }
 
-function buildAlternateLinks(huPath, dePath) {
+function buildAlternateLinks(huPath: string, dePath: string) {
   const huUrl = `${BASE_URL}${huPath}`
   const deUrl = `${BASE_URL}${dePath}`
   return [
@@ -51,7 +35,14 @@ function buildAlternateLinks(huPath, dePath) {
   ].join('\n')
 }
 
-function buildUrlEntry(loc, lastmod, changefreq, priority, huPath, dePath) {
+function buildUrlEntry(
+  loc: string,
+  lastmod: string,
+  changefreq: string,
+  priority: string,
+  huPath: string,
+  dePath: string,
+) {
   return [
     '  <url>',
     `    <loc>${escapeXml(loc)}</loc>`,
@@ -69,43 +60,50 @@ function main() {
   const today = new Date().toISOString().split('T')[0]
 
   // Load blog posts
-  const blogsPath = resolve(__dirname, '..', 'src', 'assets', 'data', 'blogs.json')
-  const blogPosts = JSON.parse(readFileSync(blogsPath, 'utf-8'))
+  const blogPosts = getBlogSlugs()
 
   const urls = []
 
   // Static routes — Hungarian (default, no prefix)
-  for (const route of staticRoutes) {
+  for (const route of getStaticPages()) {
     const huPath = route.path
     const dePath = route.path === '/' ? '/de' : `/de${route.path}`
     const loc = `${BASE_URL}${huPath}`
-    urls.push(buildUrlEntry(loc, today, route.changefreq, route.priority, huPath, dePath))
+    urls.push(
+      buildUrlEntry(loc, today, route.sitemapChangefreq, route.sitemapPriority, huPath, dePath),
+    )
   }
 
   // Static routes — German (/de prefix)
-  for (const route of staticRoutes) {
+  for (const route of getStaticPages()) {
     const huPath = route.path
     const dePath = route.path === '/' ? '/de' : `/de${route.path}`
     const loc = `${BASE_URL}${dePath}`
-    urls.push(buildUrlEntry(loc, today, route.changefreq, route.priority, huPath, dePath))
+    urls.push(
+      buildUrlEntry(loc, today, route.sitemapChangefreq, route.sitemapPriority, huPath, dePath),
+    )
   }
 
   // Blog post routes — Hungarian
   for (const post of blogPosts) {
-    const huPath = `/blog/${post.slug}`
-    const dePath = `/de/blog/${post.slug}`
+    const huPath = post.pattern
+    const dePath = `/de${post.pattern}`
     const loc = `${BASE_URL}${huPath}`
     const lastmod = post.date.replace(/\./g, '-')
-    urls.push(buildUrlEntry(loc, lastmod, 'monthly', '0.7', huPath, dePath))
+    urls.push(
+      buildUrlEntry(loc, lastmod, post.sitemapChangefreq, post.sitemapPriority, huPath, dePath),
+    )
   }
 
   // Blog post routes — German
   for (const post of blogPosts) {
-    const huPath = `/blog/${post.slug}`
-    const dePath = `/de/blog/${post.slug}`
+    const huPath = post.pattern
+    const dePath = `/de${post.pattern}`
     const loc = `${BASE_URL}${dePath}`
     const lastmod = post.date.replace(/\./g, '-')
-    urls.push(buildUrlEntry(loc, lastmod, 'monthly', '0.7', huPath, dePath))
+    urls.push(
+      buildUrlEntry(loc, lastmod, post.sitemapChangefreq, post.sitemapPriority, huPath, dePath),
+    )
   }
 
   const xml = [

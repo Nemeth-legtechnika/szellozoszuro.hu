@@ -1,31 +1,33 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 
-const pagePaths = (langPrefix: string = '') => ({
-  home: `${langPrefix}/`,
+import { type PageKey, pages } from '@/config/pages'
 
-  shop: `${langPrefix}/shop`,
-
+type PagePaths = {
+  [K in Exclude<PageKey, 'blog'>]: string
+} & {
   blog: {
-    base: `${langPrefix}/blog`,
-    getPost: (slug: string): string => `${langPrefix}/blog/${slug}`,
-    postTemplate: `${langPrefix}/blog/:slug`,
-  },
+    base: string
+    getPost: (slug: string) => string
+  }
+}
 
-  about: `${langPrefix}/about`,
+export const pagePaths = (langPrefix: string = ''): PagePaths => {
+  const pathMap = Object.fromEntries(pages.map((p) => [p.key, `${langPrefix}${p.path}`])) as Record<
+    PageKey,
+    string
+  >
 
-  contact: `${langPrefix}/contact`,
+  const blogBase = pathMap.blog
 
-  faq: `${langPrefix}/gyik`,
-
-  terms: `${langPrefix}/aszf`,
-
-  termsAlt: `${langPrefix}/terms`,
-
-  privacy: `${langPrefix}/privacy`,
-
-  shipping: `${langPrefix}/shipping`,
-})
+  return {
+    ...pathMap,
+    blog: {
+      base: blogBase,
+      getPost: (slug: string): string => `${blogBase}/${slug}`,
+    },
+  }
+}
 
 const usePath = () => {
   const { i18n } = useTranslation()
