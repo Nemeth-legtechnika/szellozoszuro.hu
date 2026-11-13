@@ -101,7 +101,7 @@
   },
   {
     "id": 3,
-    "showOnHomePage": true,
+    "showOnHomePage": false,
     "title": "Száraz levegő és nedves szűrők? – A téli szellőztetés buktatói",
     "titleDe": "Trockene Luft und nasse Filter? – Die Tücken der Winterlüftung",
     "excerpt": "Hogyan kezeld a téli időszak páratartalom-problémáit hővisszanyerős rendszerrel? Praktikus tanácsok a páralecsapódás és a penészesedés megelőzésére.",
@@ -372,7 +372,7 @@
         "id": 3,
         "type": "heading",
         "title": "Az aktív szén: A \"mágneses felület\" analógiája",
-        "content": "Az aktív szén (aktivált szén) működése alapvetően eltér a mechanikai szűréstől. Az eljárás neve: adszorpció. Képzeljük el úgy, mint egy hatalmas, mikroszkopikus szivacs-felületet, amelynek belső felülete elképesztően nagy – mindössze 1 gramm aktív szénnek akár 3000 m² belső felülete is lehet!\n\nEz a felület úgy működik, mint egy mágnes a gázmolekulák számára: a szagmolekulák, a VOC-ok és egyéb gáz szennyezők \"ráragadnak\" erre a felületre, és ott maradnak. A levegő tisztán és szagmentesen távozik."
+        "content": "Az aktív szén (aktivált szén) működése alapvetően eltér a mechanikai szűréstől. Az eljárás neve: adszorpció. Képzeljük el úgy, mint egy hatalmas, mikroszkopikus szivacs-felületet, amelynek belső felülete elképesztően nagy – mindössze 1 gramm aktív szénnek akár 3000 m² belső felülete is lehet!\n\nEz a felület úgy működik, mint egy mágnes a gázmolekulák számára: a szagmolekulák, a VOC-ok és egyéb gáz szennyezők \"ráragadnak\" erre a felületre, és ott maradnak. A levegő így lényegesen kevesebb szagot visz be a lakásba. (A „teljesen szagmentes” állapot túlzás lenne: a szellőztetőkben alkalmazott szénmennyiség a szagterhelést hatékonyan csökkenti, de a gázokat nem semlegesíti teljesen. Vásárlóink visszajelzései szerint a különbség így is szembetűnő.)"
       },
       {
         "id": 4,
@@ -384,13 +384,13 @@
         "id": 5,
         "type": "heading",
         "title": "MUK 10 – Alap városi védelem",
-        "content": "A MUK 10 szűrők kb. 100 g/m² aktív szenet tartalmaznak. Ez a szint ideális az alapvető szagvédelemre: ha forgalmasabb úton lakik, vagy időszakosan érzi a városi légszennyezést. A MUK 10 hatékonyan szűri a közlekedési eredetű szennyeződéseket és az enyhe ipari szagokat."
+        "content": "A MUK 10 szűrők kb. 100 g/m² aktív szenet tartalmaznak. Ez a szint ideális az alapvető szagvédelemre: ha forgalmasabb úton lakik, vagy időszakosan érzi a városi légszennyezést. A MUK 10 hatékonyan szűri a közlekedési eredetű szennyeződéseket és az enyhe ipari szagokat.\n\nWebshopunkban ez a standard, készletről elérhető típus."
       },
       {
         "id": 6,
         "type": "heading",
         "title": "MUK 25 – Intenzív védelem, 2,5-szörös szénmennyiséggel",
-        "content": "A MUK 25 szűrők kb. 250 g/m² aktív szenet tartalmaznak – ez 2,5-szer több, mint a MUK 10! Ez a kategória ajánlott, ha:\n\n• Szmogos, erősen terhelt városi környezetben lakik\n• A szomszédban rendszeresen tüzelnek fával vagy szénnel (kandallófüst)\n• Mezőgazdasági szagok (trágyázás, állattartás) érik az ingatlant\n• Ipari létesítmény közelében él"
+        "content": "A MUK 25 szűrők kb. 250 g/m² aktív szenet tartalmaznak – ez 2,5-szer több, mint a MUK 10! Ez a kategória ajánlott, ha:\n\n• Szmogos, erősen terhelt városi környezetben lakik\n• A szomszédban rendszeresen tüzelnek fával vagy szénnel (kandallófüst)\n• Mezőgazdasági szagok (trágyázás, állattartás) érik az ingatlant\n• Ipari létesítmény közelében él\n\nEzt a változatot egyedi megkeresésre készítjük el.\n\n⚠️ Fontos szakmai kitétel: a sűrűbb szerkezet miatt a MUK 25 jelentős áramlási ellenállást jelent, és erősen igénybe veszi a gépet. Beépítése előtt mindig számolni kell a gép kapacitásával és tartalékaival – nem tehető be bármilyen rendszerbe!"
       },
       {
         "id": 7,
@@ -432,7 +432,7 @@
         "id": 13,
         "type": "callout",
         "title": "Szakértői tanácsunk",
-        "content": "Használjon aktív szenes (MUK) szűrőt a szagokkal terhelt időszakokban (őszi-téli fűtésszezon, tavaszi trágyázás), majd allergiaszezonban váltson F9-es finomszűrőre a maximális pollenvédelemért. A két szűrőtípus váltogatása az évszaknak megfelelően biztosítja a legmagasabb védelmet egész évben!"
+        "content": "Használjon aktív szenes (MUK) szűrőt a szagokkal terhelt időszakokban (őszi-téli fűtési szezon, tavaszi trágyázás), majd tavasszal váltson vissza F7-es finomszűrőre (ahol a gép bírja, F9-re) a maximális pollenvédelemért. A két szűrőtípus évszakhoz igazított váltogatása egész évben a legjobb védelmet adja!"
       }
     ]
   },
@@ -557,6 +557,171 @@
         "type": "heading",
         "title": "Ne hagyd, hogy a géped erőlködjön!",
         "content": "A nyirkos időszak extra terhelést jelent a szellőztető rendszerednek. A rendszeres szűrőellenőrzés és a gyors csere biztosítja, hogy a géped csendesen, hatékonyan és higiénikusan működjön egész télen át. Rendelj friss szűrőt még ma, és védd meg a rendszered a nedvesség csendes pusztításától!"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "showOnHomePage": true,
+    "title": "Azbeszt a levegőben! Védi-e az otthonod a hővisszanyerős szellőztető?",
+    "titleDe": "Asbest in der Luft! Schützt die Lüftungsanlage mit Wärmerückgewinnung Ihr Zuhause?",
+    "excerpt": "Sopronban és Vas megyében is kimutatták az osztrák bányákból érkező azbesztszennyezést. Megmutatjuk, melyik szűrőosztály véd valóban, és mit érdemes most tenni.",
+    "excerptDe": "Asbestbelastung aus österreichischen Steinbrüchen wurde auch in Sopron und im Komitat Vas nachgewiesen. Wir zeigen, welche Filterklasse wirklich schützt und was jetzt zu tun ist.",
+    "image": "blog/filter-classes-chart.jpg",
+    "date": "2026.11.13",
+    "authorFirstName": "Kálmán",
+    "authorLastName": "Németh",
+    "slug": "azbeszt-szellozteto-szurovedelem",
+    "category": "Egészség",
+    "categoryDe": "Gesundheit",
+    "readTime": "6 min",
+    "sections": [
+      {
+        "id": 1,
+        "type": "intro",
+        "content": "Az elmúlt hetekben egyre több megkeresés érkezett hozzánk Sopronból és Szombathely környékéről. Az emberek aggódnak, és joggal kérdezik: ha kint azbeszt van a levegőben, biztonságban vagyunk-e otthon?\n\nA Greenpeace megerősítette, hogy Kőszeg és Szombathely után Sopronban is kimutatható az osztrák bányákból Magyarországra kerülő azbesztszennyezés. A Telex beszámolója szerint az előzetes adatok alapján a nyugat-magyarországi települések szennyezettsége jóval nagyobb a korábban feltételezettnél. A HVG arról írt, hogy Vas megyében – többek között Sárváron, Körmenden, Táplánszentkereszten, Gencsapátiban, Peresznyén és Toronyban – és több osztrák településen is vizsgálódnak.\n\nEbben a helyzetben sok ügyfelünk kérdezi: mit tud tenni a hővisszanyerős szellőztető? Nézzük meg tényszerűen."
+      },
+      {
+        "id": 2,
+        "type": "heading",
+        "title": "Mi az azbeszt, és miért veszélyes pont ilyen apró?",
+        "content": "Az azbeszt nem por a szó hétköznapi értelmében, hanem szál alakú ásványi rost, amelynek veszélyessége éppen a méretéből fakad. A WHO meghatározása szerint a légzőrendszert veszélyeztető azbesztszál hossza meghaladja az 5 mikront, átmérője kisebb 3 mikronnál, és a hossz–átmérő arány nagyobb háromnál.\n\nEgy emberi hajszál vastagsága 50–100 mikron, így ezek a szálak a hajszálnál több tucatszor, a legvékonyabbak több százszor vékonyabbak. Ezért lebegnek sokáig a levegőben, és ezért lélegezhetők be észrevétlenül.\n\nA Greenpeace vegyianyag-szakértője szerint a szálak a légutakba jutva beakadnak, ott betokosodnak, és akár évtizedekkel később daganatos megbetegedést okozhatnak."
+      },
+      {
+        "id": 3,
+        "type": "image",
+        "image": "blog/filter-classes-chart.jpg",
+        "caption": "Szűrőosztályok hatékonysága szemcseméret szerint. Az azbesztpor jellemző tartománya 0,5–5 µm: szabad szemmel láthatatlan, és pont ott van, ahol a szűrőteljesítmény a legkritikusabb."
+      },
+      {
+        "id": 4,
+        "type": "heading",
+        "title": "Véd-e a szellőztető? Igen – de csak megfelelő szűrővel",
+        "content": "A hővisszanyerős szellőztető lényege, hogy a friss levegő kizárólag a gépbe épített szűrőn keresztül jut a lakásba. Az ablakok zárva vannak, a ház légcseréjét teljes egészében a gép végzi. A lakótér védelme ezért a szűrő minőségén múlik.\n\n• G4: a legtöbb gépbe gyárilag ez kerül, ilyen helyzetben elégtelen védelmet nyújt.\n\n• M5: lényegesen jobb, de a kritikus 0,5–1 µm-es tartományban még mindig átengedi a részecskék 50–70%-át.\n\n• F7: az első osztály, amellyel valós védelem érhető el – a teljes azbesztpor-tartomány 75–99%-át megfogja.\n\n• F9: tovább javítja a védelmet, különösen a legkisebb szálaknál (már 0,5 µm-en is 90–95%)."
+      },
+      {
+        "id": 5,
+        "type": "heading",
+        "title": "Mi a helyzet az aktív szenes szűrővel?",
+        "content": "Az aktív szenes szűrő nem részecskeszűrő: a gáz halmazállapotú szennyezők, szagok és illékony szerves vegyületek megkötésére való. Azbeszt ellen önmagában nem véd, és nem helyettesíti az F7/F9 szűrőt. Ahol gáz halmazállapotú szennyező is jelen van (forgalmas út, ipari terület közelében), ott érdemes az F7 mellé kombináltan alkalmazni."
+      },
+      {
+        "id": 6,
+        "type": "heading",
+        "title": "Mit tegyen, akinek van hővisszanyerős szellőztetője?",
+        "content": "1. Ellenőrizze, milyen szűrő van a gépében. Ha G4-es, érdemes F7-re, vagy ahol a gép befogadja, F9-re cserélni.\n\n2. Ellenőrizze gyakrabban. Szennyezett külső levegőnél a szűrő gyorsabban telítődik. A szokásos évi 1–2 csere helyett most 3–4 havonta nézze meg az állapotát, és szükség esetén cserélje. A telt szűrő nemcsak rosszabbul szűr, hanem a légáramot is akadályozza.\n\n3. Tartsa zárva az ablakokat. A szellőztető akkor véd, ha a ház légcseréje rajta keresztül történik. Nyitott ablakon a szűretlen levegő közvetlenül beáramlik."
+      },
+      {
+        "id": 7,
+        "type": "heading",
+        "title": "És ha nincs szellőztető rendszere?",
+        "content": "Ilyenkor a lakás levegője a természetes infiltrációtól függ: az ablaktömítéseken, falréseken, ajtóhézagokon beszivárgó levegő szűretlen. A legfontosabb, hogy ne szellőztessen nyitott ablakkal, különösen forgalmas utcán, építési-burkolási munkák közelében, száraz, szeles időben.\n\nHa épít, felújít vagy hosszabb távon gondolkodik, a hővisszanyerős szellőztető beépítése ebben a helyzetben is indokolt döntés: nemcsak az azbeszt, hanem a pollen, a finompor (PM2,5) és az egyéb légköri szennyezők ellen is folyamatos, automatikus védelmet ad."
+      },
+      {
+        "id": 8,
+        "type": "callout",
+        "title": "Segítünk kiválasztani",
+        "content": "Kérdése van a gépébe illő szűrőosztályról, vagy segítség kell a szűrőcseréhez? Keressen minket bizalommal! Az F7 és F9 szűrőket gépmárka szerint a Szűrők oldalunkon találja."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "showOnHomePage": false,
+    "title": "Hová kerüljön az elhasznált szellőztetőszűrő?",
+    "titleDe": "Wohin mit dem gebrauchten Lüftungsfilter?",
+    "excerpt": "Kidobható a lecserélt szűrő a kukába? Igen – de nem mindegy, melyikbe. Rövid útmutató a szűrő helyes kidobásához és a pormentes cseréhez.",
+    "excerptDe": "Darf der gewechselte Filter in den Müll? Ja – aber nicht in jede Tonne. Kurze Anleitung zur richtigen Entsorgung und zum staubfreien Wechsel.",
+    "image": "blog/dirty-filters-used.jpg",
+    "date": "2026.11.12",
+    "authorFirstName": "Kálmán",
+    "authorLastName": "Németh",
+    "slug": "elhasznalt-szuro-hova-dobjam",
+    "category": "Tippek",
+    "categoryDe": "Tipps",
+    "readTime": "3 min",
+    "sections": [
+      {
+        "id": 1,
+        "type": "intro",
+        "content": "Nemrég kérdezte tőlünk egy ügyfelünk, hogy a lecserélt szűrőt kidobhatja-e egyszerűen a kukába. Jó kérdés, és biztosan mások is gondolkodtak már rajta!"
+      },
+      {
+        "id": 2,
+        "type": "heading",
+        "title": "Vegyes kuka: igen",
+        "content": "Az otthoni hővisszanyerős szellőztető elhasznált szűrője kommunális, vegyes hulladék, nyugodtan mehet a vegyes kukába."
+      },
+      {
+        "id": 3,
+        "type": "heading",
+        "title": "Szelektív: nem",
+        "content": "A szűrő pont a dolgát végezte: felfogta a port, a pollent és a szennyeződéseket. Emiatt nem hasznosítható újra, még akkor sem, ha a kerete karton vagy műanyag."
+      },
+      {
+        "id": 4,
+        "type": "heading",
+        "title": "Tipp a pormentes cseréhez",
+        "content": "A kivett szűrőt tegye rögtön zacskóba, és kösse be, így a felfogott por nem száll vissza a lakás levegőjébe. Allergiásoknak érdemes kesztyűt is húzni."
+      },
+      {
+        "id": 5,
+        "type": "callout",
+        "title": "Ne feledje",
+        "content": "A szűrőt általában félévente érdemes cserélni, hogy a rendszer tiszta, egészséges levegőt adjon. A géptípusához illő szűrőt a Szűrők oldalunkon találja."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "showOnHomePage": false,
+    "title": "Nem mindegy, mit szív be a házad: a német Sandler AG szűrőanyag szakértői szemmel",
+    "titleDe": "Nicht egal, was Ihr Haus einatmet: Sandler-AG-Filtermaterial aus Expertensicht",
+    "excerpt": "Egy olcsó szűrő is megteszi? Megmutatjuk, mitől más a német Sandler AG szűrőanyag: nagyobb porraktározás, kisebb nyomásesés, kötőanyag-mentes, higiénikus szálak.",
+    "excerptDe": "Reicht ein billiger Filter? Wir zeigen, was das Sandler-AG-Filtermaterial unterscheidet: höhere Staubspeicherung, geringerer Druckverlust, bindemittelfreie, hygienische Fasern.",
+    "image": "blog/aftermarket-filters.jpg",
+    "date": "2026.11.10",
+    "authorFirstName": "Kálmán",
+    "authorLastName": "Németh",
+    "slug": "sandler-ag-szuroanyag",
+    "category": "Vásárlási tanács",
+    "categoryDe": "Kaufberatung",
+    "readTime": "6 min",
+    "sections": [
+      {
+        "id": 1,
+        "type": "intro",
+        "content": "Sokan gondolják, hogy a szűrőcsere csak kötelező nyűg, és „egy olcsó szűrő is megteszi”. Pedig a szűrő a hővisszanyerős szellőztető legkritikusabb védelmi és áramlástechnikai eleme.\n\nOlcsó, ismeretlen eredetű szűrőanyaggal olyan ez, mintha egy prémium autóba nem megfelelő motorolajat töltenénk: a gép egy darabig működik, de a hatásfok bezuhan, a fogyasztás nő, az alkatrészek idő előtt elhasználódnak. Mitől más egy német, Sandler AG által gyártott szűrőanyag? Íme a műszaki tények."
+      },
+      {
+        "id": 2,
+        "type": "heading",
+        "title": "1. Progresszív rostszerkezet a nagyobb porraktározásért (DHC)",
+        "content": "Az olcsó szűrők felületén a por pillanatok alatt tömör, átjárhatatlan réteget képez (felületi eltömődés). A Sandler AG szintetikus nonwoven (műszálas vlies) anyagai ezzel szemben progresszív szerkezetűek:\n\n• Külső réteg: ritkább szálszerkezet, amely a nagyobb porszemcséket fogja meg.\n\n• Belső réteg: egyre sűrűsödő mikroszálak, amelyek a legfinomabb részecskéket ejtik csapdába, az ISO 16890 szabványnak megfelelően.\n\nÍgy a por nem a legkülső felületet tömíti el, hanem a szűrő teljes mélységében oszlik el. Ez lényegesen nagyobb porraktározó kapacitást (Dust Holding Capacity, DHC) és hosszabb élettartamot jelent."
+      },
+      {
+        "id": 3,
+        "type": "heading",
+        "title": "2. Alacsony kezdő nyomásesés (ΔP0) = kevesebb áramfogyasztás",
+        "content": "A ventilátoroknak le kell győzniük a szűrő áramlási ellenállását. A rossz minőségű szűrőanyag ellenállása magas, ezért a ventilátorok magasabb fordulatszámon pörögnek. Már 10–20 Pa többlet-nyomásesés is mérhető többlet-áramfogyasztást jelent az év 365 napján, napi 24 órában – ráadásul nő a zaj, és gyorsabban kopnak a csapágyak.\n\nA Sandler AG szálgeometriája alacsony kezdő nyomásesés mellett biztosítja a magas szűrési hatásfokot, így kíméli a gépet és a pénztárcát."
+      },
+      {
+        "id": 4,
+        "type": "heading",
+        "title": "3. Kötőanyag-mentes, termikusan kötött szálak (higiénia)",
+        "content": "A szellőztetőből érkező levegőt lélegezzük be a hálószobában és a nappaliban. A Sandler AG szűrőanyagai:\n\n• 100% szintetikus, termikusan rögzített szálakból készülnek;\n\n• nem tartalmaznak vegyi kötőanyagot, műgyantát vagy ragasztót, így nem bocsátanak ki illékony szerves vegyületeket (VOC);\n\n• hidrofóbok (vízlepergetők): magas páratartalomnál sem puhulnak meg, nem roskadnak össze, és nem képeznek táptalajt penésznek, baktériumoknak."
+      },
+      {
+        "id": 5,
+        "type": "heading",
+        "title": "Összehasonlítás: miért éri meg a minőség?",
+        "content": "• Szerkezet – Olcsó szűrő: homogén, gyorsan eltömődő felület. Sandler AG: progresszív, mélységi porraktározás.\n\n• Nyomásesés (ΔP) – Olcsó szűrő: magas, növeli az áramfogyasztást és a zajt. Sandler AG: optimális, alacsony áramlási ellenállás.\n\n• Élettartam – Olcsó szűrő: gyorsan telítődik. Sandler AG: hosszú, stabil működési ciklus.\n\n• Anyagbiztonság – Olcsó szűrő: esetleges vegyi kötőanyagok, ragasztók. Sandler AG: 100% szintetikus, vegyszermentes, hidrofób.\n\n• Gépvédelem – Olcsó szűrő: terheli a ventilátormotort. Sandler AG: kíméli a szellőztető berendezést."
+      },
+      {
+        "id": 6,
+        "type": "callout",
+        "title": "Konklúzió",
+        "content": "A prémium szűrő nem luxus, hanem befektetés a rendszer élettartamába és a családja egészségébe. A Sandler AG szűrőanyagból készült utángyártott szűrőink segítenek abban, hogy a hővisszanyerő úgy működjön, ahogy a tervezőmérnök megálmodta: csendesen, energiatakarékosan, friss és tiszta levegőt adva."
       }
     ]
   }
