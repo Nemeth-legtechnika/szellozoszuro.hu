@@ -567,7 +567,7 @@
     "titleDe": "Asbest in der Luft! Schützt die Lüftungsanlage mit Wärmerückgewinnung Ihr Zuhause?",
     "excerpt": "Sopronban és Vas megyében is kimutatták az osztrák bányákból érkező azbesztszennyezést. Megmutatjuk, melyik szűrőosztály véd valóban, és mit érdemes most tenni.",
     "excerptDe": "Asbestbelastung aus österreichischen Steinbrüchen wurde auch in Sopron und im Komitat Vas nachgewiesen. Wir zeigen, welche Filterklasse wirklich schützt und was jetzt zu tun ist.",
-    "image": "blog/filter-classes-chart.jpg",
+    "image": "blog/azbeszt-vedelem-szurok.jpg",
     "date": "2026.11.13",
     "authorFirstName": "Kálmán",
     "authorLastName": "Németh",
@@ -632,7 +632,7 @@
     "titleDe": "Wohin mit dem gebrauchten Lüftungsfilter?",
     "excerpt": "Kidobható a lecserélt szűrő a kukába? Igen – de nem mindegy, melyikbe. Rövid útmutató a szűrő helyes kidobásához és a pormentes cseréhez.",
     "excerptDe": "Darf der gewechselte Filter in den Müll? Ja – aber nicht in jede Tonne. Kurze Anleitung zur richtigen Entsorgung und zum staubfreien Wechsel.",
-    "image": "blog/dirty-filters-used.jpg",
+    "image": "blog/elhasznalt-szuro-hulladek.jpg",
     "date": "2026.11.12",
     "authorFirstName": "Kálmán",
     "authorLastName": "Németh",
@@ -719,6 +719,12 @@
       },
       {
         "id": 6,
+        "type": "image",
+        "image": "blog/sandler-osszehasonlitas.jpg",
+        "caption": "Olcsó, névtelen szűrő és Sandler AG prémium szűrőanyag összehasonlítása."
+      },
+      {
+        "id": 7,
         "type": "callout",
         "title": "Konklúzió",
         "content": "A prémium szűrő nem luxus, hanem befektetés a rendszer élettartamába és a családja egészségébe. A Sandler AG szűrőanyagból készült utángyártott szűrőink segítenek abban, hogy a hővisszanyerő úgy működjön, ahogy a tervezőmérnök megálmodta: csendesen, energiatakarékosan, friss és tiszta levegőt adva."
