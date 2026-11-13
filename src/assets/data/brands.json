@@ -22,7 +22,7 @@
   {
     "id": 5,
     "name": "Aereco",
-    "link": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/"
+    "link": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/aereco/"
   },
   {
     "id": 6,
@@ -58,5 +58,25 @@
     "id": 12,
     "name": "Zehnder",
     "link": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/zehnder/"
+  },
+  {
+    "id": 13,
+    "name": "Vortice",
+    "link": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/vort/"
+  },
+  {
+    "id": 14,
+    "name": "Pichler",
+    "link": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/pichler/"
+  },
+  {
+    "id": 15,
+    "name": "Prometeo",
+    "link": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/prometeo/"
+  },
+  {
+    "id": 16,
+    "name": "Smarty",
+    "link": "https://szelloztetes.eu/termekkategoria/szurok/utangyartott-szurok/smarty/"
   }
 ]
