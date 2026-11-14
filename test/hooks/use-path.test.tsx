@@ -16,6 +16,8 @@ describe('usePath – Hungarian (default)', () => {
     const paths = result.current
 
     expect(paths.home).toBe('/')
+    expect(paths.subscription).toBe('/elofizetes')
+    expect(paths.subscriptionThanks).toBe('/elofizetes/koszonjuk')
     expect(paths.shop).toBe('/shop')
     expect(paths.blog.base).toBe('/blog')
     expect(paths.blog.getPost('test-slug')).toBe('/blog/test-slug')
