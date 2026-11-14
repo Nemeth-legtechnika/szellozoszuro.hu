@@ -590,8 +590,8 @@
       {
         "id": 3,
         "type": "image",
-        "image": "blog/filter-classes-chart.jpg",
-        "caption": "Szűrőosztályok hatékonysága szemcseméret szerint. Az azbesztpor jellemző tartománya 0,5–5 µm: szabad szemmel láthatatlan, és pont ott van, ahol a szűrőteljesítmény a legkritikusabb."
+        "image": "blog/azbeszt-szurosztaly-tablazat.jpg",
+        "caption": "Szűrőosztályok kiszűrési hatékonysága az azbeszt szemcsetartományában (EN 779 / ISO 16890 alapján). Az azbesztpor kritikus tartománya 0,5–5 µm: itt dől el, mennyit véd a szűrő."
       },
       {
         "id": 4,
@@ -601,30 +601,37 @@
       },
       {
         "id": 5,
+        "type": "image",
+        "image": "blog/szurosztalyok-g4-m5-f7-szen.jpg",
+        "caption": "G4 durva szűrő, M5 (ePM10), F7 (ePM1) finomszűrő és aktív szenes szűrő egymás mellett."
+      },
+      {
+        "id": 6,
         "type": "heading",
         "title": "Mi a helyzet az aktív szenes szűrővel?",
         "content": "Az aktív szenes szűrő nem részecskeszűrő: a gáz halmazállapotú szennyezők, szagok és illékony szerves vegyületek megkötésére való. Azbeszt ellen önmagában nem véd, és nem helyettesíti az F7/F9 szűrőt. Ahol gáz halmazállapotú szennyező is jelen van (forgalmas út, ipari terület közelében), ott érdemes az F7 mellé kombináltan alkalmazni."
       },
       {
-        "id": 6,
+        "id": 7,
         "type": "heading",
         "title": "Mit tegyen, akinek van hővisszanyerős szellőztetője?",
         "content": "1. Ellenőrizze, milyen szűrő van a gépében. Ha G4-es, érdemes F7-re, vagy ahol a gép befogadja, F9-re cserélni.\n\n2. Ellenőrizze gyakrabban. Szennyezett külső levegőnél a szűrő gyorsabban telítődik. A szokásos évi 1–2 csere helyett most 3–4 havonta nézze meg az állapotát, és szükség esetén cserélje. A telt szűrő nemcsak rosszabbul szűr, hanem a légáramot is akadályozza.\n\n3. Tartsa zárva az ablakokat. A szellőztető akkor véd, ha a ház légcseréje rajta keresztül történik. Nyitott ablakon a szűretlen levegő közvetlenül beáramlik."
       },
       {
-        "id": 7,
+        "id": 8,
         "type": "heading",
         "title": "És ha nincs szellőztető rendszere?",
         "content": "Ilyenkor a lakás levegője a természetes infiltrációtól függ: az ablaktömítéseken, falréseken, ajtóhézagokon beszivárgó levegő szűretlen. A legfontosabb, hogy ne szellőztessen nyitott ablakkal, különösen forgalmas utcán, építési-burkolási munkák közelében, száraz, szeles időben.\n\nHa épít, felújít vagy hosszabb távon gondolkodik, a hővisszanyerős szellőztető beépítése ebben a helyzetben is indokolt döntés: nemcsak az azbeszt, hanem a pollen, a finompor (PM2,5) és az egyéb légköri szennyezők ellen is folyamatos, automatikus védelmet ad."
       },
       {
-        "id": 8,
+        "id": 9,
         "type": "callout",
         "title": "Segítünk kiválasztani",
         "content": "Kérdése van a gépébe illő szűrőosztályról, vagy segítség kell a szűrőcseréhez? Keressen minket bizalommal! Az F7 és F9 szűrőket gépmárka szerint a Szűrők oldalunkon találja."
       }
     ]
   },
+
   {
     "id": 11,
     "showOnHomePage": false,
