@@ -5,6 +5,7 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import JsonLdSchema from '@/components/seo/JsonLdSchema'
+import SubscriptionCta from '@/components/subscription/SubscriptionCta'
 import useBlogs from '@/hooks/use-blogs'
 import useImage from '@/hooks/use-image'
 import usePath from '@/hooks/use-path'
@@ -159,6 +160,8 @@ const BlogPost = () => {
             </div>
           </div>
         </article>
+
+        <SubscriptionCta />
 
         {/* Spacer */}
         <div className="h-16 lg:h-24" />

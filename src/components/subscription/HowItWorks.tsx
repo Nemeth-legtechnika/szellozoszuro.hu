@@ -10,7 +10,10 @@ const HowItWorks = () => {
         {[ClipboardList, Mail, Truck].map((Icon, index) => (
           <li key={index} className="flex gap-3">
             <Icon className="h-6 w-6 shrink-0 text-cyan" />
-            <div><span className="font-semibold text-foreground">{index + 1}.</span><p className="mt-2 text-muted-foreground">{t(`subscription.how.step${index + 1}`)}</p></div>
+            <div>
+              <span className="font-semibold text-foreground">{index + 1}.</span>
+              <p className="mt-2 text-muted-foreground">{t(`subscription.how.step${index + 1}`)}</p>
+            </div>
           </li>
         ))}
       </ol>

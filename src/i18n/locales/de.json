@@ -476,5 +476,69 @@
     "accept": "Akzeptieren",
     "decline": "Ablehnen",
     "learnMore": "Datenschutz"
+  },
+  "subscription": {
+    "pageTitle": "Filterabo",
+    "pageDescription": "Melden Sie sich für einen regelmäßigen Filterwechsel an. Vor jeder Bestellung stimmen wir uns mit Ihnen ab.",
+    "note": "Unverbindlich: Sie können jederzeit kündigen. Vor jeder Bestellung bitten wir um Ihre Bestätigung.",
+    "link": "Filterabo",
+    "accepted": "Akzeptiert",
+    "emailSubject": "Filterabo: {{name}}",
+    "how": {
+      "title": "So funktioniert es",
+      "step1": "Sie melden sich über das Formular an.",
+      "step2": "Vor dem nächsten Filterwechsel erinnern wir Sie per E-Mail. Sie bestätigen, verschieben oder stornieren.",
+      "step3": "Wir senden eine Zahlungsaufforderung. Nach Zahlungseingang versenden wir den Filter."
+    },
+    "cta": {
+      "title": "Vergessen Sie den Filterwechsel nicht!",
+      "text": "Melden Sie sich für regelmäßige Filterwechsel an – wir erinnern Sie vor jeder Bestellung.",
+      "button": "Filterabo anfragen"
+    },
+    "thanks": {
+      "title": "Vielen Dank für Ihre Anmeldung!",
+      "text": "Wir bestätigen Ihre Angaben in Kürze per E-Mail."
+    },
+    "emailOpened": {
+      "title": "Nur noch ein Schritt!",
+      "text": "Wir haben Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht geöffnet. Bitte senden Sie die E-Mail ab; anschließend bestätigen wir Ihre Anmeldung. Falls sich Ihr E-Mail-Programm nicht geöffnet hat, schreiben Sie uns an: {{email}}",
+      "return": "Zurück zum Formular"
+    },
+    "form": {
+      "title": "Anmeldung",
+      "name": "Name",
+      "namePlaceholder": "Ihr Name",
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "beispiel@email.com",
+      "phone": "Telefon (optional)",
+      "phonePlaceholder": "+43 123 456 789",
+      "brand": "Marke",
+      "chooseBrand": "Marke auswählen",
+      "other": "Andere / weiß ich nicht",
+      "model": "Gerätetyp oder Filtermaße",
+      "modelPlaceholder": "z. B. recoVAIR VAR 260/4 oder 161×492×47 mm",
+      "interval": "Filterwechselintervall",
+      "6m": "Halbjährlich",
+      "12m": "Jährlich",
+      "note": "Anmerkung (optional)",
+      "notePlaceholder": "Weitere Angaben zum Filter...",
+      "privacy": "Datenschutzerklärung",
+      "privacyBefore": "Ich habe die",
+      "privacyLink": "Datenschutzerklärung",
+      "privacyAfter": " gelesen und akzeptiere sie",
+      "submit": "Anmeldung anfragen",
+      "sending": "Wird gesendet..."
+    },
+    "errors": {
+      "name": "Der Name muss 2–100 Zeichen lang sein.",
+      "email": "Geben Sie eine gültige E-Mail-Adresse ein (maximal 255 Zeichen).",
+      "phone": "Geben Sie eine gültige Telefonnummer ein (maximal 50 Zeichen).",
+      "brand": "Bitte wählen Sie eine Marke.",
+      "model": "Gerätetyp oder Filtermaße müssen 2–150 Zeichen lang sein.",
+      "interval": "Bitte wählen Sie ein Intervall.",
+      "note": "Die Anmerkung darf maximal 1000 Zeichen enthalten.",
+      "privacy": "Bitte akzeptieren Sie die Datenschutzerklärung.",
+      "submit": "Die Anmeldung konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+    }
   }
 }

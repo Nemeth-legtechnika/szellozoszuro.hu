@@ -5,7 +5,12 @@ export const subscriptionSchema = (message: (key: string) => string, brands: str
   z.object({
     name: z.string().trim().min(2, message('name')).max(100, message('name')),
     email: z.string().trim().email(message('email')).max(255, message('email')),
-    phone: z.string().trim().max(50, message('phone')).regex(/^[+\d\s()./-]*$/, message('phone')).optional(),
+    phone: z
+      .string()
+      .trim()
+      .max(50, message('phone'))
+      .regex(/^[+\d\s()./-]*$/, message('phone'))
+      .optional(),
     brand: z.string().refine((value) => [...brands, 'other'].includes(value), message('brand')),
     model: z.string().trim().min(2, message('model')).max(150, message('model')),
     interval: z.enum(['6m', '12m'], { errorMap: () => ({ message: message('interval') }) }),
@@ -25,11 +30,17 @@ export const subscriptionMailto = (
   const body = ['name', 'email', 'phone', 'brand', 'model', 'interval', 'note', 'privacy']
     .map((key) => {
       const value = data[key as keyof SubscriptionData]
-      const display = key === 'interval' ? t(`subscription.form.${data.interval}`)
-        : key === 'privacy' ? t('subscription.accepted')
-          : key === 'brand' && value === 'other' ? t('subscription.form.other') : value || '-'
+      const display =
+        key === 'interval'
+          ? t(`subscription.form.${data.interval}`)
+          : key === 'privacy'
+            ? t('subscription.accepted')
+            : key === 'brand' && value === 'other'
+              ? t('subscription.form.other')
+              : value || '-'
       return `${t(`subscription.form.${key}`)}: ${display}`
-    }).join('\n\n')
+    })
+    .join('\n\n')
   return `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 }
 
@@ -53,11 +64,20 @@ export const deliverSubscription = async (
   const response = await fetch(url.href, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ ...payload, submittedAt: new Date().toISOString(), source: 'szellozoszuro.hu', lang }),
+    body: JSON.stringify({
+      ...payload,
+      submittedAt: new Date().toISOString(),
+      source: 'szellozoszuro.hu',
+      lang,
+    }),
   })
   if (!response.ok) throw new Error('Submission failed')
   if (typeof window.gtag === 'function') {
-    window.gtag('event', 'generate_lead', { form_name: 'filter_subscription', interval: data.interval, brand: data.brand })
+    window.gtag('event', 'generate_lead', {
+      form_name: 'filter_subscription',
+      interval: data.interval,
+      brand: data.brand,
+    })
   }
   return 'submitted'
 }

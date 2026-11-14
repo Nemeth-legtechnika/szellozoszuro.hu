@@ -16,6 +16,8 @@ describe('usePath – German', () => {
     const paths = result.current
 
     expect(paths.home).toBe('/de/')
+    expect(paths.subscription).toBe('/de/elofizetes')
+    expect(paths.subscriptionThanks).toBe('/de/elofizetes/koszonjuk')
     expect(paths.shop).toBe('/de/shop')
     expect(paths.blog.base).toBe('/de/blog')
     expect(paths.blog.getPost('mein-beitrag')).toBe('/de/blog/mein-beitrag')
