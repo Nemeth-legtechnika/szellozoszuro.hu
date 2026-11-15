@@ -22,9 +22,9 @@ import usePath from '@/hooks/use-path'
 import useProducts from '@/hooks/use-products'
 import {
   deliverSubscription,
+  type SubscriptionData,
   subscriptionMailto,
   subscriptionSchema,
-  type SubscriptionData,
 } from '@/lib/subscription'
 import { SUBSCRIPTION_ENDPOINT, SUBSCRIPTION_FALLBACK_EMAIL } from '@/lib/subscription-config'
 
@@ -72,7 +72,14 @@ const SubscriptionForm = () => {
       toast.error(t('subscription.errors.submit'))
     }
   }
-  if (emailOpened) return <EmailOpenedInfo onReturn={() => setEmailOpened(false)} />
+  if (emailOpened)
+    return (
+      <EmailOpenedInfo
+        onReturn={() => {
+          setEmailOpened(false)
+        }}
+      />
+    )
   return (
     <Form {...form}>
       <form
@@ -154,7 +161,9 @@ const SubscriptionForm = () => {
                         name={field.name}
                         value={value}
                         checked={field.value === value}
-                        onChange={() => field.onChange(value)}
+                        onChange={() => {
+                          field.onChange(value)
+                        }}
                         onBlur={field.onBlur}
                         ref={field.ref}
                         className="h-4 w-4 accent-primary"
@@ -196,7 +205,9 @@ const SubscriptionForm = () => {
                   <input
                     type="checkbox"
                     checked={field.value}
-                    onChange={(event) => field.onChange(event.target.checked)}
+                    onChange={(event) => {
+                      field.onChange(event.target.checked)
+                    }}
                     onBlur={field.onBlur}
                     ref={field.ref}
                     name={field.name}

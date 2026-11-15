@@ -1,4 +1,5 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import { toast } from 'sonner'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 vi.mock('react-i18next', () => ({
@@ -31,6 +32,7 @@ const fillForm = (overrides: Record<string, string> = {}) => {
 
 describe('ContactForm', () => {
   beforeEach(() => {
+    vi.clearAllMocks()
     // Prevent mailto navigation in tests
     Object.defineProperty(window, 'location', {
       value: { href: '' },
@@ -74,7 +76,7 @@ describe('ContactForm', () => {
     )
   })
 
-  it('constructs mailto link and shows success state on valid submission', async () => {
+  it('opens an email draft without confirming delivery and preserves form values', async () => {
     render(<ContactForm />)
     fillForm()
 
@@ -86,7 +88,12 @@ describe('ContactForm', () => {
 
     expect(window.location.href).toContain('subject=')
     expect(window.location.href).toContain('Test%20User')
-    expect(screen.getByText('contact.form.success')).toBeInTheDocument()
-    expect(screen.getByText('contact.form.successDescription')).toBeInTheDocument()
+    expect(screen.queryByText('contact.form.success')).not.toBeInTheDocument()
+    expect(toast.success).not.toHaveBeenCalled()
+    fireEvent.click(screen.getByRole('button', { name: 'contact.form.emailOpened.return' }))
+    expect(screen.getByPlaceholderText('contact.form.namePlaceholder')).toHaveValue('Test User')
+    expect(screen.getByPlaceholderText('contact.form.emailPlaceholder')).toHaveValue(
+      'test@example.com',
+    )
   })
 })

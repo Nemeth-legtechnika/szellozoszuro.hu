@@ -18,9 +18,9 @@ import NotFound from './pages/NotFound'
 import Privacy from './pages/Privacy'
 import Shipping from './pages/Shipping'
 import Shop from './pages/Shop'
-import Terms from './pages/Terms'
 import Subscription from './pages/Subscription'
 import SubscriptionThanks from './pages/SubscriptionThanks'
+import Terms from './pages/Terms'
 
 const queryClient = new QueryClient()
 
