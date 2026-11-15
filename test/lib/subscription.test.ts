@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
-import { deliverSubscription, subscriptionSchema, type SubscriptionData } from '@/lib/subscription'
+import { deliverSubscription, type SubscriptionData, subscriptionSchema } from '@/lib/subscription'
 
 const data: SubscriptionData = {
   name: 'Teszt Elek',
