@@ -69,7 +69,7 @@ describe('subscription validation and delivery', () => {
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: expect.any(String),
+        body: expect.any(String) as unknown,
       },
     )
     const body = fetchMock.mock.calls[0]?.[1]?.body
@@ -84,7 +84,7 @@ describe('subscription validation and delivery', () => {
       interval: '6m',
       note: data.note,
       privacy: true,
-      submittedAt: expect.any(String),
+      submittedAt: expect.any(String) as unknown,
       source: 'szellozoszuro.hu',
       lang: 'de',
     })
