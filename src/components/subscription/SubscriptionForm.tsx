@@ -22,9 +22,9 @@ import usePath from '@/hooks/use-path'
 import useProducts from '@/hooks/use-products'
 import {
   deliverSubscription,
+  type SubscriptionData,
   subscriptionMailto,
   subscriptionSchema,
-  type SubscriptionData,
 } from '@/lib/subscription'
 import { SUBSCRIPTION_ENDPOINT, SUBSCRIPTION_FALLBACK_EMAIL } from '@/lib/subscription-config'
 
