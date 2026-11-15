@@ -276,6 +276,11 @@
       "sending": "Wird gesendet...",
       "success": "Nachricht gesendet!",
       "successDescription": "Vielen Dank für Ihre Anfrage! Wir werden uns in Kürze bei Ihnen melden.",
+      "emailOpened": {
+        "title": "Nur noch ein Schritt!",
+        "text": "Wir haben Ihr E-Mail-Programm mit einer vorausgefüllten Nachricht geöffnet. Die Nachricht wurde noch nicht gesendet: Bitte senden Sie die E-Mail selbst ab. Falls sich Ihr E-Mail-Programm nicht geöffnet hat, schreiben Sie uns an: {{email}}",
+        "return": "Zurück zum Formular"
+      },
       "error": "Fehler aufgetreten",
       "errorDescription": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut."
     },

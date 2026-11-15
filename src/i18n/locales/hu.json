@@ -276,6 +276,11 @@
       "sending": "Küldés...",
       "success": "Üzenet elküldve!",
       "successDescription": "Köszönjük megkeresését! Hamarosan felvesszük Önnel a kapcsolatot.",
+      "emailOpened": {
+        "title": "Már csak egy lépés!",
+        "text": "Megnyitottuk a levelezőprogramját egy előre kitöltött üzenettel. Az üzenet még nincs elküldve: kérjük, küldje el a levelet. Ha nem nyílt meg a levelező, írjon nekünk: {{email}}",
+        "return": "Vissza az űrlaphoz"
+      },
       "error": "Hiba történt",
       "errorDescription": "Az üzenet küldése sikertelen. Kérjük, próbálja újra később."
     },
