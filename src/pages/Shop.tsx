@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next'
 import shopBrandsBg from '@/assets/images/shop-brands-bg.jpg'
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
-import SubscriptionCta from '@/components/subscription/SubscriptionCta'
 import { Button } from '@/components/ui/button'
 import useProducts from '@/hooks/use-products'
 import useShopCategories from '@/hooks/use-shop-categories'
@@ -147,8 +146,6 @@ const Shop = () => {
             </div>
           </div>
         </section>
-
-        <SubscriptionCta />
 
         {/* All Filters CTA */}
         <section className="py-12 lg:py-16 section-dark">

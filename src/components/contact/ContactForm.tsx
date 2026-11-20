@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { z } from 'zod'
 
-import EmailOpenedInfo from '@/components/subscription/EmailOpenedInfo'
+import EmailOpenedInfo from '@/components/contact/EmailOpenedInfo'
 import { Button } from '@/components/ui/button'
 import {
   Form,
@@ -68,7 +68,6 @@ const ContactForm = () => {
   if (emailOpened) {
     return (
       <EmailOpenedInfo
-        translationPrefix="contact.form.emailOpened"
         onReturn={() => {
           setEmailOpened(false)
         }}

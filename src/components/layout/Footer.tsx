@@ -31,14 +31,6 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to={paths.subscription}
-                  className="text-dark-muted hover:text-cyan transition-colors text-sm"
-                >
-                  {t('subscription.link')}
-                </Link>
-              </li>
-              <li>
-                <Link
                   to={paths.shop}
                   className="text-dark-muted hover:text-cyan transition-colors text-sm"
                 >

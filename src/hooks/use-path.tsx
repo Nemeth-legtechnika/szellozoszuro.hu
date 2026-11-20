@@ -6,10 +6,6 @@ const pagePaths = (langPrefix: string = '') => ({
 
   shop: `${langPrefix}/shop`,
 
-  subscription: `${langPrefix}/elofizetes`,
-
-  subscriptionThanks: `${langPrefix}/elofizetes/koszonjuk`,
-
   blog: {
     base: `${langPrefix}/blog`,
     getPost: (slug: string): string => `${langPrefix}/blog/${slug}`,

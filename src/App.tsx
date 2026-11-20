@@ -18,8 +18,6 @@ import NotFound from './pages/NotFound'
 import Privacy from './pages/Privacy'
 import Shipping from './pages/Shipping'
 import Shop from './pages/Shop'
-import Subscription from './pages/Subscription'
-import SubscriptionThanks from './pages/SubscriptionThanks'
 import Terms from './pages/Terms'
 
 const queryClient = new QueryClient()
@@ -28,8 +26,6 @@ const queryClient = new QueryClient()
 const routes = [
   { path: '/', element: <Index /> },
   { path: '/shop', element: <Shop /> },
-  { path: '/elofizetes', element: <Subscription /> },
-  { path: '/elofizetes/koszonjuk', element: <SubscriptionThanks /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
   { path: '/about', element: <About /> },
