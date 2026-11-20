@@ -1,11 +1,11 @@
 import { zodResolver } from '@hookform/resolvers/zod'
-import { CheckCircle, Loader2, Send } from 'lucide-react'
+import { Loader2, Send } from 'lucide-react'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
-import { toast } from 'sonner'
 import { z } from 'zod'
 
+import EmailOpenedInfo from '@/components/contact/EmailOpenedInfo'
 import { Button } from '@/components/ui/button'
 import {
   Form,
@@ -21,7 +21,7 @@ import { Textarea } from '@/components/ui/textarea'
 const ContactForm = () => {
   const { t } = useTranslation()
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSuccess, setIsSuccess] = useState(false)
+  const [emailOpened, setEmailOpened] = useState(false)
 
   const contactSchema = z.object({
     name: z.string().min(2, t('contact.form.name')).max(100),
@@ -46,7 +46,6 @@ const ContactForm = () => {
 
   const onSubmit = (data: ContactFormData) => {
     if (data.website && data.website.length > 0) {
-      toast.success(t('contact.form.success'))
       return
     }
 
@@ -62,33 +61,17 @@ const ContactForm = () => {
 
     window.location.href = `mailto:office@sopronterv.hu?subject=${subject}&body=${body}`
 
-    setIsSuccess(true)
-    toast.success(t('contact.form.successDescription'))
-    form.reset()
-
-    setTimeout(() => {
-      setIsSuccess(false)
-    }, 5000)
+    setEmailOpened(true)
     setIsSubmitting(false)
   }
 
-  if (isSuccess) {
+  if (emailOpened) {
     return (
-      <div className="bg-card rounded-2xl border border-border p-8 text-center">
-        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500/10 flex items-center justify-center">
-          <CheckCircle className="w-8 h-8 text-green-500" />
-        </div>
-        <h3 className="text-xl font-semibold text-foreground mb-2">{t('contact.form.success')}</h3>
-        <p className="text-muted-foreground mb-4">{t('contact.form.successDescription')}</p>
-        <Button
-          variant="outline"
-          onClick={() => {
-            setIsSuccess(false)
-          }}
-        >
-          {t('contact.form.submit')}
-        </Button>
-      </div>
+      <EmailOpenedInfo
+        onReturn={() => {
+          setEmailOpened(false)
+        }}
+      />
     )
   }
 

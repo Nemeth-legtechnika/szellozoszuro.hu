@@ -170,7 +170,7 @@
     "aftermarketFilters": "Utángyártott szűrők",
     "comingSoon": "Hamarosan",
     "viewAll": "Összes szűrő megtekintése",
-    "viewAllDescription": "Böngéssz a teljes szűrő kínálatunkban a Szellőztetés Webshop oldalán. Gyári és utángyártott szűrők 85+ termék.",
+    "viewAllDescription": "Böngéssz a teljes szűrő kínálatunkban a Szellőztetés Webshop oldalán. Gyári és utángyártott szűrők 90+ termék.",
     "openWebshop": "Webshop megnyitása",
     "fastShipping": "Gyors szállítás",
     "fastShippingDescription": "Raktárról 24 órán belül postázzuk, GLS-sel 1-3 nap",
@@ -283,6 +283,11 @@
       "sending": "Küldés...",
       "success": "Üzenet elküldve!",
       "successDescription": "Köszönjük megkeresését! Hamarosan felvesszük Önnel a kapcsolatot.",
+      "emailOpened": {
+        "title": "Már csak egy lépés!",
+        "text": "Megnyitottuk a levelezőprogramját egy előre kitöltött üzenettel. Az üzenet még nincs elküldve: kérjük, küldje el a levelet. Ha nem nyílt meg a levelező, írjon nekünk: {{email}}",
+        "return": "Vissza az űrlaphoz"
+      },
       "error": "Hiba történt",
       "errorDescription": "Az üzenet küldése sikertelen. Kérjük, próbálja újra később.",
       "emailSubjectPrefix": "Kontakt"
