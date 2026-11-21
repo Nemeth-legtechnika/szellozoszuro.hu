@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 import logo from '@/assets/images/logo.png'
+import { Button } from '@/components/ui/button'
 import useContact from '@/hooks/use-contact'
+import { resetCookieConsent } from '@/hooks/use-cookie-consent'
 import usePath from '@/hooks/use-path'
 
 const Footer = () => {
@@ -184,7 +186,7 @@ const Footer = () => {
           <p className="text-dark-muted text-sm">
             © {new Date().getFullYear()} Németh Légtechnika Kft. {t('footer.allRights')}
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-6">
             <Link
               to={paths.privacy}
               className="text-dark-muted hover:text-cyan transition-colors text-sm"
@@ -197,6 +199,14 @@ const Footer = () => {
             >
               {t('footer.terms')}
             </Link>
+            <Button
+              type="button"
+              variant="link"
+              onClick={resetCookieConsent}
+              className="h-auto p-0 text-dark-muted hover:text-cyan transition-colors text-sm font-normal no-underline hover:no-underline"
+            >
+              {t('footer.cookieSettings')}
+            </Button>
           </div>
         </div>
       </div>

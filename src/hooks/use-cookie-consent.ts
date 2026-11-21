@@ -2,13 +2,38 @@ import { useCallback, useEffect, useState } from 'react'
 
 const STORAGE_KEY = 'cookieConsent'
 const GA_MEASUREMENT_ID = 'G-8PZY62C9EV'
+const CONSENT_CHANGE_EVENT = 'cookie-consent-change'
 
 type ConsentStatus = 'undecided' | 'granted' | 'denied'
 
 function getStoredConsent(): ConsentStatus {
-  const value = localStorage.getItem(STORAGE_KEY)
-  if (value === 'granted' || value === 'denied') return value
+  try {
+    const value = localStorage.getItem(STORAGE_KEY)
+    if (value === 'granted' || value === 'denied') return value
+  } catch {
+    // The banner remains usable when the browser blocks local storage.
+  }
   return 'undecided'
+}
+
+export function resetCookieConsent() {
+  const wasGranted = getStoredConsent() === 'granted'
+  if (wasGranted && typeof window.gtag === 'function') {
+    window.gtag('consent', 'update', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+    })
+  }
+  try {
+    localStorage.removeItem(STORAGE_KEY)
+  } catch {
+    // Reopen the banner even if the saved choice cannot be removed.
+  }
+  window.dispatchEvent(
+    new CustomEvent<ConsentStatus>(CONSENT_CHANGE_EVENT, { detail: 'undecided' }),
+  )
 }
 
 function loadGtagScript() {
@@ -42,17 +67,26 @@ export function useCookieConsent() {
     if (stored === 'granted') {
       grantConsent()
     }
+    const onChange = (event: Event) => {
+      setStatus((event as CustomEvent<ConsentStatus>).detail)
+    }
+    window.addEventListener(CONSENT_CHANGE_EVENT, onChange)
+    return () => { window.removeEventListener(CONSENT_CHANGE_EVENT, onChange); }
   }, [])
 
   const accept = useCallback(() => {
     localStorage.setItem(STORAGE_KEY, 'granted')
     setStatus('granted')
     grantConsent()
+    window.dispatchEvent(
+      new CustomEvent<ConsentStatus>(CONSENT_CHANGE_EVENT, { detail: 'granted' }),
+    )
   }, [])
 
   const decline = useCallback(() => {
     localStorage.setItem(STORAGE_KEY, 'denied')
     setStatus('denied')
+    window.dispatchEvent(new CustomEvent<ConsentStatus>(CONSENT_CHANGE_EVENT, { detail: 'denied' }))
   }, [])
 
   return { status: status ?? 'undecided', accept, decline }

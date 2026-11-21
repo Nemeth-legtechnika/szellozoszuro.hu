@@ -1,7 +1,7 @@
 import { act, renderHook } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
-import { useCookieConsent } from '@/hooks/use-cookie-consent'
+import { resetCookieConsent, useCookieConsent } from '@/hooks/use-cookie-consent'
 
 const mockGtag = vi.fn()
 
@@ -104,6 +104,57 @@ describe('useCookieConsent', () => {
     localStorage.setItem('cookieConsent', 'something-invalid')
     const { result } = renderHook(() => useCookieConsent())
 
+    expect(result.current.status).toBe('undecided')
+    expect(mockGtag).not.toHaveBeenCalled()
+  })
+
+  it('revokes all four granted signals before reopening every mounted banner hook', () => {
+    localStorage.setItem('cookieConsent', 'granted')
+    const first = renderHook(() => useCookieConsent())
+    const second = renderHook(() => useCookieConsent())
+    mockGtag.mockClear()
+
+    act(() => {
+      resetCookieConsent()
+    })
+
+    expect(localStorage.getItem('cookieConsent')).toBeNull()
+    expect(first.result.current.status).toBe('undecided')
+    expect(second.result.current.status).toBe('undecided')
+    expect(mockGtag).toHaveBeenCalledExactlyOnceWith('consent', 'update', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+    })
+    act(() => {
+      first.result.current.decline()
+    })
+    expect(second.result.current.status).toBe('denied')
+    expect(localStorage.getItem('cookieConsent')).toBe('denied')
+  })
+
+  it('reopens a denied decision without granting or loading tracking', () => {
+    localStorage.setItem('cookieConsent', 'denied')
+    const { result } = renderHook(() => useCookieConsent())
+    act(() => {
+      resetCookieConsent()
+    })
+    expect(result.current.status).toBe('undecided')
+    expect(localStorage.getItem('cookieConsent')).toBeNull()
+    expect(mockGtag).not.toHaveBeenCalled()
+    expect(getGtagScripts()).toHaveLength(0)
+  })
+
+  it('still reopens the banner when removing the saved choice throws', () => {
+    localStorage.setItem('cookieConsent', 'denied')
+    const { result } = renderHook(() => useCookieConsent())
+    vi.spyOn(Storage.prototype, 'removeItem').mockImplementation(() => {
+      throw new Error('Storage is blocked')
+    })
+    act(() => {
+      resetCookieConsent()
+    })
     expect(result.current.status).toBe('undecided')
     expect(mockGtag).not.toHaveBeenCalled()
   })

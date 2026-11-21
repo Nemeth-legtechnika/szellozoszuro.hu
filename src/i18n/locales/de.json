@@ -142,7 +142,8 @@
     "orderLabel": "Bestellung",
     "technicalLabel": "Fachfragen",
     "location": "Sopron, Ungarn",
-    "allRights": "Alle Rechte vorbehalten."
+    "allRights": "Alle Rechte vorbehalten.",
+    "cookieSettings": "Cookie-Einstellungen"
   },
   "shop": {
     "pageTitle": "Filter für Lüftungsanlagen mit Wärmerückgewinnung",
@@ -378,65 +379,205 @@
     "checkoutNote": "Hinweis: Der Kauf erfolgt über den externen Webshop szelloztetes.eu, wo die AGB beim Checkout akzeptiert werden müssen, um die Bestellung abzuschließen."
   },
   "privacy": {
-    "pageTitle": "Datenschutzrichtlinie",
-    "pageDescription": "Die Németh Légtechnika Kft. verpflichtet sich zum Schutz personenbezogener Daten und gibt auf Grundlage der Datenschutz-Grundverordnung (DSGVO) der Europäischen Union folgende Informationen.",
-    "dataController": "Daten des Verantwortlichen",
-    "mainPoints": "Wichtigste Verarbeitungspunkte",
+    "pageTitle": "Datenschutzhinweise — szellozoszuro.hu",
+    "pageDescription": "Wie die Németh Légtechnika Kft. die Daten der Besucher von szellozoszuro.hu verarbeitet.",
+    "effective": "Gültig ab: 2026.11.23. | Version: 2.0",
+    "processorHeaders": ["Auftragsverarbeiter", "Tätigkeit", "Sitz"],
+    "naih": {
+      "name": "Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)",
+      "address": "Cím: 1055 Budapest, Falk Miksa utca 9–11. · Postacím: 1363 Budapest, Pf. 9.",
+      "contact": "Telefon: +36 1 391 1400 · E-Mail: ugyfelszolgalat@naih.hu · Web: https://naih.hu"
+    },
     "sections": {
-      "purchase": {
-        "title": "Kauf auf der Website",
-        "text": "Zweck der Datenverarbeitung ist der Online-Produktverkauf, die Identifizierung des Käufers, die Auftragsabwicklung und die Rechnungsstellung.",
-        "dataHandled": "Verarbeitete Daten:",
-        "name": "Name",
-        "billingAddress": "Rechnungsadresse",
-        "shippingAddress": "Lieferadresse",
-        "email": "E-Mail-Adresse",
-        "phone": "Telefonnummer"
+      "s1": {
+        "title": "1. Der Verantwortliche",
+        "rows": [
+          ["Name", "Németh Légtechnika Kft."],
+          ["Sitz", "Szent György utca 4., II. emelet 3., H-9400 Sopron"],
+          ["Handelsregisternummer", "08 09 029861"],
+          ["Steuernummer", "26290438-2-08"],
+          ["Vertreter", "Németh Kálmán"],
+          ["E-Mail", "info@sopronterv.hu"],
+          ["Telefon", "+36 20 323 8172"],
+          ["Website", "https://szellozoszuro.hu"]
+        ]
       },
-      "retention": {
-        "title": "Dauer der Datenverarbeitung",
-        "text1": "Zur Erfüllung der Buchhaltungspflichten ist der Verantwortliche verpflichtet, Rechnungsdaten 8 Jahre aufzubewahren.",
-        "text2": "Bei Beschwerdemeldungen bewahren wir das Protokoll 5 Jahre auf."
+      "s2": {
+        "title": "2. Zweck dieser Hinweise",
+        "paragraphs": [
+          "Diese Hinweise beschreiben die über die Website szellozoszuro.hu vorgenommenen Verarbeitungen personenbezogener Daten.",
+          "szellozoszuro.hu ist eine Informationswebsite: Auf ihr können Sie weder einkaufen noch sich registrieren; wir speichern dort keine Kundendaten. Der Kauf der Filter erfolgt im Onlineshop szelloztetes.eu; für die dort vorgenommenen Verarbeitungen (Bestellung, Rechnungsstellung, Versand, Zahlung und die nach dem Kauf versandte Erinnerung an den Filterwechsel) gelten die auf szelloztetes.eu veröffentlichten Datenschutzhinweise. Für die anderen Websites unseres Unternehmens (sopronterv.hu, hoszivattyu-online.hu) gelten die dort veröffentlichten Hinweise.",
+          "Bei der Verarbeitung beachten wir die DSGVO (Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates) sowie das ungarische Gesetz Nr. CXII von 2011 über das Recht auf informationelle Selbstbestimmung."
+        ]
       },
-      "transfer": {
-        "title": "Datenübermittlung",
-        "text": "Für die Produktlieferung werden Name und Adresse des Empfängers an den Versanddienstleister übermittelt.",
-        "onlinePayment": "Online-Zahlung",
-        "onlinePaymentText": "Online-Kartenzahlungen werden über das Barion-System abgewickelt. Die Kartendaten gelangen nicht zum Händler."
+      "s3": {
+        "title": "3. Welche Daten wir verarbeiten und zu welchen Zwecken",
+        "subsections": {
+          "form": {
+            "title": "3.1 Kontaktformular",
+            "paragraphs": [
+              "Das Formular speichert keine Daten: Nach dem Ausfüllen öffnet sich im eigenen E-Mail-Programm des Besuchers eine vorausgefüllte E-Mail, die er selbst an uns sendet. Wir erhalten die Daten daher nur, wenn Sie die E-Mail absenden."
+            ],
+            "rows": [
+              [
+                "Verarbeitete Daten",
+                "Name, E-Mail-Adresse, Telefonnummer (optional), Nachrichtentext"
+              ],
+              [
+                "Zweck der Verarbeitung",
+                "Beantwortung der Anfrage, Beratung zur Filterauswahl und technische Beratung"
+              ],
+              [
+                "Rechtsgrundlage",
+                "Art. 6 Abs. 1 lit. b DSGVO — vorvertragliche Maßnahmen auf Anfrage der betroffenen Person; wenn die Anfrage nicht auf einen Kauf gerichtet ist: Art. 6 Abs. 1 lit. f DSGVO — berechtigtes Interesse an der Beantwortung der Anfrage"
+              ],
+              [
+                "Speicherdauer",
+                "Wenn aus der Anfrage ein Kauf entsteht: gemäß den Datenschutzhinweisen von szelloztetes.eu; andernfalls 1 Jahr ab Abschluss der Anfrage"
+              ],
+              [
+                "Bereitstellung der Daten",
+                "freiwillig; ohne die Angaben in den gekennzeichneten Feldern können wir nicht antworten"
+              ]
+            ]
+          },
+          "direct": {
+            "title": "3.2 Kontaktaufnahme per E-Mail oder Telefon",
+            "rows": [
+              [
+                "Verarbeitete Daten",
+                "die in der Anfrage angegebenen Daten (Name, Kontaktdaten, Inhalt der Nachricht)"
+              ],
+              ["Zweck / Rechtsgrundlage", "wie in Abschnitt 3.1"],
+              ["Speicherdauer", "wie in Abschnitt 3.1"]
+            ]
+          },
+          "cookies": {
+            "title": "3.3 Cookies und Messcodes",
+            "paragraphs": ["Einzelheiten finden Sie in Abschnitt 7."]
+          }
+        }
       },
-      "cookies": {
-        "title": "Cookies",
-        "text": "Die Website verwendet Cookies zur Gewährleistung des Betriebs und zur Bedienung der Besucher. Deren Zulassung ist für die Nutzung des Systems erforderlich."
+      "s4": {
+        "title": "4. Auftragsverarbeiter",
+        "processors": [
+          [
+            "GitHub, Inc. (GitHub Pages)",
+            "Hosting und Bereitstellung der Website (die IP-Adressen der Besucher werden bei der Bereitstellung technisch verarbeitet)",
+            "88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA"
+          ],
+          [
+            "FORPSI / BlazeArts Kft.",
+            "Domain- und DNS-Dienste, E-Mail-Hosting (Speicherung der an uns gerichteten E-Mails)",
+            "1096 Budapest, Thaly Kálmán utca 39., Magyarország"
+          ],
+          [
+            "Google Ireland Ltd.",
+            "Webanalyse (Google Analytics), Verwaltung und Messung von Werbung (Google Ads)",
+            "Gordon House, Barrow Street, Dublin 4, Írország"
+          ]
+        ]
+      },
+      "s5": {
+        "title": "5. Datenübermittlung in Drittländer",
+        "paragraphs": [
+          "Bei der Nutzung der Dienste von GitHub und Google kann eine Übermittlung von Daten außerhalb des Europäischen Wirtschaftsraums (USA) erfolgen. Grundlage der Übermittlung sind der Angemessenheitsbeschluss der Europäischen Kommission (EU–US-Datenschutzrahmen) beziehungsweise die von den Anbietern verwendeten Standardvertragsklauseln (SCC). Darüber hinaus übermitteln wir keine Daten in Drittländer."
+        ]
+      },
+      "s6": {
+        "title": "6. Datensicherheit",
+        "paragraphs": [
+          "Die Website verwendet eine verschlüsselte Verbindung (HTTPS). Auf der Website werden keine Kundendaten gespeichert; eingehende E-Mails werden in einem passwortgeschützten E-Mail-System mit beschränktem Zugriff verarbeitet, auf das ausschließlich befugte Mitarbeiter zugreifen können."
+        ]
+      },
+      "s7": {
+        "title": "7. Cookies",
+        "paragraphs": [
+          "Die Website verwendet Cookies. Über Cookies können Sie im Banner entscheiden, das bei Ihrem ersten Besuch erscheint; Ihre Entscheidung können Sie jederzeit über den Link „Cookie-Einstellungen“ in der Fußzeile ändern."
+        ],
+        "subsections": {
+          "necessary": {
+            "title": "7.1 Unbedingt erforderliche Speicherung",
+            "paragraphs": [
+              "Zur Speicherung Ihrer Cookie-Entscheidung verwenden wir den lokalen Speicher Ihres Browsers. Hierfür bitten wir nicht um Ihre Einwilligung, da Sie Ihre Entscheidung andernfalls bei jedem Laden einer Seite erneut treffen müssten. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO — berechtigtes Interesse."
+            ]
+          },
+          "analytics": {
+            "title": "7.2 Analyse-Cookies",
+            "paragraphs": [
+              "Sie helfen uns zu verstehen, wie Besucher die Website nutzen (z. B. welche Seiten und Artikel beliebt sind und woher die Besucher kommen). Anbieter: Google (Google Analytics 4). Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO — Ihre Einwilligung. Diese Cookies werden nur aktiviert, wenn Sie eingewilligt haben."
+            ]
+          },
+          "marketing": {
+            "title": "7.3 Marketing-Cookies",
+            "paragraphs": [
+              "Sie dienen der Messung der Wirksamkeit unserer Werbung und der Personalisierung von Anzeigen. Anbieter: Google (Google Ads). Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO — Ihre Einwilligung. Diese Cookies werden nur aktiviert, wenn Sie eingewilligt haben."
+            ]
+          },
+          "withdrawal": {
+            "title": "7.4 Widerruf der Einwilligung",
+            "paragraphs": [
+              "Sie können Ihre Einwilligung jederzeit ohne Einschränkung über den Link „Cookie-Einstellungen“ in der Fußzeile oder über die Cookie-Einstellungen Ihres Browsers widerrufen. Der Widerruf berührt nicht die Rechtmäßigkeit der Verarbeitung vor dem Widerruf."
+            ]
+          },
+          "lovable": {
+            "title": "Ergänzung: Besucheranalyse durch Lovable",
+            "paragraphs": [
+              "Klicks werden erst nach Ihrer Einwilligung erfasst; bei Besuchern, deren Browser das Signal Global Privacy Control sendet, werden keine Klicks erfasst. Seitenbesuche, Verweildauer, Ladegeschwindigkeit und Fehler werden bei allen Besuchern ohne Cookies und ohne Identifizierung erfasst.",
+              "Die Analyse durch Lovable verwendet keine Cookies, speichert nichts auf dem Gerät der Besucher, bewahrt keine IP-Adressen auf und identifiziert keine Besucher. Erfasst werden die besuchten Seiten, die Herkunft der Besuche, Land, Browser, Betriebssystem und Gerätetyp, Verweildauer, Ladegeschwindigkeit, Fehler und — nach Einwilligung — Klicks. Detaillierte Daten werden 90 Tage, tägliche Zusammenfassungen ein Jahr aufbewahrt.",
+              "Lovable erhebt diese Daten für uns. Die Datenschutzhinweise von Lovable erläutern die Verarbeitung: https://lovable.dev/privacy"
+            ]
+          }
+        }
+      },
+      "s8": {
+        "title": "8. Ihre Rechte",
+        "rights": [
+          [
+            "Recht auf Information und Auskunft",
+            " — Sie können Auskunft darüber verlangen, ob wir Daten über Sie verarbeiten, und eine Kopie dieser Daten anfordern."
+          ],
+          ["Recht auf Berichtigung", " — Sie können die Berichtigung unrichtiger Daten verlangen."],
+          [
+            "Recht auf Löschung",
+            " — Sie können die Löschung Ihrer Daten verlangen, wenn der Verarbeitungszweck entfallen ist oder Sie Ihre Einwilligung widerrufen haben und keine andere Rechtsgrundlage für die Verarbeitung besteht."
+          ],
+          ["Recht auf Einschränkung der Verarbeitung.", ""],
+          [
+            "Recht auf Datenübertragbarkeit",
+            " — Sie können die Herausgabe Ihrer Daten in einem maschinenlesbaren Format verlangen."
+          ],
+          [
+            "Widerspruchsrecht",
+            " — Sie können einer auf berechtigten Interessen beruhenden Verarbeitung widersprechen."
+          ],
+          [
+            "Recht auf Widerruf der Einwilligung",
+            " — bei Verarbeitungen, die auf Ihrer Einwilligung beruhen."
+          ]
+        ],
+        "after": [
+          "Sie können Ihren Antrag an info@sopronterv.hu oder per Brief an unseren Sitz richten. Wir beantworten Ihren Antrag spätestens innerhalb eines Monats. Diese Frist kann in begründeten Fällen um weitere zwei Monate verlängert werden; hierüber informieren wir Sie innerhalb eines Monats nach Eingang Ihres Antrags."
+        ]
+      },
+      "s9": {
+        "title": "9. Rechtsbehelfe",
+        "paragraphs": [
+          "Wenn Sie der Ansicht sind, dass Ihre Rechte bei der Verarbeitung verletzt wurden, wenden Sie sich bitte zunächst direkt an uns — die meisten Fragen lassen sich auf diesem Weg am schnellsten klären.",
+          "Sie können außerdem Beschwerde bei der Aufsichtsbehörde einlegen:"
+        ],
+        "authority": true,
+        "after": [
+          "Bei einer Verletzung Ihrer Rechte können Sie sich auch an ein Gericht wenden. Die Klage kann auch vor dem für Ihren Wohnsitz oder Aufenthaltsort zuständigen Gericht erhoben werden."
+        ]
+      },
+      "s10": {
+        "title": "10. Änderung dieser Hinweise",
+        "paragraphs": [
+          "Wir behalten uns vor, diese Datenschutzhinweise zu ändern. Die jeweils geltende Fassung ist auf dieser Seite unter Angabe des Datums ihres Inkrafttretens verfügbar."
+        ]
       }
-    },
-    "yourRights": "Ihre Rechte",
-    "yourRightsText": "Gemäß den DSGVO-Bestimmungen haben Sie folgende Rechte in Bezug auf Ihre personenbezogenen Daten:",
-    "rights": {
-      "access": {
-        "title": "Recht auf Auskunft",
-        "description": "Sie haben das Recht, Informationen darüber zu erhalten, welche Daten wir über Sie verarbeiten."
-      },
-      "rectification": {
-        "title": "Recht auf Berichtigung",
-        "description": "Sie können die Berichtigung unrichtiger Daten verlangen."
-      },
-      "erasure": {
-        "title": "Recht auf Löschung",
-        "description": "Bei Einwilligung können Sie die Löschung Ihrer Daten verlangen."
-      },
-      "restriction": {
-        "title": "Recht auf Einschränkung",
-        "description": "Sie können die Einschränkung der Verarbeitung verlangen."
-      }
-    },
-    "legalRemedies": "Rechtsbehelfe",
-    "legalRemediesText": "Wenn Sie der Ansicht sind, dass wir Ihr Recht auf Schutz personenbezogener Daten verletzt haben, können Sie Beschwerde bei der Aufsichtsbehörde einlegen:",
-    "naih": "Nationale Behörde für Datenschutz und Informationsfreiheit (NAIH)",
-    "naihAddress": "Adresse: 1055 Budapest, Falk Miksa utca 9-11.",
-    "naihPostal": "Postanschrift: 1363 Budapest, Pf. 9.",
-    "naihWebsite": "Website:",
-    "questionsTitle": "Haben Sie Fragen zur Datenverarbeitung?",
-    "questionsText": "Bei Fragen zu Ihren personenbezogenen Daten wenden Sie sich vertrauensvoll an uns:"
+    }
   },
   "shipping": {
     "pageTitle": "Versandinformationen",

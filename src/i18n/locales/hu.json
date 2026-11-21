@@ -142,7 +142,8 @@
     "orderLabel": "Rendelés",
     "technicalLabel": "Szakmai kérdések",
     "location": "Sopron, Magyarország",
-    "allRights": "Minden jog fenntartva."
+    "allRights": "Minden jog fenntartva.",
+    "cookieSettings": "Süti beállítások"
   },
   "shop": {
     "pageTitle": "Szűrők hővisszanyerős gépekhez",
@@ -378,65 +379,196 @@
     "checkoutNote": "Megjegyzés: A vásárlás a külső szelloztetes.eu webáruházon keresztül történik, ahol a pénztár lépésnél szükséges elfogadni az ÁSZF-et a megrendelés véglegesítéséhez."
   },
   "privacy": {
-    "pageTitle": "Adatvédelmi Irányelvek",
-    "pageDescription": "A Németh Légtechnika Kft. elkötelezett a személyes adatok védelme mellett, és az Európai Unió Általános Adatvédelmi Rendelete (GDPR) alapján az alábbi tájékoztatást adja.",
-    "dataController": "Az Adatkezelő adatai",
-    "mainPoints": "Főbb adatkezelési pontok",
+    "pageTitle": "Adatkezelési tájékoztató — szellozoszuro.hu",
+    "pageDescription": "Hogyan kezeli a Németh Légtechnika Kft. a szellozoszuro.hu látogatóinak adatait.",
+    "effective": "Hatályos: 2026.11.23. | Verzió: 2.0",
+    "processorHeaders": ["Adatfeldolgozó", "Tevékenység", "Székhely"],
+    "naih": {
+      "name": "Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)",
+      "address": "Cím: 1055 Budapest, Falk Miksa utca 9–11. · Postacím: 1363 Budapest, Pf. 9.",
+      "contact": "Telefon: +36 1 391 1400 · E-mail: ugyfelszolgalat@naih.hu · Web: https://naih.hu"
+    },
     "sections": {
-      "purchase": {
-        "title": "Vásárlás a weboldalon",
-        "text": "Az adatkezelés célja az online termékértékesítés, a vásárló beazonosítása, a megrendelés teljesítése és a számlakiállítás.",
-        "dataHandled": "Kezelt adatok:",
-        "name": "Név",
-        "billingAddress": "Számlázási cím",
-        "shippingAddress": "Szállítási cím",
-        "email": "E-mail cím",
-        "phone": "Telefonszám"
+      "s1": {
+        "title": "1. Az adatkezelő",
+        "rows": [
+          ["Név", "Németh Légtechnika Kft."],
+          ["Székhely", "Szent György utca 4., II. emelet 3., H-9400 Sopron"],
+          ["Cégjegyzékszám", "08 09 029861"],
+          ["Adószám", "26290438-2-08"],
+          ["Képviselő", "Németh Kálmán"],
+          ["E-mail", "info@sopronterv.hu"],
+          ["Telefon", "+36 20 323 8172"],
+          ["Weboldal", "https://szellozoszuro.hu"]
+        ]
       },
-      "retention": {
-        "title": "Adatkezelés időtartama",
-        "text1": "A számviteli kötelezettség teljesítése érdekében a számlázási adatokat 8 évig köteles megőrizni az Adatkezelő.",
-        "text2": "Panaszbejelentés esetén a jegyzőkönyvet 5 évig őrizzük meg."
+      "s2": {
+        "title": "2. A tájékoztató célja",
+        "paragraphs": [
+          "Ez a tájékoztató a szellozoszuro.hu weboldalon keresztül végzett adatkezeléseket írja le.",
+          "A szellozoszuro.hu tájékoztató oldal: rajta nem lehet vásárolni, regisztrálni, és nem tárolunk ügyféladatot. A szűrők megvásárlása a szelloztetes.eu webáruházban történik; az ott végzett adatkezelésekre (rendelés, számlázás, szállítás, fizetés, a vásárlás után küldött szűrőcsere-emlékeztető) a szelloztetes.eu oldalon közzétett tájékoztató vonatkozik. Cégünk többi weboldalára (sopronterv.hu, hoszivattyu-online.hu) az ott közzétett tájékoztatók érvényesek.",
+          "Az adatkezelés során a GDPR (az Európai Parlament és a Tanács (EU) 2016/679 rendelete) és az információs önrendelkezési jogról szóló 2011. évi CXII. törvény rendelkezései szerint járunk el."
+        ]
       },
-      "transfer": {
-        "title": "Adattovábbítás",
-        "text": "A termékek kiszállítása érdekében a címzett neve és címe a futárszolgálat részére továbbításra kerül.",
-        "onlinePayment": "Online fizetés",
-        "onlinePaymentText": "Az online bankkártyás fizetések a Barion rendszerén keresztül valósulnak meg. A bankkártya adatok a kereskedőhöz nem jutnak el."
+      "s3": {
+        "title": "3. Milyen adatokat kezelünk és miért",
+        "subsections": {
+          "form": {
+            "title": "3.1 Kapcsolatfelvételi űrlap",
+            "paragraphs": [
+              "Az űrlap nem tárolja az adatokat: a kitöltés után a látogató saját levelezőprogramjában megnyílik egy előre kitöltött e-mail, amelyet ő maga küld el nekünk. Az adatokat ezért csak akkor kapjuk meg, ha a levelet elküldi."
+            ],
+            "rows": [
+              ["Kezelt adatok", "név, e-mail cím, telefonszám (nem kötelező), az üzenet szövege"],
+              [
+                "Az adatkezelés célja",
+                "a megkeresés megválaszolása, szűrőválasztási és műszaki tanácsadás"
+              ],
+              [
+                "Jogalap",
+                "GDPR 6. cikk (1) b) — szerződéskötést megelőző lépések az érintett kérésére; ha a megkeresés nem vásárlásra irányul: GDPR 6. cikk (1) f) — jogos érdek a megkeresés megválaszolásához"
+              ],
+              [
+                "Megőrzési idő",
+                "ha a megkeresésből vásárlás lesz: a szelloztetes.eu tájékoztatója szerint; egyébként a megkeresés lezárásától számított 1 év"
+              ],
+              ["Az adatszolgáltatás", "önkéntes; a megjelölt mezők nélkül nem tudunk válaszolni"]
+            ]
+          },
+          "direct": {
+            "title": "3.2 Kapcsolatfelvétel e-mailben vagy telefonon",
+            "rows": [
+              [
+                "Kezelt adatok",
+                "a megkeresésben megadott adatok (név, elérhetőség, az üzenet tartalma)"
+              ],
+              ["Cél / jogalap", "mint a 3.1 pontnál"],
+              ["Megőrzési idő", "mint a 3.1 pontnál"]
+            ]
+          },
+          "cookies": {
+            "title": "3.3 Sütik és mérőkódok",
+            "paragraphs": ["Részletesen a 7. pontban."]
+          }
+        }
       },
-      "cookies": {
-        "title": "Sütik (Cookie-k)",
-        "text": "A weboldal a működés biztosítása és a látogatók kiszolgálása érdekében sütiket használ. Ezek engedélyezése szükséges a rendszer használatához."
+      "s4": {
+        "title": "4. Adatfeldolgozók",
+        "processors": [
+          [
+            "GitHub, Inc. (GitHub Pages)",
+            "a weboldal tárhelye és kiszolgálása (a látogatók IP-címét a kiszolgálás során technikailag kezeli)",
+            "88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA"
+          ],
+          [
+            "FORPSI / BlazeArts Kft.",
+            "domain- és DNS-szolgáltatás, e-mail tárhely (a hozzánk érkező levelek tárolása)",
+            "1096 Budapest, Thaly Kálmán utca 39., Magyarország"
+          ],
+          [
+            "Google Ireland Ltd.",
+            "webanalitika (Google Analytics), hirdetéskezelés és -mérés (Google Ads)",
+            "Gordon House, Barrow Street, Dublin 4, Írország"
+          ]
+        ]
+      },
+      "s5": {
+        "title": "5. Adattovábbítás harmadik országba",
+        "paragraphs": [
+          "A GitHub és a Google szolgáltatásainak igénybevétele során előfordulhat adattovábbítás az Európai Gazdasági Térségen kívülre (USA). Az adattovábbítás jogalapja az Európai Bizottság megfelelőségi határozata (EU–USA adatvédelmi keretrendszer), illetve a szolgáltatók által alkalmazott általános szerződési feltételek (SCC). Az adatokat ezen túlmenően harmadik országba nem továbbítjuk."
+        ]
+      },
+      "s6": {
+        "title": "6. Adatbiztonság",
+        "paragraphs": [
+          "A weboldal titkosított (HTTPS) kapcsolaton működik. A weboldal nem tárol ügyféladatot; a hozzánk érkező leveleket jelszóval védett, hozzáférés-korlátozott levelezőrendszerben kezeljük, amelyhez kizárólag arra jogosult munkatárs fér hozzá."
+        ]
+      },
+      "s7": {
+        "title": "7. Sütik (cookie-k)",
+        "paragraphs": [
+          "A weboldal sütiket használ. A sütikről az első látogatáskor megjelenő sávban dönthet, döntését pedig bármikor módosíthatja a lábléc „Süti beállítások” hivatkozására kattintva."
+        ],
+        "subsections": {
+          "necessary": {
+            "title": "7.1 A működéshez feltétlenül szükséges tárolás",
+            "paragraphs": [
+              "A süti-döntés eltárolására a böngésző helyi tárolóját használjuk. Ehhez nem kérünk hozzájárulást, mert nélküle a döntését minden oldalbetöltéskor újra meg kellene adnia. Jogalap: GDPR 6. cikk (1) f) — jogos érdek."
+            ]
+          },
+          "analytics": {
+            "title": "7.2 Analitikai sütik",
+            "paragraphs": [
+              "Segítenek megérteni, hogyan használják a látogatók az oldalt (pl. mely oldalak és cikkek népszerűek, honnan érkeznek a látogatók). Szolgáltató: Google (Google Analytics 4). Jogalap: GDPR 6. cikk (1) a) — az Ön hozzájárulása. Ezek a sütik csak akkor aktiválódnak, ha Ön ehhez hozzájárul."
+            ]
+          },
+          "marketing": {
+            "title": "7.3 Marketing sütik",
+            "paragraphs": [
+              "Hirdetéseink eredményességének mérésére és a hirdetések személyre szabására szolgálnak. Szolgáltató: Google (Google Ads). Jogalap: GDPR 6. cikk (1) a) — az Ön hozzájárulása. Ezek a sütik csak akkor aktiválódnak, ha Ön ehhez hozzájárul."
+            ]
+          },
+          "withdrawal": {
+            "title": "7.4 A hozzájárulás visszavonása",
+            "paragraphs": [
+              "A hozzájárulás bármikor, korlátozás nélkül visszavonható a lábléc „Süti beállítások” hivatkozásán keresztül, illetve a böngésző süti-beállításaiban. A visszavonás nem érinti a visszavonás előtti adatkezelés jogszerűségét."
+            ]
+          },
+          "lovable": {
+            "title": "Kiegészítés: Lovable látogatói analitika",
+            "paragraphs": [
+              "A kattintások mérését a hozzájárulás elfogadásáig visszatartjuk; a Global Privacy Control böngészőjelzést küldő látogatóknál kattintásokat nem rögzítünk. Az oldalmegtekintéseket, az oldalon töltött időt, az oldalbetöltés sebességét és a hibákat minden látogatónál mérjük, sütik és személyazonosítás nélkül.",
+              "A Lovable analitikája nem használ sütiket, nem tárol semmit a látogató eszközén, nem őrzi meg az IP-címeket, és nem azonosítja a látogatókat. Rögzíti a meglátogatott oldalakat, a látogatás forrását, az országot, a böngészőt, az operációs rendszert és az eszköz típusát, az oldalon töltött időt, az oldalbetöltés sebességét, a hibákat és — hozzájárulás után — a kattintásokat. A részletes adatok megőrzési ideje 90 nap, a napi összesítéseké egy év.",
+              "A Lovable számunkra gyűjti ezeket az adatokat. Az adatkezelését a Lovable adatvédelmi tájékoztatója ismerteti: https://lovable.dev/privacy"
+            ]
+          }
+        }
+      },
+      "s8": {
+        "title": "8. Az Ön jogai",
+        "rights": [
+          [
+            "Tájékoztatáshoz és hozzáféréshez való jog",
+            " — kérheti, hogy tájékoztassuk, kezelünk-e Önről adatot, és másolatot kérhet róla."
+          ],
+          ["Helyesbítéshez való jog", " — kérheti a pontatlan adat javítását."],
+          [
+            "Törléshez való jog",
+            " — kérheti adatai törlését, ha az adatkezelés célja megszűnt, vagy hozzájárulását visszavonta, és nincs más jogalap a kezelésre."
+          ],
+          ["Az adatkezelés korlátozásához való jog.", ""],
+          [
+            "Adathordozhatósághoz való jog",
+            " — kérheti adatai géppel olvasható formátumban való kiadását."
+          ],
+          ["Tiltakozáshoz való jog", " — tiltakozhat a jogos érdeken alapuló adatkezelés ellen."],
+          [
+            "Hozzájárulás visszavonásához való jog",
+            " — a hozzájáruláson alapuló adatkezelések esetén."
+          ]
+        ],
+        "after": [
+          "Kérelmét az info@sopronterv.hu címen vagy a székhelyünkre küldött levélben terjesztheti elő. A kérelemre legkésőbb egy hónapon belül válaszolunk. E határidő indokolt esetben további két hónappal meghosszabbítható, amiről a kérelem kézhezvételétől számított egy hónapon belül tájékoztatjuk."
+        ]
+      },
+      "s9": {
+        "title": "9. Jogorvoslat",
+        "paragraphs": [
+          "Ha úgy érzi, hogy az adatkezelés során sérültek a jogai, először kérjük, forduljon hozzánk közvetlenül — a legtöbb kérdés így rendezhető a leggyorsabban.",
+          "Panasszal élhet továbbá a felügyeleti hatóságnál:"
+        ],
+        "authority": true,
+        "after": [
+          "Jogainak megsértése esetén bírósághoz is fordulhat. A per az Ön lakóhelye vagy tartózkodási helye szerinti törvényszék előtt is megindítható."
+        ]
+      },
+      "s10": {
+        "title": "10. A tájékoztató módosítása",
+        "paragraphs": [
+          "Fenntartjuk a jogot, hogy a jelen tájékoztatót módosítsuk. A mindenkor hatályos változat ezen az oldalon érhető el, a hatálybalépés dátumának feltüntetésével."
+        ]
       }
-    },
-    "yourRights": "Az Ön jogai",
-    "yourRightsText": "A GDPR rendelkezései alapján Ön az alábbi jogokkal rendelkezik személyes adatai tekintetében:",
-    "rights": {
-      "access": {
-        "title": "Hozzáférés joga",
-        "description": "Jogosult tájékoztatást kérni arról, hogy milyen adatokat kezelünk Önről."
-      },
-      "rectification": {
-        "title": "Helyesbítés joga",
-        "description": "Kérheti pontatlan adatainak helyesbítését."
-      },
-      "erasure": {
-        "title": "Törlés joga",
-        "description": "Hozzájárulás esetén kérheti adatai törlését."
-      },
-      "restriction": {
-        "title": "Korlátozás joga",
-        "description": "Kérheti az adatkezelés korlátozását."
-      }
-    },
-    "legalRemedies": "Jogorvoslat",
-    "legalRemediesText": "Amennyiben úgy érzi, hogy megsértettük személyes adatai védelméhez való jogát, panasszal fordulhat a felügyeleti hatósághoz:",
-    "naih": "Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)",
-    "naihAddress": "Cím: 1055 Budapest, Falk Miksa utca 9-11.",
-    "naihPostal": "Postacím: 1363 Budapest, Pf. 9.",
-    "naihWebsite": "Weboldal:",
-    "questionsTitle": "Kérdése van az adatkezeléssel kapcsolatban?",
-    "questionsText": "Személyes adataival kapcsolatos kérdéseivel forduljon hozzánk bizalommal:"
+    }
   },
   "shipping": {
     "pageTitle": "Szállítási információk",
